@@ -1,0 +1,656 @@
+{
+  "electra": {
+    "stats": {
+      "fuerza": "B",
+      "resistencia": "B",
+      "velocidad": "C",
+      "inteligencia": "D",
+      "habilidades_combate": "A",
+      "carisma": "C",
+      "portal": "A",
+      "afinidad_espiritual": "B",
+      "potencial": "S",
+      "suerte": "F"
+    },
+    "historias": [
+      {
+        "titulo": "promise me the world, tell me no lies",
+        "autor": "RegulusCorneas",
+        "capitulo": "Leer",
+        "url": "https://archiveofourown.org/works/65590243/chapters/168867181"
+      },
+      {
+        "titulo": "Electra IF",
+        "autor": "ThinkMind",
+        "capitulo": "Leer",
+        "url": "https://archiveofourown.org/works/81333981/chapters/213818821"
+      },
+      {
+        "titulo": "Promise If",
+        "autor": "ThinkMind",
+        "capitulo": "Leer",
+        "url": "https://archiveofourown.org/works/63041911/chapters/161451277"
+      },
+      {
+        "titulo": "Family IF - Remake",
+        "autor": "ThinkMind",
+        "capitulo": "Leer",
+        "url": "https://archiveofourown.org/works/74914876/chapters/195724736"
+      }
+    ],
+    "relaciones": [
+      { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+      { "nombre": "Rem", "relacion": "Madre (no biológica)", "id": "rem" },
+      { "nombre": "Emilia", "relacion": "madre", "id": "emilia" }
+    ]
+  },
+  "alpha": {
+    "stats": {
+      "fuerza": "F (sin Autoridad) / EX (con Autoridad)",
+      "resistencia": "F (sin Autoridad) / EX (con Autoridad)",
+      "velocidad": "F (sin Autoridad) / EX (con Autoridad)",
+      "inteligencia": "SS+",
+      "habilidades_combate": "B",
+      "carisma": "E",
+      "portal": "SS (sin Autoridad) / EX (con Autoridad)",
+      "afinidad_espiritual": "SS (sin Autoridad) / EX (con Autoridad)",
+      "potencial": "SS (sin Autoridad) / EX (con Autoridad)",
+      "suerte": "F"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "elpis": {
+    "stats": {
+      "fuerza": "SS",
+      "resistencia": "SS",
+      "velocidad": "C",
+      "inteligencia": "E",
+      "habilidades_combate": "B",
+      "carisma": "A",
+      "portal": "S",
+      "afinidad_espiritual": "C",
+      "potencial": "SS",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "chochorina": {
+    "stats": {
+      "fuerza": "C",
+      "resistencia": "C",
+      "velocidad": "D",
+      "inteligencia": "S",
+      "habilidades_combate": "F",
+      "carisma": "A",
+      "portal": "A",
+      "afinidad_espiritual": "B",
+      "potencial": "S",
+      "suerte": "D"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "helena": {
+    "stats": {
+      "fuerza": "A",
+      "resistencia": "A",
+      "velocidad": "SS",
+      "inteligencia": "A",
+      "habilidades_combate": "S",
+      "carisma": "S",
+      "portal": "A",
+      "afinidad_espiritual": "A",
+      "potencial": "SS",
+      "suerte": "S"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "leo": {
+    "stats": {
+      "fuerza": "A",
+      "resistencia": "S",
+      "velocidad": "S",
+      "inteligencia": "A",
+      "habilidades_combate": "SS",
+      "carisma": "S",
+      "portal": "A",
+      "afinidad_espiritual": "A",
+      "potencial": "SS",
+      "suerte": "B"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "lyra": {
+    "stats": {
+      "fuerza": "D",
+      "resistencia": "D",
+      "velocidad": "E",
+      "inteligencia": "SS",
+      "habilidades_combate": "A",
+      "carisma": "S",
+      "portal": "SS",
+      "afinidad_espiritual": "A",
+      "potencial": "EX",
+      "suerte": "SS+"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "mercurius": {
+    "stats": {
+      "fuerza": "D",
+      "resistencia": "D",
+      "velocidad": "D",
+      "inteligencia": "A",
+      "habilidades_combate": "S",
+      "carisma": "C",
+      "portal": "C",
+      "afinidad_espiritual": "B",
+      "potencial": "S",
+      "suerte": "D"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "cassiopeia": {
+    "stats": {
+      "fuerza": "SS",
+      "resistencia": "SS",
+      "velocidad": "S",
+      "inteligencia": "B",
+      "habilidades_combate": "SS+",
+      "carisma": "A",
+      "portal": "S",
+      "afinidad_espiritual": "B",
+      "potencial": "SS+",
+      "suerte": "B"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "graffias": {
+    "stats": {
+      "fuerza": "SS",
+      "resistencia": "B",
+      "velocidad": "C",
+      "inteligencia": "A",
+      "habilidades_combate": "A",
+      "carisma": "E",
+      "portal": "SS",
+      "afinidad_espiritual": "B",
+      "potencial": "SS",
+      "suerte": "E"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "taygette": {
+    "stats": {
+      "fuerza": "B",
+      "resistencia": "SS+",
+      "velocidad": "D",
+      "inteligencia": "B",
+      "habilidades_combate": "SS",
+      "carisma": "A",
+      "portal": "SS+",
+      "afinidad_espiritual": "S",
+      "potencial": "SS — EX",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "bellatrix": {
+    "stats": {
+      "fuerza": "B",
+      "resistencia": "SS",
+      "velocidad": "A",
+      "inteligencia": "C",
+      "habilidades_combate": "A",
+      "carisma": "B",
+      "portal": "C",
+      "afinidad_espiritual": "C",
+      "potencial": "A",
+      "suerte": "F"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "maia": {
+    "stats": {
+      "fuerza": "D",
+      "resistencia": "D",
+      "velocidad": "E",
+      "inteligencia": "C",
+      "habilidades_combate": "F",
+      "carisma": "B",
+      "portal": "D",
+      "afinidad_espiritual": "B",
+      "potencial": "C",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "aconita": {
+    "stats": {
+      "fuerza": "B",
+      "resistencia": "B",
+      "velocidad": "B",
+      "inteligencia": "B",
+      "habilidades_combate": "C",
+      "carisma": "D",
+      "portal": "SS+",
+      "afinidad_espiritual": "B",
+      "potencial": "EX",
+      "suerte": "E"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "menkar": {
+    "stats": {
+      "fuerza": "S",
+      "resistencia": "S",
+      "velocidad": "S",
+      "inteligencia": "D",
+      "habilidades_combate": "E",
+      "carisma": "F",
+      "portal": "S",
+      "afinidad_espiritual": "E",
+      "potencial": "SS",
+      "suerte": "E"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "nunki": {
+    "stats": {
+      "fuerza": "SS+",
+      "resistencia": "SS+",
+      "velocidad": "S",
+      "inteligencia": "C",
+      "habilidades_combate": "E",
+      "carisma": "A",
+      "portal": "A",
+      "afinidad_espiritual": "C",
+      "potencial": "SS+",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "alcyone": {
+    "stats": {
+      "fuerza": "C",
+      "resistencia": "D",
+      "velocidad": "E",
+      "inteligencia": "A",
+      "habilidades_combate": "B",
+      "carisma": "D",
+      "portal": "S",
+      "afinidad_espiritual": "A",
+      "potencial": "S",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "caph": {
+    "stats": {
+      "fuerza": "A",
+      "resistencia": "S",
+      "velocidad": "A",
+      "inteligencia": "A",
+      "habilidades_combate": "A",
+      "carisma": "B",
+      "portal": "A",
+      "afinidad_espiritual": "C",
+      "potencial": "S",
+      "suerte": "S"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "cygnus": {
+    "stats": {
+      "fuerza": "C",
+      "resistencia": "C",
+      "velocidad": "S",
+      "inteligencia": "C",
+      "habilidades_combate": "S",
+      "carisma": "S",
+      "portal": "C",
+      "afinidad_espiritual": "C",
+      "potencial": "S",
+      "suerte": "A"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "vega": {
+    "stats": {
+      "fuerza": "A",
+      "resistencia": "A",
+      "velocidad": "A",
+      "inteligencia": "A",
+      "habilidades_combate": "A",
+      "carisma": "B",
+      "portal": "S",
+      "afinidad_espiritual": "A",
+      "potencial": "S",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "natsumi_natsuki": {
+    "stats": {
+      "fuerza": "E",
+      "resistencia": "D",
+      "velocidad": "E",
+      "inteligencia": "C",
+      "habilidades_combate": "F",
+      "carisma": "SS",
+      "portal": "E",
+      "afinidad_espiritual": "F",
+      "potencial": "C",
+      "suerte": "D"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "saiph": {
+    "stats": {
+      "fuerza": "C",
+      "resistencia": "C",
+      "velocidad": "C",
+      "inteligencia": "B",
+      "habilidades_combate": "B",
+      "carisma": "A",
+      "portal": "D",
+      "afinidad_espiritual": "E",
+      "potencial": "C",
+      "suerte": "D"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "sabik": {
+    "stats": {
+      "fuerza": "C",
+      "resistencia": "D",
+      "velocidad": "E",
+      "inteligencia": "A",
+      "habilidades_combate": "B",
+      "carisma": "C",
+      "portal": "C",
+      "afinidad_espiritual": "C",
+      "potencial": "B",
+      "suerte": "D"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "phoebe": {
+    "stats": {
+      "fuerza": "A (Normal) / SS (Dragón)",
+      "resistencia": "B (Normal) / SS (Dragón)",
+      "velocidad": "A (Normal) / C (Dragón)",
+      "inteligencia": "C (Normal) / D (Dragón)",
+      "habilidades_combate": "A",
+      "carisma": "C",
+      "portal": "A",
+      "afinidad_espiritual": "E",
+      "potencial": "SS",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "merope": {
+    "stats": {
+      "fuerza": "B",
+      "resistencia": "B",
+      "velocidad": "B",
+      "inteligencia": "D",
+      "habilidades_combate": "C",
+      "carisma": "C",
+      "portal": "D",
+      "afinidad_espiritual": "F",
+      "potencial": "A",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "perseus": {
+    "stats": {
+      "fuerza": "C",
+      "resistencia": "C",
+      "velocidad": "E",
+      "inteligencia": "S",
+      "habilidades_combate": "F",
+      "carisma": "E",
+      "portal": "S",
+      "afinidad_espiritual": "SS",
+      "potencial": "S",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "adhara": {
+    "stats": {
+      "fuerza": "A",
+      "resistencia": "A",
+      "velocidad": "A",
+      "inteligencia": "C",
+      "habilidades_combate": "C",
+      "carisma": "B",
+      "portal": "SS",
+      "afinidad_espiritual": "S",
+      "potencial": "SS+",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "denebola": {
+    "stats": {
+      "fuerza": "C",
+      "resistencia": "C",
+      "velocidad": "E",
+      "inteligencia": "B",
+      "habilidades_combate": "E",
+      "carisma": "A",
+      "portal": "D",
+      "afinidad_espiritual": "E",
+      "potencial": "C",
+      "suerte": "B"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "reid": {
+    "stats": {
+      "fuerza": "A",
+      "resistencia": "A",
+      "velocidad": "SS+",
+      "inteligencia": "C",
+      "habilidades_combate": "EX",
+      "carisma": "B",
+      "portal": "C",
+      "afinidad_espiritual": "C",
+      "potencial": "SS+",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "cepheus": {
+    "stats": {
+      "fuerza": "S",
+      "resistencia": "S",
+      "velocidad": "S",
+      "inteligencia": "C",
+      "habilidades_combate": "A",
+      "carisma": "C",
+      "portal": "S",
+      "afinidad_espiritual": "A",
+      "potencial": "SS",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "luna": {
+    "stats": {
+      "fuerza": "B",
+      "resistencia": "SS+",
+      "velocidad": "S",
+      "inteligencia": "B",
+      "habilidades_combate": "A",
+      "carisma": "S",
+      "portal": "SS",
+      "afinidad_espiritual": "A",
+      "potencial": "SS+",
+      "suerte": "A"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "nova": {
+    "stats": {
+      "fuerza": "EX",
+      "resistencia": "EX",
+      "velocidad": "EX",
+      "inteligencia": "C",
+      "habilidades_combate": "C",
+      "carisma": "F",
+      "portal": "EX",
+      "afinidad_espiritual": "EX",
+      "potencial": "EX",
+      "suerte": "F"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "orion": {
+    "stats": {
+      "fuerza": "D",
+      "resistencia": "D",
+      "velocidad": "D",
+      "inteligencia": "B",
+      "habilidades_combate": "E",
+      "carisma": "SS",
+      "portal": "F",
+      "afinidad_espiritual": "C",
+      "potencial": "C",
+      "suerte": "S"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "morgana": {
+    "stats": {
+      "fuerza": "C",
+      "resistencia": "A",
+      "velocidad": "C",
+      "inteligencia": "S",
+      "habilidades_combate": "B",
+      "carisma": "A",
+      "portal": "SS",
+      "afinidad_espiritual": "SS",
+      "potencial": "SS",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "viviane": {
+    "stats": {
+      "fuerza": "A",
+      "resistencia": "A",
+      "velocidad": "B",
+      "inteligencia": "B",
+      "habilidades_combate": "C",
+      "carisma": "A",
+      "portal": "F",
+      "afinidad_espiritual": "C",
+      "potencial": "SS",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "arthur": {
+    "stats": {
+      "fuerza": "B (Normal) / SS+ (Protección Divina)",
+      "resistencia": "D (Normal) / SS+ (Protección Divina)",
+      "velocidad": "A (Normal) / SS+ (Protección Divina)",
+      "inteligencia": "C",
+      "habilidades_combate": "S (Normal) / SS+ (Protección Divina)",
+      "carisma": "A",
+      "portal": "D (Normal) / SS+ (Protección Divina)",
+      "afinidad_espiritual": "B",
+      "potencial": "A (Normal) / SS+ (Protección Divina)",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "castor": {
+    "stats": {
+      "fuerza": "C",
+      "resistencia": "A",
+      "velocidad": "A",
+      "inteligencia": "A",
+      "habilidades_combate": "C",
+      "carisma": "B",
+      "portal": "S",
+      "afinidad_espiritual": "C",
+      "potencial": "S",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "pollux": {
+    "stats": {
+      "fuerza": "B",
+      "resistencia": "A",
+      "velocidad": "A",
+      "inteligencia": "B",
+      "habilidades_combate": "B",
+      "carisma": "A",
+      "portal": "S",
+      "afinidad_espiritual": "C",
+      "potencial": "S",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": []
+  },
+  "tonnura": {
+    "stats": {
+      "fuerza": "A",
+      "resistencia": "A",
+      "velocidad": "B",
+      "inteligencia": "A",
+      "habilidades_combate": "A",
+      "carisma": "C",
+      "portal": "A",
+      "afinidad_espiritual": "SS+",
+      "potencial": "S",
+      "suerte": "E"
+    },
+    "historias": [],
+    "relaciones": []
+  }
+
+}

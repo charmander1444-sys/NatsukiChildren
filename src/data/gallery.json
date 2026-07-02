@@ -1,0 +1,27 @@
+{
+  "electra": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/52262773a85b.png",
+        "https://cdn.imgchest.com/files/414443f8c187.png",
+        "https://cdn.imgchest.com/files/cd5798bc3eab.png",
+        "https://cdn.imgchest.com/files/8fa08c1f2f89.png",
+        "https://cdn.imgchest.com/files/d75c473878ec.png",
+        "https://cdn.imgchest.com/files/87ceb497d861.png",
+        "https://cdn.imgchest.com/files/5d158ad984e6.png",
+        "https://cdn.imgchest.com/files/fed27cee4d2e.png",
+        "https://cdn.imgchest.com/files/6979e5582c0c.png"
+      ]
+    },
+    {
+      "artista": "CuryFromZero",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/12cb82e1f0f8.png",
+        "https://cdn.imgchest.com/files/8bccebf4a8d6.png",
+        "https://cdn.imgchest.com/files/e528a037e87a.png",
+        "https://cdn.imgchest.com/files/d46031afbcbe.png"
+      ]
+    }
+  ]
+}

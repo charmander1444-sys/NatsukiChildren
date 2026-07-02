@@ -1,0 +1,49 @@
+---
+interface Relacion {
+  nombre: string;
+  relacion?: string;
+  id?: string;
+  avatar?: string;
+}
+
+interface Props {
+  relaciones?: Relacion[];
+}
+
+const { relaciones = [] } = Astro.props;
+const valid = (relaciones ?? []).filter((r) => r && r.nombre);
+---
+
+{valid.length > 0 && (
+  <section class="mt-10">
+    <h2 class="font-display text-3xl text-white text-glow mb-4">Relaciones</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {valid.map((r) => {
+        const Tag = r.id ? "a" : "div";
+        const href = r.id ? `/detailcharacter/${r.id}` : undefined;
+        return (
+          <Tag
+            href={href}
+            class="flex items-center gap-4 rounded-xl border border-rz-accent/20 bg-rz-bg-2/40 p-4 hover:border-rz-accent/50 hover:bg-rz-bg-2/70 transition-colors duration-200"
+          >
+            <div class="w-14 h-14 rounded-full overflow-hidden border border-rz-accent/30 shrink-0 bg-black">
+              {r.avatar ? (
+                <img src={r.avatar} alt={r.nombre} class="w-full h-full object-cover" />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center">
+                  <span class="text-rz-text/20 text-lg font-display">?</span>
+                </div>
+              )}
+            </div>
+            <div class="min-w-0">
+              <p class="text-base text-white font-body truncate">{r.nombre}</p>
+              {r.relacion && (
+                <p class="text-sm text-rz-accent-2/80 font-body truncate">{r.relacion}</p>
+              )}
+            </div>
+          </Tag>
+        );
+      })}
+    </div>
+  </section>
+)}

@@ -1,0 +1,48 @@
+---
+interface Historia {
+  titulo: string;
+  autor?: string;
+  capitulo?: string;
+  url: string;
+}
+
+interface Props {
+  historias?: Historia[];
+}
+
+const { historias = [] } = Astro.props;
+const valid = (historias ?? []).filter((h) => h && h.titulo && h.url);
+---
+
+{valid.length > 0 && (
+  <section class="mt-10">
+    <h2 class="font-display text-3xl text-white text-glow mb-4">
+      Historias
+    </h2>
+
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+      {valid.map((h) => (
+        <div class="rounded-xl border border-rz-accent/20 bg-rz-bg-2/40 p-5 flex flex-col gap-2 hover:border-rz-accent/50 transition-colors duration-200">
+          <p class="font-display text-lg text-white leading-snug">
+            {h.titulo}
+          </p>
+
+          {h.autor && (
+            <p class="text-sm text-rz-text/60 font-body">
+              Autor: {h.autor}
+            </p>
+          )}
+
+          <a
+            href={h.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 inline-block text-center text-sm font-body px-4 py-2 rounded-full border border-rz-accent/40 text-rz-accent-2 hover:bg-rz-accent/15 hover:text-white transition-colors duration-200"
+          >
+            {h.capitulo ?? "Leer historia"}
+          </a>
+        </div>
+      ))}
+    </div>
+  </section>
+)}

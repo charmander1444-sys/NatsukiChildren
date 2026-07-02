@@ -1,0 +1,44 @@
+---
+// Layout.astro
+import "../styles/global.css";
+import Starfield from "../components/Starfield.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Re:Zero — Portal",
+  description = "Sitio temático inspirado en Re:Zero: árbol genealógico, personajes y galería.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet"
+  />
+  </head>
+  <body class="min-h-screen bg-rz-bg text-rz-text font-body">
+    <div class="relative min-h-screen flex flex-col overflow-x-hidden bg-[radial-gradient(ellipse_at_top,rgba(75,40,130,0.35),transparent_60%)]">
+      <Starfield />
+
+      <div class="fixed -top-[10%] -left-[10%] -z-10 w-[45vw] h-[45vw] rounded-full blur-[120px] opacity-25 bg-[#8b5cf6] pointer-events-none"></div>
+      <div class="fixed -bottom-[15%] -right-[10%] -z-10 w-[45vw] h-[45vw] rounded-full blur-[120px] opacity-25 bg-[#38bdf8] pointer-events-none"></div>
+
+      <main class="flex-1 max-w-[1200px] w-full mx-auto px-6 py-10 pb-16">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

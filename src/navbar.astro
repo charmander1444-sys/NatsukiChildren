@@ -1,0 +1,81 @@
+---
+// Navbar.astro
+const currentPath = Astro.url.pathname;
+
+const links = [
+  { href: "/arbol-genealogico", label: "Arbol Genealogico" },
+  { href: "/personajes", label: "Personajes" },
+  { href: "/galeria", label: "Galeria" },
+];
+
+const isActive = (href: string) =>
+  currentPath === href || currentPath.startsWith(`${href}/`);
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-rz-accent/15 bg-rz-bg/90 shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+  <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+    <a
+      href="/"
+      class="font-display text-2xl font-semibold tracking-[0.2em] text-white transition-transform duration-300 hover:scale-[1.02]"
+    >
+      <span class="text-white">Re</span><span class="text-rz-accent">:Zero</span>
+    </a>
+
+    <button
+      class="flex cursor-pointer flex-col gap-[5px] border-0 bg-transparent p-1 md:hidden"
+      id="navToggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+      <span class="h-0.5 w-6 rounded-sm bg-white"></span>
+      <span class="h-0.5 w-6 rounded-sm bg-white"></span>
+      <span class="h-0.5 w-6 rounded-sm bg-white"></span>
+    </button>
+
+    <nav
+      id="navLinks"
+      class="absolute inset-x-0 top-full hidden flex-col border-b border-rz-accent/15 bg-rz-bg/95 px-4 py-4 shadow-lg backdrop-blur-md md:static md:flex md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0 md:shadow-none"
+    >
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              "relative rounded-full px-2 py-1.5 text-sm font-semibold uppercase tracking-[0.2em] text-rz-text/80 no-underline transition-all duration-300 sm:text-base",
+              "after:absolute after:left-1/2 after:-bottom-0.5 after:h-0.5 after:w-0 after:-translate-x-1/2 after:bg-gradient-to-r after:from-rz-accent after:to-rz-accent-2 after:transition-all after:duration-300 after:content-['']",
+              isActive(link.href)
+                ? "text-rz-accent after:w-full"
+                : "hover:text-rz-accent hover:after:w-full",
+            ]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("navToggle");
+  const nav = document.getElementById("navLinks");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const willShow = nav.classList.contains("hidden");
+      nav.classList.toggle("hidden", !willShow);
+      nav.classList.toggle("flex", willShow);
+      toggle.setAttribute("aria-expanded", String(willShow));
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 768) {
+          nav.classList.add("hidden");
+          nav.classList.remove("flex");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+  }
+</script>

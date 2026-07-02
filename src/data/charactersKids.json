@@ -1,0 +1,1935 @@
+{
+  "personas": [
+    {
+      "id": "subaru",
+      "nombre": "Subaru Natsuki",
+      "tipo": "raiz"
+    },
+    {
+      "id": "natsumi subaru",
+      "nombre": "Natsumi Natsuki",
+      "tipo": "raiz"
+    },
+    {
+      "id": "echidna",
+      "nombre": "Echidna",
+      "tipo": "madre"
+    },
+    {
+      "id": "emilia",
+      "nombre": "Emilia",
+      "tipo": "madre"
+    },
+    {
+      "id": "pandora",
+      "nombre": "Pandora",
+      "tipo": "madre"
+    },
+    {
+      "id": "priscilla",
+      "nombre": "Priscilla Barielle",
+      "tipo": "madre"
+    },
+    {
+      "id": "anastasia",
+      "nombre": "Anastasia Hoshin",
+      "tipo": "madre"
+    },
+    {
+      "id": "shaula",
+      "nombre": "Shaula",
+      "tipo": "madre"
+    },
+    {
+      "id": "miyuse",
+      "nombre": "Miyuse",
+      "tipo": "madre"
+    },
+    {
+      "id": "shion",
+      "nombre": "Shion",
+      "tipo": "madre"
+    },
+    {
+      "id": "crusch",
+      "nombre": "Crusch Karsten",
+      "tipo": "madre"
+    },
+    {
+      "id": "elsa",
+      "nombre": "Elsa Granhiert",
+      "tipo": "madre"
+    },
+    {
+      "id": "emerada",
+      "nombre": "Emerada Lugunica",
+      "tipo": "madre"
+    },
+    {
+      "id": "felt",
+      "nombre": "Felt",
+      "tipo": "madre"
+    },
+    {
+      "id": "lilac",
+      "nombre": "Lilac",
+      "tipo": "madre"
+    },
+    {
+      "id": "daphne",
+      "nombre": "Daphne",
+      "tipo": "madre"
+    },
+    {
+      "id": "sekhmet",
+      "nombre": "Sekhmet",
+      "tipo": "madre"
+    },
+    {
+      "id": "capella",
+      "nombre": "Capella Emerada Lugunica",
+      "tipo": "madre"
+    },
+    {
+      "id": "liliana",
+      "nombre": "Liliana Masquerade",
+      "tipo": "madre"
+    },
+    {
+      "id": "ram",
+      "nombre": "Ram",
+      "tipo": "madre"
+    },
+    {
+      "id": "rem",
+      "nombre": "Rem",
+      "tipo": "madre"
+    },
+    {
+      "id": "rem promise",
+      "nombre": "Rem(Promise IF)",
+      "tipo": "conexion"
+    },
+    {
+      "id": "petra",
+      "nombre": "Petra Leyte",
+      "tipo": "madre"
+    },
+    {
+      "id": "patrasche",
+      "nombre": "Patrasche",
+      "tipo": "madre"
+    },
+    {
+      "id": "minerva",
+      "nombre": "Minerva",
+      "tipo": "madre"
+    },
+    {
+      "id": "satella",
+      "nombre": "Satella",
+      "tipo": "madre"
+    },
+    {
+      "id": "sylphy",
+      "nombre": "Sylphy",
+      "tipo": "madre"
+    },
+    {
+      "id": "adelheid",
+      "nombre": "Adelheid Astrea",
+      "tipo": "madre"
+    },
+    {
+      "id": "zarestia",
+      "nombre": "Zarestia",
+      "tipo": "madre"
+    },
+    {
+      "id": "yorna",
+      "nombre": "Yorna Mishigure",
+      "tipo": "madre"
+    },
+    {
+      "id": "carmilla",
+      "nombre": "Carmilla",
+      "tipo": "madre"
+    },
+    {
+      "id": "frederica",
+      "nombre": "Frederica Baumann",
+      "tipo": "madre"
+    },
+    {
+      "id": "julia",
+      "nombre": "Julia Mathers",
+      "tipo": "madre"
+    },
+    {
+      "id": "bruja de la envidia",
+      "nombre": "Bruja de la Envidia",
+      "tipo": "madre"
+    },
+    {
+      "id": "beatrice",
+      "nombre": "Beatrice",
+      "tipo": "conexion"
+    },
+    {
+      "id": "alpha",
+      "nombre": "Alpha Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "173cm",
+      "apariencia": {
+        "cabello": "Blanco con partes oscuras y moradas, causado por un accidente",
+        "ojos": "",
+        "ropa": "Viste típicamente de verde y blanco, casi como un uniforme militar, a menudo con una falda morada encima; es su tipo de atuendo favorito",
+        "constitucion": "Físicamente débil y sedentaria pese a su apariencia bien cuidada",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Volátil, con tendencias bipolares: pasa de la felicidad a la irritación, la tristeza o el miedo extremo en poco tiempo",
+        "Tiene buen autocontrol para evitar causar daños extremos innecesarios",
+        "Comprende totalmente las emociones propias y ajenas desde la infancia, pero no le importan los sentimientos de los demás salvo los de quienes aprecia",
+        "Puede observar el sufrimiento ajeno sin ofrecer apoyo, e incluso disfrutarlo, a menos que afecte a alguien que quiere",
+        "Respeta a su versión de Echidna (su madre) y a Beatrice (su 'media hermana'), pero no las ama al nivel de su padre",
+        "Apenas tolera a otras versiones de ellas o a personas de universos alternos",
+        "Es una 'niña de papá': ama a su padre Subaru en todas sus versiones, sin importar las decisiones que tome (héroe, villano, número de parejas, etc.)",
+        "Su felicidad depende de que su padre sea feliz; odia verlo triste en cualquier versión",
+        "Al estar con su padre se vuelve una niña consentida que busca mimos (caricias en la cabeza, sentarse en su regazo, abrazos, besos), abandonando su actitud fría y dura",
+        "Puede dejar cualquier actividad con tal de seguir recibiendo cariño de su padre",
+        "Odia los clichés románticos y de harem, especialmente el de la tsundere que golpea al protagonista por celos"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Magia Yin, todos los tipos (especialmente fuerte en Yin, afinidad heredada de su padre y entrenada con su versión de Beatrice); puede manipular el tiempo y posee un Gate extremadamente poderoso",
+        "Afinidad Espiritual excepcionalmente alta, dos o tres veces mayor que la de su padre",
+        "Autoridad de la Avaricia: potencia su magia en manipulación espacio-temporal y dimensional; le permitió crear su Teatro/Cine"
+      ],
+      "equipamiento": [
+        "Libro de la Vida y la Muerte (Versión: Subaru Natsuki) — creado con su magia y Autoridad, le permite ver el pasado y presente (no más de tres años a futuro) de la vida y versiones alternas de una persona elegida; usarlo por primera vez en su padre le causó tal estrés que su cabello se volvió blanco",
+        "Silla plegable de metal (usada en su Teatro/Cine), típica de la lucha libre, que usa normalmente contra chicas que lastiman a Subaru"
+      ],
+      "trivia": [
+        "Odia los clichés románticos y de harem; llegó a dejar un cráter con forma de Emilia en el suelo de su teatro tras golpearla por celos hacia Subaru",
+        "Recibir una mirada de decepción de su padre (en cualquier versión) la deja en shock y paralizada, un castigo peor que cualquier golpe o insulto",
+        "Es extremadamente débil físicamente; apenas puede hacer los radioejercicios de su padre sin casi vomitar, e incluso se desmayó una vez intentando correr con él de niña",
+        "Su teatro/cine se llama 'Absolute Cinema'"
+      ]
+    },
+    {
+      "id": "electra",
+      "nombre": "Electra Natsuki",
+      "tipo": "hija",
+      "avatar": "https://cdn.imgchest.com/files/8bccebf4a8d6.png",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "167cm",
+      "apariencia": {
+        "cabello": "",
+        "ojos": "Amatista, más oscuros que los de su madre; orejas ligeramente puntiagudas",
+        "ropa": "",
+        "constitucion": "",
+        "marcas": "Cicatriz en la espalda, desde el hombro izquierdo hasta la cintura, causada por agua hirviendo que su madre le derramó para que dejara de llorar"
+      },
+      "personalidad": [
+        "Se volvió bastante extrovertida con los años, tras una infancia guardándose el dolor mientras su padre permanecía en silencio para darle estabilidad en un entorno terrible",
+        "No teme hablar lo que piensa ni defender lo que cree, incluso siendo muy explícita o inoportuna al hacerlo (por ejemplo, anunciar que necesita ir al baño en medio de una pelea de vida o muerte)",
+        "Ama profundamente a su padre y a Rem (como madre, aunque no de sangre), defendiéndolos y respetándolos con su vida",
+        "Su meta principal es darle a su padre una vida simple y feliz, incluso si eso implica enfrentarse al mundo entero",
+        "Siente un fuerte odio hacia Emilia y Felix, quienes abusaron de Subaru física, mental, emocional e incluso sexualmente",
+        "Puede ser algo impulsiva, actuando sin medir las consecuencias (por ejemplo, saltar a un agujero para recuperar algo sin notar que es una trampa)"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Fuego y Agua; puede usar los mismos hechizos de fuego que Emilia y Roswaal",
+        "Magia de agua especializada en curación, desarrollada a casi la mitad del nivel de Felix",
+        "Gate de aproximadamente la mitad de fuerza que el de Emilia",
+        "Afinidad Espiritual Grande: desde pequeña pudo contactar con espíritus menores; mejor que su madre, aunque no tanto como su padre"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Le encanta la mayonesa",
+        "No tolera ninguna clase de ofensa contra su padre y peleará contra quien lo insulte"
+      ]
+    },
+    {
+      "id": "elpis",
+      "nombre": "Elpis Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "12 años",
+      "tamano": "164cm",
+      "apariencia": {
+        "cabello": "Largo y negro",
+        "ojos": "Azules y brillantes como los de su madre, igual de intimidantes que los de su padre",
+        "ropa": "Vestido mitad oscuro, mitad blanco, hasta debajo de la rodilla, adornado con lazos azules y naranjas cosidos",
+        "constitucion": "",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Personalidad tan enigmática como la de su madre, pero también obsesiva",
+        "Tiene una obsesión malsana con su padre, rayana en el fanatismo romántico",
+        "Cree que todo a su alrededor existe para él, incluida ella misma",
+        "Siente celos de la relación de su madre con su padre y desea reemplazarla",
+        "No comprende del todo emociones como la ira o el odio, ni sabe expresarlas correctamente"
+      ],
+      "habilidades": [
+        "Autoridad del Orgullo — Amor Absoluto (絶対愛・Zettai Ai): funciona casi como una habilidad de Juicio similar a la de Typhon",
+        "Corazón del Único (唯一の心・Yuiitsu no Kokoro): al tocar a alguien, siente la intensidad y pureza del amor o devoción que esa persona siente por alguien específico",
+        "Fragmentación de la Devoción (献身の分解・Kenshin no Bunkai): puede desgarrar emocional y físicamente a quien considere 'emocionalmente impuro' o que ame a alguien distinto de su padre; el cuerpo de la víctima se desintegra desde el corazón, siendo más doloroso cuanto más fuerte sea el amor o vínculo con otra persona; solo se salva, e incluso es bendecida o curada, quien ame o idolatre sinceramente a Subaru",
+        "Afinidad Mágica: Yang, usada para potenciar su fuerza física; domina el método de Flujo desde pequeña",
+        "Devoradora Espiritual: puede devorar espíritus para fortalecerse, potenciando su cuerpo y magia de formas que ni ella entiende del todo, y puede extinguir espíritus"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Guarda un dibujo que su padre le hizo de pequeña, de cuando decidieron dibujarse el uno al otro"
+      ]
+    },
+    {
+      "id": "helena",
+      "nombre": "Helena Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "10 años",
+      "tamano": "168cm",
+      "apariencia": {
+        "cabello": "Largo y oscuro",
+        "ojos": "Rojos e intensos",
+        "ropa": "Ropas nobles, con una apariencia real digna de su título de princesa",
+        "constitucion": "",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Mirada y sonrisa arrogantes incluso a los diez años",
+        "Lengua afilada, sin dudar en decir lo que piensa aunque sea cortante, ácida o cruel",
+        "Se expresa abiertamente sin importarle la opinión ajena; orgullosa, confiada y segura de sí misma",
+        "También es enfocada, cuidadosa y trabajadora: entrena para perfeccionar sus habilidades en vez de confiar solo en su talento natural",
+        "Cree que 'una persona arrogante es alguien que no puede respaldar sus palabras', por lo que busca ser orgullosa pero capaz de sostener todo lo que dice"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Fuego y Yang; prodigio considerado el mejor del reino en estos tipos, apoyado por un Gate poderoso",
+        "Afinidad Espiritual al nivel de su padre; a los dos años formó un contrato con un espíritu de fuego que luego evolucionó a Gran Espíritu de Fuego, con potencial de crecer más al llegar a la adultez",
+        "Bendiciones Divinas: del Sol (más fuerte bajo la luz solar) y de la Confianza (se potencia según su propia confianza en sí misma), heredadas de su madre"
+      ],
+      "equipamiento": [
+        "Espada Yang — pudo empuñarla desde los cinco años, incluso sin pasar la prueba, como si siempre hubiera estado destinada a ella"
+      ],
+      "trivia": [
+        "Tiene una suerte comparable a la de su madre",
+        "Mostró gran inteligencia desde temprano, propia de una emperatriz; a los once años se le dio un territorio para gobernar y lo hizo prosperar con su talento administrativo",
+        "No teme a su madre pese a que esta es más fuerte que ella, pero sí teme la mirada de decepción de su padre, algo que rara vez ha visto ya que él nunca le ha levantado la mano ni la voz, ni la ha castigado",
+        "Tras escuchar a su padre hablar de Zoro y ver el estilo de dos espadas de Cecilus, entrenó duro para dominar casi al 100% el estilo de tres espadas"
+      ]
+    },
+    {
+      "id": "mercurius",
+      "nombre": "Mercurius Natsuki Hoshin",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "170cm",
+      "tamano": "Alto para su edad, más alto que su hermana mayor pese a ser el menor",
+      "apariencia": {
+        "cabello": "Largo, hasta los hombros, de color malva y bien arreglado",
+        "ojos": "Los mismos ojos intimidantes de su padre, mismo color, a menudo con expresión cansada",
+        "ropa": "Ropa que recuerda a la de un joven mercader",
+        "constitucion": "",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Chico agudo, inteligente y enfocado, especialmente en negociaciones, herencia de su madre",
+        "A diferencia de su madre y otros mercaderes, nunca aprendió a ocultar sus emociones por completo, aunque puede suprimir la mayoría",
+        "Se estresa con facilidad al tratar con su hermana mayor",
+        "Tranquilo en sus momentos de ocio, prefiere leer o contar el dinero que ha ahorrado"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Viento; no muy hábil en magia, pero capaz de defenderse si es necesario",
+        "Afinidad Espiritual casi nula, incrediblemente baja"
+      ],
+      "equipamiento": [
+        "Bolsa de equipo — contiene herramientas básicas de autodefensa y negociación, con monedas desde bronce hasta oro sagrado"
+      ],
+      "trivia": [
+        "Disfruta apostar y es muy bueno, pero nunca logra ganarle a su hermana en ningún juego, ni siquiera los que él mismo inventa",
+        "Su inteligencia y habilidad administrativa para los negocios superan incluso a las de su hermana mayor, al punto de ser considerado el heredero principal del negocio familiar si quisiera",
+        "Al carecer de fuerza o poder bruto, se enfocó en desarrollar habilidades de combate usando herramientas y su entorno",
+        "Puede crear distintos tipos de equipo para combate a corta, media o larga distancia"
+      ]
+    },
+    {
+      "id": "lyra",
+      "nombre": "Lyra Natsuki Hoshin",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "158cm",
+      "apariencia": {
+        "cabello": "Corto, generalmente bien cuidado, look más desordenado que el de su hermano",
+        "ojos": "Similares a los de su madre",
+        "ropa": "Mezcla del equipo de Iron Fang, con pantalones que llevan una cola dibujada en tributo a su 'hermana' Mimi, y una decoración en forma de estrella sobre el pecho izquierdo, cerca del trapecio",
+        "constitucion": "",
+        "marcas": ""
+      },
+      "personalidad": [
+        "No quiere ni puede ocultar sus emociones, siempre se expresa de forma directa, a veces de manera tan exagerada que genera conflictos con su hermano menor, muy serio",
+        "Muy impulsiva al hacer lo que quiere, sin contenerse (llegó a intentar comprar una tienda entera de dulces solo porque le gustó un postre común)",
+        "Puede ser muy enfocada cuando es necesario, sin dejar que sus emociones causen problemas a otros, especialmente a sus padres",
+        "Le gusta bromear incluso en momentos serios; suele bromear con Otto o pasar el rato con los trillizos de Iron Fang"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Todos los tipos, aunque no es especialista en ninguno (75% de la eficiencia de un especialista); aun así es una combatiente sólida con un Gate promedio",
+        "Afinidad Espiritual: Media a alta, aunque no tanto como Julius o Subaru, y no le interesa mucho el entrenamiento espiritual"
+      ],
+      "equipamiento": [
+        "Bolsa de dinero — lleva una bolsa de monedas, normalmente oro que ella misma ha ganado"
+      ],
+      "trivia": [
+        "Extremadamente adicta a las apuestas, una adicción que probablemente necesite tratamiento, pero es muy hábil; contra Priscilla en un juego que ninguna conociera, tendría un 60% de probabilidad de ganar",
+        "Muy afortunada en los negocios: compró una tienda de dulces común solo porque le gustó un postre al azar, y la tienda tuvo tanto éxito que ganó el 250% de lo invertido, para frustración de sus padres",
+        "Gracias a Ricardo, cree que el nombre de su madre es 'Ana-Bo' en vez de Anastasia; comparte sus ganancias con él porque le gusta su 'abuelo'",
+        "Ha jugado y apostado tanto con Otto que él terminó debiéndole unas 2.000 monedas de oro sagrado, convirtiéndolo en su 'esclavo de deudas'; a menudo lo usa para hacer apuestas en su nombre"
+      ]
+    },
+    {
+      "id": "graffias",
+      "nombre": "Graffias Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "170cm",
+      "apariencia": {
+        "cabello": "Largo y castaño, que pasa a negro a la mitad, como una melena de león bien cuidada y brillante",
+        "ojos": "Como los de su madre",
+        "ropa": "De la cintura para abajo, ropa como la de su madre; de la cintura para arriba, como la de su padre; usa una bufanda naranja y una capa oscura con forro interior naranja",
+        "constitucion": "",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Enérgica, alegre, amable y educada; disfruta jugar con otros",
+        "Siempre intenta ayudar a quienes lo necesitan dentro de su alcance",
+        "Suele compensar las travesuras de su madre Shaula, actuando como la adulta entre las dos, aunque la ama por ayudarla a relajarse y entrenar",
+        "También puede ser una guerrera seria y feroz, capaz de aplastar a sus oponentes cuando la situación lo requiere, sin importar cuántos enemigos deba enfrentar",
+        "Retirarse mientras otros necesitan apoyo le resulta impensable, aunque ha aprendido que no puede ni quizás debe salvar a todos",
+        "Extremadamente inteligente y adaptable en lo social y en combate, incluso adopta los gestos y formas de hablar de sus padres para causar buena impresión"
+      ],
+      "habilidades": [
+        "Francotiradora del Infierno — la misma habilidad mágica de su madre, con el mismo nivel de poder y alcance; entrena para aumentar su rango y fuerza y hacer sentir orgullosa a su madre"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Su fuerza bruta supera incluso a la de Shaula al llegar a la adultez",
+        "Puede transformarse en escorpión al igual que Shaula",
+        "Aprende rápido, ya sea leyendo u observando; puede aprender las habilidades de combate de un oponente con solo verlas una vez, siendo formidable en poder bruto, capacidad física e inteligencia dentro y fuera del combate"
+      ]
+    },
+    {
+      "id": "taygete",
+      "nombre": "Taygete Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "164cm",
+      "apariencia": {
+        "cabello": "Verde, de largo medio",
+        "ojos": "Intensos",
+        "ropa": "Vestido que se mezcla con un uniforme militar en tonos azules y verdes",
+        "constitucion": "Cuarta parte elfa; fuerza física extremadamente alta, comparable a la de Emilia",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Seria, madura, pero también divertida y alegre",
+        "Fue criada para ser una líder capaz y amable en honor a sus padres, Subaru y Shion, pero sin la presión de tener que ser igual a ellos",
+        "Solo desea que la imagen de sus padres nunca se vea manchada por decisiones personales suyas",
+        "Capaz de convertirse en futura gobernante si es necesario",
+        "No le importa mucho la ropa, prefiere ir descalza o vestir ligero para moverse con libertad",
+        "Se lleva bien con los demás como su padre, incluso imita sus poses, aunque mantiene un rostro serio al hacerlo"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Creación — con el apoyo de su padre desarrolló una magia entre antigua y moderna, capaz de moldear átomos a su alrededor para crear cosas vivas o inertes, orgánicas o inorgánicas; una habilidad que distorsiona la realidad y cuesta mucho maná, pero su Gate le permite usarla con seguridad",
+        "Afinidad Espiritual alta, desarrollada lentamente",
+        "Precisión excelente, capaz de acertar objetivos incluso a larga distancia"
+      ],
+      "equipamiento": [
+        "Arco y flecha — arco hecho por ella misma; las flechas también están hechas con su magia, haciéndolas decenas de veces más fuertes que las normales"
+      ],
+      "trivia": [
+        "Es daltónica, ve los colores de forma distinta a como realmente son"
+      ]
+    },
+    {
+      "id": "leo",
+      "nombre": "Leo Natsuki Karsten",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "172cm",
+      "apariencia": {
+        "cabello": "Verde, con mechones oscuros en el flequillo",
+        "ojos": "Brillantes e intensos, mezcla de los colores de ambos padres",
+        "ropa": "Ropa que recuerda al uniforme militar de su madre, pero del color de la chaqueta de su padre; usa un sombrero con el símbolo de la casa Karsten y un dragón",
+        "constitucion": "",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Maduro y serio desde pequeño, se toma muy en serio su papel como heredero Karsten y miembro de la familia real",
+        "Su madre suele recordarle que debe tomar descansos para mantenerse centrado y disfrutar la vida sin dejarse aplastar por las responsabilidades",
+        "En su tiempo libre disfruta jugar con sus padres, leer y estudiar, especialmente historias, incluso las que su padre le escribía de niño",
+        "Entrena con Wilhelm y su madre para mejorar sus habilidades de combate, disfrutándolo como una forma de superación personal para momentos serios",
+        "Su relación con sus padres es de extremo respeto, al punto de tratarlos casi como Reina y Rey más que como madre y padre, lo que lleva a que ellos le tomen el pelo",
+        "Le parece extraño que su madre disfrute del crossdressing y que su padre se travista para complacerla, pero lo acepta"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Viento, con un alto dominio que lo hace superar a muchos en poder bruto en esta área",
+        "Protección Divina del Viento — lo hace extremadamente más rápido y le permite sentir si alguien miente o dice la verdad; también potencia el poder de ataque de su magia de viento",
+        "Espadachín de alto nivel, se espera que supere el pico de habilidad de Wilhelm por el doble al llegar a la adultez completa; domina técnicas del Demonio de la Espada y de su madre"
+      ],
+      "equipamiento": [
+        "Espada — actualmente posee una espada ordinaria, pero en el futuro heredará la espada de su madre"
+      ],
+      "trivia": [
+        "No entiende por qué su padre y Felix se travisten, pero lo acepta de buena fe sin darle mucha importancia",
+        "Disfruta mucho de los libros y las bibliotecas, usándolos para leer y pasar el tiempo",
+        "Quiere derrotar a los mejores espadachines del mundo para poner a prueba su habilidad con la espada"
+      ]
+    },
+    {
+      "id": "bellatrix",
+      "nombre": "Bellatrix Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "16 años",
+      "tamano": "168cm",
+      "apariencia": {
+        "cabello": "Ligeramente largo y oscuro, casi hasta los hombros",
+        "ojos": "Tan oscuros que es imposible distinguir si tiene iris, acompañados de una sonrisa inquietante",
+        "ropa": "Vestido morado oscuro con falda corta hasta las rodillas, con aberturas laterales que van desde debajo de las axilas hasta cerca de los muslos",
+        "constitucion": "Muy parecida a su madre, chica muy bonita",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Pese a su apariencia fría, aterradora y seductora, es en realidad una chica muy enérgica, alegre y de buen humor",
+        "Tiene un tic peculiar en la sonrisa: por más que intente sonreír de forma normal y amigable, siempre termina viéndose aterradora para los demás, generando una disonancia constante entre sus intenciones internas y su expresión externa",
+        "Pese a vestir con bastante libertad, en realidad es muy tímida respecto a su apariencia, aunque no por elección sino por necesidad: tiene una sensibilidad extrema al calor y se siente mucho más cómoda en ambientes fríos, lo que le hace sudar en exceso ya sea por vergüenza o por el calor del entorno",
+        "Aunque no le desagradan sus padres, se pone muy nerviosa con el comportamiento de su madre, especialmente su costumbre de arrancar los intestinos de la gente",
+        "Al haber formado parte de un grupo mercenario desde joven, está algo acostumbrada al estilo de vida de pelear para sobrevivir",
+        "Ha desarrollado una fijación extraña por arrancar los corazones de sus rivales, igual que su madre hace con los intestinos"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Agua — no tan hábil como otros usuarios de magia, pero muy efectiva con la magia de agua, especialmente en curación",
+        "Resistencia — alta resistencia natural a maldiciones y rápida recuperación de heridas, aunque no posee la misma regeneración que su madre",
+        "Maldiciones — de niña fue mordida accidentalmente por una de las Mabestias de Meili y sobrevivió; gracias a su fisiología heredada de su madre logró absorber la maldición, y ahora, como una Mabestia, puede usar maldiciones contra sus oponentes transmitiéndolas mediante su saliva al entrar en contacto con sangre o zonas sensibles como boca, ojos o nariz"
+      ],
+      "equipamiento": [
+        "Dagas — lleva varias en bolsillos o bolsas, lo bastante afiladas para cortar o perforar al lanzarlas con fuerza; suele apuntar lejos del corazón si planea extraerlo después como trofeo"
+      ],
+      "trivia": [
+        "Pese a ser muy hábil en asesinato, fuera del combate actúa completamente como una chica normal, al punto de no parecer mercenaria"
+      ]
+    },
+    {
+      "id": "maia",
+      "nombre": "Maia Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "164cm",
+      "apariencia": {
+        "cabello": "Corto y rubio, apenas cubre las orejas",
+        "ojos": "Rosados-rojizos e intensos, como los de su padre",
+        "ropa": "Ropa rosa y verde, usualmente con listones oscuros y naranjas",
+        "constitucion": "Dientes delanteros afilados que le dan un aspecto vampírico al sonreír",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Gentil, alegre y muy afectuosa con quienes la rodean",
+        "Verdaderamente generosa, siempre dispuesta a ayudar a quien lo necesite",
+        "A veces muestra una personalidad infantil, sobre todo al enfadarse: pisotea el suelo, infla las mejillas hasta ponerlas rojas y camina de un lado a otro con frustración",
+        "Tiene una relación fuerte y amorosa con ambos padres; sabe que recibe amor incondicional de ellos sin presiones excesivas",
+        "Muy observadora e inteligente, incluso comportándose de forma infantil, y puede entender su entorno cuando es necesario"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Agua — enorme afinidad, sobresaliendo en defensa y curación; intenta desarrollar sus propios hechizos",
+        "Regeneración — gracias a la sangre de dragón en sus venas, tiene una regeneración impresionante, capaz incluso de restaurar extremidades perdidas; a diferencia de la sangre de su madre, la suya tiene propiedades curativas, no equivalentes a la Sangre del Dragón Divino pero con al menos una quinta parte de su efectividad; puede resistir y absorber maldiciones como si fueran bocadillos (por ejemplo, una vez le arrancaron el brazo izquierdo y lo regeneró en minutos)"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Aunque aún no lo entiende del todo, recibe una cantidad abrumadora de amor materno; Capella intenta darle todo el amor y atención que ella nunca recibió de niña, diciéndole 'te amo' a Maia al menos una vez al día sin falta",
+        "Habiendo aprendido de su padre, es muy hábil en costura y puede crear distintos tipos de ropa",
+        "Al igual que su padre, es talentosa disfrazándose de un chico apuesto cuando usa ropa masculina"
+      ]
+    },
+    {
+      "id": "chochorina",
+      "nombre": "Chochorina Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "167cm",
+      "apariencia": {
+        "cabello": "Plateado",
+        "ojos": "Oscuros y de mirada aterradora, como los de su padre; orejas puntiagudas de elfa como las de Emilia",
+        "ropa": "Vestidos blancos combinados con una capa oscura forrada de naranja por dentro; suele andar descalza o en pantuflas para sentirse más libre",
+        "constitucion": "",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Niña enérgica e hiperactiva que constantemente lucha por concentrarse o prestar atención, salvo que sea algo colorido y visualmente atractivo",
+        "Su déficit de atención hace que a menudo se pierda partes grandes de explicaciones o conversaciones (por ejemplo, entender 'no te muevas hasta que dé la señal' como 'muévete')",
+        "Extremadamente ingenua y amable, a veces sin darse cuenta cuando la engañan, igual que su madre; puede parecer aún más ingenua al sentirse segura, al punto de que otros lo confunden con tontería",
+        "En realidad es muy inteligente: aprendió japonés e inglés (lectura, escritura y habla) en solo dos horas, una hora por idioma",
+        "Aprende rápido en combate pese a que no le gusta pelear"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Fuego — al igual que Emilia, tiene una fuerte afinidad con la magia de fuego, que usa para crear hielo; su magia es tan poderosa o más que la de su madre; disfruta inventar nuevos estilos de combate con sus padres",
+        "Afinidad Espiritual absurdamente alta — decenas de espíritus se sienten naturalmente atraídos hacia ella, pero irónicamente no puede formar contratos con ninguno, ni siquiera Grandes Espíritus, porque en el fondo desea inconscientemente hacer un contrato con Beatrice tras conocer sus 400 años de soledad",
+        "Habilidades Físicas — enorme fuerza física, igual o ligeramente mayor que la de su madre; una vez cayó más de diez metros sobre una losa de piedra y salió con solo heridas menores"
+      ],
+      "equipamiento": [
+        "Puños de latón — creados con la ayuda de Reinhard, Felt y Shaula, hechos de acero y oro con púas en los extremos, para autodefensa"
+      ],
+      "trivia": [
+        "Tiene un pésimo equilibrio y a menudo cae por las escaleras, aunque nunca se lastima en el proceso",
+        "Tiene bastante mala memoria: puede olvidar parte de una conversación segundos después de que ocurrió, a menos que el diálogo sea profundo e interesante"
+      ]
+    },
+    {
+      "id": "cassia",
+      "nombre": "Cassia (Cassiopeia) Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "245cm",
+      "apariencia": {
+        "cabello": "Largo, brillante y rubio",
+        "ojos": "Rojos y brillantes",
+        "ropa": "Ropa que cubre todo el cuerpo",
+        "constitucion": "Sonrisa salvaje que le da la impresión de un poderoso león, como la imagen del Rey León",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Personalidad fuerte y agresiva que la hace propensa a meterse en peleas y conflictos que podrían evitarse",
+        "No se arrodilla ni abandona sus ideales una vez que se decide por algo; enfrenta las dificultades y consecuencias de sus actos sin bajar la cabeza",
+        "Cree firmemente que 'una vez que tomas una decisión, debes asumir las consecuencias, sin importar cuáles sean', por lo que nunca retrocede",
+        "Pese a ser agresiva, tiene momentos de calma al comer o hacer actividades similares, que usa para ordenar sus ideas",
+        "Aunque es terca, acepta estar equivocada o adoptar un método más efectivo, aunque sea distinto al suyo, si eso ayuda a otros"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Viento — gran habilidad en magia de viento",
+        "Afinidad Espiritual: Media — irónicamente atrae espíritus, exclusivamente de viento",
+        "Habilidades de Combate — gracias al Método de Flujo y al entrenamiento continuo con Wilhelm y Reinhard desde niña, es una luchadora formidable, al nivel de rivalizar con los Cuatro Grandes; en una pelea seria sería capaz de infligir dos cortes profundos en la mejilla de Reinhard antes de ser derrotada o muerta en un combate a muerte",
+        "Protección Divina de Evasión del Viento — otorga inmunidad a los efectos del viento y elimina la resistencia del viento al correr",
+        "Protección Divina del Dios de la Muerte — al igual que Theresia van Astrea, sus golpes con esta protección causan heridas malditas que no pueden curarse; el efecto se intensifica cuanto más cerca esté del objetivo, pudiendo reabrir heridas que ella misma infligió si está lo bastante cerca; si la herida se extiende, el efecto de la maldición también aumenta"
+      ],
+      "equipamiento": [
+        "Espada — espada afilada que en el futuro sería nombrada Raionkingu (ライオンキング – Lion King) por sus excepcionales habilidades de combate"
+      ],
+      "trivia": [
+        "Tiene cierto complejo con sus músculos: aunque orgullosa de ser más desarrollada físicamente que su madre incluso de adulta, se siente algo avergonzada de sus músculos, especialmente en brazos y abdomen",
+        "Sin darse cuenta, siempre mantiene el mismo número de victorias y derrotas, nunca teniendo una racha ganadora; si gana una pelea, automáticamente pierde la siguiente, y viceversa; solo empató una vez, cuando perdió contra Wilhelm y luego peleó contra Reinhard, terminando en empate porque la pelea fue interrumpida antes de concluir",
+        "Muchos creen que su poder, pese a que sus padres no están a su mismo nivel, se debe a que es la encarnación de la fuerza combinada de todos los antiguos 'Reyes León' del pasado, lo que la hace parecer una versión más poderosa que todos los miembros previos de la familia real; por eso su cuerpo parece bendecido para ser tan fuerte, en comparación con su madre"
+      ]
+    },
+    {
+      "id": "aconita",
+      "nombre": "Aconita Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "167cm",
+      "apariencia": {
+        "cabello": "Lila oscuro profundo",
+        "ojos": "Lila oscuro a juego con el cabello",
+        "ropa": "El mismo atuendo que su madre: un vestido negro corto y sin mangas, junto con zapatos que combinan colores lila y naranja",
+        "constitucion": "Un cuarto elfa, piel impecable",
+        "marcas": "Una única cicatriz sobre el ojo izquierdo"
+      },
+      "personalidad": [
+        "Personalidad que refleja levemente la de su madre: agresiva y terca, pero también puede ser muy amable y alegre cuando está relajada o divirtiéndose",
+        "En el fondo es una persona delicada que detesta meterse en peleas, especialmente por lo que le ocurrió a su padre años antes de su entrenamiento",
+        "Disfruta pasar el tiempo divirtiéndose y saliendo con su hermana adoptiva siempre que puede"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: [XXX] — no revelada aún"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Intenta fingir que no le gusta la mayonesa, pero la ama tanto como su padre; memorizó cómo recrear cada tipo de mayonesa que su padre le mostró alguna vez, y solo intenta usarla en su comida cuando su padre no está mirando, para que no note cuánto le gusta en realidad",
+        "Tiene dislexia, lo que le dificulta aprender a leer",
+        "Además de la dislexia, necesita gafas, que su padre diseñó personalmente para que pudiera ver bien"
+      ]
+    },
+    {
+      "id": "menkar",
+      "nombre": "Menkar Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "172cm",
+      "apariencia": {
+        "cabello": "Oscuro grisáceo",
+        "ojos": "Aterradoramente brillantes, cambiando entre dorado y morado",
+        "ropa": "Suele usar ropa que rápidamente se convierte en harapos por el uso, sin preocuparse mucho por la limpieza o el cuidado, aunque no le desagrada del todo la ropa que recibe y usa",
+        "constitucion": "Piel ligeramente grisácea",
+        "marcas": ""
+      },
+      "personalidad": [
+        "No es malvado, pero tampoco podría llamársele bueno; se mantiene en un punto neutral respecto a sus decisiones hacia los demás",
+        "Definitivamente es amable cuando no tiene hambre, algo poco común en él",
+        "Le cuesta comunicarse porque no puede hablar correctamente, logrando comunicarse pero a menudo equivocando palabras o su orden (por ejemplo, decir 'Detrás de mí debes ir' en vez de 'Tienes que ir detrás de mí', o a veces omitiendo palabras por completo)",
+        "Siente gran respeto y amor por su familia, especialmente por su padre y madre, amándolos incluso cuando lo domina el hambre que puede volverlo loco",
+        "También le importan profundamente las demás mabestias, a quienes considera sus 'hermanos' y 'hermanas', especialmente las más conscientes, en este orden: Shaula, Whale, Snake y Rabbit; valora mucho sus lazos familiares con ellas"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Tierra — no usa mucho la magia, pero tiene un excelente Gate y fuerte afinidad con la magia de tipo Tierra",
+        "Habilidad Física — en términos de poder físico, podría enfrentar y derrotar incluso a las otras bestias en combate cuerpo a cuerpo; en una batalla de cuatro contra uno (Menkar vs. Shaula, Whale, Rabbit y Snake) tiene más de un 90% de probabilidad de victoria si busca matarlas o devorarlas sin piedad; posiblemente el ser más fuerte jamás creado por Daphne",
+        "Protección Divina de las Bestias Brujas — similar a la de Meili, pero extremadamente más poderosa; suficientemente fuerte para permitirle comunicarse con otros seres vivos, como la habilidad de Otto, pero sin necesidad de imitar sus estilos de habla; también puede controlar bestias brujas más poderosas, incluyendo a Whale, Rabbit, Snake e incluso a los Centauros; combinado con su olfato, puede localizar personas y bestias brujas",
+        "Miasma — por razones desconocidas, puede literalmente devorar Miasma sin problema; solo estar en un área con Miasma le permite alimentarse de él, borrándolo y saciando su hambre en el proceso; podría consumir todo el Miasma de la Bruja de la Envidia sin problema, y solo lo haría más fuerte"
+      ],
+      "equipamiento": [],
+      "trivia": []
+    },
+    {
+      "id": "nunki",
+      "nombre": "Nunki Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "El mayor entre todos sus hermanos",
+      "tamano": "177cm",
+      "apariencia": {
+        "cabello": "Mezcla salvaje de los colores de ambos padres",
+        "ojos": "También mezcla de los colores de ambos padres, dándole una apariencia inusual",
+        "ropa": "Suele terminar usando solo pantalones, olvidando ponerse camisa",
+        "constitucion": "Cuerpo fuerte y musculoso",
+        "marcas": ""
+      },
+      "personalidad": [
+        "A diferencia de su madre, es extremadamente enérgico, al punto de ser demasiado hiperactivo",
+        "Como el mayor entre todos sus hermanos, es alegre, juguetón y animado; se niega a quedarse quieto por mucho tiempo cuando hay diversión de por medio",
+        "Increíblemente afectuoso y de buen corazón, siempre dispuesto a ayudar a quien lo necesite, sintiéndose genuinamente feliz al poder hacerlo",
+        "Aunque no le gusta la violencia hacia otros y es un pacifista comprometido, también sabe cuándo ponerse serio en una pelea",
+        "Especialmente afectuoso con su familia, siempre ayuda a sus padres a cuidar de sus hermanos, así como a los niños del orfanato, del pueblo y a los aldeanos",
+        "Es normal escucharlo decir 'te amo' a cada miembro de su familia todos los días, sin falta"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — es la encarnación de lo que la Raza Gigante esperaba: el Dios de los Gigantes; increíblemente fuerte, físicamente insuperable, incluso más que Reinhard, Satella, Volcanica y hasta Sekhmet en su punto máximo usando su Autoridad; si fuera lanzado a la Luna, volvería sin un rasguño; una vez lanzó una roca que salió de la atmósfera terrestre y dispersó nubes en el cielo; es el físicamente más fuerte entre todos sus hermanos",
+        "Afinidad Mágica: Yang — buena afinidad, aunque rara vez la usa",
+        "Gate — extremadamente poderoso, rozando lo absurdo tanto en fuerza como en producción de maná; posiblemente el Gate más poderoso de su mundo en la actualidad"
+      ],
+      "equipamiento": [],
+      "trivia": []
+    },
+    {
+      "id": "alcyone",
+      "nombre": "Alcyone Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "La menor entre todos sus hermanos",
+      "tamano": "162cm",
+      "apariencia": {
+        "cabello": "Similar en largo al de su madre, en una versión más clara de su color, con solo un cuarto de la vivacidad del de Sekhmet",
+        "ojos": "Los de su padre, normalmente entrecerrados por su fatiga constante",
+        "ropa": "Suele usar ropa tierna que trata como si fuera una almohada, a menudo cruzando los brazos para recostar la cabeza",
+        "constitucion": "Opuesta a Nunki; extremadamente débil físicamente y constantemente cansada por una condición personal",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Generalmente calmada y letárgica, trata de evitar el caos que suelen causar sus hermanos",
+        "Muy fácil de tratar; a pesar de ello, es amable, amistosa, juguetona y mucho más madura que sus hermanos, comparable incluso a la madurez de su madre pese a su corta edad",
+        "Ama a cada miembro de su familia y los prioriza sobre todo lo demás, dispuesta a ayudar cuando sea necesario, incluso a costa de su propio sueño",
+        "Se lleva especialmente bien con su madre porque comparten el mismo nivel de cansancio y pereza; una vez tuvieron un concurso de dormir en el que Sekhmet durmió 61 horas, 59 minutos y 59 segundos, mientras que su hija logró 62 horas y 1 segundo, ganándole"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Yin — alta afinidad, usualmente para apoyar a sus aliados si debe pelear",
+        "Habilidades Físicas — opuesta a su hermano mayor, extremadamente débil físicamente y constantemente cansada",
+        "Absorción de Maná — debido a una condición desconocida, su Gate está roto; debe absorber maná de su entorno o de las personas para mantenerse despierta y con vida, consumiéndolo muy rápido cuando está despierta y en movimiento; por eso suele quedarse cerca de su hermano mayor, cuyas reservas de maná le permiten mantenerse despierta hasta 6 horas al día si es necesario, sin causarle un daño mayor a él"
+      ],
+      "equipamiento": [
+        "Almohada — casi siempre lleva una consigo para descansar o dormir donde esté, con el fin de evitar agotar su energía acumulada"
+      ],
+      "trivia": []
+    },
+    {
+      "id": "caph",
+      "nombre": "Caph Natsuki",
+      "tipo": "sin_genero",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "166cm",
+      "apariencia": {
+        "cabello": "Color de cabello similar al de su madre",
+        "ojos": "Color similar al de su madre, pero tan inquietantes como los de su padre",
+        "ropa": "Ropa ligeramente reveladora, que resalta piernas, muslos y trasero más que el pecho, dándole liviedad sexual que hace que la gente cuestione su género",
+        "constitucion": "Cuerpo delgado y flexible, difícil de clasificar como masculino o femenino",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Tiene una actitud terrible hacia cualquiera que no sean sus padres; para Caph, todos los demás son basura de distintas formas, nada especial a menos que demuestren su valor",
+        "A menudo golpea a quienes considera sin valor, tratándolos como pedazos de carne insignificantes",
+        "Si alguien se atreve a burlarse de su apariencia o intenta causarle daño permanente a su cuerpo, Caph se llena de una furia abrumadora, rozando la locura si no puede eliminar al ofensor de inmediato",
+        "Si logra capturarlos, se emociona con la idea de romperlos y convertirlos en una de sus 'Mascotas', escudos desechables o juguetes con los que jugar hasta aburrirse",
+        "Siente un profundo amor por sus padres, más por su padre que por su madre, aunque se lleva bien con ambos; está eufórico al pasar tiempo con su padre, sentándose en su regazo y abrazándolo largos periodos mientras le cuenta su día",
+        "Su amor, moldeado por Capella, le impide notar que su padre está mentalmente roto, actuando casi como una marioneta destrozada, pero Caph lo ama incondicionalmente",
+        "Se pone muy celoso cuando su madre compite por la atención de Subaru, lo que lleva a pequeñas discusiones cómicas entre ambos"
+      ],
+      "habilidades": [
+        "Sangre — sangre venenosa como la de su madre, y al igual que su padre, puede regenerar extremidades perdidas desde la nada; su sangre es tan poderosa y letal como la de Capella",
+        "Afinidad Mágica: Agua — afinidad perfecta, potenciada aún más por su Protección Divina; especialista en magia de curación, capaz de superar a Felix incluso en sus mejores días, al doble de nivel",
+        "Protección Divina del Agua — le otorga un poder y afinidad extremadamente altos con la magia de agua; todo lo que un usuario típico de magia de agua puede hacer, Caph lo hace con facilidad y al doble de poder, superando incluso a Felix en curación",
+        "Protección Divina de Metamorfosis — una Protección Divina única y nunca antes vista; puede alterar su forma física igual que su madre, haciendo aún más difícil determinar su verdadero género"
+      ],
+      "equipamiento": [
+        "Daga — daga afilada y letal cubierta con su propia sangre, causando daño adicional a los enemigos al usarla"
+      ],
+      "trivia": []
+    },
+    {
+      "id": "cygnus",
+      "nombre": "Cygnus Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "173cm",
+      "apariencia": {
+        "cabello": "Largo y oscuro, como el de su padre",
+        "ojos": "Los de su madre",
+        "ropa": "Mezcla de los estilos y colores de Garfiel y Medium, ligera y fácil de mover; usa varias joyas en los dedos y en el cabello",
+        "constitucion": "Muy apuesto y encantador, rostro atractivo",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Animado y enérgico, casi tan despistado como su madre, o eso creen los demás; en realidad es bastante inteligente, trabajador y proactivo, asegurándose de ganarse todo lo que logra",
+        "Se esfuerza por destacar entre los demás, buscando estilo, encanto y carisma, lo que lo motiva a entrenar y mostrar sus habilidades",
+        "Entrena con Zarestia, Medium, Garfiel, y en algún momento incluso con Halibel",
+        "Ama jugar con sus padres y su hermana menor, siempre emocionado por divertirse con ellos",
+        "Disfruta cantar y escuchar música, a veces cantando en su mente o tarareando durante el entrenamiento o el combate, usando el ritmo para guiar sus movimientos"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — gracias al entrenamiento intenso y al esfuerzo, ha desarrollado gran agilidad y destreza física",
+        "Habilidades Shinobi — gracias al entrenamiento con Zarestia desde joven y luego con Halibel en Kararagi, se volvió muy hábil, aunque no al nivel de Halibel, sí competente, aprendiendo diversas técnicas de combate de ambos"
+      ],
+      "equipamiento": [
+        "Espadas Gemelas — empuña dos espadas conectadas por una cadena que puede alargarse o acortarse, permitiendo usarlas como nunchakus o para golpear enemigos a distancia; muy hábil con ellas tanto en combate cercano como a media distancia"
+      ],
+      "trivia": []
+    },
+    {
+      "id": "vega",
+      "nombre": "Vega Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "167cm",
+      "apariencia": {
+        "cabello": "Mezcla del rosa de su madre y el azul de su tía, con un núcleo oscuro como el de su padre, como un tornado rosa y azul con centro negro, sin flequillo",
+        "ojos": "Uno rosa (izquierdo) y otro azul (derecho), simbolizando a las tres figuras clave en su vida",
+        "ropa": "Vestidos tiernos que recuerdan a los trajes de estilo kimono que usaba su madre de joven, pero en tonos grises oscuros; usa dos listones, uno azul a la izquierda y uno rosa a la derecha, opuestos al color de sus ojos para contraste; también lleva una bufanda naranja al cuello",
+        "constitucion": "Increíblemente bella",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Muestra distintos estados de ánimo según la situación",
+        "Con la familia es juguetona, molesta a su padre cuando él la molesta y arrastra a su madre y tía a la diversión; le encanta especialmente hacer sonrojar a su tía burlándose de ella sobre Subaru",
+        "Fuera de la familia, especialmente trabajando, se vuelve más enfocada y tímida; no se le da bien hablar con gente fuera de su familia y a menudo le preocupa equivocarse en las tareas que le asignan",
+        "Sin embargo, en batalla esa timidez desaparece; se vuelve fría y eficiente, actuando como si su único propósito fuera eliminar a sus enemigos"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Viento — afinidad extrema, posiblemente mayor que la de su madre; crea nuevos hechizos para combate y autoapoyo; sus ataques de viento están entre los más poderosos del mundo",
+        "Afinidad Espiritual: Extremadamente alta — al igual que su padre, tiene una alta afinidad espiritual que le permite formar contratos con espíritus con facilidad",
+        "Gate y Cuerno — posee un Gate tan poderoso como el de su madre, pero su cuerno es solo ligeramente más grande que el de su tía, careciendo del mismo nivel o segundo cuerno que el de su madre, aunque sigue siendo poderoso"
+      ],
+      "equipamiento": [
+        "Lanza — entrenó con una lanza de mango rojo y una hoja afilada y nublada, usándola de forma profesional"
+      ],
+      "trivia": []
+    },
+    {
+      "id": "natsumi",
+      "nombre": "Natsumi Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "160cm",
+      "apariencia": {
+        "cabello": "Largo y castaño",
+        "ojos": "Verdes y brillantes, a diferencia de los de su padre, ya que casi todos sus rasgos físicos se parecen a los de su madre",
+        "ropa": "En casa: ropa holgada y grande que la cubre casi por completo, dejando ver solo manos y parte de la cabeza, junto con grandes gafas redondas que le dan apariencia de hikikomori; fuera de casa: viste de forma extremadamente elegante, resaltando su figura y rostro, con accesorios tiernos inspirados en animes famosos como Pokémon o Digimon",
+        "constitucion": "Físico ligeramente por encima del promedio gracias a sus radioejercicios diarios con su padre; delgada, sin buscar un aspecto muy musculoso",
+        "marcas": "Una pequeña marca de nacimiento en el brazo izquierdo (su brazo dominante) con forma de siete puntos"
+      },
+      "personalidad": [
+        "Generalmente amigable, alegre, decidida y enfocada; cuando realmente quiere algo, se absorbe por completo en lograrlo, apoyándose en su propio esfuerzo y habilidad",
+        "En casa: prefiere quedarse en su habitación jugando o haciendo streaming bajo el nombre 'Plêiade'; alegre pero relajada, a veces incluso perezosa",
+        "Fuera de casa: adopta una actitud confiada y refinada acorde a su apariencia elegante, casi como una actuación, moldeando su forma de hablar y actuar para encajar en el arquetipo de 'chica rica, hermosa y poderosa'; en este papel toma naturalmente el liderazgo entre sus amigos cuando salen juntos"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — físico ligeramente por encima del promedio gracias a sus radioejercicios diarios",
+        "(Hipotética) Afinidad Mágica de Tierra si fuera invocada al mundo de Re:Zero, aunque con muy baja afinidad espiritual, capaz de invocar solo un espíritu de cada cien intentos"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "No le gustan los dulces y le encanta lo picante",
+        "Ha rechazado al menos a 100 chicos en total",
+        "Su nombre proviene del disfraz femenino de su padre"
+      ]
+    },
+    {
+      "id": "saiph",
+      "nombre": "Saiph Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "174cm",
+      "apariencia": {
+        "cabello": "Color similar al de su madre pero mucho más oscuro",
+        "ojos": "Del color de su padre, pero de apariencia ordinaria como los de su madre",
+        "ropa": "Ropa de aspecto noble, hecha a mano por sus padres desde la infancia, principalmente en verde y negro; lo más distintivo es su larga bufanda roja que llega hasta la parte baja de la espalda y cubre parte de su boca",
+        "constitucion": "",
+        "marcas": "Graves cicatrices alrededor de la boca, ocultas por la bufanda, causadas por un antiguo accidente al salvar a su hermana, dejándole una deformidad permanente"
+      },
+      "personalidad": [
+        "Alegre, de buen corazón y sin mala voluntad hacia los demás; posiblemente el más sensato y equilibrado de todos sus hermanos",
+        "Tiene dificultad para encontrar una meta personal en la vida, intentando actuar como un príncipe sin desear realmente la realeza o el estatus, lo que a menudo le hace sentirse fuera de lugar",
+        "Nació mudo incluso antes de su deformidad; se comunica mediante lenguaje de señas que su padre le ayudó a desarrollar, incluyendo señas únicas que solo su familia entiende",
+        "Inteligente y enfocado; si sus padres necesitan a alguien con buena cabeza, es a él a quien acuden"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Yang — comparte el mismo tipo de afinidad que su madre, aunque nada particularmente extraordinario",
+        "Habilidades Físicas — casi al nivel de su padre en la adultez, aunque un poco más débil",
+        "Afinidad Espiritual — no tiene ninguna, lo que le dificulta invocar o comunicarse con espíritus"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Es el mejor sastre entre todos sus hermanos",
+        "También es el más débil físicamente"
+      ]
+    },
+    {
+      "id": "sabik",
+      "nombre": "Sabik Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "172cm",
+      "apariencia": {
+        "cabello": "Color de su madre",
+        "ojos": "Color de su madre",
+        "ropa": "Similar a la de su padre Otto, pero con los colores de su madre (negro y naranja); a diferencia de Otto, usa un pequeño sombrero plano pegado a la cabeza en vez de uno alto",
+        "constitucion": "Se parece a su padre Otto, sin nada particularmente destacable en su apariencia",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Inteligente, amigable y tranquilo, pero también muy nervioso, preocupándose en exceso por lo que sucede a su alrededor, lo que a menudo le provoca dolores de estómago",
+        "Pese a su nerviosismo, es amable y compasivo, el mejor comunicador entre sus hermanos y el más perceptivo; su fuerte observación le ayuda a resolver problemas y negociar eficazmente",
+        "Suele discutir con sus hermanos más enérgicos, aunque normalmente son ellos quienes lo calman cuando piensa demasiado las cosas",
+        "Su Protección Divina también tiende a hacerlo excesivamente ansioso"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Tierra — no particularmente poderosa, pero suficiente para defenderse cuando es necesario",
+        "Habilidades Físicas — desarrolladas con entrenamientos inspirados en las rutinas de su madre y lecciones de su tío Garfiel, permitiéndole defenderse y protegerse",
+        "Afinidad Espiritual: Media — permite que algunos espíritus se comuniquen con él, aunque no todos",
+        "Protección Divina: Ojos de Identificación — al activarla, le permite ver parcialmente las emociones de las personas y discernir si mienten o dicen la verdad; también percibe el aura de otros según un código de colores que indica su fuerza relativa (blanco: débil; verde: algo débil; amarillo: fuerza igual; rojo: fuerte; negro: abrumadoramente fuerte); por ejemplo, al usarla una vez en Reinhard vio un aura tan negra que casi vomita de miedo"
+      ],
+      "equipamiento": [
+        "Piedras Mágicas — suele llevar algunas piedras cargadas de maná capaces de explotar, usadas como un medio de autodefensa bastante extremo"
+      ],
+      "trivia": [
+        "Es considerado el más destacado entre sus tres hermanos, aunque parecería ordinario de no ser por su Protección Divina única",
+        "Junto a su padre, suele encargarse de lidiar con el caos causado por su madre y sus hermanos, que comparten su temperamento",
+        "Pese a su naturaleza nerviosa, le encanta ayudar a los demás y tiene una brújula moral tan fuerte como la de su madre cuando se trata de auxiliar a quien lo necesita"
+      ]
+    },
+    {
+      "id": "phoebe",
+      "nombre": "Phoebe Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "163cm",
+      "apariencia": {
+        "cabello": "Largo y oscuro, hasta el final de la espalda",
+        "ojos": "",
+        "ropa": "Viste completamente de negro, con shorts cortos que llegan casi a las rodillas; no le gusta usar nada en los pies, prefiriendo andar descalza",
+        "constitucion": "Híbrida con rasgos de dragón repartidos por el cuerpo, con brazos cubiertos de escamas oscuras que van desde los hombros hasta cerca de las muñecas, afiladas y sobresalientes como pequeñas púas",
+        "marcas": ""
+      },
+      "personalidad": [
+        "En apariencia es extremadamente rebelde, alguien que se niega a obedecer órdenes o peticiones con facilidad, queriendo siempre tomar sus propias decisiones; incluso a sus padres les cuesta hacerla cambiar de opinión una vez decidida",
+        "En realidad sufre de chuunibyou, creyéndose la elegida de una antigua profecía, destinada a enfrentar y derrotar a un gran mal cuando llegue el momento",
+        "Bajo esa fantasía, es una chica nerviosa e insegura que se pone extremadamente tímida al ser el centro de atención o al sentirse observada por muchas personas a la vez",
+        "En el fondo sigue siendo una niña tratando de descubrir quién es, alguien que solo quiere ser una heroína predestinada"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Viento — fuerte afinidad, usada principalmente para combate o movimiento potenciado",
+        "Habilidades Físicas variables según su forma: en híbrida, iguala la fuerza de Rem con su cuerno activo; como Dragón de Tierra, supera a Rem con cuerno e incluso a su madre, comparable al nivel de Garfiel; en Dragón Completo, es lo bastante poderosa para rivalizar con figuras como Emilia, Roswaal e incluso combatientes de otros bandos; también puede liberar un ataque de aliento mágico como Volcanica y otros dragones",
+        "Afinidad Espiritual — no tiene ninguna",
+        "Habilidades de Combate — entrena regularmente con su madre y con Garfiel para mantener su capacidad de lucha, aunque no se especializa en ningún arte marcial formal",
+        "Protección Divina de Dragonización — puede transformarse entre su forma híbrida y de Dragón de Tierra como sus hermanos, pero es la única capaz de usar una tercera forma, la de dragón completo; también puede manifestar rasgos de dragón más marcados incluso en forma humana",
+        "Protección Divina de Evasión del Viento — otorga inmunidad a los efectos del viento y elimina la resistencia del viento al correr"
+      ],
+      "equipamiento": [
+        "Guadañas gemelas — pelea con dos guadañas, mostrando gran destreza con ellas en batalla"
+      ],
+      "trivia": [
+        "A veces murmura monólogos dramáticos para sí misma sobre su 'futuro destino'",
+        "No puede distinguir izquierda de derecha; le resulta genuinamente difícil saber cuál es cuál"
+      ]
+    },
+    {
+      "id": "merope",
+      "nombre": "Merope Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "La mayor de los dos hijos de la pareja",
+      "tamano": "168cm",
+      "apariencia": {
+        "cabello": "Largo y rubio, como el de su madre",
+        "ojos": "Idénticos a los de su padre, coincidiendo hasta el último detalle en color e intensidad, algo inquietante",
+        "ropa": "Similar a la de su madre combinada con un kimono al estilo de su padre; sus atuendos combinan blanco, naranja, morado, azul y dorado, una mezcla brillante y vívida que la hace destacar",
+        "constitucion": "Cuerpo naturalmente atlético, capaz de comer de forma poco saludable sin subir de peso ni mostrar cambios visibles",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Personalidad extremadamente alegre e hiperactiva, prácticamente como un cachorro emocionado corriendo sin miedo; llena de energía, tiende a tomar varias tareas a la vez, prefiriendo un día ocupado a quedarse quieta",
+        "Desarrolló el hábito de entrenar constantemente para quemar su exceso de energía",
+        "Aunque brillante y enérgica, tiene poca paciencia, estallando en arrebatos explosivos con frecuencia, muy parecido a su madre; sin embargo, se pone triste o arrepentida con la misma facilidad si nota que ha herido los sentimientos de alguien",
+        "Fuerte deseo de ayudar a los demás, lo que la motiva a entrenar duro para ser útil cuando se la necesite; su lema personal es '¡NUNCA TE RINDAS, NUNCA TE DES POR VENCIDA!', poniendo siempre al menos un 1000% de esfuerzo en todo lo que intenta"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Agua — muy baja, al punto de casi no poder usar magia real",
+        "Habilidades Físicas — al nivel de su madre, pero sin las restricciones que causa la Autoridad de Minerva a quienes la rodean; fuerza increíble, superior a la mayoría de los caballeros, capaz de hacer girar un carruaje con las manos desnudas",
+        "Habilidades de Combate — intentó entrenar con Halibel pero no logró dominar la técnica; no sabe usar armas ni artes marciales formales, improvisa en cada movimiento apoyándose por completo en su poder físico",
+        "Afinidad Espiritual — inexistente, literalmente cero; ni siquiera seres como Zarestia notarían su existencia de no ser por su fuerte personalidad"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Le encantan los dulces y odia lo picante, quemándose la lengua incluso con platos apenas picantes",
+        "Pese a ser terrible en artes marciales, es muy talentosa improvisando ataques y usando el entorno a su favor",
+        "Es apenas '20% competente' en cada tipo de trabajo que intenta, ya que no logra concentrarse el tiempo suficiente para especializarse en algo",
+        "Le resulta extremadamente difícil subir de peso, así que nunca se preocupa por hacer dieta"
+      ]
+    },
+    {
+      "id": "perseus",
+      "nombre": "Perseus Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "170cm",
+      "apariencia": {
+        "cabello": "Corto y bien peinado, del mismo color que el de su madre",
+        "ojos": "Iguales a los de su madre",
+        "ropa": "Generalmente holgada, especialmente las mangas, por preferencia personal más que por mal corte; esquema de color habitual en blanco y negro",
+        "constitucion": "Rasgos faciales que recuerdan a los de Minerva, con el peinado heredado de su padre",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Personalidad más calmada y reservada que la de su hermana, y mucho más controlada que la de cualquiera de sus padres; destaca por ser diferente al resto de su familia",
+        "Posee una mente brillante, sobresaliendo en resolver acertijos y estudiar; su enfoque principal es investigar medicinas usando hierbas, flores y venenos, intentando crear curas para cualquier tipo de toxina o maldición",
+        "Se vuelve profundamente concentrado ante un problema médico, decidido a encontrar una solución, sin preocuparse por mostrar afecto pero sin estar dispuesto a sacrificar a nadie para lograr sus resultados",
+        "Tiene una fascinación peculiar por los venenos y antídotos, al punto de que sus padres a menudo deben detenerlo antes de que pruebe toxinas en sí mismo"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Agua — especializado por completo en magia de curación para ayudar a otros; dedica incontables horas diarias a entrenar su oficio, a menudo hasta el agotamiento y más allá, por lo que su madre debe detenerlo antes de que dañe su propio Gate por sobreuso",
+        "Habilidades Físicas — fuerza promedio para alguien como su padre; su resistencia a los venenos ha crecido con los años, resultado de años experimentando en sí mismo desde la infancia, impulsado por su sueño de crear antídotos para venenos, enfermedades y maldiciones",
+        "Afinidad Espiritual — extremadamente alta; de no ser porque su hermana la equilibra, cientos de pequeños espíritus aparecerían constantemente por toda la casa, especialmente en su habitación, atraídos por su presencia"
+      ],
+      "equipamiento": [
+        "Cuchillo pequeño — muy afilado, para autodefensa y como herramienta médica en situaciones donde la magia no puede sanar una herida"
+      ],
+      "trivia": [
+        "Su madre discute con él casi a diario por sus experimentos, y ambos suelen aterrorizarse cuando Subaru o Merope se enfadan, al punto de dejar sus disputas de inmediato y ponerse a temblar juntos",
+        "Su pasatiempo favorito es estudiar textos médicos o aprender cualquier cosa relacionada con la medicina",
+        "A menudo olvida comer cuando se absorbe en su investigación, por lo que necesita recordatorios constantes"
+      ]
+    },
+    {
+      "id": "adhara",
+      "nombre": "Adhara Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "168cm",
+      "apariencia": {
+        "cabello": "Plateado",
+        "ojos": "Amatista, idénticos a los de su madre",
+        "ropa": "Ropa tierna y de colores oscuros, suave, esponjosa y cómoda; prefiere prendas holgadas que no le restrinjan pies ni piernas, usualmente largas en vez de cortas, en tonos pálidos y desaturados, salvo sus pijamas que a veces tienen un toque naranja",
+        "constitucion": "Un cuarto elfa; piel aún más pálida que la de su madre; físicamente débil comparada con Satella, aunque más fuerte que su padre",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Niña dulce y de buen corazón, con un fuerte instinto de ayudar a los demás, incluso cuando la gente le teme o le guarda rencor por su parecido con su madre",
+        "Naturaleza genuinamente gentil, siempre dispuesta a actuar con amabilidad como su padre, ayudando a otros como si fuera algo natural en ella",
+        "Sin embargo, tiene una gran capacidad de guardar rencor; cuando alguien hace algo imperdonable o cruel, se niega a perdonarlo, y una vez que gana su enojo, es extremadamente difícil, casi imposible, que vuelva a perdonarlo"
+      ],
+      "habilidades": [
+        "Afinidad Mágica: Yin — la misma afinidad y Gate que su madre, potencialmente igual de poderosa; heredó el talento natural de ambos padres para la magia, capaz de crear y lanzar una amplia variedad de hechizos",
+        "Hechizo de sombras — puede dar forma a sombras y crear criaturas de sombra capaces de usar la magia que ella conoce, aunque no hechizos que no haya aprendido; su poder mágico es limitado y tiene un alto costo de maná",
+        "Habilidades Físicas — pese a tener sangre élfica, es físicamente más débil que una elfa completa, igualando aproximadamente a un hombre humano bien entrenado de su edad; su fuerza mejora gradualmente con la edad: de 1 a 18 años iguala el nivel físico entrenado de su padre, y desde los 18 en adelante sigue creciendo hasta alcanzar el nivel de su madre",
+        "Afinidad Espiritual — extremadamente baja, irónicamente más baja que la de una persona común; su sola presencia ahuyenta a los espíritus, siendo Beatrice la única con la que se lleva bien",
+        "Miasma — emite un miasma tenue pero perceptible, mucho menos letal que el de su madre; puede suprimirlo o liberarlo conscientemente, siendo capaz de emitir algo mucho peor si quisiera, pero se contiene"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Es mucho más inteligente y dulce de lo que aparenta",
+        "Irónicamente, si conociera a las Brujas del Pecado, la que más le interesaría conocer sería Echidna, a quien probablemente seguiría a todas partes",
+        "Si se la pusiera junto a Emilia o Satella, las tres parecerían trillizas",
+        "Las hermanas con las que más le gustaría llevarse bien son Electra y Chochorina, aunque es probable que Electra le desagrade por su apariencia"
+      ]
+    },
+    {
+      "id": "denebola",
+      "nombre": "Denebola Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "165cm",
+      "apariencia": {
+        "cabello": "Corto y de color dorado ligeramente pálido desde pequeña",
+        "ojos": "Casi similares a los de su padre, especialmente en color",
+        "ropa": "Suele usar uniforme de sirvienta o ropa bien cuidada, a menudo faldas que le permiten sentirse libre; de mayor le recomendaron vestir de forma elegante para resaltar su belleza, pero eligió no hacerlo por preferencia personal",
+        "constitucion": "",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Personalidad muy calmada, aunque también bastante alegre en comparación con la mayoría de las personas",
+        "Disfruta hablar con sus 'tías' y compañeros de trabajo para divertirse juntos, aunque aún no le agradan tanto Rem y Ram como al resto",
+        "Puede ser animada y juguetona cuando quiere serlo",
+        "Pese a ser amable, alegre y enérgica, tiene un lado algo sombrío: desde pequeña se sintió un poco inadecuada como hija por ser hija de Natsuki Subaru, lo que la hizo sentirse indigna",
+        "Esto empeoró después de escuchar a Ram decir que no era más que un 'accidente de un error de una noche', palabras que dejaron una cicatriz profunda y generaron un trauma que gradualmente derivó en baja autoestima",
+        "También tiene un lado resentido: la herida que Ram le causó en el pasado aún la hace rechazar a la oni de cabello rosa, incluso cuando Ram intenta hablar o jugar con ella a su manera"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — similares a las de un humano normal en su mundo, sin mucho entrenamiento físico, con una capacidad modesta, en el mejor de los casos promedio",
+        "Afinidad Mágica: Yang — pequeña afinidad, no suficiente para ser una amenaza; en su mejor momento podría alcanzar el nivel que tenía Petra de niña, pero no podría desarrollarse más allá de eso",
+        "Afinidad Espiritual — no tiene ninguna",
+        "Protección Divina del Servicio Perfecto — capaz de realizar cualquier tarea con precisión extrema, siendo literalmente perfecta en sus labores (por ejemplo, limpiar algo oxidado hasta dejarlo como nuevo, o cocinar platos que a chefs experimentados les tomaría años perfeccionar)"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "En el pasado, tras conocer a Reinhard, desarrolló un pequeño enamoramiento infantil hacia el Santo de la Espada",
+        "Al poder realizar sus tareas con tanta perfección, es responsable del 10% del trabajo dentro de la Mansión Mathers, y podría encargarse de hasta el 20% de las labores si se le pidiera",
+        "Aunque es hija de Subaru fuera del matrimonio, es considerada su heredera principal, pese a creer que no merece ese papel"
+      ]
+    },
+    {
+      "id": "reid",
+      "nombre": "Reid Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "El mayor de sus hermanos",
+      "tamano": "176cm",
+      "apariencia": {
+        "cabello": "Largo y rojo, atado hacia atrás, como todos los miembros de la familia Astrea",
+        "ojos": "Azules",
+        "ropa": "Combina el estilo de Adelheid con el de su padre; no tiene un gusto particular por la moda y suele vestir lo que sea sin preocuparse por la imagen que proyecta",
+        "constitucion": "Heredó la mayoría de sus rasgos de su madre",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Pese a ser extremadamente poderoso desde su nacimiento, no tiene arrogancia ni nada similar",
+        "Es un niño amable, pacífico, alegre y relajado, que disfruta encontrar lugares perfectos para descansar tras correr o practicar con sus armas",
+        "A diferencia de lo que muchos podrían pensar por comparación con Cecilus, no desea involucrarse en grandes batallas, ser el centro de atención ni destacar",
+        "No le importa si la gente lo observa o no; mientras nadie lo ataque o lo provoque, no tiene deseo de atacar o provocar a nadie",
+        "Vive como una persona amable y de corazón abierto que disfruta hacer nuevos amigos y vivir en paz",
+        "Muy respetuoso con quienes le muestran respeto, especialmente los mayores",
+        "Increíblemente responsable con sus hermanos menores; como el mayor, cree que debe cargar con los pesos más grandes de la familia, tratando de resolver los problemas él mismo para que los menores crezcan sanos y sin preocupaciones, además de enseñarles para que estén preparados para el futuro"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — desde su nacimiento tiene más fuerza en las piernas que en los brazos; aunque sigue siendo más fuerte que la mayoría de las personas en general, sus piernas son extremadamente más fuertes que sus brazos, lo que le da una velocidad increíble comparable a la de su madre, superando incluso la velocidad de Cecilus Segmunt",
+        "Esgrima — talento natural con la espada comparable al Reid Astrea original y a Adelheid, sin necesidad de Protección Divina; su habilidad es tan grande que sería difícil determinar quién es el más hábil entre él, su ancestro y su madre",
+        "Capacidad de Combate — aunque no parece muy inteligente, es en realidad extremadamente perceptivo e inteligente, especialmente en combate, pudiendo predecir los movimientos de sus oponentes antes de que los realicen, como si hubiera peleado contra el mismo oponente miles de veces en menos de un segundo; su capacidad mental es tan vasta y resiliente que podría parecer apoyada por Protecciones Divinas, cuando en realidad es simplemente su habilidad natural"
+      ],
+      "equipamiento": [
+        "Florete — arma propia, distinta de la Espada Reid que porta su madre; hecho de materiales duraderos y difícil de romper, con hoja de metal refinado y empuñadura blanca con el escudo de la Casa Astrea"
+      ],
+      "trivia": [
+        "La razón de que sus brazos sean más débiles que sus piernas sigue siendo casi un misterio, ya que ninguno de los otros hijos de Adelheid comparte ese rasgo; podría deberse a una Autoridad que Subaru poseía en ese momento, o incluso interferencia de la Bruja de la Envidia (no Satella)",
+        "Fue su hermana menor quien terminó heredando la bendición de Santo de la Espada, aunque Reid no se queda muy atrás; cuando entrenan juntos, sus combates siempre terminan en empate",
+        "Entrena constantemente con su madre cuando quiere poner a prueba sus habilidades",
+        "Aunque no lo entiende del todo, se da cuenta de que su padre tiene un pasado triste del que nunca se habla; lo vigila en silencio, igual que su madre, y trata de que sus padres no noten que lo sabe, para que no se preocupen por él durante su infancia",
+        "Si Reid tuviera Return by Death, sería igual que su padre si alguna vez muriera"
+      ]
+    },
+    {
+      "id": "cepheus",
+      "nombre": "Cepheus Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "171cm",
+      "apariencia": {
+        "cabello": "",
+        "ojos": "",
+        "ropa": "Usa un kimono que nunca ha cambiado en toda su vida, algo que no le molesta dada su longevidad",
+        "constitucion": "Belleza etérea y una calma casi aterradora, considerado uno de los chicos más bellos que se pueda ver; se parece mucho a su madre, aunque se nota la diferencia por sus rasgos faciales masculinos",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Decir que tiene una personalidad fría o desinteresada sería quedarse corto; su expresión facial es tan neutral y gélida que interactuar con él suele significar nunca saber lo que realmente siente",
+        "Pese a haber nacido rodeado del mayor amor que sus padres podían ofrecer, no logra expresarse adecuadamente ni hacer comprensibles sus emociones",
+        "Tampoco entiende del todo lo que él mismo siente; por ejemplo, no comprendía por qué se sintió incómodo tras partir en dos a una niña que había sido amable con él, tal como tampoco entendía por qué había sentido un impulso tan fuerte de hacerlo",
+        "Esto no aplica solo a extraños, sino también a su propia familia; desde que aprendió a vivir de forma independiente, rara vez volvió a visitar a sus padres",
+        "Aunque compartió momentos raros y únicos con su padre, él mismo no comprendía del todo lo que sentía hacia él; en verdad lo amaba a su manera, y sintió tristeza el día de su muerte, aunque siguió viviendo de forma distante",
+        "Tras la muerte de Subaru, él y su madre rara vez volvieron a verse; su relación con Zarestia es única: no se odian, al contrario, se aman y se muestran afecto de una forma que solo ellos comprenden, aunque cada uno sigue su propio camino por el mundo, como espíritus independientes que vagan solos"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — al ser mitad humano y mitad espíritu, es aterradoramente fuerte, posiblemente uno de los más fuertes del mundo, a la par de Kurgan en su punto máximo de fuerza en vida",
+        "Velocidad — su aspecto más impresionante; en una carrera directa podría incluso superar temporalmente al Santo de la Espada, Reinhard van Astrea, aunque eventualmente perdería, manteniendo la ventaja durante la mayor parte de la carrera",
+        "Afinidad Mágica: Viento — como gran espíritu descendiente directo de Zarestia, posee una afinidad natural con la magia de viento, posiblemente a la par de las habilidades mágicas de su madre; en una batalla basada puramente en este estilo de magia sería probablemente imposible determinar un ganador claro entre ambos, aunque Zarestia tendría ventaja por su mucha mayor experiencia de vida",
+        "Longevidad — como mitad espíritu, posee una vida física muy larga, capaz de vivir siglos sin envejecer por completo, lejos de morir de forma natural como un humano común; su esperanza de vida podría igualar a la de los Elfos y Espíritus comunes del mundo"
+      ],
+      "equipamiento": [
+        "Abanico — un abanico blanco decorado con una nube verde en el lado izquierdo y un lobo naranja en el lado derecho"
+      ],
+      "trivia": [
+        "Debido a su gran longevidad, cuando él y Zarestia se separan, el tiempo transcurrido les parece mucho menor que a los demás; estar separados una década podría sentirse como solo tres horas como mucho, por lo que al reencontrarse a menudo no notan cuánto tiempo ha pasado hasta que lo mencionan",
+        "Zarestia y Cepheus visitan con frecuencia la tumba que hicieron para Subaru, limpiándola y cuidándola; son los únicos que lo hacen, ya que la tumba está ubicada en la residencia de Zarestia",
+        "Constantemente se dicen 'Muere' el uno al otro, pero en realidad quieren decir 'Te amo'; se lo dicen al menos tres veces al día cada vez que se encuentran"
+      ]
+    },
+    {
+      "id": "luna",
+      "nombre": "Luna Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "164cm",
+      "apariencia": {
+        "cabello": "Blanco, tanto el pelaje como el cabello",
+        "ojos": "",
+        "ropa": "Ha usado un kimono similar al de su madre desde muy pequeña, cuando comenzó a vestir ropa",
+        "constitucion": "Piel ligeramente pálida, casi brillante bajo la luz; rasgos de kitsune, con orejas de zorro, cola y uñas en forma de garra; su cola es extremadamente esponjosa y suave, usada a veces como almohada",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Persona agradable de tratar por su amabilidad, calidez y altruismo; a menudo descrita como una chica tierna y alegre",
+        "Su expresión cansada y actitud relajada pueden hacerla parecer fácil de engañar, pero la realidad es todo lo contrario",
+        "Extremadamente capaz como líder, especialmente en asuntos personales entre las personas, con una mente aguda y una percepción penetrante que la convierten en una líder nata cuando realmente se enfoca en algo que debe hacerse",
+        "Siempre intenta elegir el camino que traiga menos problemas a quienes la rodean, especialmente a quienes ama, aunque aceptará enfrentarse a otros si es necesario para proteger las vidas de las personas que le importan"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — gran fuerza física incluso sin usar [Matrimonio de Almas], comparable o incluso superior a la de Yorna o Priscilla; por ejemplo, en un pulso contra Garfiel, Rem y Emilia les ganaría 10 de 10 veces, y a Shaula le ganaría 6 de 10 veces; su velocidad y agilidad también son extraordinarias, pudiendo seguirle el ritmo a Cecilus por unos momentos antes de ser superada",
+        "Regeneración — muy alta capacidad regenerativa, ya sea mediante [Matrimonio de Almas] o de forma natural; puede regenerarse incluso si le cortan el cuello, siempre que el ataque no la decapite al instante, y puede regenerar extremidades perdidas, aunque puede tardar días o semanas según la gravedad",
+        "Afinidad Mágica: Yin y Yang — extremadamente alta en ambas, al punto de ser considerada un prodigio; si viviera en Lugunica podría incluso recibir los títulos de [Blanco] y [Negro]; con la ayuda de Subaru también tiene la creatividad e inteligencia para desarrollar nuevos hechizos",
+        "Afinidad Espiritual: Alta — fuerte afinidad con los espíritus, aunque curiosamente los que menos se acercan a ella son los espíritus de Yin y Yang comparado con otros tipos elementales",
+        "Protección Divina: Diosa Zorro — le permite transformarse en un zorro literal en dos formas: consciente, un pequeño zorro de pelaje blanco, ojos azules brillantes y una sola cola; inconsciente (al desmayarse), un zorro gigante de pelaje negro, ojos rojo rubí, más de 15 metros de altura y nueve colas",
+        "Longevidad — posee una gran longevidad física, pudiendo vivir un tiempo indefinido antes de morir de vejez, con una esperanza de vida similar a la de Elfos, Medio-Elfos y Espíritus"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Tiene una esperanza de vida extremadamente inusual: solo alcanzará la verdadera adultez alrededor de los 1.200 años",
+        "Al llegar a la adultez, su belleza sería considerada mayor que la de su madre e incluso la de Priscilla",
+        "Puede moverse con tal ligereza que la gente podría no escuchar sus pasos en absoluto si ella lo decide, pareciendo flotar o deslizarse en el aire en vez de pisar el suelo",
+        "Al nacer era muy pequeña, lo suficiente para caber en ambas manos de Yorna como recién nacida; nadie sabe la causa, pero era tan sana como un bebé normal y creció con normalidad hasta aparentar unos diez años"
+      ]
+    },
+    {
+      "id": "nova",
+      "nombre": "Nova Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "154cm",
+      "apariencia": {
+        "cabello": "Blanco (como la ve Subaru)",
+        "ojos": "Grises con una brillante estrella blanca en el centro (como la ve Subaru); vacíos y negros (como la ven los demás)",
+        "ropa": "Ropa blanca (como la ve Subaru); ropa desgastada y descompuesta (como la ven los demás)",
+        "constitucion": "Tiene dos apariencias distintas según quién la mire: para Subaru, una adorable niña mitad elfa con aura inmaculada y atractiva, semejante a una princesa; para todos los demás, un cadáver andante cubierto de marcas, cortes y moretones, como un monstruo sin alma",
+        "marcas": "Cubierta de marcas, cortes y moretones (como la ven los demás)"
+      },
+      "personalidad": [
+        "Personalidad corrupta debido a la influencia del lado de la Bruja de la Envidia de Satella, combinada con la 'programación' impuesta en ella desde su creación: proteger y amar a Subaru",
+        "Como una IA creada específicamente para protegerlo, cuidarlo y amarlo incluso cuando otros lo odien, lo pone por encima de todo, de forma similar a Elpis, aunque quizás aún más perturbadora",
+        "Si Subaru muriera, ella esencialmente se convertiría en una hoja en blanco",
+        "Está dispuesta a hacer absolutamente cualquier cosa para mantenerlo protegido, seguro y satisfecho, considerando normal usarse a sí misma —mente, cuerpo y alma— para garantizarlo, incluyendo usar su propio cuerpo para intimar con él si lo cree necesario",
+        "Posee una lógica distorsionada al encontrarse con versiones alternas de la familia de su padre a través del multiverso: intentaría eliminar a sus hermanos para seguir siendo la única [hija], y eliminar a las esposas de otras versiones de Subaru para convertirse en la única [esposa]",
+        "En esencia, es como una IA defectuosa cuya única forma de vivir es encontrar métodos para cumplir su objetivo —sin importar lo que se requiera— de mantener a Subaru protegido, feliz y satisfecho hasta que muera de vejez"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — cuerpo físicamente fuerte heredado de Emilia, cuyo cuerpo fue usado para su creación; comparativamente tan fuerte como Garfiel durante el Arco 4, aunque él la superaría después de ese punto; es esencialmente inmortal, y aunque su cuerpo sea destruido no sería realmente eliminada",
+        "Afinidad Mágica: Todas — posee afinidad con todos los tipos de magia, aunque tiene problemas para usarla correctamente debido a la interferencia de la Bruja de la Envidia; pese a esto, puede absorber conocimiento y aprender a usar las distintas formas de magia que observa y estudia",
+        "Afinidad Espiritual — inmensa, diseñada así por Beatrice y por la interferencia de la Bruja de la Envidia; sin embargo, en vez de atraer espíritus, esta afinidad los repele, aunque sigue siendo capaz de formar contratos con ellos",
+        "Autoridad de la Envidia — le permite moverse por el Espacio y el Tiempo hacia el punto que considere más favorable, viajando entre líneas temporales y mundos donde exista cualquier versión de Subaru, apareciendo en cualquier lugar y momento; también puede usar Return by Death si Subaru muriera",
+        "Autoridad de la Avaricia — le permite crear un espacio dimensional personal, existente más allá de los límites de Od Laguna (similar al Cine Absoluto de Alpha); dentro de esta dimensión oculta su mundo original, y cada mundo consumido es transportado a este reino personal infinito, destruyéndose eventualmente cuando el Subaru de ese mundo muere, convirtiéndose en energía para sostener el reino de Nova; al entrar en un mundo crea un 'punto de guardado' desde el cual genera una barrera que se expande, convirtiendo todo en su territorio personal, dentro del cual puede manipular la realidad consumiendo el maná circundante",
+        "Autoridad de la Ira — funciona como fuente de conexión, permitiéndole extraer maná de las muchas versiones de Satella en el Multiverso, ya que su Od y Gate están conectados a Satella por el fragmento de la Bruja de la Envidia que porta, mientras sus Autoridades provienen de Subaru; también la conecta mental y espiritualmente con versiones de Subaru, permitiéndole emitir órdenes que pueden controlarlos mentalmente, y combinada con la Autoridad de la Lujuria facilita lavarles el cerebro",
+        "Autoridad de la Lujuria — crea una ilusión personal que impide que casi cualquier Subaru vea su verdadera apariencia cadavérica, provocando en ellos las mismas emociones que sentirían al ver a Satella en el Jardín de las Sombras, haciéndolos susceptibles a su manipulación; también puede generar territorios ilusorios donde todo parece perfecto mientras afuera todo es destruido, sin que Subaru pueda distinguir la ilusión de la realidad",
+        "Autoridad de la Gula — le permite manifestarse físicamente en un espacio, localizando un anfitrión compatible, consumiendo su identidad y ocupando su lugar, transformando literalmente el cuerpo de la víctima en el de Nova, matándola y borrando su existencia; puede usar esta habilidad en cualquiera, y si su cuerpo físico es destruido puede poseer a otra persona cercana, creando un ciclo interminable; también le permite almacenar la información de los seres que absorbe (forma física, memorias, personalidad), recrearlos en sus ilusiones, usar sus habilidades y experiencias como propias (Encarnación), y remodelar cuerpos adquiridos en réplicas de sí misma para usarlas simultáneamente, formando algo similar a una mente colmena (Clonación)",
+        "Autoridad de la Pereza — puede crear cientos de Manos Invisibles, incluso hacerlas intangibles para atacar desde dentro hacia afuera, produciendo más que Petelgeuse; su alcance aumenta junto con la expansión de su territorio de Avaricia, pudiendo generarlas incluso desde la propia barrera",
+        "Autoridad del Orgullo — puede absorber Protecciones Divinas de sus portadores, las cuales se corrompen y se integran permanentemente a sus Autoridades, pudiendo absorber cualquier Protección Divina, incluso la del Santo de la Espada si logra acercarse lo suficiente; existen restricciones: no puede volver a absorber una versión más fuerte de una protección que ya posee, y si descarta una protección jamás podrá volver a absorber esa misma protección de ninguna versión en ningún universo; sus Protecciones Divinas se debilitan (a 1/5 de su poder) al entrar en un mundo donde otra persona posee esa protección de nacimiento; también puede 'desactivar' una Protección Divina que posea, provocando que el portador original de esa misma protección pierda temporalmente el acceso a ella"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Cuando intenta lanzar un hechizo, en realidad termina lanzando uno distinto (por ejemplo, al intentar lanzar [Huma] puede terminar lanzando [Dona]); pese a esto, el poder de sus ataques, incluso los comunes, es mucho mayor que el de los hechizos más fuertes de la mayoría de los demás usuarios de magia — un simple [Huma] suyo podría ser hasta diez veces más fuerte que un [El Huma] lanzado por Rem",
+        "Nova y Alpha llegaron a enfrentarse una vez; su batalla resultó en la destrucción completa del universo donde ocurrió, y siguieron peleando durante milenios, terminando solo en un empate, hasta que HopeSubaru tuvo que intervenir para separarlas; de lo contrario, probablemente habrían seguido peleando durante cientos de miles de años más",
+        "Es tan monstruosa por naturaleza que si Elpis la conociera, incluso ella diría 'Repugnante', aunque al mismo tiempo sentiría envidia porque Nova es capaz de hacer las cosas que ella siempre quiso hacer",
+        "Debido al fragmento de [Envidia] que posee desde su creación, cualquier versión de Subaru siente una atracción hacia ella similar a la que sienten hacia Satella en el Jardín de las Sombras, facilitándole reclamarlos cuando lo desea"
+      ]
+    },
+    {
+      "id": "orion",
+      "nombre": "Orion Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "162cm",
+      "apariencia": {
+        "cabello": "Largo y rosado",
+        "ojos": "Con la forma de los de su padre, pero del color de su madre",
+        "ropa": "Suele usar ropa que cubre casi todo su cuerpo",
+        "constitucion": "Tan bello que a menudo lo confunden con una chica, aunque en realidad es un chico extremadamente apuesto que llama la atención de todos allá donde va",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Prefiere mantenerse callado en la mayoría de las situaciones, eligiendo normalmente estar solo con sus propios pensamientos",
+        "No es antisocial ni le desagrada la gente; cuando un tema le interesa, habla de él con pasión y apertura, expresando sus opiniones sin contenerse",
+        "Es extrovertido cuando quiere serlo y nunca oculta lo que piensa cuando decide hablar; tiene creencias personales firmes y no le importa expresarlas",
+        "También es muy amable y accesible, alguien con quien de forma natural se querría hablar"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — no es muy fuerte físicamente, de hecho más débil que su padre, y solo mejoraría con entrenamiento",
+        "Habilidades Mágicas — sin afinidad mágica",
+        "Afinidad Espiritual — extremadamente baja, casi inexistente"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Pese a ser físicamente débil e incapaz de defenderse mediante magia o medios espirituales, rara vez está en peligro estando solo, gracias a su fuerte sentido común sobre cuándo actuar y cuándo no",
+        "A pesar de no tener talento natural para ello, tiende a atraer a la gente a su alrededor, tanto chicos como chicas; Subaru bromea diciendo que sin querer está formando un harem mixto"
+      ]
+    },
+    {
+      "id": "morgana",
+      "nombre": "Morgana \"Morgan\" Natsuki Baumann",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "La mayor de los tres hermanos",
+      "tamano": "178cm",
+      "apariencia": {
+        "cabello": "Largo y oscuro, del mismo color que el de su padre",
+        "ojos": "Verdes y brillantes, como los de su madre",
+        "ropa": "Ropa noble y extravagante en verde y negro, usualmente vestidos largos que le dan una impresión de princesa",
+        "constitucion": "No heredó los dientes de su madre; se vería como su gemela más joven de no ser por el color del cabello",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Como la mayor, debería ser la más madura en experiencia, pero por la influencia de su tío Garfiel consintiéndola y jugando con ella, así como de Clind, se volvió una chica algo consentida y ligeramente egocéntrica",
+        "Le gusta hablar alto, ser juguetona, y a menudo no se comporta de manera 'noble' pese a disfrutar de ropa elegante, siendo algo contradictoria entre su comportamiento y apariencia, especialmente cuando viste formalmente",
+        "Pese a su actitud algo marimacho, es indudablemente una buena chica: divertida, amable y dispuesta a ayudar a quienes lo necesitan, aunque sus métodos puedan ser algo limitados en ciertas situaciones; intenta genuinamente encontrar formas de ayudar a otros con sus problemas"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — carentes, más débil que su padre en general",
+        "Habilidades Mágicas: Tierra y Agua — en contraste con su debilidad física, tiene gran capacidad mágica en estos atributos; posee un Gate y una capacidad de almacenamiento de maná impresionante, siendo una maga prometedora, con magia más orientada al ataque, aunque también con capacidades defensivas para apoyar a sus aliados",
+        "Afinidad Espiritual — la más alta entre los tres hermanos"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "El día en que nació Morgana amaneció soleado antes de nublarse, pero no llovió",
+        "Le gustan las cosas brillantes y disfruta decorarse con ellas",
+        "Su nombre, Morgana 'Morgan', está inspirado en la leyenda del Rey Arturo",
+        "En una prueba de inteligencia, ocuparía el primer lugar en inteligencia general y el tercero en inteligencia emocional"
+      ]
+    },
+    {
+      "id": "viviane",
+      "nombre": "Viviane \"Vivian\" Natsuki Baumann",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "La mediana de los tres hermanos",
+      "tamano": "174cm",
+      "apariencia": {
+        "cabello": "Oscuro",
+        "ojos": "Del mismo color y tipo que los de su padre",
+        "ropa": "Mezcla de estilos masculino y femenino, en tonos verde y naranja",
+        "constitucion": "Chica bella y algo marimacho; heredó los dientes afilados de su madre y su tío, así como rasgos demihumanos",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Personalidad más directa y con mejor control de lo que debe o no decir en comparación con su hermana mayor; bastante franca al hablar, aunque no pretende ser fría o cruel aunque a veces lo parezca al expresar sus pensamientos honestos",
+        "Genuinamente quiere ayudar a la gente diciéndoles lo que cree que necesitan escuchar en el momento en que lo necesitan",
+        "Incluso siendo honesta, su tono deja claro que no pretende ofender a nadie; intenta ser tan gentil como su forma de ser se lo permite",
+        "Tiene un fuerte sentido de justicia, negándose a excusar malas acciones incluso de quienes ama cuando cree que es necesario"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — la mejor capacidad física natural entre los tres hermanos, especialmente en fuerza de golpe, capacidad de levantamiento, resistencia y aguante; la más fuerte en capacidad física bruta",
+        "Habilidades Mágicas — sin afinidad mágica suficiente para usar magia",
+        "Afinidad Espiritual — sin afinidad notable que atraiga espíritus; la más baja entre los tres hermanos",
+        "Transformación: León — a diferencia de Garfiel (tigre) y Frederica (leopardo), puede transformarse en un león; su transformación completa y parcial le permiten rivalizar incluso con el estado transformado de Garfiel, con excelente agilidad y control comparable al de su madre"
+      ],
+      "equipamiento": [
+        "Escudos — usa el mismo tipo de equipo que Garfiel como armas en combate contra sus oponentes"
+      ],
+      "trivia": [
+        "En una prueba de inteligencia, ocuparía el segundo lugar en inteligencia general y emocional",
+        "Nació en un día lluvioso que incluso causó inundaciones alrededor de la mansión",
+        "Tiene el mejor sentido común entre los tres hermanos y es quien toma las decisiones más difíciles de forma que evita que los demás sufran las consecuencias de esas decisiones"
+      ]
+    },
+    {
+      "id": "arthur",
+      "nombre": "Arthur Natsuki Baumann",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "El menor de los tres hermanos",
+      "tamano": "170cm",
+      "apariencia": {
+        "cabello": "Peinado y cortado de forma similar al de Subaru, pero rubio como el de su madre",
+        "ojos": "Grises, no pueden ver nada; nació ciego",
+        "ropa": "Usa una banda verde sobre los ojos como gesto simbólico, ya que no necesita la vista",
+        "constitucion": "Dientes normales",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Personalidad alegre, divertida y amigable, increíblemente amable y dulce con quienes lo rodean; posee un corazón verdaderamente gentil que elegiría ayudar a otros antes que a sí mismo",
+        "Por su personalidad, sus hermanas se preocupan por su seguridad, especialmente por su discapacidad visual",
+        "Al nacer completamente ciego, nunca experimentó el mundo visualmente y depende mucho de la confianza en su familia y amigos para vivir con normalidad, lo que le hizo desarrollar una tendencia mayor de lo normal a confiar en los demás, además de una empatía elevada por el sufrimiento ajeno",
+        "Posee un fuerte sentido de la caballerosidad, con un deseo inquebrantable de convertirse en caballero desde pequeño, inspirado en historias de héroes, deseo que creció aún más al escuchar relatos de caballeros y héroes del mundo de su padre; se esfuerza por ser un caballero heroico ideal que protege a otros y defiende lo que cree correcto",
+        "A veces se pierde en la fantasía y necesita que lo devuelvan a la realidad, aunque sigue siendo un chico alegre y de buen corazón"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — no tan fuerte como Vivian transformada, pero con alta fuerza y resistencia; sus principales ventajas físicas son la velocidad y agilidad",
+        "Habilidades Mágicas — no posee habilidades mágicas convencionales, pero tiene un Gate poderoso, comparable en capacidad al de Morgana, aunque no lo usa para magia de forma convencional",
+        "Afinidad Espiritual — la segunda más alta entre los tres hermanos, aunque tanto él como Vivian están muy por detrás de Morgan en este aspecto",
+        "Protección Divina 'Cuentos de Hadas' — similar a la {Protección Divina de la Moralidad}, donde la persona se vuelve físicamente más fuerte cuanto más cree en sí misma; cuanto más cree que puede hacer algo, más capaz se vuelve de hacerlo, aplicándose a fuerza, resistencia, velocidad, agilidad y aguante; usando su Gate puede concentrar maná y darle forma de armas de luz azul, típicamente una espada extremadamente afilada que también puede lanzarse como un rayo cortante explosivo"
+      ],
+      "equipamiento": [
+        "Empuñadura de la Espada de la Vida — le fue entregada por Subaru sin expectativa de que llegara a usarse; puede imbuirla con el poder de su Protección Divina, haciéndola aún más fuerte, con lo que creó una nueva arma capaz de funcionar como espada, hacha-espada y espada-látigo, convirtiéndose en una nueva [Espada de la Vida]"
+      ],
+      "trivia": [
+        "En una prueba de inteligencia, ocuparía el tercer lugar en inteligencia general y el primero en inteligencia emocional",
+        "Si conociera a Julius, sentiría gran admiración por su espíritu caballeresco",
+        "Pese a no poder ver, es menos torpe que sus hermanas al realizar tareas; incluso las tareas simples las maneja mejor, y con apoyo para tareas más complejas sigue siendo capaz de cuidar de sí mismo",
+        "En el futuro convencería a sus hermanas de formar un trío de héroes para ayudar a la gente",
+        "Aunque no lo admita en voz alta, nombró a su [Espada de la Vida] 'Excalibur'"
+      ]
+    },
+    {
+      "id": "castor",
+      "nombre": "Castor Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alienacion": "",
+      "alineacion": "",
+      "edad": "Nació 10 segundos antes que Pollux",
+      "tamano": "169cm",
+      "apariencia": {
+        "cabello": "De longitud media, lado izquierdo oscuro como Subaru y lado derecho azul como Julia",
+        "ojos": "Heterocromáticos: ojo izquierdo brillante como el de Julia, ojo derecho como el de Subaru",
+        "ropa": "Elegante, bien cuidada y limpia; atuendos largos y refinados que le dan un aura noble incluso de niño",
+        "constitucion": "Apariencia tierna y amigable",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Se presenta bastante refinado, con una mentalidad fuerte y una inteligencia superior a la de su hermano gemelo",
+        "Muy estudioso e inteligente, disfruta leer y aprender",
+        "Puede ser algo arrogante respecto a sí mismo, a veces alardeando de su inteligencia cuando siente que tiene ventaja en una conversación; tiende a burlarse de quienes considera tontos y a menudo es reprendido por ello",
+        "También tiene un lado más gentil, especialmente cuando siente que habla con alguien digno de respeto",
+        "Se comporta como un noble desde que nació, alguien que podría llegar a hacerse cargo del hogar Mathers al crecer",
+        "Tiene un fuerte cariño por su hermano gemelo, Pollux"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — no tan fuerte físicamente como su hermano, pero aun así capaz; podría enfrentarse a un caballero de nivel medio en combate físico",
+        "Habilidades Mágicas: Yin y Yang — gran afinidad con ambas, muy hábil en las dos, pudiendo incluso obtener los títulos de [Oscuridad] y [Blanco]",
+        "Afinidad Espiritual — de nivel medio, similar a la de su hermano Pollux",
+        "Protección Divina de los Gemelos — al igual que las Trillizas Pearlbaton y los Gemelos Remendis, ambos hermanos comparten una protección que les permite: compartir cargas físicas (daño, fatiga, etc.), comunicarse telepáticamente al concentrarse lo suficiente, enlazar sus Gates para usar el maná del otro, y compartir magia, pudiendo cada uno usar los hechizos que el otro ha aprendido sin entrenarlos, accediendo así a las afinidades mágicas del otro"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Nació 10 segundos antes que Pollux",
+        "Es un erudito dedicado que disfruta los estudios mágicos, incluso llevándose al límite",
+        "Llegaría a admirar a Echidna de la misma manera en que admira a Julia"
+      ]
+    },
+    {
+      "id": "pollux",
+      "nombre": "Pollux Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "Nació 10 segundos después que Castor",
+      "tamano": "171cm",
+      "apariencia": {
+        "cabello": "De longitud media, lado derecho oscuro como Subaru y lado izquierdo azul como Julia",
+        "ojos": "Heterocromáticos: ojo derecho brillante como el de Julia, ojo izquierdo como el de Subaru",
+        "ropa": "Más simple que la de su hermano, aunque sigue siendo noble; viste de una forma que se parece más a su padre",
+        "constitucion": "Apariencia tierna y amigable",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Más relajado que su hermano; entre los dos, es humilde, afectuoso y trata a los demás con más amabilidad que Castor",
+        "De los gemelos, se relaciona mejor con el personal de la mansión y la gente común, prestando más atención a las relaciones sociales que Castor",
+        "Aunque Castor parece más noble en estatus, su arrogancia socava buena parte de esa nobleza y a menudo obliga a Pollux a intervenir",
+        "No está exento de impulsividad; entre los dos, es el más guiado por las emociones al tomar decisiones",
+        "Equilibra a Castor, y juntos compensan las debilidades del otro en aspectos físicos, mentales y emocionales"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — nivel de fuerza similar al de Castor, posiblemente un poco mayor",
+        "Habilidades Mágicas: Fuego/Hielo, Tierra, Viento y Agua — mayor afinidad con una gama más amplia de magia que Castor; su afinidad más fuerte es, irónicamente, la magia de Agua, a un nivel capaz de rivalizar con el maestro de Felix o incluso acercarse al propio Felix, algo que Julia nunca logró",
+        "Afinidad Espiritual — mismo nivel que su hermano",
+        "Protección Divina de los Gemelos — al igual que las Trillizas Pearlbaton y los Gemelos Remendis, ambos hermanos comparten una protección que les permite: compartir cargas físicas, comunicarse telepáticamente, enlazar sus Gates, y compartir magia entre ambos"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "Nació 10 segundos después que Castor",
+        "También es buen estudiante, aunque no tanto como su hermano",
+        "Llegaría a temer a Echidna y comenzaría a formar planes para sellarla o matarla y asegurarse de que nunca regrese",
+        "Es extremadamente talentoso y podría potencialmente usar todos los hechizos del Roswaal original si entrenara lo suficiente, incluyendo el Ojo Amarillo de Roswaal"
+      ]
+    },
+    {
+      "id": "tonnura",
+      "nombre": "Tonnura Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "",
+      "edad": "",
+      "tamano": "170cm",
+      "apariencia": {
+        "cabello": "Corto y plateado",
+        "ojos": "Amatista",
+        "ropa": "Ropa oscura, casi completamente negra, que le permite volverse casi invisible en ambientes de poca luz; su rasgo más notable es una capa gris y blanca; también lleva atada a su cuerpo la vieja prenda superior de su padre",
+        "constitucion": "Medio elfo",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Desde su nacimiento fue criado en el Santuario por Al, quien obtuvo permiso para usar el Castillo de los Sueños de Echidna para vivir y crecer allí; con el tiempo desarrolló una personalidad más seria, aunque de bebé fue un niño alegre",
+        "Con el crecimiento, su alegría infantil desapareció gradualmente",
+        "Al nacer de una extraña relación entre el lado maligno de la Bruja de la Envidia y Natsuki Subaru, desde que supo esto se vio a sí mismo como algo anormal",
+        "Al no ser criado directamente por su padre ni por su madre biológica, todo lo que sabe de ellos proviene de historias contadas por otros —Al, Echidna y las demás Brujas del Santuario—, lo que formó una percepción negativa de ambos",
+        "Aunque desea, como hijo, amar a sus padres, termina priorizando la seriedad de su deber asignado",
+        "Tiene una personalidad más fría y seria para cumplir su objetivo: 'Eliminar a la Bruja de la Envidia antes de que destruya completamente el mundo', una misión que no puede permitirse fallar o abandonar",
+        "En el fondo sigue siendo amable, gentil y preocupado por los demás",
+        "Su única expresión emocional real fue con Emilia, quien le dio su nombre y vivió con él hasta que cumplió cinco años, antes de morir junto a Puck a causa de la Bruja de la Envidia"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — al mismo nivel que tendría su madre de adulta, aunque ligeramente menos resistente que ella al recibir golpes",
+        "Habilidades Mágicas: Yin — sus habilidades pueden igualar el nivel mágico de su madre; aprendió todos los hechizos de Yin que pudo de la Bruja de la Avaricia y de Al, absorbiendo la mayor información posible de las habilidades de su madre; puede incluso imitar las manos de sombra de Satella; posee además un Gate poderoso capaz de almacenar una gran cantidad de maná",
+        "Afinidad Espiritual — comparable a figuras como Julius, Subaru e incluso Reinhard",
+        "Autoridad Desconocida [???] — le permite anular los efectos de otras Autoridades a su alrededor, borrándolas como si nunca hubieran existido en el poder de sus usuarios; sin embargo, debe activarse en un dominio de corto alcance (unos 10 metros a su alrededor), y el maná del área circundante desaparece, pudiendo incluso morir los Espíritus presentes al activarla; esto la convierte en una habilidad solo utilizable a corta distancia contra usuarios de Autoridades para anular sus poderes, aunque no desactiva habilidades físicas ni impide el uso de magia o habilidades espirituales ya existentes"
+      ],
+      "equipamiento": [
+        "Caja de la Melancolía — posee la caja que contiene la Autoridad de la Melancolía y es capaz de usarla"
+      ],
+      "trivia": [
+        "De no ser por las circunstancias de su nacimiento y crianza, podría haberse convertido en alguien tan amable y alegre como Kenichi, su abuelo",
+        "No siente amor por su madre ni por su padre, enfocándose únicamente en cumplir su objetivo: eliminar a la Bruja de la Envidia y al Sabio que vive en la Torre de Observación de las Pléyades y amenaza con destruir el mundo",
+        "Las personas con las que vivió en el Santuario fueron: Al, Echidna, las Brujas, Garfiel, las Ryuzu, Emilia, Clind y Roswaal (tras tomar el cuerpo de Annerose)"
+      ]
+    }
+  ],
+  "relaciones": [
+    {
+      "origen": "subaru",
+      "destino": "alpha",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "electra",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "elpis",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "helena",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "mercurius",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "lyra",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "graffias",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "taygete",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "leo",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "bellatrix",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "maia",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "chochorina",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "cassia",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "aconita",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "menkar",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "nunki",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "alcyone",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "caph",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "cygnus",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "vega",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "natsumi",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "saiph",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "phoebe",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "merope",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "perseus",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "adhara",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "denebola",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "reid",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "cepheus",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "luna",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "orion",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "morgana",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "viviane",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "arthur",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "castor",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "pollux",
+      "tipo": "padre"
+    },
+    {
+      "origen": "subaru",
+      "destino": "tonnura",
+      "tipo": "padre"
+    },
+    {
+      "origen": "echidna",
+      "destino": "alpha",
+      "tipo": "madre"
+    },
+    {
+      "origen": "emilia",
+      "destino": "electra",
+      "tipo": "madre"
+    },
+    {
+      "origen": "pandora",
+      "destino": "elpis",
+      "tipo": "madre"
+    },
+    {
+      "origen": "priscilla",
+      "destino": "helena",
+      "tipo": "madre"
+    },
+    {
+      "origen": "anastasia",
+      "destino": "mercurius",
+      "tipo": "madre"
+    },
+    {
+      "origen": "anastasia",
+      "destino": "lyra",
+      "tipo": "madre"
+    },
+    {
+      "origen": "shaula",
+      "destino": "graffias",
+      "tipo": "madre"
+    },
+    {
+      "origen": "shion",
+      "destino": "taygete",
+      "tipo": "madre"
+    },
+    {
+      "origen": "crusch",
+      "destino": "leo",
+      "tipo": "madre"
+    },
+    {
+      "origen": "elsa",
+      "destino": "bellatrix",
+      "tipo": "madre"
+    },
+    {
+      "origen": "emerada",
+      "destino": "maia",
+      "tipo": "madre"
+    },
+    {
+      "origen": "emilia",
+      "destino": "chochorina",
+      "tipo": "madre"
+    },
+    {
+      "origen": "felt",
+      "destino": "cassia",
+      "tipo": "madre"
+    },
+    {
+      "origen": "lilac",
+      "destino": "aconita",
+      "tipo": "madre"
+    },
+    {
+      "origen": "daphne",
+      "destino": "menkar",
+      "tipo": "madre"
+    },
+    {
+      "origen": "sekhmet",
+      "destino": "nunki",
+      "tipo": "madre"
+    },
+    {
+      "origen": "sekhmet",
+      "destino": "alcyone",
+      "tipo": "madre"
+    },
+    {
+      "origen": "capella",
+      "destino": "caph",
+      "tipo": "madre"
+    },
+    {
+      "origen": "liliana",
+      "destino": "cygnus",
+      "tipo": "madre"
+    },
+    {
+      "origen": "ram",
+      "destino": "vega",
+      "tipo": "madre"
+    },
+    {
+      "origen": "miyuse",
+      "destino": "natsumi",
+      "tipo": "madre"
+    },
+    {
+      "origen": "petra",
+      "destino": "saiph",
+      "tipo": "madre"
+    },
+    {
+      "origen": "patrasche",
+      "destino": "phoebe",
+      "tipo": "madre"
+    },
+    {
+      "origen": "minerva",
+      "destino": "merope",
+      "tipo": "madre"
+    },
+    {
+      "origen": "minerva",
+      "destino": "perseus",
+      "tipo": "madre"
+    },
+    {
+      "origen": "satella",
+      "destino": "adhara",
+      "tipo": "madre"
+    },
+    {
+      "origen": "sylphy",
+      "destino": "denebola",
+      "tipo": "madre"
+    },
+    {
+      "origen": "adelheid",
+      "destino": "reid",
+      "tipo": "madre"
+    },
+    {
+      "origen": "zarestia",
+      "destino": "cepheus",
+      "tipo": "madre"
+    },
+    {
+      "origen": "yorna",
+      "destino": "luna",
+      "tipo": "madre"
+    },
+    {
+      "origen": "carmilla",
+      "destino": "orion",
+      "tipo": "madre"
+    },
+    {
+      "origen": "frederica",
+      "destino": "morgana",
+      "tipo": "madre"
+    },
+    {
+      "origen": "frederica",
+      "destino": "viviane",
+      "tipo": "madre"
+    },
+    {
+      "origen": "frederica",
+      "destino": "arthur",
+      "tipo": "madre"
+    },
+    {
+      "origen": "julia",
+      "destino": "castor",
+      "tipo": "madre"
+    },
+    {
+      "origen": "julia",
+      "destino": "pollux",
+      "tipo": "madre"
+    },
+    {
+      "origen": "bruja de la envidia",
+      "destino": "tonnura",
+      "tipo": "madre"
+    },
+    {
+      "origen": "alpha",
+      "destino": "beatrice",
+      "tipo": "media_hermana"
+    },
+    {
+      "origen": "electra",
+      "destino": "rem promise",
+      "tipo": "madre_adoptiva"
+    }
+  ]
+}

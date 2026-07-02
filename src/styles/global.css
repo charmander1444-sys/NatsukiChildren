@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cinzel", serif;
+  --font-body: "Cormorant Garamond", serif;
+
+  --color-rz-bg: #0a0814;
+  --color-rz-bg-2: #14102a;
+  --color-rz-text: #f5f3ff;
+  --color-rz-accent: #b48cff;
+  --color-rz-accent-2: #6ee7ff;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-rz-text);
+    background-color: var(--color-rz-bg);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: #ffffff;
+    letter-spacing: 0.03em;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 14px rgba(150, 120, 255, 0.6);
+  }
+
+  @keyframes twinkle {
+    from { opacity: 0.2; }
+    to { opacity: 0.45; }
+  }
+
+  .animate-twinkle {
+    animation: twinkle 6s ease-in-out infinite alternate;
+  }
+}

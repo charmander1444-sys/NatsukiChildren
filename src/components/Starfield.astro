@@ -1,0 +1,134 @@
+---
+// Starfield.astro — fondo de cosmos con estrellas y constelaciones sutiles
+---
+
+<div class="fixed inset-0 -z-20 overflow-hidden pointer-events-none">
+  <svg id="starfield" class="w-full h-full" preserveAspectRatio="xMidYMid slice"></svg>
+</div>
+
+<script>
+  function initStarfield() {
+    const svg = document.getElementById("starfield");
+    if (!svg) return;
+
+    const ns = "http://www.w3.org/2000/svg";
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+
+    const STAR_COUNT = Math.round((width * height) / 9000);
+    const MAX_LINK_DIST = 140;
+
+    const stars = Array.from({ length: STAR_COUNT }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: Math.random() * 1.4 + 0.4,
+      delay: Math.random() * 6,
+      duration: 4 + Math.random() * 5,
+    }));
+
+    // Líneas de "constelación": solo entre estrellas cercanas, y no todas
+    const linksGroup = document.createElementNS(ns, "g");
+    for (let i = 0; i < stars.length; i++) {
+      for (let j = i + 1; j < stars.length; j++) {
+        const dx = stars[i].x - stars[j].x;
+        const dy = stars[i].y - stars[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < MAX_LINK_DIST && Math.random() < 0.06) {
+          const line = document.createElementNS(ns, "line");
+          line.setAttribute("x1", stars[i].x);
+          line.setAttribute("y1", stars[i].y);
+          line.setAttribute("x2", stars[j].x);
+          line.setAttribute("y2", stars[j].y);
+          line.setAttribute("stroke", "#b48cff");
+          line.setAttribute("stroke-opacity", "0.12");
+          line.setAttribute("stroke-width", "0.6");
+          linksGroup.appendChild(line);
+        }
+      }
+    }
+    svg.appendChild(linksGroup);
+
+    const starsGroup = document.createElementNS(ns, "g");
+    stars.forEach((s) => {
+      const circle = document.createElementNS(ns, "circle");
+      circle.setAttribute("cx", s.x);
+      circle.setAttribute("cy", s.y);
+      circle.setAttribute("r", s.r);
+      circle.setAttribute("fill", "#f5f3ff");
+      circle.style.animation = `star-twinkle ${s.duration}s ease-in-out ${s.delay}s infinite`;
+      starsGroup.appendChild(circle);
+    });
+    svg.appendChild(starsGroup);
+
+    // Estrella fugaz ocasional
+    function spawnShootingStar() {
+      const startX = Math.random() * width * 0.6;
+      const startY = Math.random() * height * 0.3;
+      const length = 120 + Math.random() * 80;
+
+      const line = document.createElementNS(ns, "line");
+      line.setAttribute("x1", startX);
+      line.setAttribute("y1", startY);
+      line.setAttribute("x2", startX + length);
+      line.setAttribute("y2", startY + length * 0.4);
+      line.setAttribute("stroke", "url(#shooting-gradient)");
+      line.setAttribute("stroke-width", "2");
+      line.setAttribute("stroke-linecap", "round");
+      line.style.opacity = "0";
+      line.style.animation = "shooting-star 1.4s ease-out forwards";
+      svg.appendChild(line);
+
+      setTimeout(() => line.remove(), 1600);
+    }
+
+    let defs = svg.querySelector("defs");
+    if (!defs) {
+      defs = document.createElementNS(ns, "defs");
+      svg.prepend(defs);
+    }
+    const gradient = document.createElementNS(ns, "linearGradient");
+    gradient.setAttribute("id", "shooting-gradient");
+    gradient.innerHTML = `
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1" />
+    `;
+    defs.appendChild(gradient);
+
+    function scheduleShootingStar() {
+      const delay = 6000 + Math.random() * 10000;
+      setTimeout(() => {
+        spawnShootingStar();
+        scheduleShootingStar();
+      }, delay);
+    }
+    scheduleShootingStar();
+  }
+
+  initStarfield();
+</script>
+
+<style>
+  @keyframes star-twinkle {
+    0%, 100% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes shooting-star {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(60px, 24px);
+    }
+  }
+</style>

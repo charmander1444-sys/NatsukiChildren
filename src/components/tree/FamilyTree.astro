@@ -1,0 +1,35 @@
+---
+import Controls from "./Controls.astro";
+import Canvas from "./Canvas.astro";
+---
+
+<div class="w-full">
+  <Controls />
+  <Canvas />
+</div>
+
+<script type="module">
+  import { createFamilyTreeContext } from "./familyTreeCore.js";
+  import { setModeLibre, setModeJerarquico, setModeCircular } from "./FamilytreeFreeModes.js";
+  import { setModeChicos, setModeChicas, setModeTodos } from "./FamilytreeChildModes.js";
+  import { initSearch } from "./familyTreeSearch.js";
+  import familyData from "../../data/charactersKids.json";
+
+  const MODES = {
+    libre: setModeLibre,
+    jerarquico: setModeJerarquico,
+    circular: setModeCircular,
+    chicos: setModeChicos,
+    chicas: setModeChicas,
+    todos: setModeTodos,
+  };
+
+  const ctx = createFamilyTreeContext(familyData);
+
+  ctx.modeButtons.forEach((btn) =>
+    btn.addEventListener("click", () => MODES[btn.dataset.mode](ctx))
+  );
+
+  setModeLibre(ctx);
+  initSearch(ctx, MODES);
+</script>

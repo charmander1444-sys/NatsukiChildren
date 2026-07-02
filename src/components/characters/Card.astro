@@ -1,0 +1,71 @@
+---
+interface Props {
+  id: string;
+  nombre: string;
+  avatar?: string;
+  tipo?: string;
+}
+
+const { id, nombre, avatar = "", tipo = "" } = Astro.props;
+
+const TIPO_LABEL: Record<string, string> = {
+  hija: "Hija",
+  hijo: "Hijo",
+  sin_genero: "Sin género",
+  madre: "Madre",
+  raiz: "Padre",
+  conexion: "Conexión",
+};
+
+const TIPO_COLOR: Record<string, string> = {
+  hija: "#f472b6",
+  hijo: "#60a5fa",
+  sin_genero: "#cbd5e1",
+  madre: "#6ee7ff",
+  raiz: "#b48cff",
+  conexion: "#8b8398",
+};
+
+const accent = TIPO_COLOR[tipo] ?? "#b48cff";
+---
+
+<a
+  href={`/detailcharacter/${id}`}
+  class="character-card group flex flex-col items-center gap-3 p-4 rounded-xl border border-rz-accent/20 bg-rz-bg-2/40 hover:bg-rz-bg-2/70 hover:border-rz-accent/50 transition-all duration-300"
+  data-nombre={nombre}
+  data-tipo={tipo}
+>
+  <div
+    class="relative w-28 h-28 rounded-full overflow-hidden border-2 transition-transform duration-300 group-hover:scale-105"
+    style={`border-color: ${accent}66;`}
+  >
+    {avatar ? (
+      <img
+        src={avatar}
+        alt={nombre}
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    ) : (
+      <div class="w-full h-full bg-black flex items-center justify-center">
+        <span class="text-rz-text/20 text-3xl font-display">?</span>
+      </div>
+    )}
+    <div
+      class="absolute inset-0 rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      style={`box-shadow: 0 0 20px 3px ${accent}55;`}
+    ></div>
+  </div>
+
+  <div class="text-center">
+    <p class="font-display text-sm text-white text-glow leading-snug">{nombre}</p>
+    {tipo && (
+      <span
+        class="inline-block mt-1 text-[10px] uppercase tracking-wider font-body"
+        style={`color: ${accent}`}
+      >
+        {TIPO_LABEL[tipo] ?? tipo}
+      </span>
+    )}
+  </div>
+</a>

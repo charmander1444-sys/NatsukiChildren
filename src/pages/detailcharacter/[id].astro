@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/layout.astro";
+import Detail from "../../components/detail/Detail.astro";
+import charactersData from "../../data/charactersKids.json";
+
+export function getStaticPaths() {
+  const characters = charactersData.personas ?? charactersData;
+
+  return characters.map((c: any) => ({
+    params: { id: c.id },
+    props: { character: c },
+  }));
+}
+
+const { character } = Astro.props;
+---
+
+<Layout
+  title={`${character.nombre} — Re:Zero Portal`}
+  description={`Detalles de ${character.nombre}`}
+>
+  <Detail character={character} />
+</Layout>

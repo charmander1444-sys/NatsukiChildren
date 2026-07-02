@@ -1,0 +1,77 @@
+---
+import DetailHero from "./DetailHero.astro";
+import DetailStats from "./DetailStats.astro";
+import DetailHistorias from "./DetailHistorias.astro";
+import DetailApariencia from "./DetailApariencia.astro";
+import DetailSection from "./DetailSection.astro";
+import DetailRelaciones from "./DetailRelaciones.astro";
+import DetailGaleria from "./DetailGaleria.astro";
+import statsData from "../../data/stats.json";
+import galleryData from "../../data/gallery.json";
+
+interface Character {
+  id: string;
+  nombre: string;
+  tipo?: string;
+  avatar?: string;
+  alineacion?: string;
+  edad?: string;
+  tamano?: string;
+  apariencia?: Record<string, string>;
+  personalidad?: string[];
+  habilidades?: string[];
+  equipamiento?: string[];
+  trivia?: string[];
+  [key: string]: any;
+}
+
+interface Props {
+  character: Character;
+}
+
+const { character } = Astro.props;
+
+const statsEntry = (statsData as Record<string, any>)[character.id] ?? {};
+const images = (galleryData as Record<string, { artista: string; imagenes: string[] }[]>)[character.id] ?? [];
+---
+<article class="max-w-5xl mx-auto">
+  <a
+    href="/personajes"
+    class="inline-flex items-center gap-1.5 text-sm text-rz-text/60 hover:text-white font-body mb-6 transition-colors duration-200"
+  >
+    <span aria-hidden="true">←</span> Volver a personajes
+  </a>
+
+  <h1 class="font-display text-5xl sm:text-6xl text-white text-glow text-center mb-8">
+    {character.nombre}
+  </h1>
+
+  <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6 mb-10">
+    <DetailHero
+      nombre={character.nombre}
+      avatar={character.avatar}
+      tipo={character.tipo}
+      alineacion={character.alineacion}
+      edad={character.edad}
+      tamano={character.tamano}
+    />
+    <DetailStats stats={statsEntry.stats} />
+  </div>
+
+  <DetailHistorias historias={statsEntry.historias} />
+
+  <section class="mt-10">
+    <h2 class="font-display text-2xl text-white text-glow mb-4">Datos</h2>
+    <div class="rounded-2xl border border-rz-accent/20 bg-rz-bg-2/40 p-6 sm:p-8 space-y-6">
+      <DetailApariencia apariencia={character.apariencia} />
+      <DetailSection title="Personalidad" items={character.personalidad} />
+      <DetailSection title="Habilidades" items={character.habilidades} />
+      <DetailSection title="Equipamiento" items={character.equipamiento} />
+      <DetailSection title="Trivia" items={character.trivia} />
+    </div>
+  </section>
+
+  <DetailRelaciones relaciones={statsEntry.relaciones} />
+
+<DetailGaleria images={images} nombre={character.nombre} />
+</article>

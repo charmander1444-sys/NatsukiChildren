@@ -1,0 +1,31 @@
+---
+// src/pages/arbol-genealogico.astro
+import Layout from "../layouts/layout.astro";
+import Characters from "../components/characters/Character.astro";
+import Navbar from "../navbar.astro";
+---
+  <Navbar />
+<Layout title="Re:Zero Personajes" description="Explora los personajes de distintos universos IF.">
+
+
+  <div class="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-8">
+
+    <!-- Encabezado -->
+    <section class="mx-auto max-w-3xl text-center">
+      <h1 class="font-display text-4xl font-bold text-white text-glow">
+      </h1>
+
+      <p class="mt-3 text-lg leading-relaxed text-rz-text/70">
+        Explora los personajes de distintos universos IF y descubre sus conexiones familiares.
+      </p>
+    </section>
+
+    <!-- Árbol -->
+    <section class="w-full">
+        <Characters/>
+    </section>
+
+  </div>
+</Layout>
+
+

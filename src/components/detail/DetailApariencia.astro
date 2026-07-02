@@ -1,0 +1,41 @@
+---
+interface Apariencia {
+  cabello?: string;
+  ojos?: string;
+  ropa?: string;
+  constitucion?: string;
+  marcas?: string;
+  [key: string]: any;
+}
+
+interface Props {
+  apariencia?: Apariencia;
+}
+
+const { apariencia } = Astro.props;
+
+const LABELS: Record<string, string> = {
+  cabello: "Cabello",
+  ojos: "Ojos",
+  ropa: "Ropa",
+  constitucion: "Constitución",
+  marcas: "Marcas",
+};
+
+const entries = apariencia
+  ? Object.entries(apariencia).filter(([, v]) => v && String(v).trim() !== "")
+  : [];
+---
+
+{entries.length > 0 && (
+  <section>
+    <h2 class="font-display text-xl text-rz-accent-2 mb-2">Apariencia</h2>
+    <ul class="space-y-1.5">
+      {entries.map(([key, value]) => (
+        <li class="text-base text-rz-text/85 font-body leading-relaxed">
+          <span class="text-rz-accent-2/90 capitalize">{LABELS[key] ?? key}:</span> {value}
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

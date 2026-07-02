@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  items?: string[];
+}
+
+const { title, items = [] } = Astro.props;
+const valid = (items ?? []).filter((i) => i && i.trim() !== "");
+---
+
+{valid.length > 0 && (
+  <section>
+    <h2 class="font-display text-xl text-rz-accent-2 mb-2">{title}</h2>
+    <ul class="list-disc list-inside space-y-1.5">
+      {valid.map((item) => (
+        <li class="text-base text-rz-text/85 font-body leading-relaxed">{item}</li>
+      ))}
+    </ul>
+  </section>
+)}

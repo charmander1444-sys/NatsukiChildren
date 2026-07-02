@@ -1,0 +1,18 @@
+---
+import Search from "./Search.astro";
+import CardOrg from "./CardOrg.astro";
+import charactersData from "../../data/charactersKids.json";
+
+// Ajustá esta línea si el JSON es un array plano en vez de { personas: [...] }
+const characters = charactersData.personas ?? charactersData;
+---
+
+<section class="w-full">
+  <h2 class="font-display text-3xl text-white text-glow mb-2">Personajes</h2>
+  <p class="text-sm text-rz-text/60 font-body mb-6">
+    Explora a todos los personajes del arbol. Busca y filtra.
+  </p>
+
+  <Search />
+  <CardOrg characters={characters} />
+</section>

@@ -1,0 +1,71 @@
+---
+// Controls.astro — botones para alternar entre modos y filtros
+---
+
+<div class="flex gap-2 mb-3 flex-wrap items-center">
+  <div class="relative w-56">
+    <input
+      id="node-search"
+      type="text"
+      placeholder="Buscar por nombre..."
+      autocomplete="off"
+      class="w-full bg-rz-bg-2/60 border border-rz-accent/30 rounded-full px-4 py-1.5 text-sm font-body text-rz-text placeholder-rz-text/40 focus:outline-none focus:border-rz-accent transition-colors duration-200"
+    />
+    <div
+      id="search-results"
+      class="hidden absolute z-30 mt-1 w-full max-h-64 overflow-y-auto bg-rz-bg-2/95 border border-rz-accent/30 rounded-lg shadow-lg backdrop-blur-sm"
+    ></div>
+  </div>
+
+  <div class="h-6 w-px bg-rz-accent/20 mx-1 self-center"></div>
+
+  <button
+    id="mode-libre"
+    data-mode="libre"
+    class="layout-toggle px-4 py-1.5 rounded-full text-sm font-body border border-rz-accent/30 transition-colors duration-200"
+  >
+    Libre
+  </button>
+
+  <button
+    id="mode-jerarquico"
+    data-mode="jerarquico"
+    class="layout-toggle px-4 py-1.5 rounded-full text-sm font-body border border-rz-accent/30 transition-colors duration-200"
+  >
+    Jerarquico
+  </button>
+
+  <button
+    id="mode-circular"
+    data-mode="circular"
+    class="layout-toggle px-4 py-1.5 rounded-full text-sm font-body border border-rz-accent/30 transition-colors duration-200"
+  >
+    Circular
+  </button>
+
+  <div class="h-6 w-px bg-rz-accent/20 mx-1 self-center"></div>
+
+  <button
+    id="mode-chicos"
+    data-mode="chicos"
+    class="layout-toggle px-4 py-1.5 rounded-full text-sm font-body border border-rz-accent/30 transition-colors duration-200"
+  >
+    Chicos
+  </button>
+
+  <button
+    id="mode-chicas"
+    data-mode="chicas"
+    class="layout-toggle px-4 py-1.5 rounded-full text-sm font-body border border-rz-accent/30 transition-colors duration-200"
+  >
+    Chicas
+  </button>
+
+  <button
+    id="mode-todos"
+    data-mode="todos"
+    class="layout-toggle px-4 py-1.5 rounded-full text-sm font-body border border-rz-accent/30 transition-colors duration-200"
+  >
+    Todos
+  </button>
+</div>

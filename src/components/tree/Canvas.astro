@@ -1,0 +1,11 @@
+---
+// Canvas.astro — contenedor visual del grafo (svg) y el panel de detalle
+import DetailPanel from "./DetailPanel.astro";
+---
+
+<div class="relative w-full h-[80vh] rounded-2xl border border-rz-accent/20 bg-rz-bg-2/30 overflow-hidden">
+  <svg id="tree-svg" class="w-full h-full cursor-grab active:cursor-grabbing"></svg>
+
+  <DetailPanel />
+
+</div>

@@ -1,0 +1,104 @@
+---
+interface Props {
+  stats?: Record<string, string>;
+}
+
+const { stats } = Astro.props;
+
+const LABELS: Record<string, string> = {
+  fuerza: "Fuerza",
+  resistencia: "Resistencia",
+  velocidad: "Velocidad",
+  inteligencia: "Inteligencia",
+  habilidades_combate: "Habilidades de combate",
+  carisma: "Carisma",
+  portal: "Portal",
+  afinidad_espiritual: "Afinidad espiritual",
+  potencial: "Potencial",
+  suerte: "Suerte",
+};
+
+// Orden de la escala, de menor a mayor
+const RANKS = ["F", "E", "D", "C", "B", "A", "S", "SS", "SS+", "EX"];
+
+// Color sólido fijo por rango: apagado en F, cada vez más vibrante hasta EX
+const RANK_COLORS: Record<string, string> = {
+  F: "#52525b",     // gris apagado, casi invisible
+  E: "#71717a",     // gris
+  D: "#8b8398",     // gris violáceo
+  C: "#8b93b0",     // azulado apagado
+  B: "#60a5fa",     // azul
+  A: "#818cf8",     // índigo
+  S: "#b48cff",     // violeta (acento raíz)
+  SS: "#e879f9",    // magenta brillante
+  "SS+": "#f472b6", // rosa vívido
+  EX: "#facc15",    // dorado brillante
+};
+
+// Intensidad del glow por rango: nulo en F, máximo en EX
+const RANK_GLOW: Record<string, string> = {
+  F: "none",
+  E: "none",
+  D: "none",
+  C: "0 0 4px #8b93b055",
+  B: "0 0 6px #60a5fa66",
+  A: "0 0 8px #818cf877",
+  S: "0 0 10px #b48cff88",
+  SS: "0 0 12px #e879f999",
+  "SS+": "0 0 14px #f472b6aa",
+  EX: "0 0 18px #facc15cc",
+};
+
+const RANK_DESC: Record<string, string> = {
+  F: "Ninguna",
+  E: "Mala",
+  D: "Débil",
+  C: "Media",
+  B: "Buena / Superior al promedio",
+  A: "Excelente",
+  S: "Superior",
+  SS: "Élite",
+  "SS+": "Divina",
+  EX: "Incalculable",
+};
+
+const entries = stats
+  ? Object.entries(stats).filter(([, v]) => v && RANKS.includes(v.toUpperCase()))
+  : [];
+---
+
+{entries.length > 0 && (
+  <div class="rounded-2xl border border-rz-accent/20 bg-rz-bg-2/40 p-6">
+    <h2 class="font-display text-xl text-white text-glow mb-5 text-center">Stats</h2>
+    <div class="space-y-5">
+      {entries.map(([key, rawRank]) => {
+        const rank = rawRank.toUpperCase();
+        const idx = RANKS.indexOf(rank);
+        const pct = ((idx + 1) / RANKS.length) * 100;
+        const color = RANK_COLORS[rank];
+        const glow = RANK_GLOW[rank];
+        return (
+          <div class="flex items-center gap-3" title={RANK_DESC[rank]}>
+            <span class="w-40 shrink-0 text-sm uppercase tracking-wider text-rz-text/70 font-body">
+              {LABELS[key] ?? key}
+            </span>
+
+            <div class="flex-1 h-3 rounded-full bg-rz-bg/70 overflow-hidden">
+              <div
+                class="h-full rounded-full transition-all duration-500"
+                style={`width:${pct}%; background:${color}; box-shadow:${glow};`}
+              ></div>
+            </div>
+
+            <span
+              class="w-14 shrink-0 text-center text-sm font-display font-semibold rounded-full py-0.5"
+              style={`color:${color}; border:1px solid ${color}55; background:${color}14;`}
+            >
+              {rank}
+            </span>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+)}

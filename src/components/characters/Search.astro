@@ -1,0 +1,70 @@
+---
+---
+
+<div class="flex flex-wrap gap-3 items-center mb-6">
+  <div class="relative flex-1 min-w-[200px]">
+    <input
+      id="char-search"
+      type="text"
+      placeholder="Buscar por nombre..."
+      autocomplete="off"
+      class="w-full bg-rz-bg-2/60 border border-rz-accent/30 rounded-full px-4 py-2 text-sm font-body text-rz-text placeholder-rz-text/40 focus:outline-none focus:border-rz-accent transition-colors duration-200"
+    />
+  </div>
+
+  <select
+    id="char-gender-filter"
+    class="bg-rz-bg-2/60 border border-rz-accent/30 rounded-full px-4 py-2 text-sm font-body text-rz-text focus:outline-none focus:border-rz-accent transition-colors duration-200"
+  >
+    <option value="">Todos los generos</option>
+    <option value="hijo">Hijo</option>
+    <option value="hija">Hija</option>
+    <option value="sin_genero">Sin genero</option>
+  </select>
+
+  <button
+    id="char-clear"
+    type="button"
+    class="px-4 py-2 rounded-full text-sm font-body border border-rz-accent/30 text-rz-text/70 hover:text-white hover:border-rz-accent transition-colors duration-200"
+  >
+    Limpiar
+  </button>
+</div>
+
+<script>
+  const searchInput = document.getElementById("char-search") as HTMLInputElement;
+  const genderSelect = document.getElementById("char-gender-filter") as HTMLSelectElement;
+  const clearBtn = document.getElementById("char-clear") as HTMLButtonElement;
+  const grid = document.getElementById("card-grid");
+  const noResults = document.getElementById("no-results");
+
+  const normalize = (s: string) =>
+    s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+  function applyFilters() {
+    if (!grid) return;
+    const query = normalize(searchInput.value.trim());
+    const gender = genderSelect.value;
+    let visibleCount = 0;
+
+    grid.querySelectorAll<HTMLElement>(".character-card").forEach((card) => {
+      const nombre = normalize(card.dataset.nombre ?? "");
+      const tipo = card.dataset.tipo ?? "";
+      const matchesName = !query || nombre.includes(query);
+      const matchesGender = !gender || tipo === gender;
+      const visible = matchesName && matchesGender;
+      card.style.display = visible ? "" : "none";
+      if (visible) visibleCount++;
+    });
+
+    noResults?.classList.toggle("hidden", visibleCount !== 0);
+  }
+
+  searchInput?.addEventListener("input", applyFilters);
+  genderSelect?.addEventListener("change", applyFilters);
+  clearBtn?.addEventListener("click", () => {
+    searchInput.value = "";
+    genderSelect.value = "";
+    applyFilters();
+  });
+</script>
