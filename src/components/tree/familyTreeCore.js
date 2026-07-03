@@ -19,12 +19,28 @@ export const FIXED_COLLIDE_PAD = 34; // separación extra de nodos en modos jer�
 
 export const getId = (x) => (typeof x === "object" && x !== null ? x.id : x);
 
+// Tipos de relación "hermanos" (de sangre, medios o adoptivos): mismo estilo
+// visual (gris punteado, sin flecha) y misma lógica de posicionamiento como
+// nodo "conexion". Se exportan para que familyTreeFreeModes.js (y cualquier
+// otro módulo de modo) use la misma lista en vez de duplicarla.
+export const SIBLING_TIPOS = [
+  "media_hermana",
+  "medio_hermano",
+  "hermano",
+  "hermana",
+  "hermana_adoptiva",
+  "hermano_adoptivo",
+];
+// "madre_adoptiva" se agrupa junto a los hermanos porque comparte el mismo
+// estilo visual y el mismo tratamiento como nodo "conexion" en los modos.
+export const isSiblingLink = (tipo) => SIBLING_TIPOS.includes(tipo) || tipo === "madre_adoptiva";
+
 // Estilos de línea según tipo de relación (compartidos por libre/jerárquico/circular)
 const strokeForLink = (d) =>
-  d.tipo === "media_hermana" || d.tipo === "madre_adoptiva" ? "#8b8398" : d.tipo === "madre" ? COLOR.madre : COLOR.raiz;
+  isSiblingLink(d.tipo) ? "#8b8398" : d.tipo === "madre" ? COLOR.madre : COLOR.raiz;
 const widthForLink = (d) => (d.tipo === "padre" || d.tipo === "madre" ? 2 : 1.4);
 const dashForLink = (d) =>
-  d.tipo === "media_hermana" || d.tipo === "madre_adoptiva" ? "4 4" : d.tipo === "padre_madre_derivado" ? "3 5" : null;
+  isSiblingLink(d.tipo) ? "4 4" : d.tipo === "padre_madre_derivado" ? "3 5" : null;
 const markerForLink = (d) => (d.tipo === "padre" || d.tipo === "madre" ? `url(#arrow-${d.tipo})` : null);
 const opacityForLink = (d) => (d.tipo === "padre_madre_derivado" ? 0.4 : 0.6);
 
@@ -219,7 +235,7 @@ const totalHijos = nodes.filter((n) => ["hija", "hijo", "sin_genero"].includes(n
 
     content.innerHTML = `
       <h3 class="font-display text-xl text-white text-glow mb-1 pr-8">${d.nombre}</h3>
-      <p class="text-sm text-rz-text/60 mb-3">${d.edad || "Personaje canon de Re:Zero"}</p>
+      <p class="text-sm text-rz-text/60 mb-3">${d.edad || ""}</p>
       ${apariencia ? `<h4 class="font-display text-sm text-rz-accent-2 mt-3 mb-1">Apariencia</h4><ul class="text-sm space-y-1 text-rz-text/85">${apariencia}</ul>` : ""}
       ${d.personalidad ? `<h4 class="font-display text-sm text-rz-accent-2 mt-3 mb-1">Personalidad</h4>${list(d.personalidad)}` : ""}
       ${d.habilidades ? `<h4 class="font-display text-sm text-rz-accent-2 mt-3 mb-1">Habilidades</h4>${list(d.habilidades)}` : ""}

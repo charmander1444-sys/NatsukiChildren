@@ -1,180 +1,62 @@
 {
   "personas": [
-    {
-      "id": "subaru",
-      "nombre": "Subaru Natsuki",
-      "tipo": "raiz"
-    },
-    {
-      "id": "natsumi subaru",
-      "nombre": "Natsumi Natsuki",
-      "tipo": "raiz"
-    },
-    {
-      "id": "echidna",
-      "nombre": "Echidna",
-      "tipo": "madre"
-    },
-    {
-      "id": "emilia",
-      "nombre": "Emilia",
-      "tipo": "madre"
-    },
-    {
-      "id": "pandora",
-      "nombre": "Pandora",
-      "tipo": "madre"
-    },
-    {
-      "id": "priscilla",
-      "nombre": "Priscilla Barielle",
-      "tipo": "madre"
-    },
-    {
-      "id": "anastasia",
-      "nombre": "Anastasia Hoshin",
-      "tipo": "madre"
-    },
-    {
-      "id": "shaula",
-      "nombre": "Shaula",
-      "tipo": "madre"
-    },
-    {
-      "id": "miyuse",
-      "nombre": "Miyuse",
-      "tipo": "madre"
-    },
-    {
-      "id": "shion",
-      "nombre": "Shion",
-      "tipo": "madre"
-    },
-    {
-      "id": "crusch",
-      "nombre": "Crusch Karsten",
-      "tipo": "madre"
-    },
-    {
-      "id": "elsa",
-      "nombre": "Elsa Granhiert",
-      "tipo": "madre"
-    },
-    {
-      "id": "emerada",
-      "nombre": "Emerada Lugunica",
-      "tipo": "madre"
-    },
-    {
-      "id": "felt",
-      "nombre": "Felt",
-      "tipo": "madre"
-    },
-    {
-      "id": "lilac",
-      "nombre": "Lilac",
-      "tipo": "madre"
-    },
-    {
-      "id": "daphne",
-      "nombre": "Daphne",
-      "tipo": "madre"
-    },
-    {
-      "id": "sekhmet",
-      "nombre": "Sekhmet",
-      "tipo": "madre"
-    },
-    {
-      "id": "capella",
-      "nombre": "Capella Emerada Lugunica",
-      "tipo": "madre"
-    },
-    {
-      "id": "liliana",
-      "nombre": "Liliana Masquerade",
-      "tipo": "madre"
-    },
-    {
-      "id": "ram",
-      "nombre": "Ram",
-      "tipo": "madre"
-    },
-    {
-      "id": "rem",
-      "nombre": "Rem",
-      "tipo": "madre"
-    },
-    {
-      "id": "rem promise",
-      "nombre": "Rem(Promise IF)",
-      "tipo": "conexion"
-    },
-    {
-      "id": "petra",
-      "nombre": "Petra Leyte",
-      "tipo": "madre"
-    },
-    {
-      "id": "patrasche",
-      "nombre": "Patrasche",
-      "tipo": "madre"
-    },
-    {
-      "id": "minerva",
-      "nombre": "Minerva",
-      "tipo": "madre"
-    },
-    {
-      "id": "satella",
-      "nombre": "Satella",
-      "tipo": "madre"
-    },
-    {
-      "id": "sylphy",
-      "nombre": "Sylphy",
-      "tipo": "madre"
-    },
-    {
-      "id": "adelheid",
-      "nombre": "Adelheid Astrea",
-      "tipo": "madre"
-    },
-    {
-      "id": "zarestia",
-      "nombre": "Zarestia",
-      "tipo": "madre"
-    },
-    {
-      "id": "yorna",
-      "nombre": "Yorna Mishigure",
-      "tipo": "madre"
-    },
-    {
-      "id": "carmilla",
-      "nombre": "Carmilla",
-      "tipo": "madre"
-    },
-    {
-      "id": "frederica",
-      "nombre": "Frederica Baumann",
-      "tipo": "madre"
-    },
-    {
-      "id": "julia",
-      "nombre": "Julia Mathers",
-      "tipo": "madre"
-    },
-    {
-      "id": "bruja de la envidia",
-      "nombre": "Bruja de la Envidia",
-      "tipo": "madre"
-    },
-    {
-      "id": "beatrice",
-      "nombre": "Beatrice",
-      "tipo": "conexion"
-    },
+  {"id":"subaru","nombre":"Subaru Natsuki","tipo":"raiz"},
+  {"id":"natsumi subaru","nombre":"Natsumi Natsuki","tipo":"raiz"},
+
+  {"id":"echidna","nombre":"Echidna","tipo":"madre"},
+  {"id":"emilia","nombre":"Emilia","tipo":"madre"},
+  {"id":"pandora","nombre":"Pandora","tipo":"madre"},
+  {"id":"priscilla","nombre":"Priscilla Barielle","tipo":"madre"},
+  {"id":"anastasia","nombre":"Anastasia Hoshin","tipo":"madre"},
+  {"id":"shaula","nombre":"Shaula","tipo":"madre"},
+  {"id":"miyuse","nombre":"Miyuse","tipo":"madre"},
+  {"id":"shion","nombre":"Shion","tipo":"madre"},
+  {"id":"crusch","nombre":"Crusch Karsten","tipo":"madre"},
+  {"id":"elsa","nombre":"Elsa Granhiert","tipo":"madre"},
+  {"id":"emerada","nombre":"Emerada Lugunica","tipo":"madre"},
+  {"id":"felt","nombre":"Felt","tipo":"madre"},
+  {"id":"lilac","nombre":"Lilac","tipo":"madre"},
+  {"id":"daphne","nombre":"Daphne","tipo":"madre"},
+  {"id":"sekhmet","nombre":"Sekhmet","tipo":"madre"},
+  {"id":"capella","nombre":"Capella Emerada Lugunica","tipo":"madre"},
+  {"id":"liliana","nombre":"Liliana Masquerade","tipo":"madre"},
+  {"id":"ram","nombre":"Ram","tipo":"madre"},
+  {"id":"rem","nombre":"Rem","tipo":"madre"},
+  {"id":"petra","nombre":"Petra Leyte","tipo":"madre"},
+  {"id":"patrasche","nombre":"Patrasche","tipo":"madre"},
+  {"id":"minerva","nombre":"Minerva","tipo":"madre"},
+  {"id":"satella","nombre":"Satella","tipo":"madre"},
+  {"id":"sylphy","nombre":"Sylphy","tipo":"madre"},
+  {"id":"adelheid","nombre":"Adelheid Van Astrea","tipo":"madre"},
+  {"id":"zarestia","nombre":"Zarestia","tipo":"madre"},
+  {"id":"yorna","nombre":"Yorna Mishigure","tipo":"madre"},
+  {"id":"carmilla","nombre":"Carmilla","tipo":"madre"},
+  {"id":"frederica","nombre":"Frederica Baumann","tipo":"madre"},
+  {"id":"julia","nombre":"Julia Mathers","tipo":"madre"},
+  {"id":"bruja de la envidia","nombre":"Bruja de la Envidia","tipo":"madre"},
+  {"id":"katya","nombre":"Katya Aurelie","tipo":"madre"},
+
+  {"id":"rem promise","nombre":"Rem(Promise IF)","tipo":"conexion"},
+  {"id":"rigel promise","nombre":"Rigel(Promise IF)","tipo":"conexion"},
+  {"id":"spica promise","nombre":"Spica(Promise IF)","tipo":"conexion"},
+  {"id":"beatrice","nombre":"Beatrice","tipo":"conexion"},
+  {"id":"beta","nombre":"Beta","tipo":"hija"},
+  {"id":"omega","nombre":"Omega","tipo":"hija"},
+  {"id":"chocorina katya if","nombre":"Chocorina(Katya IF)","tipo":"conexion"},
+  {"id":"rigel katya if","nombre":"Rigel(Katya IF)","tipo":"conexion"},
+  {"id":"spica katya if","nombre":"Spica(Katya IF)","tipo":"conexion"},
+  {"id":"tanza yorna if","nombre":"Tanza(Yorna IF)","tipo":"conexion"},
+  {"id":"zoey yorna if","nombre":"Zoey(Yorna IF)","tipo":"conexion"},
+  {"id":"meili elsa if","nombre":"Meili(Elsa IF)","tipo":"conexion"},
+  {"id":"meili emerada if","nombre":"Meili(Emerada IF)","tipo":"conexion"},
+  {"id":"meili priscilla if","nombre":"Meili(Priscilla IF)","tipo":"conexion"},
+  {"id":"spica(rui) priscilla if","nombre":"Spica(Rui)(Priscilla IF)","tipo":"conexion"},
+
+
+  {"id":"eris","nombre":"Eris Natsuki","tipo":"hija"},
+  
+
+
     {
       "id": "alpha",
       "nombre": "Alpha Natsuki",
@@ -1551,385 +1433,114 @@
     }
   ],
   "relaciones": [
-    {
-      "origen": "subaru",
-      "destino": "alpha",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "electra",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "elpis",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "helena",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "mercurius",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "lyra",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "graffias",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "taygete",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "leo",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "bellatrix",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "maia",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "chochorina",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "cassia",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "aconita",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "menkar",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "nunki",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "alcyone",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "caph",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "cygnus",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "vega",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "natsumi",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "saiph",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "phoebe",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "merope",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "perseus",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "adhara",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "denebola",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "reid",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "cepheus",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "luna",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "orion",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "morgana",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "viviane",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "arthur",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "castor",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "pollux",
-      "tipo": "padre"
-    },
-    {
-      "origen": "subaru",
-      "destino": "tonnura",
-      "tipo": "padre"
-    },
-    {
-      "origen": "echidna",
-      "destino": "alpha",
-      "tipo": "madre"
-    },
-    {
-      "origen": "emilia",
-      "destino": "electra",
-      "tipo": "madre"
-    },
-    {
-      "origen": "pandora",
-      "destino": "elpis",
-      "tipo": "madre"
-    },
-    {
-      "origen": "priscilla",
-      "destino": "helena",
-      "tipo": "madre"
-    },
-    {
-      "origen": "anastasia",
-      "destino": "mercurius",
-      "tipo": "madre"
-    },
-    {
-      "origen": "anastasia",
-      "destino": "lyra",
-      "tipo": "madre"
-    },
-    {
-      "origen": "shaula",
-      "destino": "graffias",
-      "tipo": "madre"
-    },
-    {
-      "origen": "shion",
-      "destino": "taygete",
-      "tipo": "madre"
-    },
-    {
-      "origen": "crusch",
-      "destino": "leo",
-      "tipo": "madre"
-    },
-    {
-      "origen": "elsa",
-      "destino": "bellatrix",
-      "tipo": "madre"
-    },
-    {
-      "origen": "emerada",
-      "destino": "maia",
-      "tipo": "madre"
-    },
-    {
-      "origen": "emilia",
-      "destino": "chochorina",
-      "tipo": "madre"
-    },
-    {
-      "origen": "felt",
-      "destino": "cassia",
-      "tipo": "madre"
-    },
-    {
-      "origen": "lilac",
-      "destino": "aconita",
-      "tipo": "madre"
-    },
-    {
-      "origen": "daphne",
-      "destino": "menkar",
-      "tipo": "madre"
-    },
-    {
-      "origen": "sekhmet",
-      "destino": "nunki",
-      "tipo": "madre"
-    },
-    {
-      "origen": "sekhmet",
-      "destino": "alcyone",
-      "tipo": "madre"
-    },
-    {
-      "origen": "capella",
-      "destino": "caph",
-      "tipo": "madre"
-    },
-    {
-      "origen": "liliana",
-      "destino": "cygnus",
-      "tipo": "madre"
-    },
-    {
-      "origen": "ram",
-      "destino": "vega",
-      "tipo": "madre"
-    },
-    {
-      "origen": "miyuse",
-      "destino": "natsumi",
-      "tipo": "madre"
-    },
-    {
-      "origen": "petra",
-      "destino": "saiph",
-      "tipo": "madre"
-    },
-    {
-      "origen": "patrasche",
-      "destino": "phoebe",
-      "tipo": "madre"
-    },
-    {
-      "origen": "minerva",
-      "destino": "merope",
-      "tipo": "madre"
-    },
-    {
-      "origen": "minerva",
-      "destino": "perseus",
-      "tipo": "madre"
-    },
-    {
-      "origen": "satella",
-      "destino": "adhara",
-      "tipo": "madre"
-    },
-    {
-      "origen": "sylphy",
-      "destino": "denebola",
-      "tipo": "madre"
-    },
-    {
-      "origen": "adelheid",
-      "destino": "reid",
-      "tipo": "madre"
-    },
-    {
-      "origen": "zarestia",
-      "destino": "cepheus",
-      "tipo": "madre"
-    },
-    {
-      "origen": "yorna",
-      "destino": "luna",
-      "tipo": "madre"
-    },
-    {
-      "origen": "carmilla",
-      "destino": "orion",
-      "tipo": "madre"
-    },
-    {
-      "origen": "frederica",
-      "destino": "morgana",
-      "tipo": "madre"
-    },
-    {
-      "origen": "frederica",
-      "destino": "viviane",
-      "tipo": "madre"
-    },
-    {
-      "origen": "frederica",
-      "destino": "arthur",
-      "tipo": "madre"
-    },
-    {
-      "origen": "julia",
-      "destino": "castor",
-      "tipo": "madre"
-    },
-    {
-      "origen": "julia",
-      "destino": "pollux",
-      "tipo": "madre"
-    },
-    {
-      "origen": "bruja de la envidia",
-      "destino": "tonnura",
-      "tipo": "madre"
-    },
-    {
-      "origen": "alpha",
-      "destino": "beatrice",
-      "tipo": "media_hermana"
-    },
-    {
-      "origen": "electra",
-      "destino": "rem promise",
-      "tipo": "madre_adoptiva"
-    }
-  ]
+  {"origen":"subaru","destino":"alpha","tipo":"padre"},
+  {"origen":"subaru","destino":"beta","tipo":"padre"},
+  {"origen":"subaru","destino":"omega","tipo":"padre"},
+  {"origen":"subaru","destino":"electra","tipo":"padre"},
+  {"origen":"subaru","destino":"elpis","tipo":"padre"},
+  {"origen":"subaru","destino":"helena","tipo":"padre"},
+  {"origen":"subaru","destino":"mercurius","tipo":"padre"},
+  {"origen":"subaru","destino":"lyra","tipo":"padre"},
+  {"origen":"subaru","destino":"graffias","tipo":"padre"},
+  {"origen":"subaru","destino":"taygete","tipo":"padre"},
+  {"origen":"subaru","destino":"leo","tipo":"padre"},
+  {"origen":"subaru","destino":"bellatrix","tipo":"padre"},
+  {"origen":"subaru","destino":"maia","tipo":"padre"},
+  {"origen":"subaru","destino":"chochorina","tipo":"padre"},
+  {"origen":"subaru","destino":"cassia","tipo":"padre"},
+  {"origen":"subaru","destino":"aconita","tipo":"padre"},
+  {"origen":"subaru","destino":"menkar","tipo":"padre"},
+  {"origen":"subaru","destino":"nunki","tipo":"padre"},
+  {"origen":"subaru","destino":"alcyone","tipo":"padre"},
+  {"origen":"subaru","destino":"caph","tipo":"padre"},
+  {"origen":"subaru","destino":"cygnus","tipo":"padre"},
+  {"origen":"subaru","destino":"vega","tipo":"padre"},
+  {"origen":"subaru","destino":"natsumi","tipo":"padre"},
+  {"origen":"subaru","destino":"saiph","tipo":"padre"},
+  {"origen":"subaru","destino":"phoebe","tipo":"padre"},
+  {"origen":"subaru","destino":"merope","tipo":"padre"},
+  {"origen":"subaru","destino":"perseus","tipo":"padre"},
+  {"origen":"subaru","destino":"adhara","tipo":"padre"},
+  {"origen":"subaru","destino":"denebola","tipo":"padre"},
+  {"origen":"subaru","destino":"reid","tipo":"padre"},
+  {"origen":"subaru","destino":"cepheus","tipo":"padre"},
+  {"origen":"subaru","destino":"luna","tipo":"padre"},
+  {"origen":"subaru","destino":"orion","tipo":"padre"},
+  {"origen":"subaru","destino":"morgana","tipo":"padre"},
+  {"origen":"subaru","destino":"viviane","tipo":"padre"},
+  {"origen":"subaru","destino":"arthur","tipo":"padre"},
+  {"origen":"subaru","destino":"castor","tipo":"padre"},
+  {"origen":"subaru","destino":"pollux","tipo":"padre"},
+  {"origen":"subaru","destino":"tonnura","tipo":"padre"},
+  {"origen":"subaru","destino":"eris","tipo":"padre"},
+
+  {"origen":"echidna","destino":"alpha","tipo":"madre"},
+  {"origen":"echidna","destino":"beta","tipo":"madre"},
+  {"origen":"echidna","destino":"omega","tipo":"madre"},
+  {"origen":"emilia","destino":"electra","tipo":"madre"},
+  {"origen":"pandora","destino":"elpis","tipo":"madre"},
+  {"origen":"priscilla","destino":"helena","tipo":"madre"},
+  {"origen":"anastasia","destino":"mercurius","tipo":"madre"},
+  {"origen":"anastasia","destino":"lyra","tipo":"madre"},
+  {"origen":"shaula","destino":"graffias","tipo":"madre"},
+  {"origen":"shion","destino":"taygete","tipo":"madre"},
+  {"origen":"crusch","destino":"leo","tipo":"madre"},
+  {"origen":"elsa","destino":"bellatrix","tipo":"madre"},
+  {"origen":"emerada","destino":"maia","tipo":"madre"},
+  {"origen":"emilia","destino":"chochorina","tipo":"madre"},
+  {"origen":"felt","destino":"cassia","tipo":"madre"},
+  {"origen":"lilac","destino":"aconita","tipo":"madre"},
+  {"origen":"daphne","destino":"menkar","tipo":"madre"},
+  {"origen":"sekhmet","destino":"nunki","tipo":"madre"},
+  {"origen":"sekhmet","destino":"alcyone","tipo":"madre"},
+  {"origen":"capella","destino":"caph","tipo":"madre"},
+  {"origen":"liliana","destino":"cygnus","tipo":"madre"},
+  {"origen":"ram","destino":"vega","tipo":"madre"},
+  {"origen":"miyuse","destino":"natsumi","tipo":"madre"},
+  {"origen":"petra","destino":"saiph","tipo":"madre"},
+  {"origen":"patrasche","destino":"phoebe","tipo":"madre"},
+  {"origen":"minerva","destino":"merope","tipo":"madre"},
+  {"origen":"minerva","destino":"perseus","tipo":"madre"},
+  {"origen":"satella","destino":"adhara","tipo":"madre"},
+  {"origen":"sylphy","destino":"denebola","tipo":"madre"},
+  {"origen":"adelheid","destino":"reid","tipo":"madre"},
+  {"origen":"zarestia","destino":"cepheus","tipo":"madre"},
+  {"origen":"yorna","destino":"luna","tipo":"madre"},
+  {"origen":"carmilla","destino":"orion","tipo":"madre"},
+  {"origen":"frederica","destino":"morgana","tipo":"madre"},
+  {"origen":"frederica","destino":"viviane","tipo":"madre"},
+  {"origen":"frederica","destino":"arthur","tipo":"madre"},
+  {"origen":"julia","destino":"castor","tipo":"madre"},
+  {"origen":"julia","destino":"pollux","tipo":"madre"},
+  {"origen":"bruja de la envidia","destino":"tonnura","tipo":"madre"},
+  {"origen":"katya","destino":"eris","tipo":"madre"},
+
+
+  {"origen":"alpha","destino":"beatrice","tipo":"media_hermana"},
+  {"origen":"alpha","destino":"beta","tipo":"mhermana"},
+  {"origen":"alpha","destino":"omega","tipo":"hermana"},
+  {"origen":"beatrice","destino":"beta","tipo":"media_hermana"},
+  {"origen":"beatrice","destino":"omega","tipo":"media_hermana"},
+  {"origen":"electra","destino":"rem promise","tipo":"madre_adoptiva"},
+  {"origen":"electra","destino":"rigel promise","tipo":"medio_hermano"},
+  {"origen":"electra","destino":"spica promise","tipo":"media_hermana"},
+  {"origen":"rigel promise","destino":"spica promise","tipo":"hermana"},
+  {"origen":"lyra","destino":"mercurius","tipo":"hermano"},
+  {"origen":"perseus","destino":"merope","tipo":"hermana"},
+  {"origen":"alcyone","destino":"nunki","tipo":"hermano"},
+  {"origen":"pollux","destino":"castor","tipo":"hermano"},
+  {"origen":"bellatrix","destino":"meili elsa if","tipo":"hermana_adoptiva"},
+  {"origen":"eris","destino":"chocorina katya if","tipo":"media_hermana"},
+  {"origen":"eris","destino":"spica katya if","tipo":"media_hermana"},
+  {"origen":"eris","destino":"rigel katya if","tipo":"medio_hermano"},
+  {"origen":"spica katya if","destino":"rigel katya if","tipo":"hermano"},
+  {"origen":"chocorina katya if","destino":"spica katya if","tipo":"hermana"},
+  {"origen":"luna","destino":"tanza yorna if","tipo":"hermana_adoptiva"},
+  {"origen":"luna","destino":"zoey yorna if","tipo":"hermana_adoptiva"},
+  {"origen":"tanza yorna if","destino":"zoey yorna if","tipo":"hermana_adoptiva"},
+  {"origen":"helena","destino":"meili priscilla if","tipo":"hermana_adoptiva"},
+  {"origen":"helena","destino":"spica(rui) priscilla if","tipo":"hermana_adoptiva"},
+  {"origen":"spica(rui) priscilla if","destino":"meili priscilla if","tipo":"hermana_adoptiva"},
+  {"origen":"maia","destino":"meili emerada if","tipo":"hermana_adoptiva"}
+]
 }

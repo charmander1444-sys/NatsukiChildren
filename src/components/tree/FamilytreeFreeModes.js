@@ -1,6 +1,6 @@
 // familyTreeFreeModes.js — modos Libre, Jerárquico y Circular del árbol familiar
 import {
-  RADIUS, LEVEL, MARGIN, RING_MADRE, RING_HIJO, CHILD_ARC_SPAN, getId,
+  RADIUS, LEVEL, MARGIN, RING_MADRE, RING_HIJO, CHILD_ARC_SPAN, getId, isSiblingLink,
   resetFixedPositions, applyDynamicForces, applyStaticForces,
   setNodeOpacityFilter, finalizeMode, resolveOverlaps,
 } from "./familyTreeCore.js";
@@ -25,7 +25,7 @@ export function buildJerarquicoLinks(ctx) {
     } else if (madreRel) rendered.push({ source: getId(madreRel.source), target: child.id, tipo: madreRel.tipo });
     else if (padreRel) rendered.push({ source: getId(padreRel.source), target: child.id, tipo: "padre" });
   });
-  links.forEach((l) => { if (l.tipo === "media_hermana") rendered.push(l); });
+  links.forEach((l) => { if (isSiblingLink(l.tipo)) rendered.push(l); });
   return rendered;
 }
 
@@ -65,7 +65,7 @@ export function computeHierarchicalPositions(ctx) {
 
   const usedX = {};
   nodes.filter((n) => n.tipo === "conexion").forEach((c) => {
-    const rel = links.find((l) => (l.tipo === "media_hermana" || l.tipo === "madre_adoptiva") && getId(l.target) === c.id);
+    const rel = links.find((l) => isSiblingLink(l.tipo) && getId(l.target) === c.id);
     const originId = rel ? getId(rel.source) : null;
     let x = originId && hijaX.has(originId) ? hijaX.get(originId) : layoutWidth / 2 + MARGIN.side;
     const key = Math.round(x / 10);
@@ -152,9 +152,9 @@ export function computeCircularPositions(ctx) {
     r.fx = centerX + 50 * Math.cos(a); r.fy = centerY + 50 * Math.sin(a);
   });
 
-  // Conexiones (media hermanas, madre adoptiva) — un anillo más afuera del nodo de origen
+  // Conexiones (hermanos/medios hermanos, madre adoptiva) — un anillo más afuera del nodo de origen
   nodes.filter((n) => n.tipo === "conexion").forEach((c) => {
-    const rel = links.find((l) => (l.tipo === "media_hermana" || l.tipo === "madre_adoptiva") && getId(l.target) === c.id);
+    const rel = links.find((l) => isSiblingLink(l.tipo) && getId(l.target) === c.id);
     const origin = rel ? nodes.find((n) => n.id === getId(rel.source)) : null;
     if (origin && origin.fx != null) {
       const originAngle = Math.atan2(origin.fy - centerY, origin.fx - centerX);

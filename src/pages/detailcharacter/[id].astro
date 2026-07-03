@@ -2,6 +2,7 @@
 import Layout from "../../layouts/layout.astro";
 import Detail from "../../components/detail/Detail.astro";
 import charactersData from "../../data/charactersKids.json";
+import Navbar from "../../navbar.astro";
 
 export function getStaticPaths() {
   const characters = charactersData.personas ?? charactersData;
@@ -14,10 +15,11 @@ export function getStaticPaths() {
 
 const { character } = Astro.props;
 ---
-
+<Navbar />
 <Layout
   title={`${character.nombre} — Re:Zero Portal`}
   description={`Detalles de ${character.nombre}`}
 >
+
   <Detail character={character} />
 </Layout>

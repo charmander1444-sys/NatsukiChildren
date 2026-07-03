@@ -12,30 +12,27 @@ const LABELS: Record<string, string> = {
   inteligencia: "Inteligencia",
   habilidades_combate: "Habilidades de combate",
   carisma: "Carisma",
-  portal: "Portal",
+  portal: "Puerta",
   afinidad_espiritual: "Afinidad espiritual",
   potencial: "Potencial",
   suerte: "Suerte",
 };
 
-// Orden de la escala, de menor a mayor
 const RANKS = ["F", "E", "D", "C", "B", "A", "S", "SS", "SS+", "EX"];
 
-// Color sólido fijo por rango: apagado en F, cada vez más vibrante hasta EX
 const RANK_COLORS: Record<string, string> = {
-  F: "#52525b",     // gris apagado, casi invisible
-  E: "#71717a",     // gris
-  D: "#8b8398",     // gris violáceo
-  C: "#8b93b0",     // azulado apagado
-  B: "#60a5fa",     // azul
-  A: "#818cf8",     // índigo
-  S: "#b48cff",     // violeta (acento raíz)
-  SS: "#e879f9",    // magenta brillante
-  "SS+": "#f472b6", // rosa vívido
-  EX: "#facc15",    // dorado brillante
+  F: "#52525b",
+  E: "#71717a",
+  D: "#8b8398",
+  C: "#8b93b0",
+  B: "#60a5fa",
+  A: "#818cf8",
+  S: "#b48cff",
+  SS: "#e879f9",
+  "SS+": "#f472b6",
+  EX: "#facc15",
 };
 
-// Intensidad del glow por rango: nulo en F, máximo en EX
 const RANK_GLOW: Record<string, string> = {
   F: "none",
   E: "none",
@@ -68,9 +65,9 @@ const entries = stats
 ---
 
 {entries.length > 0 && (
-  <div class="rounded-2xl border border-rz-accent/20 bg-rz-bg-2/40 p-6">
+  <div class="@container rounded-2xl border border-rz-accent/20 bg-rz-bg-2/40 p-6">
     <h2 class="font-display text-xl text-white text-glow mb-5 text-center">Stats</h2>
-    <div class="space-y-5">
+    <div class="space-y-4">
       {entries.map(([key, rawRank]) => {
         const rank = rawRank.toUpperCase();
         const idx = RANKS.indexOf(rank);
@@ -78,12 +75,12 @@ const entries = stats
         const color = RANK_COLORS[rank];
         const glow = RANK_GLOW[rank];
         return (
-          <div class="flex items-center gap-3" title={RANK_DESC[rank]}>
-            <span class="w-40 shrink-0 text-sm uppercase tracking-wider text-rz-text/70 font-body">
+          <div class="flex items-center gap-3 @max-[400px]:flex-wrap @max-[400px]:gap-y-1.5" title={RANK_DESC[rank]}>
+            <span class="w-40 shrink-0 text-sm uppercase tracking-wider text-rz-text/70 font-body @max-[400px]:w-auto @max-[400px]:flex-1 @max-[400px]:order-1">
               {LABELS[key] ?? key}
             </span>
 
-            <div class="flex-1 h-3 rounded-full bg-rz-bg/70 overflow-hidden">
+            <div class="flex-1 h-3 rounded-full bg-rz-bg/70 overflow-hidden @max-[400px]:basis-full @max-[400px]:order-3">
               <div
                 class="h-full rounded-full transition-all duration-500"
                 style={`width:${pct}%; background:${color}; box-shadow:${glow};`}
@@ -91,7 +88,7 @@ const entries = stats
             </div>
 
             <span
-              class="w-14 shrink-0 text-center text-sm font-display font-semibold rounded-full py-0.5"
+              class="w-14 shrink-0 text-center text-sm font-display font-semibold rounded-full py-0.5 @max-[400px]:w-auto @max-[400px]:px-2 @max-[400px]:order-2"
               style={`color:${color}; border:1px solid ${color}55; background:${color}14;`}
             >
               {rank}

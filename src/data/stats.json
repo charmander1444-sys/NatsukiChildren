@@ -41,7 +41,7 @@
     "relaciones": [
       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
       { "nombre": "Rem", "relacion": "Madre (no biológica)", "id": "rem" },
-      { "nombre": "Emilia", "relacion": "madre", "id": "emilia" }
+      { "nombre": "Emilia", "relacion": "Madre", "id": "emilia" }
     ]
   },
   "alpha": {
@@ -58,7 +58,13 @@
       "suerte": "F"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+    { "nombre": "Echidna", "relacion": "Madre", "id": "echidna" },
+    { "nombre": "Beatrice", "relacion": "Media hermana", "id": "beatrice" },
+    { "nombre": "Beta", "relacion": "Media hermana", "id": "beta" },
+    { "nombre": "Omega", "relacion": "Hermana", "id": "omega" }
+  ]
   },
   "elpis": {
     "stats": {
@@ -74,7 +80,10 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+  { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+  { "nombre": "Pandora", "relacion": "Madre", "id": "pandora" }
+]
   },
   "chochorina": {
     "stats": {
@@ -90,7 +99,10 @@
       "suerte": "D"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+  { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+  { "nombre": "Emilia", "relacion": "Madre", "id": "emilia" }
+]
   },
   "helena": {
     "stats": {
@@ -106,7 +118,12 @@
       "suerte": "S"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+    { "nombre": "Priscilla Barielle", "relacion": "Madre", "id": "priscilla" },
+    { "nombre": "Meili (Priscilla IF)", "relacion": "Hermana adoptiva", "id": "meili priscilla if" },
+    { "nombre": "Spica (Rui) (Priscilla IF)", "relacion": "Hermana adoptiva", "id": "spica(rui) priscilla if" }
+  ]
   },
   "leo": {
     "stats": {
@@ -122,7 +139,10 @@
       "suerte": "B"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+  { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+  { "nombre": "Crusch Karsten", "relacion": "Madre", "id": "crusch" }
+]
   },
   "lyra": {
     "stats": {
@@ -138,7 +158,11 @@
       "suerte": "SS+"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+    { "nombre": "Anastasia Hoshin", "relacion": "Madre", "id": "anastasia" },
+    { "nombre": "Mercurius", "relacion": "Hermano", "id": "mercurius" }
+  ]
   },
   "mercurius": {
     "stats": {
@@ -154,7 +178,11 @@
       "suerte": "D"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+    { "nombre": "Anastasia Hoshin", "relacion": "Madre", "id": "anastasia" },
+    { "nombre": "Lyra", "relacion": "Hermana", "id": "lyra" }
+  ]
   },
   "cassiopeia": {
     "stats": {
@@ -170,7 +198,10 @@
       "suerte": "B"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+    { "nombre": "Felt", "relacion": "Madre", "id": "felt" }
+  ]
   },
   "graffias": {
     "stats": {
@@ -186,7 +217,10 @@
       "suerte": "E"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+    { "nombre": "Shaula", "relacion": "Madre", "id": "shaula" }
+    ]
   },
   "taygette": {
     "stats": {
@@ -202,7 +236,10 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+    { "nombre": "Shion", "relacion": "Madre", "id": "shion" }
+  ]
   },
   "bellatrix": {
     "stats": {
@@ -218,7 +255,11 @@
       "suerte": "F"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+    { "nombre": "Elsa Granhiert", "relacion": "Madre", "id": "elsa" },
+    { "nombre": "Meili (Elsa IF)", "relacion": "Hermana adoptiva", "id": "meili elsa if" }
+  ]
   },
   "maia": {
     "stats": {
@@ -234,7 +275,11 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Emerada Lugunica", "relacion": "Madre", "id": "emerada" },
+       { "nombre": "Meili (Emerada IF)", "relacion": "Hermana adoptiva", "id": "meili emerada if" }
+    ]
   },
   "aconita": {
     "stats": {
@@ -250,7 +295,10 @@
       "suerte": "E"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Lilac", "relacion": "Madre", "id": "lilac" }
+    ]
   },
   "menkar": {
     "stats": {
@@ -266,7 +314,10 @@
       "suerte": "E"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Daphne", "relacion": "Madre", "id": "daphne" }
+    ]
   },
   "nunki": {
     "stats": {
@@ -282,7 +333,11 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Sekhmet", "relacion": "Madre", "id": "sekhmet" },
+       { "nombre": "Alcyone", "relacion": "Hermano", "id": "alcyone" }
+    ]
   },
   "alcyone": {
     "stats": {
@@ -298,7 +353,11 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Sekhmet", "relacion": "Madre", "id": "sekhmet" },
+       { "nombre": "Nunki", "relacion": "Hermano", "id": "nunki" }
+    ]
   },
   "caph": {
     "stats": {
@@ -314,7 +373,10 @@
       "suerte": "S"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Capella Emerada Lugunica", "relacion": "Madre", "id": "capella" }
+    ]
   },
   "cygnus": {
     "stats": {
@@ -330,7 +392,10 @@
       "suerte": "A"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Liliana Masquerade", "relacion": "Madre", "id": "liliana" }
+    ]
   },
   "vega": {
     "stats": {
@@ -346,7 +411,10 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Ram", "relacion": "Madre", "id": "ram" }
+    ]
   },
   "natsumi_natsuki": {
     "stats": {
@@ -362,7 +430,10 @@
       "suerte": "D"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Miyuse", "relacion": "Madre", "id": "miyuse" }
+    ]
   },
   "saiph": {
     "stats": {
@@ -378,7 +449,10 @@
       "suerte": "D"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Petra Leyte", "relacion": "Madre", "id": "petra" }
+    ]
   },
   "sabik": {
     "stats": {
@@ -410,7 +484,10 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Patrasche", "relacion": "Madre", "id": "patrasche" }
+    ]
   },
   "merope": {
     "stats": {
@@ -426,7 +503,11 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Minerva", "relacion": "Madre", "id": "minerva" },
+      { "nombre": "Perseus Natsuki", "relacion": "Hermano", "id": "perseus" }
+    ]
   },
   "perseus": {
     "stats": {
@@ -442,7 +523,11 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Minerva", "relacion": "Madre", "id": "minerva" },
+      { "nombre": "Merope Natsuki", "relacion": "Hermana", "id": "merope" }
+    ]
   },
   "adhara": {
     "stats": {
@@ -458,7 +543,10 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Satella", "relacion": "Madre", "id": "satella" }
+    ]
   },
   "denebola": {
     "stats": {
@@ -474,7 +562,10 @@
       "suerte": "B"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Sylphy Melromac", "relacion": "Madre", "id": "sylphy" }
+    ]
   },
   "reid": {
     "stats": {
@@ -490,7 +581,10 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Adelheid Van Astrea", "relacion": "Madre", "id": "adelheid" }
+    ]
   },
   "cepheus": {
     "stats": {
@@ -506,7 +600,10 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Zarestia", "relacion": "Madre", "id": "zarestia" }
+    ]
   },
   "luna": {
     "stats": {
@@ -522,7 +619,12 @@
       "suerte": "A"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Yorna Mishigure", "relacion": "Madre", "id": "yorna" },
+       { "nombre": "Zoey", "relacion": "Media Hermana", "id": "zoey yorna if" },
+       { "nombre": "Tanza", "relacion": "Media Hermana", "id": "tanza yorna if" }
+    ]
   },
   "nova": {
     "stats": {
@@ -554,7 +656,10 @@
       "suerte": "S"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Carmilla", "relacion": "Madre", "id": "carmilla" }
+    ]
   },
   "morgana": {
     "stats": {
@@ -570,7 +675,12 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Frederica Baumann", "relacion": "Madre", "id": "frederica" },
+       { "nombre": "Viviane Natsuki", "relacion": "Hermana", "id": "viviane" },
+       { "nombre": "Arthur Natsuki", "relacion": "Hermano", "id": "arthur" }
+    ]
   },
   "viviane": {
     "stats": {
@@ -586,7 +696,12 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Frederica Baumann", "relacion": "Madre", "id": "frederica" },
+       { "nombre": "Morgana Natsuki", "relacion": "Hermana", "id": "morgana" },
+       { "nombre": "Arthur Natsuki", "relacion": "Hermano", "id": "arthur" }
+    ]
   },
   "arthur": {
     "stats": {
@@ -602,7 +717,12 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Frederica Baumann", "relacion": "Madre", "id": "frederica" },
+       { "nombre": "Morgana Natsuki", "relacion": "Hermana", "id": "morgana" },
+       { "nombre": "Viviane Natsuki", "relacion": "Hermana", "id": "viviane" }
+    ]
   },
   "castor": {
     "stats": {
@@ -618,7 +738,11 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Julia Mathers", "relacion": "Madre", "id": "julia" },
+       { "nombre": "Pollux", "relacion": "Hermano", "id": "pollux" }
+    ]
   },
   "pollux": {
     "stats": {
@@ -634,7 +758,11 @@
       "suerte": "C"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Julia Mathers", "relacion": "Madre", "id": "julia" },
+       { "nombre": "Castor", "relacion": "Hermano", "id": "castor" }
+    ]
   },
   "tonnura": {
     "stats": {
@@ -650,7 +778,10 @@
       "suerte": "E"
     },
     "historias": [],
-    "relaciones": []
+    "relaciones": [
+       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+       { "nombre": "Bruja de la envidia", "relacion": "Madre", "id": "bruja de la envidia" }
+    ]
   }
 
 }
