@@ -62,7 +62,7 @@
       "nombre": "Alpha Natsuki",
       "tipo": "hija",
       "avatar": "",
-      "alineacion": "",
+      "alineacion": "neutral",
       "edad": "",
       "tamano": "173cm",
       "apariencia": {
@@ -106,7 +106,7 @@
       "nombre": "Electra Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/8bccebf4a8d6.png",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "167cm",
       "apariencia": {
@@ -140,7 +140,7 @@
       "id": "elpis",
       "nombre": "Elpis Natsuki",
       "tipo": "hija",
-      "avatar": "",
+      "avatar": "malvada",
       "alineacion": "",
       "edad": "12 años",
       "tamano": "164cm",
