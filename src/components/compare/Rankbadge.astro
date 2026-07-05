@@ -1,0 +1,22 @@
+---
+// RankBadge.astro
+// Pill de rank reutilizable (mismo estilo visual usado en DetailStats).
+// Props: rank (string opcional, ej. "B", "S", "EX")
+
+import { RANK_COLORS } from "./lib/statsConfig.js";
+
+const { rank } = Astro.props;
+const r = rank ? rank.toUpperCase() : undefined;
+const color = r ? RANK_COLORS[r] ?? "#52525b" : undefined;
+---
+
+{r ? (
+  <span
+    class="inline-block min-w-[2.75rem] text-center text-sm sm:text-base font-display font-semibold rounded-full px-3 py-1"
+    style={`color:${color}; border:1px solid ${color}55; background:${color}14;`}
+  >
+    {r}
+  </span>
+) : (
+  <span class="text-rz-text/30 text-sm sm:text-base">—</span>
+)}

@@ -1,4 +1,6 @@
 ---
+import RadarChart from "./RadarChart.astro";
+
 interface StatsPanel {
   id: string;
   nombre: string;
@@ -16,10 +18,10 @@ const LABELS: Record<string, string> = {
   resistencia: "Resistencia",
   velocidad: "Velocidad",
   inteligencia: "Inteligencia",
-  habilidades_combate: "Habilidades de combate",
+  habilidades_combate: "Combate",
   carisma: "Carisma",
   portal: "Puerta",
-  afinidad_espiritual: "Afinidad espiritual",
+  afinidad_espiritual: "Afinidad",
   potencial: "Potencial",
   suerte: "Suerte",
 };
@@ -83,6 +85,8 @@ function getEntries(statsObj: Record<string, string>) {
 
 const panelNames = panels.map((p) => p.nombre || "Otro panel");
 const hasContent = panels.some((p) => getEntries(p.stats).length > 0);
+const panelEntries = panels.map((p) => getEntries(p.stats));
+const anyRadarAvailable = panelEntries.some((e) => e.length >= 3);
 ---
 
 {hasContent && (
@@ -91,90 +95,139 @@ const hasContent = panels.some((p) => getEntries(p.stats).length > 0);
     data-stats-widget
     data-panel-names={JSON.stringify(panelNames)}
   >
-    <div class="flex items-center justify-between gap-3 mb-5">
+    <div class="flex items-center justify-between gap-3 mb-5 flex-wrap">
       <h2 class="font-display text-xl text-white text-glow flex-1 text-center">
         Stats
       </h2>
-      {panels.length > 1 && (
-        <button
-          type="button"
-          data-stats-toggle
-          class="shrink-0 text-xs font-body uppercase tracking-wider px-3 py-1.5 rounded-full border border-rz-accent/30 text-rz-text/70 hover:text-white hover:border-rz-accent/60 transition-colors duration-200"
-        >
-          Ver: {panelNames[1]}
-        </button>
-      )}
+      <div class="flex items-center gap-2 shrink-0">
+        {anyRadarAvailable && (
+          <button
+            type="button"
+            data-view-toggle
+            class="text-xs font-body uppercase tracking-wider px-3 py-1.5 rounded-full border border-rz-accent/30 text-rz-text/70 hover:text-white hover:border-rz-accent/60 transition-colors duration-200"
+          >
+            Ver radar
+          </button>
+        )}
+        {panels.length > 1 && (
+          <button
+            type="button"
+            data-stats-toggle
+            class="text-xs font-body uppercase tracking-wider px-3 py-1.5 rounded-full border border-rz-accent/30 text-rz-text/70 hover:text-white hover:border-rz-accent/60 transition-colors duration-200"
+          >
+            Ver: {panelNames[1]}
+          </button>
+        )}
+      </div>
     </div>
 
-    {panels.map((panel, i) => (
-      <div
-        class="space-y-4"
-        data-stats-panel
-        style={i === 0 ? "" : "display:none"}
-      >
-        {panel.nombre && panels.length > 1 && (
-          <p class="text-center text-xs uppercase tracking-widest text-rz-accent/70 font-body mb-3">
-            {panel.nombre}
-          </p>
-        )}
-        {getEntries(panel.stats).map(([key, rawRank]) => {
-          const rank = rawRank.toUpperCase();
-          const idx = RANKS.indexOf(rank);
-          const pct = ((idx + 1) / RANKS.length) * 100;
-          const color = RANK_COLORS[rank];
-          const glow = RANK_GLOW[rank];
-          return (
-            <div
-              class="flex items-center gap-3 @max-[400px]:flex-wrap @max-[400px]:gap-y-1.5"
-              title={RANK_DESC[rank]}
-            >
-              <span class="w-40 shrink-0 text-sm uppercase tracking-wider text-rz-text/70 font-body @max-[400px]:w-auto @max-[400px]:flex-1 @max-[400px]:order-1">
-                {LABELS[key] ?? key}
-              </span>
+    {panels.map((panel, i) => {
+      const entries = panelEntries[i];
+      return (
+        <div
+          class="space-y-4"
+          data-stats-panel
+          style={i === 0 ? "" : "display:none"}
+        >
+          {panel.nombre && panels.length > 1 && (
+            <p class="text-center text-xs uppercase tracking-widest text-rz-accent/70 font-body mb-3">
+              {panel.nombre}
+            </p>
+          )}
 
-              <div class="flex-1 h-3 rounded-full bg-rz-bg/70 overflow-hidden @max-[400px]:basis-full @max-[400px]:order-3">
+          <div data-view="bars" class="space-y-4">
+            {entries.map(([key, rawRank]) => {
+              const rank = rawRank.toUpperCase();
+              const idx = RANKS.indexOf(rank);
+              const pct = ((idx + 1) / RANKS.length) * 100;
+              const color = RANK_COLORS[rank];
+              const glow = RANK_GLOW[rank];
+              return (
                 <div
-                  class="h-full rounded-full transition-all duration-500"
-                  style={`width:${pct}%; background:${color}; box-shadow:${glow};`}
-                ></div>
-              </div>
+                  class="flex items-center gap-3 @max-[400px]:flex-wrap @max-[400px]:gap-y-1.5"
+                  title={RANK_DESC[rank]}
+                >
+                  <span class="w-40 shrink-0 text-sm uppercase tracking-wider text-rz-text/70 font-body @max-[400px]:w-auto @max-[400px]:flex-1 @max-[400px]:order-1">
+                    {LABELS[key] ?? key}
+                  </span>
 
-              <span
-                class="w-14 shrink-0 text-center text-sm font-display font-semibold rounded-full py-0.5 @max-[400px]:w-auto @max-[400px]:px-2 @max-[400px]:order-2"
-                style={`color:${color}; border:1px solid ${color}55; background:${color}14;`}
-              >
-                {rank}
-              </span>
-            </div>
-          );
-        })}
-      </div>
-    ))}
+                  <div class="flex-1 h-3 rounded-full bg-rz-bg/70 overflow-hidden @max-[400px]:basis-full @max-[400px]:order-3">
+                    <div
+                      class="h-full rounded-full transition-all duration-500"
+                      style={`width:${pct}%; background:${color}; box-shadow:${glow};`}
+                    ></div>
+                  </div>
+
+                  <span
+                    class="w-14 shrink-0 text-center text-sm font-display font-semibold rounded-full py-0.5 @max-[400px]:w-auto @max-[400px]:px-2 @max-[400px]:order-2"
+                    style={`color:${color}; border:1px solid ${color}55; background:${color}14;`}
+                  >
+                    {rank}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+
+          <div data-view="radar" class="py-2" style="display:none">
+            <RadarChart
+              entries={entries}
+              labels={LABELS}
+              ranks={RANKS}
+              rankColors={RANK_COLORS}
+              id={`radar-${panel.id}-${i}`}
+            />
+          </div>
+        </div>
+      );
+    })}
   </div>
 )}
 
-{panels.length > 1 && (
+{(panels.length > 1 || anyRadarAvailable) && (
   <script>
     document.querySelectorAll("[data-stats-widget]").forEach((widget) => {
-      const btn = widget.querySelector("[data-stats-toggle]") as HTMLButtonElement | null;
+      const stackBtn = widget.querySelector("[data-stats-toggle]") as HTMLButtonElement | null;
+      const viewBtn = widget.querySelector("[data-view-toggle]") as HTMLButtonElement | null;
       const panelEls = Array.from(widget.querySelectorAll("[data-stats-panel]")) as HTMLElement[];
       const names: string[] = JSON.parse(widget.getAttribute("data-panel-names") || "[]");
       let current = 0;
+      let viewMode: "bars" | "radar" = "bars";
 
-      function render() {
+      function renderPanels() {
         panelEls.forEach((el, i) => {
           el.style.display = i === current ? "" : "none";
         });
-        if (btn) {
+        if (stackBtn) {
           const nextIndex = (current + 1) % panelEls.length;
-          btn.textContent = `Ver: ${names[nextIndex] ?? "otro panel"}`;
+          stackBtn.textContent = `Ver: ${names[nextIndex] ?? "otro panel"}`;
         }
       }
 
-      btn?.addEventListener("click", () => {
+      function renderView() {
+        panelEls.forEach((panelEl) => {
+          const bars = panelEl.querySelector('[data-view="bars"]') as HTMLElement | null;
+          const radar = panelEl.querySelector('[data-view="radar"]') as HTMLElement | null;
+          if (bars) bars.style.display = viewMode === "bars" ? "" : "none";
+          if (radar) radar.style.display = viewMode === "radar" ? "" : "none";
+        });
+        if (viewBtn) {
+          viewBtn.textContent = viewMode === "bars" ? "Ver radar" : "Ver barras";
+        }
+      }
+
+      stackBtn?.addEventListener("click", () => {
         current = (current + 1) % panelEls.length;
-        render();
+        renderPanels();
       });
+
+      viewBtn?.addEventListener("click", () => {
+        viewMode = viewMode === "bars" ? "radar" : "bars";
+        renderView();
+      });
+
+      renderPanels();
+      renderView();
     });
   </script>
 )}

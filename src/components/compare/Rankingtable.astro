@@ -1,0 +1,136 @@
+---
+// RankingTable.astro
+// Ya no es un <table> (que fuerza una fila = una línea completa).
+// Es un contenedor con CSS multi-columna: en móvil 1 columna, en desktop
+// 2-3, así se aprovecha el ancho disponible.
+// El sort reordena los elementos [data-row] existentes (no re-renderiza).
+// Props: characters (array), statKeys (array de strings)
+
+import RankingRow from "./Rankinggrow.astro";
+import { STAT_LABELS } from "./lib/statsConfig.js";
+
+const { characters, statKeys } = Astro.props;
+---
+
+<div class="space-y-3" data-ranking-wrapper>
+  <div class="flex items-center justify-center gap-3 flex-wrap">
+    <label for="ranking-stat-select" class="text-sm sm:text-base text-rz-text/70 font-body">
+      Ordenar por:
+    </label>
+    <select
+      id="ranking-stat-select"
+      data-stat-select
+      class="text-sm sm:text-base font-body bg-rz-bg/70 border border-rz-accent/30 rounded-full px-4 py-1.5 text-white outline-none cursor-pointer hover:border-rz-accent/60 transition-colors"
+    >
+      {statKeys.map((key) => (
+        <option value={key}>{STAT_LABELS[key] ?? key}</option>
+      ))}
+    </select>
+  </div>
+
+  <div class="rounded-2xl border border-rz-accent/20 bg-rz-bg-2/40 p-4">
+    <div class="flex items-center justify-between px-1 pb-2 mb-3 border-b border-rz-accent/20">
+      <span
+        class="text-sm sm:text-base uppercase tracking-wider text-rz-text/60 font-body font-semibold cursor-pointer select-none hover:text-white transition-colors"
+        data-sort-key="nombre"
+        data-sort-type="text"
+      >
+        Personaje <span data-sort-arrow></span>
+      </span>
+
+      {statKeys.map((key) => (
+        <span
+          class="text-sm sm:text-base uppercase tracking-wider text-rz-text/60 font-body font-semibold cursor-pointer select-none hover:text-white transition-colors"
+          data-sort-key={key}
+          data-sort-type="number"
+          data-stat-header
+          style="display:none"
+        >
+          {STAT_LABELS[key] ?? key} <span data-sort-arrow></span>
+        </span>
+      ))}
+    </div>
+
+    <div class="columns-1 sm:columns-2 lg:columns-3 gap-4" data-ranking-list>
+      {characters.map((c) => (
+        <RankingRow character={c} statKeys={statKeys} />
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll("[data-ranking-wrapper]").forEach((wrapper) => {
+    const select = wrapper.querySelector("[data-stat-select]");
+    const headers = Array.from(wrapper.querySelectorAll("[data-sort-key]"));
+    const statHeaders = headers.filter((h) => h.hasAttribute("data-stat-header"));
+    const list = wrapper.querySelector("[data-ranking-list]");
+
+    let currentKey = null;
+    let currentDir = -1; // default: descendente (el mayor primero)
+
+    function clearArrows() {
+      headers.forEach((h) => {
+        const arrow = h.querySelector("[data-sort-arrow]");
+        if (arrow) arrow.textContent = "";
+      });
+    }
+
+    function sortBy(key, type, forceDir) {
+      const dir = forceDir ?? (key === currentKey ? (currentDir === -1 ? 1 : -1) : -1);
+      currentKey = key;
+      currentDir = dir;
+
+      const rows = Array.from(list.querySelectorAll("[data-row]"));
+
+      rows.sort((a, b) => {
+        const rawA = a.getAttribute(`data-sort-${key}`);
+        const rawB = b.getAttribute(`data-sort-${key}`);
+
+        if (type === "number") {
+          const na = Number(rawA);
+          const nb = Number(rawB);
+          if (na === -1 && nb === -1) return 0;
+          if (na === -1) return 1; // sin stat va al final
+          if (nb === -1) return -1;
+          return (na - nb) * dir;
+        }
+        return String(rawA).localeCompare(String(rawB)) * dir;
+      });
+
+      rows.forEach((r) => list.appendChild(r));
+
+      clearArrows();
+      const activeHeader = headers.find((h) => h.dataset.sortKey === key);
+      const arrow = activeHeader?.querySelector("[data-sort-arrow]");
+      if (arrow) arrow.textContent = dir === -1 ? "↓" : "↑";
+    }
+
+    function showOnlyStat(key) {
+      statHeaders.forEach((h) => {
+        h.style.display = h.dataset.sortKey === key ? "" : "none";
+      });
+      list.querySelectorAll("[data-stat]").forEach((el) => {
+        el.style.display = el.dataset.stat === key ? "" : "none";
+      });
+    }
+
+    headers.forEach((h) => {
+      h.addEventListener("click", () => {
+        sortBy(h.dataset.sortKey, h.dataset.sortType);
+      });
+    });
+
+    select?.addEventListener("change", (e) => {
+      const key = e.target.value;
+      showOnlyStat(key);
+      sortBy(key, "number", -1); // vuelve a mayor -> menor al cambiar de stat
+    });
+
+    // Estado inicial
+    if (select?.value) {
+      showOnlyStat(select.value);
+      sortBy(select.value, "number", -1);
+    }
+  });
+</script>

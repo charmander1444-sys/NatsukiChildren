@@ -1,18 +1,59 @@
 ---
 import Layout from "../layouts/layout.astro";
 import Navbar from "../navbar.astro";
+
+const links = [
+  {
+    href: "/arbol-genealogico",
+    label: "Árbol Genealógico",
+    desc: "Explora las conexiones familiares",
+  },
+  {
+    href: "/personajes",
+    label: "Personajes",
+    desc: "Fichas completas de cada personaje",
+  },
+  {
+    href: "/galeria",
+    label: "Galería",
+    desc: "Imágenes y arte de la familia",
+  },
+  {
+    href: "/comparation",
+    label: "Comparación",
+    desc: "Ranking y stats lado a lado",
+  },
+];
 ---
   <Navbar />
 <Layout title="Re:Zero Inicio">
-
 
   <section class="mx-auto flex min-h-[70vh] max-w-5xl flex-col items-center justify-center px-4 py-16 text-center sm:px-6 lg:px-8">
     <h1 class="mb-6 text-5xl font-display sm:text-6xl lg:text-7xl">
       Re<span class="text-rz-accent">:Zero</span> Portal
     </h1>
 
-    <p class="max-w-2xl text-lg leading-relaxed text-rz-text/75 sm:text-xl">
+    <p class="mb-10 max-w-2xl text-lg leading-relaxed text-rz-text/75 sm:text-xl">
       Explora
     </p>
+
+    <div class="grid w-full max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class="group relative overflow-hidden rounded-2xl border border-rz-accent/20 bg-rz-bg-2/40 px-6 py-6 text-left transition-all duration-300 hover:border-rz-accent/60 hover:bg-rz-accent/10 hover:-translate-y-0.5"
+        >
+          <span class="block font-display text-xl font-semibold tracking-wide text-white transition-colors duration-300 group-hover:text-rz-accent sm:text-2xl">
+            {link.label}
+          </span>
+          <span class="mt-1 block text-sm text-rz-text/70 font-body sm:text-base">
+            {link.desc}
+          </span>
+          <span
+            class="pointer-events-none absolute inset-x-0 bottom-0 h-0.5 w-0 bg-gradient-to-r from-rz-accent to-rz-accent-2 transition-all duration-300 group-hover:w-full"
+          ></span>
+        </a>
+      ))}
+    </div>
   </section>
 </Layout>

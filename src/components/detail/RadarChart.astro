@@ -1,0 +1,109 @@
+---
+// RadarChart.astro
+// Componente standalone: recibe entries [ [key, rank], ... ] ya filtradas
+// y las etiquetas/colores por rank, y devuelve un <svg> de radar chart.
+
+interface Props {
+  entries: [string, string][];
+  labels: Record<string, string>;
+  ranks: string[];
+  rankColors: Record<string, string>;
+  id?: string; // opcional, útil si hay varios radares en la misma página
+}
+
+const { entries, labels, ranks, rankColors, id = "radar" } = Astro.props;
+
+const n = entries.length;
+const canRender = n >= 3;
+
+const size = 460;
+const center = 230;
+const maxR = 150;
+const labelR = 195;
+const rings = 4;
+
+let svgInner = "";
+
+if (canRender) {
+  const points = entries.map(([key, rawRank], i) => {
+    const rank = rawRank.toUpperCase();
+    const idx = ranks.indexOf(rank);
+    const norm = (idx + 1) / ranks.length;
+    const angle = -Math.PI / 2 + (2 * Math.PI * i) / n;
+    return {
+      x: center + maxR * norm * Math.cos(angle),
+      y: center + maxR * norm * Math.sin(angle),
+      labelX: center + labelR * Math.cos(angle),
+      labelY: center + labelR * Math.sin(angle),
+      axisX: center + maxR * Math.cos(angle),
+      axisY: center + maxR * Math.sin(angle),
+      color: rankColors[rank] ?? "#8b93b0",
+      rank,
+      label: labels[key] ?? key,
+      angle,
+    };
+  });
+
+  const polygonPoints = points
+    .map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`)
+    .join(" ");
+
+  const gridRings = Array.from({ length: rings }, (_, ringIdx) => {
+    const ringNorm = (ringIdx + 1) / rings;
+    const ringPoints = entries
+      .map((_, i) => {
+        const angle = -Math.PI / 2 + (2 * Math.PI * i) / n;
+        const x = center + maxR * ringNorm * Math.cos(angle);
+        const y = center + maxR * ringNorm * Math.sin(angle);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      })
+      .join(" ");
+    return `<polygon points="${ringPoints}" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.5" />`;
+  }).join("");
+
+  const axisLines = points
+    .map(
+      (p) =>
+        `<line x1="${center}" y1="${center}" x2="${p.axisX.toFixed(1)}" y2="${p.axisY.toFixed(1)}" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5" />`
+    )
+    .join("");
+
+  const vertexDots = points
+    .map(
+      (p) =>
+        `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="6" fill="${p.color}" stroke="#0a0a12" stroke-width="2" />`
+    )
+    .join("");
+
+  const rankTags = points
+    .map(
+      (p) =>
+        `<text x="${p.x.toFixed(1)}" y="${(p.y - 15).toFixed(1)}" text-anchor="middle" font-size="16" font-weight="700" fill="${p.color}">${p.rank}</text>`
+    )
+    .join("");
+
+  const labelEls = points
+    .map((p) => {
+      let anchor = "middle";
+      if (p.angle > -Math.PI / 2 + 0.15 && p.angle < Math.PI / 2 - 0.15) anchor = "start";
+      else if (p.angle > Math.PI / 2 + 0.15 || p.angle < -Math.PI / 2 - 0.15) anchor = "end";
+      return `<text x="${p.labelX.toFixed(1)}" y="${p.labelY.toFixed(1)}" text-anchor="${anchor}" dominant-baseline="middle" font-size="16" font-weight="600" fill="#e5e0f0" opacity="0.9">${p.label}</text>`;
+    })
+    .join("");
+
+  svgInner = `${gridRings}${axisLines}<polygon points="${polygonPoints}" fill="#b48cff" fill-opacity="0.22" stroke="#b48cff" stroke-width="3" />${vertexDots}${rankTags}${labelEls}`;
+}
+---
+
+{canRender ? (
+  <svg
+    id={id}
+    viewBox={`0 0 ${size} ${size}`}
+    class="w-full max-w-[560px] mx-auto block"
+    set:html={svgInner}
+  />
+) : (
+  <p class="text-center text-sm text-rz-text/50 font-body py-6">
+    Se necesitan al menos 3 stats para el radar.
+  </p>
+)}

@@ -1,0 +1,29 @@
+---
+// Ranking.astro
+// Punto de entrada: junta characterKids.json (id, nombre, avatar) con
+// stats.json (id, stats) y arma la tabla ordenable.
+//
+// AJUSTA LAS RUTAS de los imports de abajo a donde vivan tus JSON reales.
+
+import RankingTable from "./Rankingtable.astro";
+import { STAT_LABELS } from "./lib/statsConfig.js";
+import { mergeCharacters } from "./lib/mergeCharacters.js";
+
+import characterKids from "../../data/charactersKids.json";
+import statsData from "../../data/stats.json";
+
+const { statKeys = Object.keys(STAT_LABELS) } = Astro.props;
+
+const characters = mergeCharacters(characterKids, statsData);
+---
+
+<section class="space-y-4">
+  <h2 class="font-display text-4xl text-white text-glow text-center">
+    Ranking de personajes
+  </h2>
+  <p class="text-center text-xl text-rz-text/80 font-body">
+    Click en cualquier columna para ordenar
+  </p>
+
+  <RankingTable characters={characters} statKeys={statKeys} />
+</section>
