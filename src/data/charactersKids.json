@@ -52,7 +52,7 @@
   {"id":"meili priscilla if","nombre":"Meili(Priscilla IF)","tipo":"conexion"},
   {"id":"spica(rui) priscilla if","nombre":"Spica(Rui)(Priscilla IF)","tipo":"conexion"},
 
-  {"id":"eris","nombre":"Eris Natsuki","tipo":"hija"},
+  {"id":"eris","nombre":"Eris Natsuki","tipo":"hija", "avatar":"https://cdn.imgchest.com/files/f8bcc07a6c98.png","alineación": "buena"},
   
     {
       "id": "alpha",
@@ -744,7 +744,7 @@
       "id": "natsumi",
       "nombre": "Natsumi Natsuki",
       "tipo": "hija",
-      "avatar": "",
+      "avatar": "https://cdn.imgchest.com/files/f8bcc07a6c98.png",
       "alineacion": "buena",
       "edad": "",
       "tamano": "160cm",
@@ -886,7 +886,7 @@
       "id": "merope",
       "nombre": "Merope Natsuki",
       "tipo": "hija",
-      "avatar": "",
+      "avatar": "https://cdn.imgchest.com/files/b2bc74aa18bf.png",
       "alineacion": "buena",
       "edad": "",
       "tamano": "168cm",
@@ -921,7 +921,7 @@
       "id": "perseus",
       "nombre": "Perseus Natsuki",
       "tipo": "hijo",
-      "avatar": "",
+      "avatar": "https://cdn.imgchest.com/files/2095fd94c679.png",
       "alineacion": "bueno",
       "edad": "",
       "tamano": "170cm",
