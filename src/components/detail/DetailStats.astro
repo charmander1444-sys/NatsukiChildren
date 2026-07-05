@@ -1,6 +1,12 @@
 ---
+interface StatsPanel {
+  id: string;
+  nombre: string;
+  stats: Record<string, string>;
+}
+
 interface Props {
-  stats?: Record<string, string>;
+  stats?: Record<string, string> | { panels: StatsPanel[] };
 }
 
 const { stats } = Astro.props;
@@ -59,43 +65,116 @@ const RANK_DESC: Record<string, string> = {
   EX: "Incalculable",
 };
 
-const entries = stats
-  ? Object.entries(stats).filter(([, v]) => v && RANKS.includes(v.toUpperCase()))
+function isMultiPanel(s: any): s is { panels: StatsPanel[] } {
+  return !!s && Array.isArray(s.panels);
+}
+
+const panels: StatsPanel[] = stats
+  ? isMultiPanel(stats)
+    ? stats.panels
+    : [{ id: "default", nombre: "", stats: stats as Record<string, string> }]
   : [];
+
+function getEntries(statsObj: Record<string, string>) {
+  return Object.entries(statsObj ?? {}).filter(
+    ([, v]) => v && RANKS.includes(v.toUpperCase())
+  );
+}
+
+const panelNames = panels.map((p) => p.nombre || "Otro panel");
+const hasContent = panels.some((p) => getEntries(p.stats).length > 0);
 ---
 
-{entries.length > 0 && (
-  <div class="@container rounded-2xl border border-rz-accent/20 bg-rz-bg-2/40 p-6">
-    <h2 class="font-display text-xl text-white text-glow mb-5 text-center">Stats</h2>
-    <div class="space-y-4">
-      {entries.map(([key, rawRank]) => {
-        const rank = rawRank.toUpperCase();
-        const idx = RANKS.indexOf(rank);
-        const pct = ((idx + 1) / RANKS.length) * 100;
-        const color = RANK_COLORS[rank];
-        const glow = RANK_GLOW[rank];
-        return (
-          <div class="flex items-center gap-3 @max-[400px]:flex-wrap @max-[400px]:gap-y-1.5" title={RANK_DESC[rank]}>
-            <span class="w-40 shrink-0 text-sm uppercase tracking-wider text-rz-text/70 font-body @max-[400px]:w-auto @max-[400px]:flex-1 @max-[400px]:order-1">
-              {LABELS[key] ?? key}
-            </span>
-
-            <div class="flex-1 h-3 rounded-full bg-rz-bg/70 overflow-hidden @max-[400px]:basis-full @max-[400px]:order-3">
-              <div
-                class="h-full rounded-full transition-all duration-500"
-                style={`width:${pct}%; background:${color}; box-shadow:${glow};`}
-              ></div>
-            </div>
-
-            <span
-              class="w-14 shrink-0 text-center text-sm font-display font-semibold rounded-full py-0.5 @max-[400px]:w-auto @max-[400px]:px-2 @max-[400px]:order-2"
-              style={`color:${color}; border:1px solid ${color}55; background:${color}14;`}
-            >
-              {rank}
-            </span>
-          </div>
-        );
-      })}
+{hasContent && (
+  <div
+    class="@container rounded-2xl border border-rz-accent/20 bg-rz-bg-2/40 p-6"
+    data-stats-widget
+    data-panel-names={JSON.stringify(panelNames)}
+  >
+    <div class="flex items-center justify-between gap-3 mb-5">
+      <h2 class="font-display text-xl text-white text-glow flex-1 text-center">
+        Stats
+      </h2>
+      {panels.length > 1 && (
+        <button
+          type="button"
+          data-stats-toggle
+          class="shrink-0 text-xs font-body uppercase tracking-wider px-3 py-1.5 rounded-full border border-rz-accent/30 text-rz-text/70 hover:text-white hover:border-rz-accent/60 transition-colors duration-200"
+        >
+          Ver: {panelNames[1]}
+        </button>
+      )}
     </div>
+
+    {panels.map((panel, i) => (
+      <div
+        class="space-y-4"
+        data-stats-panel
+        style={i === 0 ? "" : "display:none"}
+      >
+        {panel.nombre && panels.length > 1 && (
+          <p class="text-center text-xs uppercase tracking-widest text-rz-accent/70 font-body mb-3">
+            {panel.nombre}
+          </p>
+        )}
+        {getEntries(panel.stats).map(([key, rawRank]) => {
+          const rank = rawRank.toUpperCase();
+          const idx = RANKS.indexOf(rank);
+          const pct = ((idx + 1) / RANKS.length) * 100;
+          const color = RANK_COLORS[rank];
+          const glow = RANK_GLOW[rank];
+          return (
+            <div
+              class="flex items-center gap-3 @max-[400px]:flex-wrap @max-[400px]:gap-y-1.5"
+              title={RANK_DESC[rank]}
+            >
+              <span class="w-40 shrink-0 text-sm uppercase tracking-wider text-rz-text/70 font-body @max-[400px]:w-auto @max-[400px]:flex-1 @max-[400px]:order-1">
+                {LABELS[key] ?? key}
+              </span>
+
+              <div class="flex-1 h-3 rounded-full bg-rz-bg/70 overflow-hidden @max-[400px]:basis-full @max-[400px]:order-3">
+                <div
+                  class="h-full rounded-full transition-all duration-500"
+                  style={`width:${pct}%; background:${color}; box-shadow:${glow};`}
+                ></div>
+              </div>
+
+              <span
+                class="w-14 shrink-0 text-center text-sm font-display font-semibold rounded-full py-0.5 @max-[400px]:w-auto @max-[400px]:px-2 @max-[400px]:order-2"
+                style={`color:${color}; border:1px solid ${color}55; background:${color}14;`}
+              >
+                {rank}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    ))}
   </div>
+)}
+
+{panels.length > 1 && (
+  <script>
+    document.querySelectorAll("[data-stats-widget]").forEach((widget) => {
+      const btn = widget.querySelector("[data-stats-toggle]") as HTMLButtonElement | null;
+      const panelEls = Array.from(widget.querySelectorAll("[data-stats-panel]")) as HTMLElement[];
+      const names: string[] = JSON.parse(widget.getAttribute("data-panel-names") || "[]");
+      let current = 0;
+
+      function render() {
+        panelEls.forEach((el, i) => {
+          el.style.display = i === current ? "" : "none";
+        });
+        if (btn) {
+          const nextIndex = (current + 1) % panelEls.length;
+          btn.textContent = `Ver: ${names[nextIndex] ?? "otro panel"}`;
+        }
+      }
+
+      btn?.addEventListener("click", () => {
+        current = (current + 1) % panelEls.length;
+        render();
+      });
+    });
+  </script>
 )}

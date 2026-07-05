@@ -44,19 +44,43 @@
       { "nombre": "Emilia", "relacion": "Madre", "id": "emilia" }
     ]
   },
-  "alpha": {
-    "stats": {
-      "fuerza": "F (sin Autoridad) / EX (con Autoridad)",
-      "resistencia": "F (sin Autoridad) / EX (con Autoridad)",
-      "velocidad": "F (sin Autoridad) / EX (con Autoridad)",
-      "inteligencia": "SS+",
-      "habilidades_combate": "B",
-      "carisma": "E",
-      "portal": "SS (sin Autoridad) / EX (con Autoridad)",
-      "afinidad_espiritual": "SS (sin Autoridad) / EX (con Autoridad)",
-      "potencial": "SS (sin Autoridad) / EX (con Autoridad)",
-      "suerte": "F"
-    },
+    "alpha": {
+      "stats": {
+        "panels": [
+          {
+            "id": "sin_autoridad",
+            "nombre": "Sin Autoridad",
+            "stats": {
+              "fuerza": "F",
+              "resistencia": "F",
+              "velocidad": "F",
+              "inteligencia": "SS+",
+              "habilidades_combate": "B",
+              "carisma": "E",
+              "portal": "SS",
+              "afinidad_espiritual": "SS",
+              "potencial": "SS",
+              "suerte": "F"
+            }
+          },
+          {
+            "id": "con_autoridad",
+            "nombre": "Con Autoridad",
+            "stats": {
+              "fuerza": "EX",
+              "resistencia": "EX",
+              "velocidad": "EX",
+              "inteligencia": "SS+",
+              "habilidades_combate": "B",
+              "carisma": "E",
+              "portal": "EX",
+              "afinidad_espiritual": "EX",
+              "potencial": "EX",
+              "suerte": "F"
+            }
+          }
+        ]
+      },
     "historias": [],
     "relaciones": [
     { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
@@ -470,19 +494,43 @@
     "historias": [],
     "relaciones": []
   },
-  "phoebe": {
-    "stats": {
-      "fuerza": "A (Normal) / SS (Dragón)",
-      "resistencia": "B (Normal) / SS (Dragón)",
-      "velocidad": "A (Normal) / C (Dragón)",
-      "inteligencia": "C (Normal) / D (Dragón)",
-      "habilidades_combate": "A",
-      "carisma": "C",
-      "portal": "A",
-      "afinidad_espiritual": "E",
-      "potencial": "SS",
-      "suerte": "C"
-    },
+"phoebe": {
+  "stats": {
+    "panels": [
+      {
+        "id": "normal",
+        "nombre": "Normal",
+        "stats": {
+          "fuerza": "A",
+          "resistencia": "B",
+          "velocidad": "A",
+          "inteligencia": "C",
+          "habilidades_combate": "A",
+          "carisma": "C",
+          "portal": "A",
+          "afinidad_espiritual": "E",
+          "potencial": "SS",
+          "suerte": "C"
+        }
+      },
+      {
+        "id": "dragon",
+        "nombre": "Dragón",
+        "stats": {
+          "fuerza": "SS",
+          "resistencia": "SS",
+          "velocidad": "C",
+          "inteligencia": "D",
+          "habilidades_combate": "A",
+          "carisma": "C",
+          "portal": "A",
+          "afinidad_espiritual": "E",
+          "potencial": "SS",
+          "suerte": "C"
+        }
+      }
+    ]
+  },
     "historias": [],
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
@@ -703,19 +751,43 @@
        { "nombre": "Arthur Natsuki", "relacion": "Hermano", "id": "arthur" }
     ]
   },
-  "arthur": {
-    "stats": {
-      "fuerza": "B (Normal) / SS+ (Protección Divina)",
-      "resistencia": "D (Normal) / SS+ (Protección Divina)",
-      "velocidad": "A (Normal) / SS+ (Protección Divina)",
-      "inteligencia": "C",
-      "habilidades_combate": "S (Normal) / SS+ (Protección Divina)",
-      "carisma": "A",
-      "portal": "D (Normal) / SS+ (Protección Divina)",
-      "afinidad_espiritual": "B",
-      "potencial": "A (Normal) / SS+ (Protección Divina)",
-      "suerte": "C"
-    },
+"arthur": {
+  "stats": {
+    "panels": [
+      {
+        "id": "normal",
+        "nombre": "Normal",
+        "stats": {
+          "fuerza": "B",
+          "resistencia": "D",
+          "velocidad": "A",
+          "inteligencia": "C",
+          "habilidades_combate": "S",
+          "carisma": "A",
+          "portal": "D",
+          "afinidad_espiritual": "B",
+          "potencial": "A",
+          "suerte": "C"
+        }
+      },
+      {
+        "id": "proteccion_divina",
+        "nombre": "Protección Divina",
+        "stats": {
+          "fuerza": "SS+",
+          "resistencia": "SS+",
+          "velocidad": "SS+",
+          "inteligencia": "C",
+          "habilidades_combate": "SS+",
+          "carisma": "A",
+          "portal": "SS+",
+          "afinidad_espiritual": "B",
+          "potencial": "SS+",
+          "suerte": "C"
+        }
+      }
+    ]
+  },
     "historias": [],
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },

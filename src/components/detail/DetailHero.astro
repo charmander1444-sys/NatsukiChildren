@@ -1,11 +1,16 @@
 ---
+interface TamanoItem {
+  nombre: string;
+  valor: string;
+}
+
 interface Props {
   nombre: string;
   avatar?: string;
   tipo?: string;
   alineacion?: string;
   edad?: string;
-  tamano?: string;
+  tamano?: string | { items: TamanoItem[] };
 }
 
 const { nombre, avatar = "", tipo = "", alineacion = "", edad = "", tamano = "" } = Astro.props;
@@ -30,10 +35,17 @@ const TIPO_COLOR: Record<string, string> = {
 
 const accent = TIPO_COLOR[tipo] ?? "#b48cff";
 
+function isMultiTamano(t: any): t is { items: TamanoItem[] } {
+  return !!t && typeof t === "object" && Array.isArray(t.items);
+}
+
+const tamanoIsMulti = isMultiTamano(tamano);
+const tamanoSimple = !tamanoIsMulti ? (tamano as string) : "";
+
 const metaItems = [
   alineacion && { label: "Alineación", value: alineacion },
   edad && { label: "Edad", value: edad },
-  tamano && { label: "Tamaño", value: tamano },
+  !tamanoIsMulti && tamanoSimple && { label: "Tamaño", value: tamanoSimple },
 ].filter(Boolean) as { label: string; value: string }[];
 ---
 
@@ -61,10 +73,26 @@ const metaItems = [
     <dl class="w-full grid grid-cols-1 gap-1.5 text-center">
       {metaItems.map((item) => (
         <div>
-          <dt class="text-xs uppercase tracking-wider text-rz-accent-2/80 font-body">{item.label}</dt>
-          <dd class="text-base text-rz-text/85 font-body">{item.value}</dd>
+          <dt class="text-sm uppercase tracking-wider text-rz-accent-2/80 font-body">{item.label}</dt>
+          <dd class="text-lg text-rz-text/85 font-body">{item.value}</dd>
         </div>
       ))}
     </dl>
+  )}
+
+  {tamanoIsMulti && (tamano as { items: TamanoItem[] }).items.length > 0 && (
+    <div class="w-full text-center">
+      <dt class="text-sm uppercase tracking-wider text-rz-accent-2/80 font-body mb-1.5">
+        Tamaño
+      </dt>
+      <dl class="flex flex-col gap-1.5">
+        {(tamano as { items: TamanoItem[] }).items.map((item) => (
+          <div class="flex items-center justify-center gap-2 text-base font-body">
+            <span class="text-rz-text/80">{item.nombre}:</span>
+            <span class="text-rz-text/90 text-lg font-semibold">{item.valor}</span>
+          </div>
+        ))}
+      </dl>
+    </div>
   )}
 </div>

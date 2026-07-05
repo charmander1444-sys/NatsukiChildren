@@ -1,0 +1,64 @@
+---
+/**
+ * FullBodySilhouette.astro
+ * Icono de persona de cuerpo entero (estilo pictograma), escalado a una
+ * altura en píxeles concreta (heightPx) para representar la altura real
+ * del personaje.
+ * - "hija"        -> icono femenino (cintura marcada), rosa
+ * - "hijo"        -> icono masculino, azul
+ * - "sin_genero"  -> icono masculino, gris
+ */
+interface Props {
+  tipo: string;
+  heightPx: number;
+}
+
+const { tipo, heightPx } = Astro.props;
+
+const COLORS: Record<string, string> = {
+  hija: "#ec4899",
+  hijo: "#38bdf8",
+  sin_genero: "#9ca3af",
+};
+
+const color = COLORS[tipo] ?? COLORS.sin_genero;
+const esFemenino = tipo === "hija";
+---
+
+<svg
+  viewBox="0 0 100 300"
+  style={`height:${heightPx}px; width:auto;`}
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMidYMax meet"
+  aria-hidden="true"
+  class="block shrink-0"
+>
+  {/* Cabeza */}
+  <circle cx="50" cy="24" r="16" fill={color} />
+
+  {esFemenino ? (
+    <Fragment>
+      {/* Brazos, pegados al torso (sin hueco) */}
+      <rect x="23" y="42" width="14" height="100" rx="6" fill={color} />
+      <rect x="63" y="42" width="14" height="100" rx="6" fill={color} />
+      {/* Torso con cintura marcada */}
+      <polygon points="37,42 63,42 55,95 65,158 35,158 45,95" fill={color} />
+      {/* Piernas juntas, estrechando hacia el tobillo */}
+      <polygon points="38,158 62,158 56,290 44,290" fill={color} />
+    </Fragment>
+  ) : (
+    <Fragment>
+      {/* Brazos, pegados al torso (sin hueco) */}
+      <rect x="20" y="42" width="14" height="104" rx="6" fill={color} />
+      <rect x="66" y="42" width="14" height="104" rx="6" fill={color} />
+      {/* Torso recto */}
+      <polygon points="34,42 66,42 60,158 40,158" fill={color} />
+      {/* Piernas juntas, estrechando hacia el tobillo */}
+      <polygon points="40,158 60,158 56,290 44,290" fill={color} />
+    </Fragment>
+  )}
+
+  {/* Pies */}
+  <ellipse cx="44.5" cy="293" rx="8" ry="6" fill={color} />
+  <ellipse cx="55.5" cy="293" rx="8" ry="6" fill={color} />
+</svg>

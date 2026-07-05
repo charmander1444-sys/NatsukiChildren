@@ -22,9 +22,13 @@ const flatImages = (images ?? []).flatMap((group) =>
 {flatImages.length > 0 && (
   <section class="mt-10">
     <h2 class="font-display text-2xl text-white text-glow mb-4">Galería</h2>
-    <div class="gallery-grid grid grid-cols-4 sm:grid-cols-3 gap-3">
-      {flatImages.map(({ src, artista }) => (
-        <div class="flex flex-col gap-1.5">
+
+    <div
+      class="gallery-grid grid grid-cols-4 sm:grid-cols-3 gap-3"
+      data-total={flatImages.length}
+    >
+      {flatImages.map(({ src, artista }, index) => (
+        <div class="gallery-item flex flex-col gap-1.5" data-index={index}>
           <button
             type="button"
             class="gallery-thumb group relative aspect-square rounded-lg overflow-hidden border border-rz-accent/20 hover:border-rz-accent/50 transition-colors duration-200"
@@ -46,6 +50,30 @@ const flatImages = (images ?? []).flatMap((group) =>
       ))}
     </div>
 
+    <nav
+      id="gallery-pagination"
+      class="hidden mt-6 flex-wrap items-center justify-center gap-2 font-body"
+      aria-label="Paginación de galería"
+    >
+      <button
+        type="button"
+        data-nav="prev"
+        class="pagination-btn px-3 py-1.5 rounded-md border border-rz-accent/20 text-rz-accent-2/80 hover:border-rz-accent/50 hover:text-white transition-colors duration-200 disabled:opacity-30 disabled:pointer-events-none"
+        aria-label="Página anterior"
+      >
+        ‹
+      </button>
+      <div id="gallery-pagination-numbers" class="flex flex-wrap items-center gap-2"></div>
+      <button
+        type="button"
+        data-nav="next"
+        class="pagination-btn px-3 py-1.5 rounded-md border border-rz-accent/20 text-rz-accent-2/80 hover:border-rz-accent/50 hover:text-white transition-colors duration-200 disabled:opacity-30 disabled:pointer-events-none"
+        aria-label="Página siguiente"
+      >
+        ›
+      </button>
+    </nav>
+
     <div
       id="gallery-lightbox"
       class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-sm items-center justify-center p-6 cursor-zoom-out"
@@ -56,7 +84,111 @@ const flatImages = (images ?? []).flatMap((group) =>
 )}
 
 <script>
-  const grid = document.querySelector(".gallery-grid");
+  const grid = document.querySelector<HTMLElement>(".gallery-grid");
+  const items = Array.from(document.querySelectorAll<HTMLElement>(".gallery-item"));
+  const paginationNav = document.getElementById("gallery-pagination");
+  const numbersContainer = document.getElementById("gallery-pagination-numbers");
+  const prevBtn = document.querySelector<HTMLButtonElement>('[data-nav="prev"]');
+  const nextBtn = document.querySelector<HTMLButtonElement>('[data-nav="next"]');
+
+  const DESKTOP_PAGE_SIZE = 12;
+  const MOBILE_PAGE_SIZE = 20;
+  const MOBILE_BREAKPOINT = 400; // px de ancho
+
+  let currentPage = 1;
+  let pageSize = DESKTOP_PAGE_SIZE;
+
+  function getPageSize() {
+    return window.innerWidth <= MOBILE_BREAKPOINT ? MOBILE_PAGE_SIZE : DESKTOP_PAGE_SIZE;
+  }
+
+  function totalPages() {
+    return Math.max(1, Math.ceil(items.length / pageSize));
+  }
+
+  function renderPage() {
+    const start = (currentPage - 1) * pageSize;
+    const end = start + pageSize;
+
+    items.forEach((item, index) => {
+      const visible = index >= start && index < end;
+      item.classList.toggle("hidden", !visible);
+    });
+
+    renderPaginationBar();
+  }
+
+  function renderPaginationBar() {
+    if (!paginationNav || !numbersContainer) return;
+
+    const pages = totalPages();
+
+    // Oculta la barra si no hace falta paginar
+    if (pages <= 1) {
+      paginationNav.classList.add("hidden");
+      paginationNav.classList.remove("flex");
+      return;
+    }
+
+    paginationNav.classList.remove("hidden");
+    paginationNav.classList.add("flex");
+
+    numbersContainer.innerHTML = "";
+    for (let i = 1; i <= pages; i++) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = String(i);
+      btn.dataset.page = String(i);
+      const isActive = i === currentPage;
+      btn.className = isActive
+        ? "pagination-btn w-9 h-9 rounded-md border border-rz-accent bg-rz-accent/20 text-white font-semibold transition-colors duration-200"
+        : "pagination-btn w-9 h-9 rounded-md border border-rz-accent/20 text-rz-accent-2/80 hover:border-rz-accent/50 hover:text-white transition-colors duration-200";
+      numbersContainer.appendChild(btn);
+    }
+
+    if (prevBtn) prevBtn.disabled = currentPage === 1;
+    if (nextBtn) nextBtn.disabled = currentPage === pages;
+  }
+
+  function goToPage(page: number) {
+    const pages = totalPages();
+    currentPage = Math.min(Math.max(1, page), pages);
+    renderPage();
+    grid?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  numbersContainer?.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest("[data-page]") as HTMLButtonElement | null;
+    if (!btn) return;
+    goToPage(Number(btn.dataset.page));
+  });
+
+  prevBtn?.addEventListener("click", () => goToPage(currentPage - 1));
+  nextBtn?.addEventListener("click", () => goToPage(currentPage + 1));
+
+  function handleResize() {
+    const newSize = getPageSize();
+    if (newSize === pageSize) return;
+
+    // Mantiene visible aproximadamente la misma imagen al cambiar de tamaño de página
+    const firstVisibleIndex = (currentPage - 1) * pageSize;
+    pageSize = newSize;
+    currentPage = Math.floor(firstVisibleIndex / pageSize) + 1;
+    renderPage();
+  }
+
+  let resizeTimeout: ReturnType<typeof setTimeout>;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(handleResize, 150);
+  });
+
+  if (items.length > 0) {
+    pageSize = getPageSize();
+    renderPage();
+  }
+
+  // Lightbox
   const lightbox = document.getElementById("gallery-lightbox");
   const lightboxImg = document.getElementById("gallery-lightbox-img") as HTMLImageElement | null;
 

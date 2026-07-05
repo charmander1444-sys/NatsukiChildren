@@ -142,7 +142,7 @@
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/042f8045a3eb.png",
       "alineacion": "malvada",
-      "edad": "12 años",
+      "edad": "",
       "tamano": "164cm",
       "apariencia": {
         "cabello": "Largo y negro",
@@ -175,8 +175,8 @@
       "nombre": "Helena Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/53114a3fb0e1.png",
-      "alineacion": "",
-      "edad": "10 años",
+      "alineacion": "buena",
+      "edad": "",
       "tamano": "168cm",
       "apariencia": {
         "cabello": "Largo y oscuro",
@@ -212,9 +212,9 @@
       "nombre": "Mercurius Natsuki Hoshin",
       "tipo": "hijo",
       "avatar": "https://cdn.imgchest.com/files/8af559f00e43.png",
-      "alineacion": "",
-      "edad": "170cm",
-      "tamano": "Alto para su edad, más alto que su hermana mayor pese a ser el menor",
+      "alineacion": "bueno",
+      "edad": "",
+      "tamano": "170cm",
       "apariencia": {
         "cabello": "Largo, hasta los hombros, de color malva y bien arreglado",
         "ojos": "Los mismos ojos intimidantes de su padre, mismo color, a menudo con expresión cansada",
@@ -247,7 +247,7 @@
       "nombre": "Lyra Natsuki Hoshin",
       "tipo": "hija",
       "avatar": "",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "158cm",
       "apariencia": {
@@ -282,7 +282,7 @@
       "nombre": "Graffias Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/1f7f0d386921.png",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "170cm",
       "apariencia": {
@@ -315,7 +315,7 @@
       "nombre": "Taygete Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/c53900151143.png",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "164cm",
       "apariencia": {
@@ -350,7 +350,7 @@
       "nombre": "Leo Natsuki Karsten",
       "tipo": "hijo",
       "avatar": "https://cdn.imgchest.com/files/9fbb9154eace.png",
-      "alineacion": "",
+      "alineacion": "bueno",
       "edad": "",
       "tamano": "172cm",
       "apariencia": {
@@ -387,8 +387,8 @@
       "nombre": "Bellatrix Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/a890d223607a.png",
-      "alineacion": "",
-      "edad": "16 años",
+      "alineacion": "malvada",
+      "edad": "",
       "tamano": "168cm",
       "apariencia": {
         "cabello": "Ligeramente largo y oscuro, casi hasta los hombros",
@@ -422,7 +422,7 @@
       "nombre": "Maia Natsuki",
       "tipo": "hija",
       "avatar": "",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "164cm",
       "apariencia": {
@@ -455,7 +455,7 @@
       "nombre": "Chochorina Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/6917a996ff37.png",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "167cm",
       "apariencia": {
@@ -490,7 +490,7 @@
       "nombre": "Cassia (Cassiopeia) Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/23a1bffc28f4.png",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "245cm",
       "apariencia": {
@@ -528,7 +528,7 @@
       "nombre": "Aconita Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/779221a43541.png",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "167cm",
       "apariencia": {
@@ -558,7 +558,7 @@
       "nombre": "Menkar Natsuki",
       "tipo": "hijo",
       "avatar": "https://cdn.imgchest.com/files/6b85ee28fde9.png",
-      "alineacion": "",
+      "alineacion": "bueno",
       "edad": "",
       "tamano": "172cm",
       "apariencia": {
@@ -589,8 +589,8 @@
       "nombre": "Nunki Natsuki",
       "tipo": "hijo",
       "avatar": "https://cdn.imgchest.com/files/8c05a8bb7491.png",
-      "alineacion": "",
-      "edad": "El mayor entre todos sus hermanos",
+      "alineacion": "bueno",
+      "edad": "",
       "tamano": "177cm",
       "apariencia": {
         "cabello": "Mezcla salvaje de los colores de ambos padres",
@@ -620,8 +620,8 @@
       "nombre": "Alcyone Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/bc58fe54e9c3.png",
-      "alineacion": "",
-      "edad": "La menor entre todos sus hermanos",
+      "alineacion": "buena",
+      "edad": "",
       "tamano": "162cm",
       "apariencia": {
         "cabello": "Similar en largo al de su madre, en una versión más clara de su color, con solo un cuarto de la vivacidad del de Sekhmet",
@@ -651,7 +651,7 @@
       "nombre": "Caph Natsuki",
       "tipo": "sin_genero",
       "avatar": "",
-      "alineacion": "",
+      "alineacion": "malvado",
       "edad": "",
       "tamano": "166cm",
       "apariencia": {
@@ -686,7 +686,7 @@
       "nombre": "Cygnus Natsuki",
       "tipo": "hijo",
       "avatar": "https://cdn.imgchest.com/files/c09df17fb2d5.png",
-      "alineacion": "",
+      "alineacion": "bueno",
       "edad": "",
       "tamano": "173cm",
       "apariencia": {
@@ -717,7 +717,7 @@
       "nombre": "Vega Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/9af22cb63fdd.png",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "167cm",
       "apariencia": {
@@ -748,7 +748,7 @@
       "nombre": "Natsumi Natsuki",
       "tipo": "hija",
       "avatar": "",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "160cm",
       "apariencia": {
@@ -779,7 +779,7 @@
       "nombre": "Saiph Natsuki",
       "tipo": "hijo",
       "avatar": "",
-      "alineacion": "",
+      "alineacion": "bueno",
       "edad": "",
       "tamano": "174cm",
       "apariencia": {
@@ -811,7 +811,7 @@
       "nombre": "Sabik Natsuki",
       "tipo": "hijo",
       "avatar": "",
-      "alineacion": "",
+      "alineacion": "bueno",
       "edad": "",
       "tamano": "172cm",
       "apariencia": {
@@ -847,9 +847,15 @@
       "nombre": "Phoebe Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/45fbfaf028a2.png",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
-      "tamano": "163cm",
+      "tamano": {
+      "items": [
+        { "nombre": "Normal/Híbrido", "valor": "163cm" },
+        { "nombre": "Dragón terrestre", "valor": "180cm" },
+        { "nombre": "Dragón", "valor": "750cm" }
+      ]
+      },
       "apariencia": {
         "cabello": "Largo y oscuro, hasta el final de la espalda",
         "ojos": "",
@@ -884,8 +890,8 @@
       "nombre": "Merope Natsuki",
       "tipo": "hija",
       "avatar": "",
-      "alineacion": "",
-      "edad": "La mayor de los dos hijos de la pareja",
+      "alineacion": "buena",
+      "edad": "",
       "tamano": "168cm",
       "apariencia": {
         "cabello": "Largo y rubio, como el de su madre",
@@ -919,7 +925,7 @@
       "nombre": "Perseus Natsuki",
       "tipo": "hijo",
       "avatar": "",
-      "alineacion": "",
+      "alineacion": "bueno",
       "edad": "",
       "tamano": "170cm",
       "apariencia": {
@@ -954,7 +960,7 @@
       "nombre": "Adhara Natsuki",
       "tipo": "hija",
       "avatar": "",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "168cm",
       "apariencia": {
@@ -989,7 +995,7 @@
       "nombre": "Denebola Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/3e8e4cfa7d61.png",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "165cm",
       "apariencia": {
@@ -1025,8 +1031,8 @@
       "nombre": "Reid Natsuki",
       "tipo": "hijo",
       "avatar": "",
-      "alineacion": "",
-      "edad": "El mayor de sus hermanos",
+      "alineacion": "bueno",
+      "edad": "",
       "tamano": "176cm",
       "apariencia": {
         "cabello": "Largo y rojo, atado hacia atrás, como todos los miembros de la familia Astrea",
@@ -1065,7 +1071,7 @@
       "nombre": "Cepheus Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/546b8bd96f39.png",
-      "alineacion": "",
+      "alineacion": "neutral",
       "edad": "",
       "tamano": "171cm",
       "apariencia": {
@@ -1103,7 +1109,7 @@
       "nombre": "Luna Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/807fd6b0b9b4.png",
-      "alineacion": "",
+      "alineacion": "buena",
       "edad": "",
       "tamano": "164cm",
       "apariencia": {
@@ -1140,7 +1146,7 @@
       "nombre": "Nova Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/d0b42c1a69a6.png",
-      "alineacion": "",
+      "alineacion": "malvada",
       "edad": "",
       "tamano": "154cm",
       "apariencia": {
@@ -1183,7 +1189,7 @@
       "nombre": "Orion Natsuki",
       "tipo": "hijo",
       "avatar": "https://cdn.imgchest.com/files/a7ee84fb1762.png",
-      "alineacion": "",
+      "alineacion": "bueno",
       "edad": "",
       "tamano": "162cm",
       "apariencia": {
@@ -1215,8 +1221,8 @@
       "nombre": "Morgana \"Morgan\" Natsuki Baumann",
       "tipo": "hija",
       "avatar": "",
-      "alineacion": "",
-      "edad": "La mayor de los tres hermanos",
+      "alineacion": "buena",
+      "edad": "",
       "tamano": "178cm",
       "apariencia": {
         "cabello": "Largo y oscuro, del mismo color que el de su padre",
@@ -1248,8 +1254,8 @@
       "nombre": "Viviane \"Vivian\" Natsuki Baumann",
       "tipo": "hija",
       "avatar": "",
-      "alineacion": "",
-      "edad": "La mediana de los tres hermanos",
+      "alineacion": "buena",
+      "edad": "",
       "tamano": "174cm",
       "apariencia": {
         "cabello": "Oscuro",
@@ -1284,8 +1290,8 @@
       "nombre": "Arthur Natsuki Baumann",
       "tipo": "hijo",
       "avatar": "",
-      "alineacion": "",
-      "edad": "El menor de los tres hermanos",
+      "alineacion": "bueno",
+      "edad": "",
       "tamano": "170cm",
       "apariencia": {
         "cabello": "Peinado y cortado de forma similar al de Subaru, pero rubio como el de su madre",
@@ -1324,8 +1330,8 @@
       "tipo": "hijo",
       "avatar": "",
       "alienacion": "",
-      "alineacion": "",
-      "edad": "Nació 10 segundos antes que Pollux",
+      "alineacion": "bueno",
+      "edad": "",
       "tamano": "169cm",
       "apariencia": {
         "cabello": "De longitud media, lado izquierdo oscuro como Subaru y lado derecho azul como Julia",
@@ -1360,8 +1366,8 @@
       "nombre": "Pollux Natsuki",
       "tipo": "hijo",
       "avatar": "",
-      "alineacion": "",
-      "edad": "Nació 10 segundos después que Castor",
+      "alineacion": "bueno",
+      "edad": "",
       "tamano": "171cm",
       "apariencia": {
         "cabello": "De longitud media, lado derecho oscuro como Subaru y lado izquierdo azul como Julia",
@@ -1396,7 +1402,7 @@
       "nombre": "Tonnura Natsuki",
       "tipo": "hijo",
       "avatar": "",
-      "alineacion": "",
+      "alineacion": "neutral",
       "edad": "",
       "tamano": "170cm",
       "apariencia": {
