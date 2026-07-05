@@ -208,7 +208,7 @@
     { "nombre": "Lyra", "relacion": "Hermana", "id": "lyra" }
   ]
   },
-  "cassiopeia": {
+  "cassia": {
     "stats": {
       "fuerza": "SS",
       "resistencia": "SS",
@@ -440,7 +440,7 @@
        { "nombre": "Ram", "relacion": "Madre", "id": "ram" }
     ]
   },
-  "natsumi_natsuki": {
+  "natsumi": {
     "stats": {
       "fuerza": "E",
       "resistencia": "D",
@@ -853,6 +853,25 @@
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
        { "nombre": "Bruja de la envidia", "relacion": "Madre", "id": "bruja de la envidia" }
+    ]
+  },
+  "taygete": {
+    "stats": {
+      "fuerza": "B",
+      "resistencia": "SS+",
+      "velocidad": "D",
+      "inteligencia": "B",
+      "habilidades_combate": "SS",
+      "carisma": "A",
+      "portal": "SS+",
+      "afinidad_espiritual": "S",
+      "potencial": "EX",
+      "suerte": "C"
+    },
+    "historias": [],
+    "relaciones": [
+      { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+      { "nombre": "Shion", "relacion": "Madre", "id": "shion" }
     ]
   }
 
