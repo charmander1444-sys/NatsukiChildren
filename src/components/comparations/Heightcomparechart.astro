@@ -79,14 +79,15 @@ const entries: FlatEntry[] = personajes.flatMap((p): FlatEntry[] => {
 // De mayor a menor
 entries.sort((a, b) => b.altura - a.altura);
 
-const alturas = entries.map((e) => e.altura);
-const maxAlturaReal = alturas.length > 0 ? Math.max(...alturas) : 0;
-const minAlturaReal = alturas.length > 0 ? Math.min(...alturas) : 0;
+// Escala fija de la regla: de 150cm a 800cm (pedido explícito), en vez de
+// calcularla dinámicamente a partir de los datos.
+const MIN_CM = 140;
+const MAX_CM = 800;
+const RANGO_CM = MAX_CM - MIN_CM;
 
 // Elige un "paso" agradable (10, 15, 20, 25, 50, 100...) para las etiquetas
-// de la regla, sin importar qué tan grande sea el máximo (ej. el Dragón
-// Completo de Phoebe a 750cm).
-function niceStep(range: number, targetLines = 8): number {
+// de la regla dentro de ese rango fijo.
+function niceStep(range: number, targetLines = 13): number {
   if (range <= 0) return 10;
   const rough = range / targetLines;
   const magnitude = Math.pow(10, Math.floor(Math.log10(rough)));
@@ -99,19 +100,26 @@ function niceStep(range: number, targetLines = 8): number {
   return niceResidual * magnitude;
 }
 
-// La escala arranca en 0 (el suelo) y termina apenas por encima del más
-// alto -sin dejar un colchón enorme- para que la diferencia entre
-// personajes se note lo más posible dentro del mismo alto de dibujo.
-const gridMax = Math.max(10, Math.ceil((maxAlturaReal || 1) / 5) * 5);
-const step = niceStep(gridMax, 8);
-const ticks = Array.from({ length: Math.floor(gridMax / step) + 1 }, (_, i) => i * step);
-const stepPct = (step / gridMax) * 100;
+const step = niceStep(RANGO_CM, 13);
+// Ticks empezando en MIN_CM y subiendo de a `step` hasta MAX_CM
+const ticks = Array.from(
+  { length: Math.floor(RANGO_CM / step) + 1 },
+  (_, i) => MIN_CM + i * step
+);
+const stepPct = (step / RANGO_CM) * 100;
 const minorStepPct = stepPct / 4;
 
-// Alto fijo del área de dibujo en px; todas las figuras se escalan en
-// proporción a esto, así 0cm queda siempre en la base y gridMax arriba.
+// Alto fijo del área de dibujo en px; se reparte entre los 650cm de rango
+// (150cm a 800cm), así todas las figuras son directamente comparables.
 const CHART_HEIGHT_PX = 460;
-const pxPerCm = CHART_HEIGHT_PX / gridMax;
+const pxPerCm = CHART_HEIGHT_PX / RANGO_CM;
+
+// Altura visual de cada figura relativa a MIN_CM (140cm = suelo del gráfico).
+// Si algún personaje midiera menos de 150cm, se deja un mínimo visible en
+// vez de desaparecer o dar una altura negativa.
+function alturaVisualPx(altura: number): number {
+  return Math.max((altura - MIN_CM) * pxPerCm, 6);
+}
 
 const COLORS: Record<string, string> = {
   hija: "#f9a8d4",
@@ -126,8 +134,8 @@ const COLORS: Record<string, string> = {
       Comparación de alturas
     </h2>
     <p class="text-sm text-rz-text/60 font-body mb-6">
-      Todos los personajes y sus formas, ordenados de mayor a menor altura
-      ({minAlturaReal}cm – {maxAlturaReal}cm).
+      Todos los personajes y sus formas, ordenados de mayor a menor altura.
+      Escala de la regla: {MIN_CM}cm – {MAX_CM}cm.
     </p>
 
     <div
@@ -143,7 +151,7 @@ const COLORS: Record<string, string> = {
           {ticks.map((v) => (
             <div
               class="absolute right-1 sm:right-2 translate-y-1/2 text-[10px] sm:text-xs text-rz-accent-2/60 font-body"
-              style={`bottom:${(v / gridMax) * 100}%`}
+              style={`bottom:${((v - MIN_CM) / RANGO_CM) * 100}%`}
             >
               {v}
             </div>
@@ -180,7 +188,7 @@ const COLORS: Record<string, string> = {
                     {entry.altura}cm
                   </p>
                 </div>
-                <FullBodySilhouette tipo={entry.tipo} heightPx={entry.altura * pxPerCm} />
+                <FullBodySilhouette tipo={entry.tipo} heightPx={alturaVisualPx(entry.altura)} />
               </div>
             ))}
           </div>
