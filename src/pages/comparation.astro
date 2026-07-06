@@ -3,11 +3,9 @@ import Layout from "../layouts/layout.astro";
 import Navbar from "../navbar.astro";
 import Ranking from "../components/compare/Ranking.astro";
 ---
-  <Navbar />
+<Navbar />
 <Layout title="Re:Zero Comparacion">
-
-
-  <section class="mx-auto flex min-h-[70vh] max-w-5xl flex-col items-center justify-center px-4 py-16 text-center sm:px-6 lg:px-8">
-        <Ranking/>
+  <section class="mx-auto flex min-h-[70vh] max-w-5xl flex-col items-stretch sm:items-center justify-center px-4 py-16 text-center sm:px-6 lg:px-8" style="min-width:0;">
+    <Ranking />
   </section>
 </Layout>

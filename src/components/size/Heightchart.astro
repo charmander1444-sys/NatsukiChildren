@@ -1,0 +1,49 @@
+---
+import HeightBar from "./Heightbar.astro";
+import { TIPO_COLORS } from "./lib/Heightutils.js";
+
+const { personajes = [], pixelsPerCm, minBarPx } = Astro.props;
+---
+
+<div class="height-chart" data-height-chart style="width:100%;max-width:100%;min-width:0;display:flex;justify-content:flex-start;overflow:hidden;">
+  <div class="height-chart__scroll" style="width:100%;max-width:100%;min-width:0;display:flex;justify-content:flex-start;overflow-x:auto;overflow-y:auto;max-height:75vh;box-sizing:border-box;">
+    <div class="height-chart__row" style="display:flex;align-items:flex-end;justify-content:flex-start;gap:0.6rem;min-width:100%;flex-shrink:0;">
+      {personajes.map((personaje, index) => {
+        const tipo = personaje._tipo ?? "sin_genero";
+        const { from: colorFrom, to: colorTo } = TIPO_COLORS[tipo] ?? TIPO_COLORS.sin_genero;
+        return (
+          <HeightBar
+            personaje={personaje}
+            pixelsPerCm={pixelsPerCm}
+            minBarPx={minBarPx}
+            colorFrom={colorFrom}
+            colorTo={colorTo}
+            tipo={tipo}
+            order={index}
+          />
+        );
+      })}
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    .height-chart__scroll { max-height: 70vh; }
+    .height-chart__row { gap: 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    .height-chart__scroll { max-height: 72vh; }
+    .height-chart__row { gap: 0.6rem; }
+  }
+
+  @media (max-width: 400px) {
+    .height-chart__row { gap: 0.4rem; }
+  }
+
+  .height-chart__scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+  .height-chart__scroll::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 8px; }
+  .height-chart__scroll::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.25); border-radius: 8px; }
+  .height-chart__scroll::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); }
+</style>

@@ -1,0 +1,148 @@
+---
+import HeightChart from "./Heightchart.astro";
+import { groupByTipo, computeScale } from "./lib/Heightutils.js";
+
+const { personajes = [] } = Astro.props;
+
+const grupos = groupByTipo(personajes);
+
+const todos = [
+  ...grupos.hijo.map((p) => ({ ...p, _tipo: "hijo" })),
+  ...grupos.hija.map((p) => ({ ...p, _tipo: "hija" })),
+  ...grupos.sin_genero.map((p) => ({ ...p, _tipo: "sin_genero" })),
+];
+
+const { pixelsPerCm, minBarPx } = computeScale(todos, {
+  maxBarPx: 520,
+  minBarPx: 36,
+});
+
+const BTN_BASE =
+  "font-size:0.8rem;padding:0.35rem 0.85rem;border-radius:9999px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);cursor:pointer;transition:all 0.15s ease;white-space:nowrap;flex-shrink:0;";
+const BTN_ACTIVE =
+  "background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#fff;border-color:transparent;";
+---
+
+<!-- reemplazar por -->
+<div class="height-wrapper" style="width:100%;max-width:100%;min-width:0;display:flex;flex-direction:column;justify-content:center;text-align:center;gap:1.25rem;margin:0 auto;overflow-x:hidden;box-sizing:border-box;">
+  <p class="hc-hint" style="width:100%;max-width:100%;min-width:0;margin:0 auto;text-align:center;box-sizing:border-box;padding:0 0.75rem;word-wrap:break-word;overflow-wrap:break-word;color:rgba(255,255,255,0.7);font-size:0.875rem;">
+    Desliza horizontal y verticalmente dentro del gráfico para ver todas las alturas
+  </p>
+
+  <!-- min-width:0 es la clave: permite que este flex-item se encoja
+       por debajo de su contenido y que su propio overflow-x:auto
+       se active en vez de desbordar hacia el wrapper padre -->
+  <div class="height-controls-scroll" style="width:100%;max-width:100%;min-width:0;display:flex;justify-content:flex-start;overflow-x:auto;overflow-y:hidden;box-sizing:border-box;">
+    <div data-height-controls style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.75rem 1.25rem;width:max-content;min-width:100%;margin:0 auto;padding:0 0.5rem;box-sizing:border-box;">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem;">
+        <span class="hc-label" style="font-size:0.8rem;color:rgba(255,255,255,0.6);white-space:nowrap;">Filtrar:</span>
+        <button type="button" class="hc-btn" data-filter="todos" style={BTN_BASE + BTN_ACTIVE}>Todos</button>
+        <button type="button" class="hc-btn" data-filter="hijo" style={BTN_BASE}>Hijos</button>
+        <button type="button" class="hc-btn" data-filter="hija" style={BTN_BASE}>Hijas</button>
+        <button type="button" class="hc-btn" data-filter="sin_genero" style={BTN_BASE}>Sin género</button>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem;">
+        <span class="hc-label" style="font-size:0.8rem;color:rgba(255,255,255,0.6);white-space:nowrap;">Orden:</span>
+        <button type="button" class="hc-btn" data-sort="desc" style={BTN_BASE + BTN_ACTIVE}>Mayor a menor</button>
+        <button type="button" class="hc-btn" data-sort="asc" style={BTN_BASE}>Menor a mayor</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Misma tarjeta visual que la tabla de ranking -->
+  <div class="height-card rounded-2xl border border-rz-accent/20 bg-rz-bg-2/40 p-4" style="width:100%;max-width:100%;min-width:0;box-sizing:border-box;">
+    <HeightChart personajes={todos} pixelsPerCm={pixelsPerCm} minBarPx={minBarPx} />
+  </div>
+</div>
+
+<style>
+
+  .height-wrapper {
+  align-items: stretch; /* móvil: evita el recorte por overflow */
+}
+
+@media (min-width: 640px) {
+  .height-wrapper {
+    align-items: center; /* pc: comportamiento original */
+  }
+}
+
+  .hc-btn:hover { background: rgba(255, 255, 255, 0.12); }
+
+  .height-controls-scroll::-webkit-scrollbar { height: 6px; }
+  .height-controls-scroll::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 8px; }
+  .height-controls-scroll::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.25); border-radius: 8px; }
+
+  @media (max-width: 480px) {
+    .hc-btn { font-size: 0.72rem; padding: 0.3rem 0.6rem; }
+    .hc-label { font-size: 0.72rem; }
+    .hc-hint { font-size: 0.78rem; }
+    .height-card { padding: 0.75rem !important; }
+  }
+</style>
+
+<script>
+  const BTN_BASE =
+    "font-size:0.8rem;padding:0.35rem 0.85rem;border-radius:9999px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);cursor:pointer;transition:all 0.15s ease;white-space:nowrap;flex-shrink:0;";
+  const BTN_ACTIVE =
+    "background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#fff;border-color:transparent;";
+
+  function setActive(buttons, activeBtn) {
+    buttons.forEach((b) => b.setAttribute("style", b === activeBtn ? BTN_BASE + BTN_ACTIVE : BTN_BASE));
+  }
+
+  function setupHeightControls() {
+    const root = document.querySelector("[data-height-controls]");
+    if (!root) return;
+
+    const scrollWrapper = root.closest(".height-controls-scroll");
+    const chart = root.closest(".height-wrapper")?.querySelector("[data-height-chart]");
+    if (!chart) return;
+
+    if (scrollWrapper) scrollWrapper.scrollLeft = 0;
+
+    let currentFilter = "todos";
+    let currentSort = "desc";
+
+    function apply() {
+      const bars = Array.from(chart.querySelectorAll("[data-height-bar]"));
+
+      bars.forEach((bar) => {
+        const tipo = bar.getAttribute("data-tipo");
+        bar.style.display = currentFilter === "todos" || tipo === currentFilter ? "" : "none";
+      });
+
+      bars
+        .slice()
+        .sort((a, b) => {
+          const cmA = parseFloat(a.getAttribute("data-cm") || "0");
+          const cmB = parseFloat(b.getAttribute("data-cm") || "0");
+          return currentSort === "desc" ? cmB - cmA : cmA - cmB;
+        })
+        .forEach((bar, index) => (bar.style.order = String(index)));
+    }
+
+    const filterBtns = Array.from(root.querySelectorAll("[data-filter]"));
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        currentFilter = btn.getAttribute("data-filter") || "todos";
+        setActive(filterBtns, btn);
+        apply();
+      });
+    });
+
+    const sortBtns = Array.from(root.querySelectorAll("[data-sort]"));
+    sortBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        currentSort = btn.getAttribute("data-sort") || "desc";
+        setActive(sortBtns, btn);
+        apply();
+      });
+    });
+
+    apply();
+  }
+
+  document.addEventListener("astro:page-load", setupHeightControls);
+  setupHeightControls();
+</script>

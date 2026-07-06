@@ -1,11 +1,7 @@
 ---
-// Ranking.astro
-// Punto de entrada: junta characterKids.json (id, nombre, avatar) con
-// stats.json (id, stats) y arma la tabla ordenable.
-//
-// AJUSTA LAS RUTAS de los imports de abajo a donde vivan tus JSON reales.
-
 import RankingTable from "./Rankingtable.astro";
+import Controles from "./Controles.astro";
+import Height from "../size/Height.astro";
 import { STAT_LABELS } from "./lib/statsConfig.js";
 import { mergeCharacters } from "./lib/mergeCharacters.js";
 
@@ -25,5 +21,26 @@ const characters = mergeCharacters(characterKids, statsData);
     Click en cualquier columna para ordenar
   </p>
 
-  <RankingTable characters={characters} statKeys={statKeys} />
+  <Controles active="ranking" />
+
+  <!-- Mismo contenedor (ancho/padding) para ambos paneles, en pc y móvil -->
+  <div class="container mx-auto max-w-6xl px-4 space-y-4 pb-12">
+    <div data-view-panel="ranking">
+      <RankingTable characters={characters} statKeys={statKeys} />
+    </div>
+
+    <div data-view-panel="tamano" style="display:none;">
+      <Height personajes={characterKids} />
+    </div>
+  </div>
 </section>
+
+<script>
+  document.addEventListener("controles:change", (e) => {
+    const { control } = (e as CustomEvent).detail;
+
+    document.querySelectorAll<HTMLElement>("[data-view-panel]").forEach((panel) => {
+      panel.style.display = panel.dataset.viewPanel === control ? "" : "none";
+    });
+  });
+</script>

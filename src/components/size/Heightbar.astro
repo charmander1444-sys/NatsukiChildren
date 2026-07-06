@@ -1,0 +1,158 @@
+---
+import { getPrimaryHeightCm, getPrimaryHeightLabel } from "./lib/Heightutils.js";
+
+const { personaje, pixelsPerCm, minBarPx = 36, colorFrom, colorTo, tipo, order = 0 } = Astro.props;
+
+const cm = getPrimaryHeightCm(personaje);
+const label = getPrimaryHeightLabel(personaje);
+const barHeight = Math.max(cm * pixelsPerCm, minBarPx);
+---
+
+<div
+  class="height-bar"
+  data-height-bar
+  data-tipo={tipo}
+  data-cm={cm}
+  style={`--bar-height:${barHeight}px; --color-from:${colorFrom}; --color-to:${colorTo}; order:${order};`}
+>
+  <span class="height-bar__value">{label}</span>
+
+  <div class="height-bar__column">
+    {personaje.avatar && (
+      <img
+        src={personaje.avatar}
+        alt={personaje.nombre}
+        class="height-bar__avatar"
+        loading="lazy"
+      />
+    )}
+  </div>
+
+  <span class="height-bar__name" title={personaje.nombre}>{personaje.nombre}</span>
+</div>
+
+<style>
+  .height-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 96px;
+    flex: 0 0 auto;
+  }
+
+  .height-bar__value {
+    height: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.35rem;
+    white-space: nowrap;
+  }
+
+  .height-bar__column {
+    width: 56px;
+    height: var(--bar-height);
+    border-radius: 0.75rem 0.75rem 0.35rem 0.35rem;
+    background: linear-gradient(180deg, var(--color-from), var(--color-to));
+    box-shadow: 0 0 18px -4px var(--color-to);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .height-bar:hover .height-bar__column {
+    filter: brightness(1.15);
+  }
+
+  .height-bar__avatar {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 9999px;
+    margin-top: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+  }
+
+  /* 3 líneas en vez de 2, con line-height más ajustado para que quepa
+     completo el nombre en casos como "Cassia (Cassiopeia) Natsuki" */
+  .height-bar__name {
+    margin-top: 0.5rem;
+    height: 2.85rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.75rem;
+    line-height: 1.05;
+    text-align: center;
+    color: white;
+    max-width: 96px;
+    cursor: default;
+  }
+
+  @media (max-width: 768px) {
+    .height-bar {
+      width: 80px;
+    }
+    .height-bar__column {
+      width: 48px;
+    }
+    .height-bar__avatar {
+      width: 38px;
+      height: 38px;
+    }
+    .height-bar__name {
+      max-width: 80px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .height-bar {
+      width: 68px;
+    }
+    .height-bar__column {
+      width: 40px;
+    }
+    .height-bar__avatar {
+      width: 32px;
+      height: 32px;
+      margin-top: 4px;
+    }
+    .height-bar__value {
+      height: 1.1rem;
+      font-size: 0.85rem;
+    }
+    .height-bar__name {
+      height: 2.55rem;
+      font-size: 0.68rem;
+      line-height: 1;
+      max-width: 68px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .height-bar {
+      width: 58px;
+    }
+    .height-bar__column {
+      width: 36px;
+    }
+    .height-bar__avatar {
+      width: 28px;
+      height: 28px;
+    }
+    .height-bar__name {
+      max-width: 58px;
+      font-size: 0.62rem;
+      height: 2.4rem;
+    }
+  }
+</style>

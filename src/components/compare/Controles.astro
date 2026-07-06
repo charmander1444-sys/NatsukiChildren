@@ -1,0 +1,70 @@
+---
+interface Props {
+  active?: string;
+}
+const { active = "ranking" } = Astro.props;
+---
+
+<div class="controles" data-controles>
+  <button type="button" class="control-btn" data-control="ranking" aria-pressed={active === "ranking"}>
+    Ranking
+  </button>
+  <button type="button" class="control-btn" data-control="tamano" aria-pressed={active === "tamano"}>
+    Tamaño
+  </button>
+</div>
+
+<style>
+  .controles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .control-btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .control-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Estado activo vía CSS (más limpio que JS) */
+  .control-btn[aria-pressed="true"] {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+</style>
+
+<script>
+  const contenedor = document.querySelector<HTMLElement>("[data-controles]");
+
+  contenedor?.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>("[data-control]");
+    if (!btn) return;
+
+    const control = btn.dataset.control!;
+
+    // Actualiza aria-pressed, el CSS se encarga del resto
+    contenedor.querySelectorAll("[data-control]").forEach((b) => {
+      b.setAttribute("aria-pressed", "false");
+    });
+    btn.setAttribute("aria-pressed", "true");
+
+    document.dispatchEvent(
+      new CustomEvent("controles:change", { detail: { control } })
+    );
+  });
+</script>
