@@ -1,14 +1,46 @@
 ---
 // RadarChart.astro
+import { getRango, RANGOS } from "../../data/lib/stats.js";
+
+// RANGOS es un array de objetos {letra, min}, necesitamos solo las letras
+const RANGO_LETRAS = RANGOS.map((r) => r.letra);
+
 interface Props {
-  entries: [string, string][];
+  entries: [string, string | number][];
   labels: Record<string, string>;
   ranks: string[];
   rankColors: Record<string, string>;
   id?: string;
 }
 
-const { entries, labels, ranks, rankColors, id = "radar" } = Astro.props;
+const { entries: rawEntries, labels, ranks, rankColors, id = "radar" } = Astro.props;
+
+/**
+ * Normaliza cada entry a una letra de rango válida, sea cual sea el
+ * tipo de dato recibido (número crudo, string numérico o letra ya
+ * calculada). Esto hace que el componente sea seguro de usar incluso
+ * si en algún punto se le pasan stats sin procesar.
+ */
+function toRankLetter(rawValue) {
+  if (rawValue == null) return null;
+
+  if (typeof rawValue === "object") {
+    const upper = String(rawValue.rango ?? "").toUpperCase();
+    return RANGO_LETRAS.includes(upper) ? upper : null;
+  }
+
+  if (typeof rawValue === "number") return getRango(rawValue);
+
+  const upper = rawValue.toUpperCase();
+  if (RANGO_LETRAS.includes(upper)) return upper;
+
+  const parsed = parseFloat(rawValue);
+  return Number.isNaN(parsed) ? null : getRango(parsed);
+}
+
+const entries: [string, string][] = rawEntries
+  .map(([key, rawValue]) => [key, toRankLetter(rawValue)] as [string, string | null])
+  .filter((e): e is [string, string] => !!e[1]);
 
 const n = entries.length;
 const canRender = n >= 3;
@@ -23,8 +55,7 @@ let svgInner = "";
 let points: any[] = [];
 
 if (canRender) {
-  points = entries.map(([key, rawRank], i) => {
-    const rank = rawRank.toUpperCase();
+  points = entries.map(([key, rank], i) => {
     const idx = Math.max(0, ranks.indexOf(rank));
     const norm = (idx + 1) / ranks.length;
     const angle = -Math.PI / 2 + (2 * Math.PI * i) / n;
@@ -72,7 +103,6 @@ if (canRender) {
     )
     .join("");
 
-  // Ya NO generamos rankTags ni labelEls como <text> del SVG.
   svgInner = `
     ${gridRings}
     ${axisLines}
@@ -91,7 +121,6 @@ if (canRender) {
       set:html={svgInner}
     />
 
-    {/* Overlay HTML: esto sí lo traduce Google Translate */}
     <div class="absolute inset-0 pointer-events-none">
       {points.map((p) => {
         let translateX = "-50%";
@@ -99,7 +128,6 @@ if (canRender) {
         if (Math.cos(p.angle) > 0.3) justify = "start";
         else if (Math.cos(p.angle) < -0.3) justify = "end";
 
-        // convertimos coords del viewBox (-40..600, escala 640) a % del contenedor
         const toPct = (v: number) => ((v + 40) / 640) * 100;
 
         return (

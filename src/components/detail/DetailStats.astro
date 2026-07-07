@@ -1,14 +1,18 @@
 ---
 import RadarChart from "./RadarChart.astro";
+// Ajusta esta ruta según dónde esté este archivo respecto a src/lib/stats.js
+import { getRango } from "../../data/lib/stats.js";
+
+type StatValue = string | number | { valor?: number; rango?: string };
 
 interface StatsPanel {
   id: string;
   nombre: string;
-  stats: Record<string, string>;
+  stats: Record<string, StatValue>;
 }
 
 interface Props {
-  stats?: Record<string, string> | { panels: StatsPanel[] };
+  stats?: Record<string, StatValue> | { panels: StatsPanel[] };
 }
 
 const { stats } = Astro.props;
@@ -74,13 +78,49 @@ function isMultiPanel(s: any): s is { panels: StatsPanel[] } {
 const panels: StatsPanel[] = stats
   ? isMultiPanel(stats)
     ? stats.panels
-    : [{ id: "default", nombre: "", stats: stats as Record<string, string> }]
+    : [{ id: "default", nombre: "", stats: stats as Record<string, string | number> }]
   : [];
 
-function getEntries(statsObj: Record<string, string>) {
-  return Object.entries(statsObj ?? {}).filter(
-    ([, v]) => v && RANKS.includes(v.toUpperCase())
-  );
+/**
+ * Convierte un valor crudo (número o string) a su letra de rango.
+ * - Si es número -> getRango(valor) calcula el rango según los umbrales de RANGOS.
+ * - Si ya es un string que coincide con una letra válida (compatibilidad con
+ *   datos antiguos que ya traían la letra directamente) -> se usa tal cual.
+ * - Si es un string numérico ("43") -> se parsea y se pasa por getRango().
+ * - Cualquier otro caso -> null (se descarta el stat).
+ */
+function toRankLetter(rawValue: string | number | { valor?: number; rango?: string } | undefined): string | null {
+  if (rawValue == null) return null;
+
+  // Objeto con override explícito de rango, ej: { valor: 40, rango: "B" }
+  if (typeof rawValue === "object") {
+    if (rawValue.rango) {
+      const upper = String(rawValue.rango).toUpperCase();
+      if (RANKS.includes(upper)) return upper;
+    }
+    if (typeof rawValue.valor === "number") {
+      return getRango(rawValue.valor);
+    }
+    return null;
+  }
+
+  if (typeof rawValue === "number") {
+    return getRango(rawValue);
+  }
+
+  const upper = rawValue.toUpperCase();
+  if (RANKS.includes(upper)) return upper;
+
+  const parsed = parseFloat(rawValue);
+  if (!Number.isNaN(parsed)) return getRango(parsed);
+
+  return null;
+}
+
+function getEntries(statsObj: Record<string, string | number>) {
+  return Object.entries(statsObj ?? {})
+    .map(([key, rawValue]) => [key, toRankLetter(rawValue)] as [string, string | null])
+    .filter((entry): entry is [string, string] => !!entry[1] && RANKS.includes(entry[1]));
 }
 
 const panelNames = panels.map((p) => p.nombre || "Otro panel");
@@ -136,8 +176,7 @@ const anyRadarAvailable = panelEntries.some((e) => e.length >= 3);
           )}
 
           <div data-view="bars" class="space-y-4">
-            {entries.map(([key, rawRank]) => {
-              const rank = rawRank.toUpperCase();
+            {entries.map(([key, rank]) => {
               const idx = RANKS.indexOf(rank);
               const pct = ((idx + 1) / RANKS.length) * 100;
               const color = RANK_COLORS[rank];

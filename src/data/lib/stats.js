@@ -34,6 +34,8 @@ const PESOS = {
 
 export function getPuntuacionTotal(stats) {
   return Object.entries(PESOS).reduce((total, [attr, peso]) => {
-    return total + (stats[attr] ?? 0) * peso;
+    const raw = stats[attr];
+    const valorNumerico = typeof raw === "object" ? raw.valor ?? 0 : raw ?? 0;
+    return total + valorNumerico * peso;
   }, 0);
 }

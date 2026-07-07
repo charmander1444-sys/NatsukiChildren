@@ -1,17 +1,17 @@
 {
   "electra": {
     "stats": {
-      "fuerza": "B",
-      "resistencia": "B",
-      "velocidad": "C",
-      "inteligencia": "D",
-      "habilidades_combate": "A",
-      "carisma": "C",
-      "portal": "A",
-      "afinidad_espiritual": "B",
-      "potencial": "S",
-      "suerte": "F"
-    },
+    "fuerza": 43,
+    "resistencia": { "valor": 40, "rango": "B" },
+    "velocidad": 37,
+    "inteligencia": 25,
+    "habilidades_combate": { "valor": 60, "rango": "A" },
+    "carisma": 35,
+    "portal": 55,
+    "afinidad_espiritual": 47,
+    "potencial": { "valor": 70, "rango": "S" },
+    "suerte": 3
+  },
     "historias": [
       {
         "titulo": "promise me the world, tell me no lies",
@@ -48,37 +48,37 @@
       "stats": {
         "panels": [
           {
-            "id": "sin_autoridad",
-            "nombre": "Sin Autoridad",
-            "stats": {
-              "fuerza": "F",
-              "resistencia": "F",
-              "velocidad": "F",
-              "inteligencia": "SS+",
-              "habilidades_combate": "B",
-              "carisma": "E",
-              "portal": "SS",
-              "afinidad_espiritual": "SS",
-              "potencial": "SS",
-              "suerte": "F"
-            }
-          },
-          {
-            "id": "con_autoridad",
-            "nombre": "Con Autoridad",
-            "stats": {
-              "fuerza": "EX",
-              "resistencia": "EX",
-              "velocidad": "EX",
-              "inteligencia": "SS+",
-              "habilidades_combate": "B",
-              "carisma": "E",
-              "portal": "EX",
-              "afinidad_espiritual": "EX",
-              "potencial": "EX",
-              "suerte": "F"
-            }
+          "id": "sin_autoridad",
+          "nombre": "Sin Autoridad",
+          "stats": {
+            "fuerza": 3,
+            "resistencia": 3,
+            "velocidad": 2,
+            "inteligencia": { "valor": 100, "rango": "SS+" },
+            "habilidades_combate": { "valor": 40, "rango": "B" },
+            "carisma": { "valor": 10, "rango": "E" },
+            "portal": { "valor": 80, "rango": "SS" },
+            "afinidad_espiritual": { "valor": 80, "rango": "SS" },
+            "potencial": { "valor": 80, "rango": "SS" },
+            "suerte": 1
           }
+        },
+        {
+          "id": "con_autoridad",
+          "nombre": "Con Autoridad",
+          "stats": {
+            "fuerza": { "valor": 500, "rango": "EX" },
+            "resistencia": { "valor": 500, "rango": "EX" },
+            "velocidad": { "valor": 400, "rango": "EX" },
+            "inteligencia": { "valor": 100, "rango": "SS+" },
+            "habilidades_combate": { "valor": 40, "rango": "B" },
+            "carisma": { "valor": 10, "rango": "E" },
+            "portal": { "valor": 800, "rango": "EX" },
+            "afinidad_espiritual": { "valor": 800, "rango": "EX" },
+            "potencial": { "valor": 1000, "rango": "EX" },
+            "suerte": 1
+          }
+        }
         ]
       },
     "historias": [],
@@ -92,16 +92,40 @@
   },
   "elpis": {
     "stats": {
-      "fuerza": "SS",
-      "resistencia": "SS",
-      "velocidad": "C",
-      "inteligencia": "E",
-      "habilidades_combate": "B",
-      "carisma": "A",
-      "portal": "S",
-      "afinidad_espiritual": "C",
-      "potencial": "SS",
-      "suerte": "C"
+      "panels": [
+         {
+        "id": "sin_autoridad",
+        "nombre": "Sin Autoridad",
+        "stats": {
+          "fuerza": { "valor": 80, "rango": "SS" },
+          "resistencia": { "valor": 80, "rango": "SS" },
+          "velocidad": { "valor": 40, "rango": "C" },
+          "inteligencia": { "valor": 10, "rango": "E" },
+          "habilidades_combate": 45,
+          "carisma": { "valor": 50, "rango": "A" },
+          "portal": { "valor": 70, "rango": "S" },
+          "afinidad_espiritual": 32,
+          "potencial": { "valor": 80, "rango": "SS" },
+          "suerte": { "valor": 30, "rango": "C" }
+        }
+      },
+      {
+        "id": "con_autoridad",
+        "nombre": "Con Autoridad",
+        "stats": {
+          "fuerza": { "valor": 95, "rango": "SS+" },
+          "resistencia": { "valor": 100, "rango": "SS+" },
+          "velocidad": { "valor": 60, "rango": "A" },
+          "inteligencia": { "valor": 10, "rango": "E" },
+          "habilidades_combate": 45,
+          "carisma": { "valor": 50, "rango": "A" },
+          "portal": { "valor": 70, "rango": "S" },
+          "afinidad_espiritual": 32,
+          "potencial": { "valor": 100, "rango": "SS+" },
+          "suerte": { "valor": 30, "rango": "C" }
+        }
+        }
+        ]
     },
     "historias": [],
     "relaciones": [
@@ -111,16 +135,16 @@
   },
   "chochorina": {
     "stats": {
-      "fuerza": "C",
-      "resistencia": "C",
-      "velocidad": "D",
-      "inteligencia": "S",
-      "habilidades_combate": "F",
-      "carisma": "A",
-      "portal": "A",
-      "afinidad_espiritual": "B",
-      "potencial": "S",
-      "suerte": "D"
+      "fuerza": { "valor": 30, "rango": "C" },
+      "resistencia": { "valor": 30, "rango": "C" },
+      "velocidad": { "valor": 20, "rango": "D" },
+      "inteligencia": { "valor": 70, "rango": "S" },
+      "habilidades_combate": 4,
+      "carisma": 55,
+      "portal": { "valor": 60, "rango": "A" },
+      "afinidad_espiritual": 48,
+      "potencial": { "valor": 70, "rango": "S" },
+      "suerte": 21
     },
     "historias": [],
     "relaciones": [
@@ -129,17 +153,17 @@
 ]
   },
   "helena": {
-    "stats": {
-      "fuerza": "A",
-      "resistencia": "A",
-      "velocidad": "SS",
-      "inteligencia": "A",
-      "habilidades_combate": "S",
-      "carisma": "S",
-      "portal": "A",
-      "afinidad_espiritual": "A",
-      "potencial": "SS",
-      "suerte": "S"
+      "stats": {
+        "fuerza": { "valor": 60, "rango": "A" },
+        "resistencia": { "valor": 60, "rango": "A" },
+        "velocidad": { "valor": 80, "rango": "SS" },
+        "inteligencia": { "valor": 60, "rango": "A" },
+        "habilidades_combate": { "valor": 70, "rango": "S" },
+        "carisma": { "valor": 70, "rango": "S" },
+        "portal": 55,
+        "afinidad_espiritual": { "valor": 50, "rango": "A" },
+        "potencial": { "valor": 80, "rango": "SS" },
+        "suerte": { "valor": 70, "rango": "S" }
     },
     "historias": [],
     "relaciones": [
@@ -150,95 +174,95 @@
   ]
   },
   "leo": {
-    "stats": {
-      "fuerza": "A",
-      "resistencia": "S",
-      "velocidad": "S",
-      "inteligencia": "A",
-      "habilidades_combate": "SS",
-      "carisma": "S",
-      "portal": "A",
-      "afinidad_espiritual": "A",
-      "potencial": "SS",
-      "suerte": "B"
+      "stats": {
+      "fuerza": { "valor": 60, "rango": "A" },
+      "resistencia": { "valor": 70, "rango": "S" },
+      "velocidad": { "valor": 70, "rango": "S" },
+      "inteligencia": { "valor": 60, "rango": "A" },
+      "habilidades_combate": { "valor": 80, "rango": "SS" },
+      "carisma": { "valor": 70, "rango": "S" },
+      "portal": { "valor": 60, "rango": "A" },
+      "afinidad_espiritual": 55,
+      "potencial": { "valor": 80, "rango": "SS" },
+      "suerte": { "valor": 50, "rango": "B" }
     },
     "historias": [],
     "relaciones": [
   { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
   { "nombre": "Crusch Karsten", "relacion": "Madre", "id": "crusch" }
 ]
-  },
+},
   "lyra": {
     "stats": {
-      "fuerza": "D",
-      "resistencia": "D",
-      "velocidad": "E",
-      "inteligencia": "SS",
-      "habilidades_combate": "A",
-      "carisma": "S",
-      "portal": "SS",
-      "afinidad_espiritual": "A",
-      "potencial": "EX",
-      "suerte": "SS+"
+      "fuerza": 25,
+      "resistencia": { "valor": 20, "rango": "D" },
+      "velocidad": 19,
+      "inteligencia": { "valor": 80, "rango": "SS" },
+      "habilidades_combate": 55,
+      "carisma": { "valor": 70, "rango": "S" },
+      "portal": { "valor": 80, "rango": "SS" },
+      "afinidad_espiritual": { "valor": 60, "rango": "A" },
+      "potencial": 2000,
+      "suerte": { "valor": 100, "rango": "SS+" }
     },
     "historias": [],
     "relaciones": [
-    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
-    { "nombre": "Anastasia Hoshin", "relacion": "Madre", "id": "anastasia" },
-    { "nombre": "Mercurius", "relacion": "Hermano", "id": "mercurius" }
-  ]
+      { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+      { "nombre": "Anastasia Hoshin", "relacion": "Madre", "id": "anastasia" },
+      { "nombre": "Mercurius", "relacion": "Hermano", "id": "mercurius" }
+    ]
   },
-  "mercurius": {
+"mercurius": {
     "stats": {
-      "fuerza": "D",
-      "resistencia": "D",
-      "velocidad": "D",
-      "inteligencia": "A",
-      "habilidades_combate": "S",
-      "carisma": "C",
-      "portal": "C",
-      "afinidad_espiritual": "B",
-      "potencial": "S",
-      "suerte": "D"
+      "fuerza": { "valor": 20, "rango": "D" },
+      "resistencia": { "valor": 20, "rango": "D" },
+      "velocidad": { "valor": 20, "rango": "D" },
+      "inteligencia": 55,
+      "habilidades_combate": 65,
+      "carisma": 35,
+      "portal": { "valor": 40, "rango": "C" },
+      "afinidad_espiritual": { "valor": 40, "rango": "B" },
+      "potencial": 65,
+      "suerte": { "valor": 20, "rango": "D" }
     },
     "historias": [],
     "relaciones": [
-    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
-    { "nombre": "Anastasia Hoshin", "relacion": "Madre", "id": "anastasia" },
-    { "nombre": "Lyra", "relacion": "Hermana", "id": "lyra" }
-  ]
+      { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+      { "nombre": "Anastasia Hoshin", "relacion": "Madre", "id": "anastasia" },
+      { "nombre": "Lyra", "relacion": "Hermana", "id": "lyra" }
+    ]
   },
   "cassia": {
     "stats": {
-      "fuerza": "SS",
-      "resistencia": "SS",
-      "velocidad": "S",
-      "inteligencia": "B",
-      "habilidades_combate": "SS+",
-      "carisma": "A",
-      "portal": "S",
-      "afinidad_espiritual": "B",
-      "potencial": "SS+",
-      "suerte": "B"
-    },
+      "fuerza": { "valor": 80, "rango": "SS" },
+      "resistencia": { "valor": 80, "rango": "SS" },
+      "velocidad": { "valor": 70, "rango": "S" },
+      "inteligencia": 45,
+      "habilidades_combate": { "valor": 90, "rango": "SS+" },
+      "carisma": 55,
+      "portal": { "valor": 70, "rango": "S" },
+      "afinidad_espiritual": 47,
+      "potencial": { "valor": 100, "rango": "SS+" },
+      "suerte": { "valor": 40, "rango": "B" 
+  },
     "historias": [],
     "relaciones": [
     { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
     { "nombre": "Felt", "relacion": "Madre", "id": "felt" }
   ]
-  },
+  }},
   "graffias": {
     "stats": {
-      "fuerza": "SS",
-      "resistencia": "B",
-      "velocidad": "C",
-      "inteligencia": "A",
-      "habilidades_combate": "A",
-      "carisma": "E",
-      "portal": "SS",
-      "afinidad_espiritual": "B",
-      "potencial": "SS",
-      "suerte": "E"
+      "fuerza": { "valor": 80, "rango": "SS" },
+      "resistencia": 45,
+      "velocidad": 37,
+      "inteligencia": 55,
+      "habilidades_combate": { "valor": 60, "rango": "A" },
+      "carisma": 11,
+      "portal": 75,
+      "afinidad_espiritual": { "valor": 50, "rango": "B" },
+      "potencial": { "valor": 80, "rango": "SS" },
+      "suerte": 14
     },
     "historias": [],
     "relaciones": [
@@ -246,37 +270,18 @@
     { "nombre": "Shaula", "relacion": "Madre", "id": "shaula" }
     ]
   },
-  "taygette": {
-    "stats": {
-      "fuerza": "B",
-      "resistencia": "SS+",
-      "velocidad": "D",
-      "inteligencia": "B",
-      "habilidades_combate": "SS",
-      "carisma": "A",
-      "portal": "SS+",
-      "afinidad_espiritual": "S",
-      "potencial": "SS — EX",
-      "suerte": "C"
-    },
-    "historias": [],
-    "relaciones": [
-    { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
-    { "nombre": "Shion", "relacion": "Madre", "id": "shion" }
-  ]
-  },
   "bellatrix": {
     "stats": {
-      "fuerza": "B",
-      "resistencia": "SS",
-      "velocidad": "A",
-      "inteligencia": "C",
-      "habilidades_combate": "A",
-      "carisma": "B",
-      "portal": "C",
-      "afinidad_espiritual": "C",
-      "potencial": "A",
-      "suerte": "F"
+        "fuerza": { "valor": 40, "rango": "B" },
+        "resistencia": 75,
+        "velocidad": { "valor": 60, "rango": "A" },
+        "inteligencia": 36,
+        "habilidades_combate": 59,
+        "carisma": { "valor": 50, "rango": "B" },
+        "portal": 34,
+        "afinidad_espiritual": 38,
+        "potencial": { "valor": 60, "rango": "A" },
+        "suerte": { "valor": 10, "rango": "F" }
     },
     "historias": [],
     "relaciones": [
@@ -287,16 +292,16 @@
   },
   "maia": {
     "stats": {
-      "fuerza": "D",
-      "resistencia": "D",
-      "velocidad": "E",
-      "inteligencia": "C",
-      "habilidades_combate": "F",
-      "carisma": "B",
-      "portal": "D",
-      "afinidad_espiritual": "B",
-      "potencial": "C",
-      "suerte": "C"
+        "fuerza": { "valor": 20, "rango": "D" },
+        "resistencia": { "valor": 20, "rango": "D" },
+        "velocidad": { "valor": 10, "rango": "E" },
+        "inteligencia": { "valor": 30, "rango": "C" },
+        "habilidades_combate": 0,
+        "carisma": { "valor": 50, "rango": "B" },
+        "portal": { "valor": 20, "rango": "D" },
+        "afinidad_espiritual": { "valor": 40, "rango": "B" },
+        "potencial": 35,
+        "suerte": { "valor": 30, "rango": "C" }
     },
     "historias": [],
     "relaciones": [
@@ -307,16 +312,16 @@
   },
   "aconita": {
     "stats": {
-      "fuerza": "B",
-      "resistencia": "B",
-      "velocidad": "B",
-      "inteligencia": "B",
-      "habilidades_combate": "C",
-      "carisma": "D",
-      "portal": "SS+",
-      "afinidad_espiritual": "B",
-      "potencial": "EX",
-      "suerte": "E"
+      "fuerza": 45,
+      "resistencia": 45,
+      "velocidad": 42,
+      "inteligencia": { "valor": 40, "rango": "B" },
+      "habilidades_combate": { "valor": 40, "rango": "C" },
+      "carisma": { "valor": 20, "rango": "D" },
+      "portal": { "valor": 100, "rango": "SS+" },
+      "afinidad_espiritual": { "valor": 50, "rango": "B" },
+      "potencial": 700,
+      "suerte": 15
     },
     "historias": [],
     "relaciones": [
@@ -326,16 +331,16 @@
   },
   "menkar": {
     "stats": {
-      "fuerza": "S",
-      "resistencia": "S",
-      "velocidad": "S",
-      "inteligencia": "D",
-      "habilidades_combate": "E",
-      "carisma": "F",
-      "portal": "S",
-      "afinidad_espiritual": "E",
-      "potencial": "SS",
-      "suerte": "E"
+        "fuerza": { "valor": 70, "rango": "S" },
+        "resistencia": 68,
+        "velocidad": 65,
+        "inteligencia": { "valor": 20, "rango": "D" },
+        "habilidades_combate": { "valor": 10, "rango": "E" },
+        "carisma": 5,
+        "portal": { "valor": 70, "rango": "S" },
+        "afinidad_espiritual": { "valor": 20, "rango": "E" },
+        "potencial": { "valor": 80, "rango": "SS" },
+        "suerte": 15
     },
     "historias": [],
     "relaciones": [
@@ -345,16 +350,16 @@
   },
   "nunki": {
     "stats": {
-      "fuerza": "SS+",
-      "resistencia": "SS+",
-      "velocidad": "S",
-      "inteligencia": "C",
-      "habilidades_combate": "E",
-      "carisma": "A",
-      "portal": "A",
-      "afinidad_espiritual": "C",
-      "potencial": "SS+",
-      "suerte": "C"
+        "fuerza": 95,
+        "resistencia": 95,
+        "velocidad": { "valor": 70, "rango": "S" },
+        "inteligencia": { "valor": 40, "rango": "C" },
+        "habilidades_combate": 15,
+        "carisma": { "valor": 60, "rango": "A" },
+        "portal": { "valor": 60, "rango": "A" },
+        "afinidad_espiritual": 35,
+        "potencial": { "valor": 100, "rango": "SS+" },
+        "suerte": { "valor": 30, "rango": "C" }
     },
     "historias": [],
     "relaciones": [
@@ -365,16 +370,16 @@
   },
   "alcyone": {
     "stats": {
-      "fuerza": "C",
-      "resistencia": "D",
-      "velocidad": "E",
-      "inteligencia": "A",
-      "habilidades_combate": "B",
-      "carisma": "D",
-      "portal": "S",
-      "afinidad_espiritual": "A",
-      "potencial": "S",
-      "suerte": "C"
+      "fuerza": { "valor": 30, "rango": "C" },
+      "resistencia": 28,
+      "velocidad": { "valor": 10, "rango": "E" },
+      "inteligencia": { "valor": 60, "rango": "A" },
+      "habilidades_combate": { "valor": 50, "rango": "B" },
+      "carisma": { "valor": 20, "rango": "D" },
+      "portal": { "valor": 70, "rango": "S" },
+      "afinidad_espiritual": 55,
+      "potencial": { "valor": 70, "rango": "S" },
+      "suerte": 32
     },
     "historias": [],
     "relaciones": [
@@ -385,16 +390,16 @@
   },
   "caph": {
     "stats": {
-      "fuerza": "A",
-      "resistencia": "S",
-      "velocidad": "A",
-      "inteligencia": "A",
-      "habilidades_combate": "A",
-      "carisma": "B",
-      "portal": "A",
-      "afinidad_espiritual": "C",
-      "potencial": "S",
-      "suerte": "S"
+      "fuerza": 58,
+      "resistencia": { "valor": 70, "rango": "S" },
+      "velocidad": 55,
+      "inteligencia": { "valor": 60, "rango": "A" },
+      "habilidades_combate": { "valor": 50, "rango": "A" },
+      "carisma": 45,
+      "portal": { "valor": 60, "rango": "A" },
+      "afinidad_espiritual": { "valor": 30, "rango": "C" },
+      "potencial": { "valor": 70, "rango": "S" },
+      "suerte": 67
     },
     "historias": [],
     "relaciones": [
@@ -404,16 +409,16 @@
   },
   "cygnus": {
     "stats": {
-      "fuerza": "C",
-      "resistencia": "C",
-      "velocidad": "S",
-      "inteligencia": "C",
-      "habilidades_combate": "S",
-      "carisma": "S",
-      "portal": "C",
-      "afinidad_espiritual": "C",
-      "potencial": "S",
-      "suerte": "A"
+      "fuerza": { "valor": 30, "rango": "C" },
+      "resistencia": 35,
+      "velocidad": 64,
+      "inteligencia": 35,
+      "habilidades_combate": 65,
+      "carisma": { "valor": 70, "rango": "S" },
+      "portal": { "valor": 30, "rango": "C" },
+      "afinidad_espiritual": { "valor": 30, "rango": "C" },
+      "potencial": { "valor": 70, "rango": "S" },
+      "suerte": 51
     },
     "historias": [],
     "relaciones": [
@@ -423,16 +428,16 @@
   },
   "vega": {
     "stats": {
-      "fuerza": "A",
-      "resistencia": "A",
-      "velocidad": "A",
-      "inteligencia": "A",
-      "habilidades_combate": "A",
-      "carisma": "B",
-      "portal": "S",
-      "afinidad_espiritual": "A",
-      "potencial": "S",
-      "suerte": "C"
+      "fuerza": { "valor": 60, "rango": "A" },
+      "resistencia": { "valor": 60, "rango": "A" },
+      "velocidad": { "valor": 60, "rango": "A" },
+      "inteligencia": 55,
+      "habilidades_combate": { "valor": 60, "rango": "A" },
+      "carisma": 45,
+      "portal": { "valor": 70, "rango": "S" },
+      "afinidad_espiritual": { "valor": 50, "rango": "A" },
+      "potencial": { "valor": 70, "rango": "S" },
+      "suerte": 32
     },
     "historias": [],
     "relaciones": [
@@ -442,16 +447,16 @@
   },
   "natsumi": {
     "stats": {
-      "fuerza": "E",
-      "resistencia": "D",
-      "velocidad": "E",
-      "inteligencia": "C",
-      "habilidades_combate": "F",
-      "carisma": "SS",
-      "portal": "E",
-      "afinidad_espiritual": "F",
-      "potencial": "C",
-      "suerte": "D"
+      "fuerza": { "valor": 10, "rango": "E" },
+      "resistencia": { "valor": 20, "rango": "D" },
+      "velocidad": { "valor": 10, "rango": "E" },
+      "inteligencia": 34,
+      "habilidades_combate": 0,
+      "carisma": { "valor": 70, "rango": "SS" },
+      "portal": { "valor": 10, "rango": "E" },
+      "afinidad_espiritual": 1,
+      "potencial": { "valor": 40, "rango": "C" },
+      "suerte": { "valor": 20, "rango": "D" }
     },
     "historias": [],
     "relaciones": [
@@ -461,16 +466,16 @@
   },
   "saiph": {
     "stats": {
-      "fuerza": "C",
-      "resistencia": "C",
-      "velocidad": "C",
-      "inteligencia": "B",
-      "habilidades_combate": "B",
-      "carisma": "A",
-      "portal": "D",
-      "afinidad_espiritual": "E",
-      "potencial": "C",
-      "suerte": "D"
+      "fuerza": 35,
+      "resistencia": 35,
+      "velocidad": { "valor": 30, "rango": "C" },
+      "inteligencia": { "valor": 50, "rango": "B" },
+      "habilidades_combate": 43,
+      "carisma": 56,
+      "portal": 27,
+      "afinidad_espiritual": { "valor": 15, "rango": "E" },
+      "potencial": { "valor": 40, "rango": "C" },
+      "suerte": 23
     },
     "historias": [],
     "relaciones": [
@@ -480,16 +485,16 @@
   },
   "sabik": {
     "stats": {
-      "fuerza": "C",
-      "resistencia": "D",
-      "velocidad": "E",
-      "inteligencia": "A",
-      "habilidades_combate": "B",
-      "carisma": "C",
-      "portal": "C",
-      "afinidad_espiritual": "C",
-      "potencial": "B",
-      "suerte": "D"
+      "fuerza": 37,
+      "resistencia": 26,
+      "velocidad": 12,
+      "inteligencia": { "valor": 60, "rango": "A" },
+      "habilidades_combate": { "valor": 50, "rango": "B" },
+      "carisma": { "valor": 30, "rango": "C" },
+      "portal": 35,
+      "afinidad_espiritual": 33,
+      "potencial": { "valor": 50, "rango": "B" },
+      "suerte": { "valor": 20, "rango": "D" }
     },
     "historias": [],
     "relaciones": []
@@ -497,38 +502,38 @@
 "phoebe": {
   "stats": {
     "panels": [
-      {
-        "id": "normal",
-        "nombre": "Normal",
-        "stats": {
-          "fuerza": "A",
-          "resistencia": "B",
-          "velocidad": "A",
-          "inteligencia": "C",
-          "habilidades_combate": "A",
-          "carisma": "C",
-          "portal": "A",
-          "afinidad_espiritual": "E",
-          "potencial": "SS",
-          "suerte": "C"
-        }
-      },
-      {
-        "id": "dragon",
-        "nombre": "Dragón",
-        "stats": {
-          "fuerza": "SS",
-          "resistencia": "SS",
-          "velocidad": "C",
-          "inteligencia": "D",
-          "habilidades_combate": "A",
-          "carisma": "C",
-          "portal": "A",
-          "afinidad_espiritual": "E",
-          "potencial": "SS",
-          "suerte": "C"
-        }
+    {
+      "id": "normal",
+      "nombre": "Normal",
+      "stats": {
+        "fuerza": { "valor": 60, "rango": "A" },
+        "resistencia": { "valor": 50, "rango": "B" },
+        "velocidad": { "valor": 60, "rango": "A" },
+        "inteligencia": { "valor": 30, "rango": "C" },
+        "habilidades_combate": { "valor": 60, "rango": "A" },
+        "carisma": { "valor": 30, "rango": "C" },
+        "portal": 55,
+        "afinidad_espiritual": 15,
+        "potencial": { "valor": 80, "rango": "SS" },
+        "suerte": { "valor": 30, "rango": "C" }
       }
+    },
+    {
+      "id": "dragon",
+      "nombre": "Dragón",
+      "stats": {
+        "fuerza": { "valor": 80, "rango": "SS" },
+        "resistencia": { "valor": 80, "rango": "SS" },
+        "velocidad": { "valor": 30, "rango": "C" },
+        "inteligencia": 25,
+        "habilidades_combate": { "valor": 60, "rango": "A" },
+        "carisma": { "valor": 30, "rango": "C" },
+        "portal": 55,
+        "afinidad_espiritual": 15,
+        "potencial": { "valor": 80, "rango": "SS" },
+        "suerte": { "valor": 30, "rango": "C" }
+      }
+    }
     ]
   },
     "historias": [],
@@ -539,16 +544,16 @@
   },
   "merope": {
     "stats": {
-      "fuerza": "B",
-      "resistencia": "B",
-      "velocidad": "B",
-      "inteligencia": "D",
-      "habilidades_combate": "C",
-      "carisma": "C",
-      "portal": "D",
-      "afinidad_espiritual": "F",
-      "potencial": "A",
-      "suerte": "C"
+      "fuerza": 45,
+      "resistencia": { "valor": 50, "rango": "B" },
+      "velocidad": { "valor": 40, "rango": "B" },
+      "inteligencia": { "valor": 20, "rango": "D" },
+      "habilidades_combate": 35,
+      "carisma": { "valor": 40, "rango": "C" },
+      "portal": { "valor": 20, "rango": "D" },
+      "afinidad_espiritual": 5,
+      "potencial": { "valor": 60, "rango": "A" },
+      "suerte": { "valor": 30, "rango": "C" }
     },
     "historias": [],
     "relaciones": [
@@ -559,16 +564,16 @@
   },
   "perseus": {
     "stats": {
-      "fuerza": "C",
-      "resistencia": "C",
-      "velocidad": "E",
-      "inteligencia": "S",
-      "habilidades_combate": "F",
-      "carisma": "E",
-      "portal": "S",
-      "afinidad_espiritual": "SS",
-      "potencial": "S",
-      "suerte": "C"
+        "fuerza": { "valor": 30, "rango": "C" },
+        "resistencia": { "valor": 30, "rango": "C" },
+        "velocidad": { "valor": 10, "rango": "E" },
+        "inteligencia": { "valor": 70, "rango": "S" },
+        "habilidades_combate": 0,
+        "carisma": { "valor": 10, "rango": "E" },
+        "portal": { "valor": 70, "rango": "S" },
+        "afinidad_espiritual": { "valor": 80, "rango": "SS" },
+        "potencial": { "valor": 70, "rango": "S" },
+        "suerte": { "valor": 40, "rango": "C" }
     },
     "historias": [],
     "relaciones": [
@@ -579,17 +584,17 @@
   },
   "adhara": {
     "stats": {
-      "fuerza": "A",
-      "resistencia": "A",
-      "velocidad": "A",
-      "inteligencia": "C",
-      "habilidades_combate": "C",
-      "carisma": "B",
-      "portal": "SS",
-      "afinidad_espiritual": "S",
-      "potencial": "SS+",
-      "suerte": "C"
-    },
+        "fuerza": { "valor": 60, "rango": "A" },
+        "resistencia": { "valor": 60, "rango": "A" },
+        "velocidad": { "valor": 50, "rango": "A" },
+        "inteligencia": 35,
+        "habilidades_combate": { "valor": 30, "rango": "C" },
+        "carisma": 45,
+        "portal": { "valor": 80, "rango": "SS" },
+        "afinidad_espiritual": { "valor": 70, "rango": "S" },
+        "potencial": { "valor": 100, "rango": "SS+" },
+        "suerte": { "valor": 30, "rango": "C" }
+  },
     "historias": [],
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
@@ -598,17 +603,17 @@
   },
   "denebola": {
     "stats": {
-      "fuerza": "C",
-      "resistencia": "C",
-      "velocidad": "E",
-      "inteligencia": "B",
-      "habilidades_combate": "E",
-      "carisma": "A",
-      "portal": "D",
-      "afinidad_espiritual": "E",
-      "potencial": "C",
-      "suerte": "B"
-    },
+      "fuerza": { "valor": 30, "rango": "C" },
+      "resistencia": { "valor": 30, "rango": "C" },
+      "velocidad": { "valor": 10, "rango": "E" },
+      "inteligencia": { "valor": 50, "rango": "B" },
+      "habilidades_combate": 15,
+      "carisma": { "valor": 55, "rango": "A" },
+      "portal": 25,
+      "afinidad_espiritual": 15,
+      "potencial": { "valor": 40, "rango": "C" },
+      "suerte": { "valor": 40, "rango": "B" }
+  },
     "historias": [],
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
@@ -617,17 +622,17 @@
   },
   "reid": {
     "stats": {
-      "fuerza": "A",
-      "resistencia": "A",
-      "velocidad": "SS+",
-      "inteligencia": "C",
-      "habilidades_combate": "EX",
-      "carisma": "B",
-      "portal": "C",
-      "afinidad_espiritual": "C",
-      "potencial": "SS+",
-      "suerte": "C"
-    },
+      "fuerza": { "valor": 50, "rango": "A" },
+      "resistencia": 55,
+      "velocidad": { "valor": 90, "rango": "SS+" },
+      "inteligencia": { "valor": 40, "rango": "C" },
+      "habilidades_combate": { "valor": 110, "rango": "EX" },
+      "carisma": { "valor": 50, "rango": "B" },
+      "portal": 35,
+      "afinidad_espiritual": { "valor": 30, "rango": "C" },
+      "potencial": { "valor": 100, "rango": "SS+" },
+      "suerte": { "valor": 40, "rango": "C" }
+  },
     "historias": [],
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
@@ -636,17 +641,17 @@
   },
   "cepheus": {
     "stats": {
-      "fuerza": "S",
-      "resistencia": "S",
-      "velocidad": "S",
-      "inteligencia": "C",
-      "habilidades_combate": "A",
-      "carisma": "C",
-      "portal": "S",
-      "afinidad_espiritual": "A",
-      "potencial": "SS",
-      "suerte": "C"
-    },
+      "fuerza": { "valor": 70, "rango": "S" },
+      "resistencia": { "valor": 70, "rango": "S" },
+      "velocidad": { "valor": 70, "rango": "S" },
+      "inteligencia": { "valor": 30, "rango": "C" },
+      "habilidades_combate": { "valor": 50, "rango": "A" },
+      "carisma": { "valor": 30, "rango": "C" },
+      "portal": { "valor": 70, "rango": "S" },
+      "afinidad_espiritual": { "valor": 60, "rango": "A" },
+      "potencial": { "valor": 80, "rango": "SS" },
+      "suerte": { "valor": 30, "rango": "C" }
+  },
     "historias": [],
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
@@ -655,17 +660,17 @@
   },
   "luna": {
     "stats": {
-      "fuerza": "B",
-      "resistencia": "SS+",
-      "velocidad": "S",
-      "inteligencia": "B",
-      "habilidades_combate": "A",
-      "carisma": "S",
-      "portal": "SS",
-      "afinidad_espiritual": "A",
-      "potencial": "SS+",
-      "suerte": "A"
-    },
+      "fuerza": 45,
+      "resistencia": { "valor": 100, "rango": "SS+" },
+      "velocidad": { "valor": 70, "rango": "S" },
+      "inteligencia": { "valor": 50, "rango": "B" },
+      "habilidades_combate": { "valor": 60, "rango": "A" },
+      "carisma": { "valor": 70, "rango": "S" },
+      "portal": { "valor": 80, "rango": "SS" },
+      "afinidad_espiritual": { "valor": 60, "rango": "A" },
+      "potencial": { "valor": 100, "rango": "SS+" },
+      "suerte": 55
+  },
     "historias": [],
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
@@ -676,33 +681,34 @@
   },
   "nova": {
     "stats": {
-      "fuerza": "EX",
-      "resistencia": "EX",
-      "velocidad": "EX",
-      "inteligencia": "C",
-      "habilidades_combate": "C",
-      "carisma": "F",
-      "portal": "EX",
-      "afinidad_espiritual": "EX",
-      "potencial": "EX",
-      "suerte": "F"
-    },
+    "fuerza": 490,
+    "resistencia": 490,
+    "velocidad": 400,
+    "inteligencia": { "valor": 30, "rango": "C" },
+    "habilidades_combate": { "valor": 30, "rango": "C" },
+    "carisma": 0,
+    "portal": 700,
+    "afinidad_espiritual": 800,
+    "potencial": 800,
+    "suerte": 0
+
+  },
     "historias": [],
     "relaciones": []
   },
   "orion": {
     "stats": {
-      "fuerza": "D",
-      "resistencia": "D",
-      "velocidad": "D",
-      "inteligencia": "B",
-      "habilidades_combate": "E",
-      "carisma": "SS",
-      "portal": "F",
-      "afinidad_espiritual": "C",
-      "potencial": "C",
-      "suerte": "S"
-    },
+      "fuerza": { "valor": 20, "rango": "D" },
+      "resistencia": { "valor": 20, "rango": "D" },
+      "velocidad": { "valor": 20, "rango": "D" },
+      "inteligencia": 45,
+      "habilidades_combate": { "valor": 10, "rango": "E" },
+      "carisma": { "valor": 80, "rango": "SS" },
+      "portal": 5,
+      "afinidad_espiritual": { "valor": 30, "rango": "C" },
+      "potencial": { "valor": 40, "rango": "C" },
+      "suerte": 65
+  },
     "historias": [],
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
@@ -711,17 +717,17 @@
   },
   "morgana": {
     "stats": {
-      "fuerza": "C",
-      "resistencia": "A",
-      "velocidad": "C",
-      "inteligencia": "S",
-      "habilidades_combate": "B",
-      "carisma": "A",
-      "portal": "SS",
-      "afinidad_espiritual": "SS",
-      "potencial": "SS",
-      "suerte": "C"
-    },
+      "fuerza": 35,
+      "resistencia": { "valor": 60, "rango": "A" },
+      "velocidad": { "valor": 30, "rango": "C" },
+      "inteligencia": 66,
+      "habilidades_combate": 44,
+      "carisma": { "valor": 60, "rango": "A" },
+      "portal": { "valor": 80, "rango": "SS" },
+      "afinidad_espiritual": { "valor": 80, "rango": "SS" },
+      "potencial": { "valor": 80, "rango": "SS" },
+      "suerte": 35
+  },
     "historias": [],
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
@@ -731,18 +737,18 @@
     ]
   },
   "viviane": {
-    "stats": {
-      "fuerza": "A",
-      "resistencia": "A",
-      "velocidad": "B",
-      "inteligencia": "B",
-      "habilidades_combate": "C",
-      "carisma": "A",
-      "portal": "F",
-      "afinidad_espiritual": "C",
-      "potencial": "SS",
-      "suerte": "C"
-    },
+     "stats": {
+      "fuerza": 58,
+      "resistencia": { "valor": 60, "rango": "A" },
+      "velocidad": { "valor": 50, "rango": "B" },
+      "inteligencia": 42,
+      "habilidades_combate": { "valor": 40, "rango": "C" },
+      "carisma": { "valor": 60, "rango": "A" },
+      "portal": { "valor": 10, "rango": "F" },
+      "afinidad_espiritual": 35,
+      "potencial": { "valor": 80, "rango": "SS" },
+      "suerte": { "valor": 40, "rango": "C" }
+  },
     "historias": [],
     "relaciones": [
        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
@@ -758,32 +764,32 @@
         "id": "normal",
         "nombre": "Normal",
         "stats": {
-          "fuerza": "B",
-          "resistencia": "D",
-          "velocidad": "A",
-          "inteligencia": "C",
-          "habilidades_combate": "S",
-          "carisma": "A",
-          "portal": "D",
-          "afinidad_espiritual": "B",
-          "potencial": "A",
-          "suerte": "C"
+          "fuerza": 45,
+          "resistencia": 25,
+          "velocidad": { "valor": 60, "rango": "A" },
+          "inteligencia": 35,
+          "habilidades_combate": { "valor": 70, "rango": "S" },
+          "carisma": { "valor": 50, "rango": "A" },
+          "portal": { "valor": 20, "rango": "D" },
+          "afinidad_espiritual": { "valor": 50, "rango": "B" },
+          "potencial": { "valor": 60, "rango": "A" },
+          "suerte": { "valor": 30, "rango": "C" }
         }
       },
       {
         "id": "proteccion_divina",
         "nombre": "Protección Divina",
         "stats": {
-          "fuerza": "SS+",
-          "resistencia": "SS+",
-          "velocidad": "SS+",
-          "inteligencia": "C",
-          "habilidades_combate": "SS+",
-          "carisma": "A",
-          "portal": "SS+",
-          "afinidad_espiritual": "B",
-          "potencial": "SS+",
-          "suerte": "C"
+          "fuerza": 95,
+          "resistencia": { "valor": 90, "rango": "SS+" },
+          "velocidad": { "valor": 100, "rango": "SS+" },
+          "inteligencia": 35,
+          "habilidades_combate": { "valor": 100, "rango": "SS+" },
+          "carisma": { "valor": 50, "rango": "A" },
+          "portal": { "valor": 90, "rango": "SS+" },
+          "afinidad_espiritual": { "valor": 50, "rango": "B" },
+          "potencial": { "valor": 100, "rango": "SS+" },
+          "suerte": { "valor": 30, "rango": "C" }
         }
       }
     ]
@@ -798,16 +804,16 @@
   },
   "castor": {
     "stats": {
-      "fuerza": "C",
-      "resistencia": "A",
-      "velocidad": "A",
-      "inteligencia": "A",
-      "habilidades_combate": "C",
-      "carisma": "B",
-      "portal": "S",
-      "afinidad_espiritual": "C",
-      "potencial": "S",
-      "suerte": "C"
+      "fuerza": 35,
+      "resistencia": { "valor": 60, "rango": "A" },
+      "velocidad": 55,
+      "inteligencia": { "valor": 60, "rango": "A" },
+      "habilidades_combate": { "valor": 40, "rango": "C" },
+      "carisma": 45,
+      "portal": { "valor": 70, "rango": "S" },
+      "afinidad_espiritual": { "valor": 40, "rango": "C" },
+      "potencial": { "valor": 70, "rango": "S" },
+      "suerte": { "valor": 30, "rango": "C" }
     },
     "historias": [],
     "relaciones": [
@@ -818,16 +824,16 @@
   },
   "pollux": {
     "stats": {
-      "fuerza": "B",
-      "resistencia": "A",
-      "velocidad": "A",
-      "inteligencia": "B",
-      "habilidades_combate": "B",
-      "carisma": "A",
-      "portal": "S",
-      "afinidad_espiritual": "C",
-      "potencial": "S",
-      "suerte": "C"
+      "fuerza": { "valor": 50, "rango": "B" },
+      "resistencia": 55,
+      "velocidad": { "valor": 60, "rango": "A" },
+      "inteligencia": 45,
+      "habilidades_combate": { "valor": 50, "rango": "B" },
+      "carisma": 55,
+      "portal": { "valor": 70, "rango": "S" },
+      "afinidad_espiritual": 35,
+      "potencial": { "valor": 70, "rango": "S" },
+      "suerte": { "valor": 30, "rango": "C" }
     },
     "historias": [],
     "relaciones": [
@@ -838,16 +844,16 @@
   },
   "tonnura": {
     "stats": {
-      "fuerza": "A",
-      "resistencia": "A",
-      "velocidad": "B",
-      "inteligencia": "A",
-      "habilidades_combate": "A",
-      "carisma": "C",
-      "portal": "A",
-      "afinidad_espiritual": "SS+",
-      "potencial": "S",
-      "suerte": "E"
+      "fuerza": { "valor": 60, "rango": "A" },
+      "resistencia": { "valor": 60, "rango": "A" },
+      "velocidad": { "valor": 50, "rango": "B" },
+      "inteligencia": 55,
+      "habilidades_combate": { "valor": 60, "rango": "A" },
+      "carisma": { "valor": 30, "rango": "C" },
+      "portal": { "valor": 60, "rango": "A" },
+      "afinidad_espiritual": { "valor": 100, "rango": "SS+" },
+      "potencial": { "valor": 70, "rango": "S" },
+      "suerte": { "valor": 10, "rango": "E" }
     },
     "historias": [],
     "relaciones": [
@@ -856,18 +862,18 @@
     ]
   },
   "taygete": {
-    "stats": {
-      "fuerza": "B",
-      "resistencia": "SS+",
-      "velocidad": "D",
-      "inteligencia": "B",
-      "habilidades_combate": "SS",
-      "carisma": "A",
-      "portal": "SS+",
-      "afinidad_espiritual": "S",
-      "potencial": "EX",
-      "suerte": "C"
-    },
+ "stats": {
+    "fuerza": 45,
+    "resistencia": {"valor": 85,"rango": "SS+"},
+    "velocidad": 21,
+    "inteligencia": {"valor": 50,"rango": "B"},
+    "habilidades_combate": {"valor": 70,"rango": "SS"},
+    "carisma": {"valor": 50,"rango": "A"},
+    "portal": {"valor": 100,"rango": "SS+"},
+    "afinidad_espiritual": 67,
+    "potencial": {"valor": 80,"rango": "SS"},
+    "suerte": 33
+  },
     "historias": [],
     "relaciones": [
       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },

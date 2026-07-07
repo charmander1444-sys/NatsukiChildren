@@ -1,11 +1,13 @@
 ---
-import { getPrimaryHeightCm, getPrimaryHeightLabel } from "./lib/Heightutils.js";
+const { entry, pixelsPerCm, minBarPx = 36, colorFrom, colorTo, order = 0 } = Astro.props;
 
-const { personaje, pixelsPerCm, minBarPx = 36, colorFrom, colorTo, tipo, order = 0 } = Astro.props;
-
-const cm = getPrimaryHeightCm(personaje);
-const label = getPrimaryHeightLabel(personaje);
+const { personaje, tipo, cm, valor, formNombre, hasMultipleForms } = entry;
 const barHeight = Math.max(cm * pixelsPerCm, minBarPx);
+
+// Si tiene múltiples formas y existe un nombre válido para la forma, lo agregamos entre paréntesis
+const nombreCompleto = hasMultipleForms && formNombre 
+  ? `${personaje.nombre} (${formNombre})` 
+  : personaje.nombre;
 ---
 
 <div
@@ -15,7 +17,7 @@ const barHeight = Math.max(cm * pixelsPerCm, minBarPx);
   data-cm={cm}
   style={`--bar-height:${barHeight}px; --color-from:${colorFrom}; --color-to:${colorTo}; order:${order};`}
 >
-  <span class="height-bar__value">{label}</span>
+  <span class="height-bar__value">{valor}</span>
 
   <div class="height-bar__column">
     {personaje.avatar && (
@@ -28,7 +30,9 @@ const barHeight = Math.max(cm * pixelsPerCm, minBarPx);
     )}
   </div>
 
-  <span class="height-bar__name" title={personaje.nombre}>{personaje.nombre}</span>
+  <div class="height-bar__name-wrap">
+    <span class="height-bar__name" title={nombreCompleto}>{nombreCompleto}</span>
+  </div>
 </div>
 
 <style>
@@ -36,10 +40,13 @@ const barHeight = Math.max(cm * pixelsPerCm, minBarPx);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    width: 96px;
+    justify-content: flex-end; /* Mantiene la base alineada */
+    width: 120px;
     flex: 0 0 auto;
+    /* Reducimos un poco el margen inferior si es necesario */
+    padding-bottom: 0.5rem; 
   }
+
 
   .height-bar__value {
     height: 1.3rem;
@@ -80,79 +87,47 @@ const barHeight = Math.max(cm * pixelsPerCm, minBarPx);
     margin-top: 6px;
     border: 2px solid rgba(255, 255, 255, 0.85);
   }
-
-  /* 3 líneas en vez de 2, con line-height más ajustado para que quepa
-     completo el nombre en casos como "Cassia (Cassiopeia) Natsuki" */
+  .height-bar__name-wrap {
+    position: relative;
+    margin-top: 0.3rem; /* Reducido de 0.5rem para acercar el texto a la barra */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .height-bar__name {
-    margin-top: 0.5rem;
-    height: 2.85rem;
+    height: 3.8rem;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 3; /* Un límite limpio para textos largos con paréntesis */
     -webkit-box-orient: vertical;
     overflow: hidden;
-    font-size: 0.75rem;
-    line-height: 1.05;
+    font-size: 0.85rem;
+    line-height: 1.2;
     text-align: center;
     color: white;
-    max-width: 96px;
+    max-width: 120px;
     cursor: default;
+    word-break: break-word;
   }
 
   @media (max-width: 768px) {
-    .height-bar {
-      width: 80px;
-    }
-    .height-bar__column {
-      width: 48px;
-    }
-    .height-bar__avatar {
-      width: 38px;
-      height: 38px;
-    }
-    .height-bar__name {
-      max-width: 80px;
-    }
+    .height-bar { width: 104px; }
+    .height-bar__column { width: 48px; }
+    .height-bar__avatar { width: 38px; height: 38px; }
+    .height-bar__name { max-width: 104px; font-size: 0.78rem; height: 3.4rem; }
   }
 
   @media (max-width: 480px) {
-    .height-bar {
-      width: 68px;
-    }
-    .height-bar__column {
-      width: 40px;
-    }
-    .height-bar__avatar {
-      width: 32px;
-      height: 32px;
-      margin-top: 4px;
-    }
-    .height-bar__value {
-      height: 1.1rem;
-      font-size: 0.85rem;
-    }
-    .height-bar__name {
-      height: 2.55rem;
-      font-size: 0.68rem;
-      line-height: 1;
-      max-width: 68px;
-    }
+    .height-bar { width: 88px; }
+    .height-bar__column { width: 40px; }
+    .height-bar__avatar { width: 32px; height: 32px; margin-top: 4px; }
+    .height-bar__value { height: 1.1rem; font-size: 0.85rem; }
+    .height-bar__name { height: 3.1rem; font-size: 0.72rem; line-height: 1.05; max-width: 88px; }
   }
 
   @media (max-width: 400px) {
-    .height-bar {
-      width: 58px;
-    }
-    .height-bar__column {
-      width: 36px;
-    }
-    .height-bar__avatar {
-      width: 28px;
-      height: 28px;
-    }
-    .height-bar__name {
-      max-width: 58px;
-      font-size: 0.62rem;
-      height: 2.4rem;
-    }
+    .height-bar { width: 76px; }
+    .height-bar__column { width: 36px; }
+    .height-bar__avatar { width: 28px; height: 28px; }
+    .height-bar__name { max-width: 76px; font-size: 0.66rem; height: 2.9rem; }
   }
 </style>

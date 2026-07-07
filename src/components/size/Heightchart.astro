@@ -2,23 +2,21 @@
 import HeightBar from "./Heightbar.astro";
 import { TIPO_COLORS } from "./lib/Heightutils.js";
 
-const { personajes = [], pixelsPerCm, minBarPx } = Astro.props;
+const { entries = [], pixelsPerCm, minBarPx } = Astro.props;
 ---
 
 <div class="height-chart" data-height-chart style="width:100%;max-width:100%;min-width:0;display:flex;justify-content:flex-start;overflow:hidden;">
   <div class="height-chart__scroll" style="width:100%;max-width:100%;min-width:0;display:flex;justify-content:flex-start;overflow-x:auto;overflow-y:auto;max-height:75vh;box-sizing:border-box;">
-    <div class="height-chart__row" style="display:flex;align-items:flex-end;justify-content:flex-start;gap:0.6rem;min-width:100%;flex-shrink:0;">
-      {personajes.map((personaje, index) => {
-        const tipo = personaje._tipo ?? "sin_genero";
-        const { from: colorFrom, to: colorTo } = TIPO_COLORS[tipo] ?? TIPO_COLORS.sin_genero;
+    <div class="height-chart__row" style="display:flex;align-items:flex-end;justify-content:flex-start;gap:0.6rem;min-width:100%;flex-shrink:0;padding-bottom:0.5rem;">
+      {entries.map((entry, index) => {
+        const { from: colorFrom, to: colorTo } = TIPO_COLORS[entry.tipo] ?? TIPO_COLORS.sin_genero;
         return (
           <HeightBar
-            personaje={personaje}
+            entry={entry}
             pixelsPerCm={pixelsPerCm}
             minBarPx={minBarPx}
             colorFrom={colorFrom}
             colorTo={colorTo}
-            tipo={tipo}
             order={index}
           />
         );

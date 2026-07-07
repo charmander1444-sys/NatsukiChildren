@@ -13,41 +13,39 @@ function parseCm(valor) {
 }
 
 /**
- * Un personaje puede tener:
- *  - tamano: "163cm"                         (string directo)
- *  - tamano: { items: [{ nombre, valor }] }  (varias formas, se usa la primera como base)
- * Devuelve el valor numérico en cm de su forma "base"/principal.
+ * Normaliza el campo `tamano` de un personaje a una lista de items
+ * homogénea: [{ nombre, valor, cm }, ...]
+ * Soporta tanto el formato string directo ("163cm") como el de
+ * múltiples formas ({ items: [{ nombre, valor }] }).
  */
-export function getPrimaryHeightCm(personaje) {
-  const tamano = personaje?.tamano;
-  if (!tamano) return null;
+function toItems(tamano) {
+  if (!tamano) return [];
 
   if (typeof tamano === "string") {
-    return parseCm(tamano);
+    const cm = parseCm(tamano);
+    return cm != null ? [{ nombre: "", valor: tamano, cm }] : [];
   }
 
-  if (Array.isArray(tamano.items) && tamano.items.length > 0) {
-    return parseCm(tamano.items[0].valor);
+  if (Array.isArray(tamano.items)) {
+    return tamano.items
+      .map((it) => ({ nombre: it.nombre ?? "", valor: it.valor, cm: parseCm(it.valor) }))
+      .filter((it) => it.cm != null);
   }
 
-  return null;
+  return [];
 }
 
-/**
- * Igual que getPrimaryHeightCm pero devuelve el texto original ("163cm")
- * para mostrarlo tal cual en la interfaz.
- */
+export function getHeightItems(personaje) {
+  return toItems(personaje?.tamano);
+}
+
+/** Se mantiene por compatibilidad con otras partes del proyecto (ej. tablas de ranking). */
+export function getPrimaryHeightCm(personaje) {
+  return getHeightItems(personaje)[0]?.cm ?? null;
+}
+
 export function getPrimaryHeightLabel(personaje) {
-  const tamano = personaje?.tamano;
-  if (!tamano) return null;
-
-  if (typeof tamano === "string") return tamano;
-
-  if (Array.isArray(tamano.items) && tamano.items.length > 0) {
-    return tamano.items[0].valor;
-  }
-
-  return null;
+  return getHeightItems(personaje)[0]?.valor ?? null;
 }
 
 export const TIPO_LABELS = {
@@ -62,20 +60,14 @@ export const TIPO_COLORS = {
   sin_genero: { from: "#a78bfa", to: "#7c3aed" }, // violeta
 };
 
-/**
- * Agrupa personajes por tipo (hijo / hija / sin_genero), descartando
- * los que no tienen ningún dato de altura utilizable.
- */
 function toArray(personajes) {
   if (Array.isArray(personajes)) return personajes;
 
   if (personajes && typeof personajes === "object") {
-    // Soporta JSON envuelto en una propiedad, ej: { characters: [...] } o { personajes: [...] }
     const posiblesClaves = ["personas", "characters", "personajes", "items", "data", "kids"];
     for (const clave of posiblesClaves) {
       if (Array.isArray(personajes[clave])) return personajes[clave];
     }
-    // Último recurso: si es un objeto de objetos { phoebe: {...}, otro: {...} }
     const valores = Object.values(personajes);
     if (valores.every((v) => v && typeof v === "object")) return valores;
   }
@@ -84,33 +76,58 @@ function toArray(personajes) {
   return [];
 }
 
-export function groupByTipo(personajesInput = []) {
+/**
+ * NUEVO: en vez de una barra por personaje, genera una "entrada" (entry)
+ * por cada FORMA de altura que tenga el personaje. Un personaje con 3
+ * formas (ej. Phoebe: Normal/Híbrido, Dragón terrestre, Dragón) genera
+ * 3 entries independientes, cada una con su propio cm — así cada forma
+ * se posiciona por separado al ordenar/filtrar por altura.
+ *
+ * Cada entry: { id, personaje, tipo, cm, valor, formNombre, hasMultipleForms }
+ */
+export function buildHeightEntries(personajesInput = []) {
   const personajes = toArray(personajesInput);
+  const ordenTipos = ["hijo", "hija", "sin_genero"];
   const grupos = { hijo: [], hija: [], sin_genero: [] };
 
   for (const personaje of personajes) {
     const tipo = personaje.tipo;
-    // Solo nos interesan hijo / hija / sin_genero para este gráfico.
-    // Otros tipos (madre, raiz, conexion, etc.) se ignoran a propósito.
     if (!Object.prototype.hasOwnProperty.call(grupos, tipo)) continue;
 
-    const cm = getPrimaryHeightCm(personaje);
-    if (cm == null) continue; // sin dato de altura -> se omite del gráfico
+    const items = getHeightItems(personaje);
+    if (items.length === 0) continue; // sin dato de altura -> se omite
 
-    grupos[tipo].push(personaje);
+    grupos[tipo].push({ personaje, items });
   }
 
-  return grupos;
+  const entries = [];
+  for (const tipo of ordenTipos) {
+    for (const { personaje, items } of grupos[tipo]) {
+      const hasMultipleForms = items.length > 1;
+      items.forEach((item, idx) => {
+        entries.push({
+          id: `${personaje.id ?? personaje.nombre}__${idx}`,
+          personaje,
+          tipo,
+          cm: item.cm,
+          valor: item.valor,
+          formNombre: item.nombre,
+          hasMultipleForms,
+        });
+      });
+    }
+  }
+
+  return entries;
 }
 
 /**
- * Calcula una escala ÚNICA (px por cm) a partir de TODOS los personajes
- * que se van a graficar, para que la comparación entre grupos sea justa
- * y las diferencias de altura se vean claramente marcadas.
+ * Calcula una escala ÚNICA (px por cm) a partir de TODAS las entries
+ * (ya explotadas por forma), para que la barra más alta de cualquier
+ * forma de cualquier personaje ocupe maxBarPx.
  */
-export function computeScale(personajesInput = [], { maxBarPx = 520, minBarPx = 36 } = {}) {
-  const personajes = toArray(personajesInput);
-  const alturas = personajes.map(getPrimaryHeightCm).filter((v) => v != null);
+export function computeScaleForEntries(entries = [], { maxBarPx = 520, minBarPx = 36 } = {}) {
+  const alturas = entries.map((e) => e.cm).filter((v) => v != null);
   const max = alturas.length ? Math.max(...alturas) : 1;
   const pixelsPerCm = max > 0 ? maxBarPx / max : 1;
 
