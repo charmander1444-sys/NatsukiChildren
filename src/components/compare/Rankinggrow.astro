@@ -21,9 +21,9 @@ const sortData = Object.fromEntries(
   data-row
   data-sort-nombre={character.nombre.toLowerCase()}
   {...sortData}
-  class="break-inside-avoid mb-3 flex items-center justify-between gap-3 rounded-xl border border-rz-accent/10 bg-rz-bg/40 px-4 py-3 hover:bg-rz-accent/5 transition-colors"
+  class="break-inside-avoid mb-3 flex items-start sm:items-center justify-between gap-3 rounded-xl border border-rz-accent/10 bg-rz-bg/40 px-4 py-3 hover:bg-rz-accent/5 transition-colors"
 >
-  <div class="flex items-center gap-3 min-w-0">
+  <div class="flex items-start sm:items-center gap-3 min-w-0 flex-1">
     {character.avatar && (
       <img
         src={character.avatar}
@@ -31,7 +31,7 @@ const sortData = Object.fromEntries(
         class="w-9 h-9 rounded-full object-cover shrink-0"
       />
     )}
-    <span class="text-base sm:text-lg text-white font-body truncate">
+    <span class="text-base sm:text-lg text-white font-body break-words sm:truncate min-w-0">
       {character.nombre}
     </span>
   </div>
