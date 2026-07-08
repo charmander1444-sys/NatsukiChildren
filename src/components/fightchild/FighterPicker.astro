@@ -1,0 +1,85 @@
+---
+interface Props {
+  side: "a" | "b";
+  label: string;
+  accent: string;
+}
+
+const { side, label, accent } = Astro.props;
+---
+
+<div
+  class="w-full min-w-0 overflow-hidden rounded-2xl border border-rz-accent/20 bg-rz-bg/50 p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col gap-4 lg:gap-6"
+  data-fighter-slot={side}
+  style={`--fighter-accent:${accent}`}
+>
+  <h3
+    class="text-sm lg:text-lg uppercase tracking-wider font-body text-center"
+    style={`color:${accent}`}
+  >
+    {label}
+  </h3>
+
+  <div class="relative min-w-0">
+    <input
+      type="text"
+      autocomplete="off"
+      placeholder="Escribe un nombre..."
+      class="w-full min-w-0 rounded-lg bg-rz-bg-2/60 border border-rz-accent/20 px-3 py-2 lg:px-4 lg:py-3 text-sm lg:text-base font-body text-white placeholder:text-rz-text/40 focus:outline-none focus:border-rz-accent/60 transition-colors duration-200"
+      data-fighter-search
+    />
+    <div
+      class="absolute z-20 mt-1.5 w-full max-h-56 lg:max-h-72 overflow-y-auto rounded-lg border border-rz-accent/20 bg-rz-bg-2/95 backdrop-blur-sm shadow-lg hidden"
+      data-fighter-suggestions
+    >
+    </div>
+  </div>
+
+  <select
+    class="w-full min-w-0 rounded-lg bg-rz-bg-2/60 border border-rz-accent/20 px-3 py-2 lg:px-4 lg:py-3 text-sm lg:text-base font-body text-rz-text/80 focus:outline-none focus:border-rz-accent/60 transition-colors duration-200"
+    data-fighter-select
+  >
+    <option value="">— o elige de la lista —</option>
+  </select>
+
+  <div class="hidden flex-col items-center gap-3 lg:gap-4 pt-2 min-w-0 w-full" data-fighter-hero>
+    <div
+      class="relative aspect-square w-32 max-w-full lg:w-52 xl:w-60 rounded-xl overflow-hidden border-2"
+      data-fighter-avatar-wrap
+    >
+      <img data-fighter-avatar alt="" class="w-full h-full object-cover hidden" />
+      <div
+        data-fighter-avatar-fallback
+        class="w-full h-full bg-black flex items-center justify-center"
+      >
+        <span class="text-rz-text/20 text-4xl lg:text-6xl font-display">?</span>
+      </div>
+    </div>
+    <span
+      data-fighter-name
+      class="font-display text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-white text-glow text-center break-words"
+    ></span>
+  </div>
+
+  <div class="hidden items-center justify-center" data-fighter-panel-toggle-wrap>
+    <button
+      type="button"
+      class="text-xs lg:text-sm font-body uppercase tracking-wider px-3 py-1.5 lg:px-4 lg:py-2 rounded-full border border-rz-accent/30 text-rz-text/70 hover:text-white hover:border-rz-accent/60 transition-colors duration-200"
+      data-fighter-panel-toggle
+    >
+    </button>
+  </div>
+
+<div
+    class="hidden grid-cols-1 xl:grid-cols-2 grid-flow-row xl:grid-flow-col xl:grid-rows-5 gap-x-4 gap-y-2.5 xl:gap-x-8 xl:gap-y-3 w-full min-w-0"
+    data-fighter-stats
+  ></div>
+
+  <div
+    class="hidden items-center justify-between gap-2 pt-2 lg:pt-3 border-t border-rz-accent/10 min-w-0"
+    data-fighter-power-wrap
+  >
+    <span class="text-xs lg:text-base uppercase tracking-wider text-rz-accent-2/80 font-body">Poder</span>
+    <span data-fighter-power class="font-display text-xl lg:text-3xl text-white text-glow"></span>
+  </div>
+</div>

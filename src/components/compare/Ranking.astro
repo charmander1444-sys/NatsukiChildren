@@ -2,6 +2,7 @@
 import RankingTable from "./Rankingtable.astro";
 import Controles from "./Controles.astro";
 import Height from "../size/Height.astro";
+import Fight from "../fightchild/Fight.astro";
 import { STAT_LABELS } from "./lib/statsConfig.js";
 import { mergeCharacters } from "./lib/mergeCharacters.js";
 
@@ -10,12 +11,21 @@ import statsData from "../../data/stats.json";
 
 const { statKeys = Object.keys(STAT_LABELS) } = Astro.props;
 
-const characters = mergeCharacters(characterKids, statsData);
+// Solo hijos/hijas/sin_genero aparecen en el ranking (se excluyen madres, raíces y conexiones)
+const VALID_TIPOS = ["hijo", "hija", "sin_genero"];
+
+const filteredKids = {
+  personas: (characterKids.personas ?? []).filter((p: any) =>
+    VALID_TIPOS.includes(p.tipo)
+  ),
+};
+
+const characters = mergeCharacters(filteredKids, statsData);
 ---
 
 <section class="space-y-4">
   <h2 class="font-display text-4xl text-white text-glow text-center">
-    Ranking de personajes
+    Comparacion de personajes
   </h2>
   <p class="text-center text-xl text-rz-text/80 font-body">
     Click en cualquier columna para ordenar
@@ -23,7 +33,7 @@ const characters = mergeCharacters(characterKids, statsData);
 
   <Controles active="ranking" />
 
-  <!-- Mismo contenedor (ancho/padding) para ambos paneles, en pc y móvil -->
+<!-- Mismo contenedor (ancho/padding) para ranking y tamaño, en pc y móvil -->
   <div class="container mx-auto max-w-6xl px-4 space-y-4 pb-12">
     <div data-view-panel="ranking">
       <RankingTable characters={characters} statKeys={statKeys} />
@@ -33,6 +43,11 @@ const characters = mergeCharacters(characterKids, statsData);
       <Height personajes={characterKids} />
     </div>
   </div>
+
+  <!-- Contenedor propio y más ancho para la pelea (especialmente en pc) -->
+<div class="container mx-auto max-w-4xl lg:max-w-[95rem] xl:max-w-[110rem] px-4 pb-12" data-view-panel="pelea" style="display:none;">
+  <Fight />
+</div>
 </section>
 
 <script>

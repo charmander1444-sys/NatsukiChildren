@@ -1,0 +1,53 @@
+<div class="mt-8 lg:mt-14 flex flex-col lg:flex-row lg:items-start lg:justify-center gap-6 lg:gap-10 w-full">
+  <div class="flex flex-col items-center gap-4 lg:gap-6 w-full lg:w-auto lg:flex-1 lg:max-w-md">
+    <div class="hidden w-full max-w-md lg:max-w-none flex-col gap-2 lg:gap-3" data-power-compare>
+      <span class="text-center text-xs lg:text-base uppercase tracking-widest text-rz-accent/70 font-body">
+        Comparativa de poder
+      </span>
+      <div class="h-3 lg:h-5 rounded-full bg-rz-bg/70 overflow-hidden flex">
+        <div
+          class="h-full transition-all duration-700"
+          data-power-bar-a
+          style="width:50%; background:#60a5fa;"
+        >
+        </div>
+        <div
+          class="h-full transition-all duration-700"
+          data-power-bar-b
+          style="width:50%; background:#f472b6;"
+        >
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      disabled
+      class="font-display uppercase tracking-widest text-sm lg:text-lg px-8 py-3 lg:px-12 lg:py-4 rounded-full border border-rz-accent/40 text-white bg-rz-accent/10 hover:bg-rz-accent/20 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200"
+      data-fight-simulate
+    >
+      Simular Pelea
+    </button>
+  </div>
+
+  <div class="hidden w-full lg:w-auto lg:flex-1 lg:max-w-md flex-col items-center gap-4 lg:gap-5" data-fight-result>
+    <div class="flex flex-col items-center gap-1 lg:gap-2">
+      <span class="text-xs lg:text-base uppercase tracking-wider text-rz-accent-2/80 font-body">Ganador</span>
+      <span
+        class="font-display text-2xl sm:text-3xl lg:text-4xl text-white text-glow text-center"
+        data-fight-winner
+      >
+      </span>
+    </div>
+
+    <ul class="flex flex-wrap justify-center gap-2 lg:gap-3" data-fight-rounds></ul>
+
+    <button
+      type="button"
+      class="text-xs lg:text-sm font-body uppercase tracking-wider px-4 py-1.5 lg:px-5 lg:py-2 rounded-full border border-rz-accent/30 text-rz-text/60 hover:text-white hover:border-rz-accent/60 transition-colors duration-200"
+      data-fight-reset
+    >
+      Reiniciar
+    </button>
+  </div>
+</div>

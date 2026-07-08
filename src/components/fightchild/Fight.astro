@@ -1,0 +1,52 @@
+---
+import FighterPicker from "./FighterPicker.astro";
+import FightControls from "./FightControls.astro";
+import personasData from "../../data/charactersKids.json";
+import statsData from "../../data/stats.json";
+
+// Solo hijos/hijas/sin_genero pueden pelear (se excluyen madres, raíces y conexiones)
+const VALID_TIPOS = ["hijo", "hija", "sin_genero"];
+
+const roster = (personasData.personas ?? [])
+  .filter((p: any) => VALID_TIPOS.includes(p.tipo))
+  .map((p: any) => ({
+    id: p.id,
+    nombre: p.nombre,
+    tipo: p.tipo,
+    avatar: p.avatar ?? "",
+  }))
+  .sort((a: any, b: any) => a.nombre.localeCompare(b.nombre, "es"));
+
+// Solo se embebe el bloque de stats de cada personaje peleable (soporta panels dobles)
+const statsById: Record<string, any> = {};
+for (const person of roster) {
+  statsById[person.id] = (statsData as Record<string, any>)[person.id]?.stats ?? null;
+}
+---
+
+<section
+  class="flex flex-col gap-6 lg:gap-10 min-w-0"
+  data-fight-widget
+  data-roster={JSON.stringify(roster)}
+  data-stats={JSON.stringify(statsById)}
+>
+<div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-6 items-start min-w-0 w-full">
+  <FighterPicker side="a" label="Luchador A" accent="#60a5fa" />
+
+    <div class="flex lg:flex-col items-center justify-center gap-2 py-2 lg:py-24">
+      <span class="font-display text-3xl lg:text-5xl text-rz-accent/70 text-glow">VS</span>
+    </div>
+
+    <FighterPicker side="b" label="Luchador B" accent="#f472b6" />
+  </div>
+
+  <FightControls />
+</section>
+
+<script>
+  import { initFightWidget } from "./lib/fightEngine.js";
+
+  document.querySelectorAll("[data-fight-widget]").forEach((el) => {
+    initFightWidget(el as HTMLElement);
+  });
+</script>

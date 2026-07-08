@@ -52,7 +52,30 @@
   {"id":"meili priscilla if","nombre":"Meili(Priscilla IF)","tipo":"conexion"},
   {"id":"spica(rui) priscilla if","nombre":"Spica(Rui)(Priscilla IF)","tipo":"conexion"},
 
-  {"id":"eris","nombre":"Eris Natsuki","tipo":"hija", "avatar":"https://cdn.imgchest.com/files/f8bcc07a6c98.png","alineación": "buena"},
+  {
+      "id": "eris",
+      "nombre": "Eris Natsuki",
+      "tipo": "hija",
+      "avatar": "https://cdn.imgchest.com/files/6c651dd7854e.png",
+      "alineacion": "buena",
+      "edad": "",
+      "tamano": "",
+      "apariencia": {
+        "cabello": "",
+        "ojos": "",
+        "ropa": "",
+        "constitucion": "",
+        "marcas": ""
+      },
+      "personalidad": [
+      ],
+      "habilidades": [
+      ],
+      "equipamiento": [
+      ],
+      "trivia": [
+      ]
+    },
   
     {
       "id": "alpha",
