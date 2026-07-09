@@ -35,6 +35,12 @@
   {"id":"julia","nombre":"Julia Mathers","tipo":"madre"},
   {"id":"bruja de la envidia","nombre":"Bruja de la Envidia","tipo":"madre"},
   {"id":"katya","nombre":"Katya Aurelie","tipo":"madre"},
+  {"id":"arakiya","nombre":"Arakiya","tipo":"madre"},
+  {"id":"sphinx","nombre":"Sphinx","tipo":"madre"},
+  {"id":"sirius","nombre":"Sirius","tipo":"madre"},
+  {"id":"mizelda","nombre":"Mizelda","tipo":"madre"},
+  {"id":"serena","nombre":"Serena Dracroy","tipo":"madre"},
+  {"id":"medium","nombre":"Medium O'Connel","tipo":"madre"},
 
   {"id":"rem promise","nombre":"Rem(Promise IF)","tipo":"conexion"},
   {"id":"rigel promise","nombre":"Rigel(Promise IF)","tipo":"conexion"},
@@ -57,25 +63,43 @@
       "nombre": "Eris Natsuki",
       "tipo": "hija",
       "avatar": "https://cdn.imgchest.com/files/6c651dd7854e.png",
-      "alineacion": "buena",
+      "alineacion": "malvada",
       "edad": "",
       "tamano": "",
       "apariencia": {
-        "cabello": "",
-        "ojos": "",
-        "ropa": "",
-        "constitucion": "",
-        "marcas": ""
+          "cabello": "Castaño claro, ligeramente largo",
+          "ojos": "Azules brillantes; en su forma de hombre lobo pueden volverse rojizos",
+          "ropa": "Ropas nobles y ligeras",
+          "constitucion": "De apariencia tierna y físicamente frágil; utiliza prótesis en ambas piernas para caminar",
+          "marcas": "Puede transformarse en un gran hombre lobo de pelaje blanco"
+        },
+        "personalidad": [
+          "Aparenta ser una niña tierna, noble y frágil para inspirar confianza",
+          "Es extremadamente manipuladora y utiliza su apariencia para influir en los demás",
+          "Profundamente patriota; está dispuesta a hacer cualquier cosa para proteger al Reino de Lugunica y a su pueblo",
+          "No duda en sobrepasar cualquier límite si considera que es por el bien del reino",
+          "Es muy orgullosa y jamás traicionaría a su reino, incluso bajo tortura",
+          "Puede ser despiadada, cruel y asesinar a quienes amenacen a las personas o al reino que protege",
+          "Con su familia y las personas cercanas es amable, cariñosa y gentil",
+          "En su forma transformada mantiene el control de sí misma, mostrando únicamente un comportamiento más sanguinario"
+        ],
+        "habilidades": [
+          "Transformación en hombre lobo mediante experimentos con la sangre de Todd, obteniendo una enorme fuerza física",
+          "En su forma de licántropo puede enfrentarse a combatientes extremadamente fuertes, incluso a la forma transformada de Garfiel",
+          "Puede utilizar únicamente magia básica debido a la debilidad de su Gate",
+          "Compensa sus limitaciones mágicas usando con gran inteligencia las habilidades de otros",
+          "Posee una buena Afinidad Espiritual y formó un contrato con un Pequeño Espíritu de Agua desde pequeña, entrenándolo constantemente"
+        ],
+        "equipamiento": [
+          "Daga oculta dentro de un muñeco de tela con forma de lobo, cosido originalmente por su padre y posteriormente modificado por ella"
+        ],
+        "trivia": [
+          "Si fuera un personaje de anime o manga sería comparable a Tanya the Evil, Funny Valentine o una combinación de ambos por su patriotismo y crueldad",
+          "Es increíblemente hábil cosiendo",
+          "Le pidió a Subaru que confeccionara un muñeco de tela con forma de lobo y luego escondió una daga en su interior para usarla cuando fuera necesario",
+          "Suele realizar oraciones profanas, maldiciendo a Od Laguna y al resto del mundo mientras bendice exclusivamente a su reino y a su reina"
+        ]
       },
-      "personalidad": [
-      ],
-      "habilidades": [
-      ],
-      "equipamiento": [
-      ],
-      "trivia": [
-      ]
-    },
   
     {
       "id": "alpha",
@@ -1455,7 +1479,229 @@
         "No siente amor por su madre ni por su padre, enfocándose únicamente en cumplir su objetivo: eliminar a la Bruja de la Envidia y al Sabio que vive en la Torre de Observación de las Pléyades y amenaza con destruir el mundo",
         "Las personas con las que vivió en el Santuario fueron: Al, Echidna, las Brujas, Garfiel, las Ryuzu, Emilia, Clind y Roswaal (tras tomar el cuerpo de Annerose)"
       ]
+    },
+    {
+      "id": "apollo",
+      "nombre": "Apollo Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "bueno",
+      "edad": "",
+      "tamano": "170cm",
+      "apariencia": {
+        "cabello": "Oscuro, como el de Subaru",
+        "ojos": "Brillantes, una mezcla de los de su padre y su madre",
+        "ropa": "Prendas abiertas y con estilo que suelen dejar su pecho al descubierto",
+        "constitucion": "Piel morena, color caramelo oscuro",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Es un chico bastante honesto, directo y sincero, que no evitaría dar su opinión cuando tuviera la oportunidad de hacerlo",
+        "Tiene un pequeño lado bastante tierno",
+        "Es un chico gentil al que le gusta ayudar a la gente a su alrededor, aunque entiende que existen personas que no merecen su ayuda",
+        "Su gentileza a veces lo hace actuar de forma un tanto tonta, ya que también heredó la impulsividad y la forma de pensar de sus padres",
+        "Es alguien extremadamente leal que cumpliría su palabra aunque le costara la propia vida, pero no permitiría que la vida de otros se arriesgara para cumplir sus propios deseos"
+      ],
+      "habilidades": [
+        "Devorador de Espíritus — posee una habilidad igual a la de su madre, aunque no al mismo nivel que Arakiya, siendo aun así alguien poderoso para usarla en combate",
+        "Habilidades Físicas — podría equipararse a su madre, siendo bastante fuerte, especialmente por entrenar peleando contra Cecilus, heredando el deseo de su madre de derrotarlo",
+        "Habilidades Mágicas [Fuego, Todas] — posee una gran afinidad con la magia de fuego, aunque también puede usar los demás tipos de magia como Devorador de Espíritus",
+        "Afinidad Espiritual — buena afinidad, atrae a los Espíritus como un Devorador de Espíritus"
+      ],
+      "equipamiento": [
+        "Dos espadas — siempre las lleva consigo, tras aprender ese estilo de lucha con Cecilus en sus intentos de derrotarlo y tomar su puesto como el más fuerte de Vollachia"
+      ],
+      "trivia": [
+        "Arakiya siempre lo educó para que odiara a Cecilus y quisiera derrotarlo, pero en realidad no lo odia ni le desea mal, solo sigue el deseo de su madre de vencerlo",
+        "Es alguien a quien la gente a su alrededor engaña con facilidad y que sufre bromas fácilmente",
+        "Pese a estar entrenado en los métodos e ideales de Vollachia, es en realidad bastante gentil como Subaru, ayudando a la gente tanto como puede",
+        "Si tuviera que servir a alguien como Arakiya sirvió y quiso seguir sirviendo a Priscilla, serviría a alguien como Emilia o Medium, ya que preferiría servir a alguien de personalidad gentil"
+      ]
+    },
+    {
+      "id": "nyx",
+      "nombre": "Nyx Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "malvada",
+      "edad": "",
+      "tamano": "134cm",
+      "apariencia": {
+        "cabello": "Mitad oscuro, mitad blanco",
+        "ojos": "De colores distintos entre sí, con un aspecto algo apagado y un símbolo en el centro",
+        "ropa": "Imita la forma original de su 'madre', aunque sin cubrir su rostro",
+        "constitucion": "Gran Espíritu Yin",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Tiene una personalidad fría, neutra, poco interesada en la mayoría de las cosas; aunque posee libre albedrío, no siente necesidad de que algo le guste o no a menos que sea para cumplir sus funciones",
+        "Si tuviera como 'objetivo' conseguir algo, sentiría sentimientos positivos o negativos como una persona común hacia quienes la ayudaran o estorbaran, hasta cumplir su objetivo; a quienes la estorbaron los marcaría, dedicándose a eliminarlos por completo",
+        "Respeta a sus 'padres', amándolos como una hija debería, al menos de forma superficial y artificial, mientras sigue intentando cumplir su objetivo principal",
+        "Su objetivo principal es el exterminio de toda la vida de su mundo hasta que no quede nada, estando dispuesta a matar a cualquiera sin importarle quién sea, una vez que sus 'padres' ya no vivan",
+        "Heredó una forma de hablar similar a la de Sphinx, agregando algo al final de sus frases, como 'Sentimientos: Satisfacción', incluso en los diálogos más simples; al despedirse de alguien o antes de exterminarlo, dice algo como 'Conclusión de Exterminio: 10%', evaluando su capacidad de exterminar a esa persona en ese momento"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — no posee una gran fuerza física para derrotar a los más fuertes del mundo, pero está a un nivel similar al de un Caballero medio o algo mayor",
+        "Habilidades Mágicas [Yin] — como Gran Espíritu Yin posee una gran afinidad mágica, al nivel de Beatrice y otros usuarios de esa magia, tomando las ideas de Subaru para crear sus propias magias con fines de exterminio",
+        "Afinidad Espiritual — es un Espíritu"
+      ],
+      "equipamiento": [],
+      "trivia": [
+        "En realidad le encantan las hamburguesas y la carne; aunque no necesite comer, aun así disfruta devorarlas",
+        "Continuaría exterminando la vida del mundo incluso después de que Sphinx y Subaru murieran de forma permanente, aunque actuaría de manera más lenta y calmada para no morir antes de cumplir su objetivo",
+        "Se quitaría la vida después de matar a todos los demás seres del mundo",
+        "Irónicamente, podría soportar la Autoridad de la Avaricia si se colocara en su cuerpo"
+      ]
+    },
+    {
+      "id": "surtr",
+      "nombre": "Surtr Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "malvada",
+      "edad": "",
+      "tamano": "168cm",
+      "apariencia": {
+        "cabello": "Oscuro, con algunos mechones plateados en el flequillo, como su madre",
+        "ojos": "Iguales a los de su madre",
+        "ropa": "Suele llevar una venda sobre uno de sus ojos, según el lado indica qué personalidad tiene el control",
+        "constitucion": "Un cuarto élfica",
+        "marcas": "Una zona de piel quemada desde la infancia"
+      },
+      "personalidad": [
+        "Es una chica un cuarto élfica criada dentro del Culto de las Brujas, educada bajo sus ideales sin tener motivo para ir en contra de las palabras de su padre en momentos de cordura",
+        "Sufre un caso de doble personalidad, dependiendo de en qué lado de su rostro esté la venda sobre uno de sus ojos",
+        "Principal — dulce, sin mucha noción de su situación ni de la de los demás, alguien que apoyaría a otros casi como una santa, ayudando a quien lo necesite aunque eso la termine hiriendo; adorable, con un corazón gentil que no desistiría de ayudar a quien viera necesitándolo",
+        "Segunda — más insana en su creencia de ayudar a la gente, pero de una manera distorsionada; por ejemplo, si la Principal viera a alguien con una pierna herida lo ayudaría a buscar atención, pero la Segunda le arrancaría la pierna herida creyendo que es más 'gentil' liberarlo de la fuente de dolor, empeorando si la persona empieza a sentir más dolor por ello; en este estado cometería el mismo nivel de atrocidades que un cultista del Culto de las Brujas"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — increíblemente fuerte, con una resistencia notable que le permite soportar daño y mantenerse despierta durante días sin problema, incluso recibiendo golpes",
+        "Habilidades Mágicas [Fuego y Hielo] — puede usar tanto la parte de fuego como la de hielo de la magia relacionada al fuego, de manera equilibrada",
+        "Afinidad Espiritual — buena, aunque no suficiente para hacer un contrato con quienes se alejan de ella",
+        "Protección Divina 'Dualidad' — por su doble personalidad puede sufrir un intercambio corporal entre cada una de ellas; por ejemplo, si la Principal se duerme y cambia a la Secundaria, el cansancio corporal de la Principal se borra al asumir el control la Secundaria, permitiéndole mantenerse despierta durante días alternando entre ambas; sin embargo, el daño físico, el hambre y otras cuestiones biológicas siguen igual, salvo el sueño y el cansancio, que se borran entre ellas"
+      ],
+      "equipamiento": [
+        "Cadena con cuchilla en la punta — posee una cadena larga con una cuchilla en la punta, igual que Sirius, aunque con una sola punta parecida a una hoja afilada"
+      ],
+      "trivia": [
+        "Sufrió parte de su rostro quemado por las llamas de Sirius durante un accidente causado por los celos y la inestabilidad de su madre, pero ninguna de las dos se odia; en realidad se aman de verdad como una buena madre e hija",
+        "Lo más irónico posible: Surtr logra salvar la misma cantidad de vidas que quita",
+        "Realmente desea ayudar a la gente, pensando que el Culto de las Brujas es un buen grupo para lograrlo"
+      ]
+    },
+    {
+      "id": "hippolyta",
+      "nombre": "Hippolyta Natsuki",
+      "tipo": "hija",
+      "avatar": "",
+      "alineacion": "buena",
+      "edad": "",
+      "tamano": "173cm",
+      "apariencia": {
+        "cabello": "Rojo y largo, hasta debajo de los hombros",
+        "ojos": "De colores distintos: uno igual al de Mizelda, el otro igual al de Subaru",
+        "ropa": "Vestimenta tribal similar a la de Mizelda, con maquillaje que recuerda al de las demás mujeres Shudrak",
+        "constitucion": "Piel parecida a la de su madre",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Tiene una personalidad fuerte y a la vez divertida",
+        "Es una verdadera guerrera como su madre y las demás mujeres de la tribu Shudrak, mostrándose desde temprana edad como una gran líder y ejemplo para las demás de su edad",
+        "Además de su personalidad seria como guerrera, también es alguien bastante divertida y gentil, disfrutando junto a sus amigas pese a sus obligaciones",
+        "Es cabeza dura, difícil de hacer cambiar de opinión una vez que toma una decisión, a menos que la detengan físicamente; incluso sus padres tienen dificultad para impedírselo, especialmente cuando pone su propia vida en riesgo, aunque nunca arriesga la vida de otros salvo que confíen en ella para tomar una gran decisión"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — increíblemente fuerte incluso para los estándares de las guerreras Shudrak, con sentidos muy desarrollados que la convierten en una cazadora ejemplar de alta clase incluso entre las guerreras más experimentadas",
+        "Habilidades Mágicas — no posee",
+        "Afinidad Espiritual — buena, atrae a los espíritus cercanos"
+      ],
+      "equipamiento": [
+        "Arco — construido por ella misma tras recibir las enseñanzas para hacerlo, esforzándose en tallarlo",
+        "Cuchillo de caza — lo lleva para defenderse en caso de perder el arco o quedarse sin flechas, y para combate a corta distancia"
+      ],
+      "trivia": [
+        "Es la hija mayor entre ella, Ladon y Hélio, siendo la segunda más madura emocionalmente después de Ladon y más que Hélio",
+        "Ya aspira a convertirse en líder de Shudrak cuando sea mayor, sin desear alcanzar el trono ni ninguna otra cosa, aunque algunos piensan que en el futuro podría llegar a ser Emperatriz",
+        "Recibió su nombre en homenaje a Hipólita de la mitología griega",
+        "Tiene una visión perfecta que le permite ver muy lejos, lo que le permite acertar casi con 100% de precisión con su arco"
+      ]
+    },
+    {
+      "id": "ladon",
+      "nombre": "Ladon Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "bueno",
+      "edad": "",
+      "tamano": "177cm",
+      "apariencia": {
+        "cabello": "Color similar al de su madre, Serena Dracroy",
+        "ojos": "Iguales a los de su padre",
+        "ropa": "Prendas dignas de la Casa Dracroy, siempre de aspecto respetable y noble",
+        "constitucion": "",
+        "marcas": "Cicatriz sobre uno de sus ojos"
+      },
+      "personalidad": [
+        "Desde joven es considerado un chico apuesto, pese a la cicatriz sobre uno de sus ojos",
+        "Desde temprana edad es alguien tanto controlado como orgulloso, mostrándose alguien que hace las cosas pensando en no deshonrar la Casa de su madre y su nombre",
+        "No permitiría que su orgullo o el de su casa fuera atacado por otros",
+        "Si tuviera que elegir entre su vida o el orgullo y honor de su casa, no dudaría en sacrificarse y matarse a sí mismo por el nombre de los Dracroy",
+        "Es conocido por su facilidad para domar dragones, tanto terrestres como voladores, un talento natural que le permitió llevarse bien incluso con figuras como Madelyn, gracias también a su propia Protección Divina, secreto para quienes están fuera de su familia y aliados"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — no es alguien físicamente muy fuerte, pero lo suficiente para defenderse",
+        "Habilidades Mágicas — no posee afinidad mágica",
+        "Afinidad Espiritual — no posee",
+        "Protección Divina 'Domación Dracónica' — como las Protecciones Divinas de Otto y Meili, le otorga una mayor afinidad con los seres de la raza de los dragones (terrestres, acuáticos, voladores o incluso grandes dragones como Volcánica), permitiéndole comunicarse y darles órdenes; se asemeja a la de Julius con los espíritus, ya que lo vuelve más agradable para esas figuras, más propensas a hablar, respetarlo y ayudarlo cuando lo pide, sin que eso signifique que pierdan su autonomía"
+      ],
+      "equipamiento": [
+        "Bolsa de cuero — siempre lleva consigo una bolsa llena de pequeños objetos: dinero, anillos con magias, cuchillas de autodefensa, estando preparado para múltiples situaciones"
+      ],
+      "trivia": [
+        "Es el hermano del medio entre Hippolyta y Hélio, y el más maduro emocionalmente de los tres hermanos, además de posiblemente el más estratega e inteligente para negociaciones",
+        "No tendría ningún interés en alcanzar un puesto como General Divino si pudiera vivir de nuevo, pero lo aceptaría si se viera obligado a ello",
+        "Tiene en realidad un instinto protector con las personas a su alrededor que le son valiosas, estando dispuesto a arriesgarse por ellas incluso cuando quizás no debería hacerlo"
+      ]
+    },
+    {
+      "id": "helio",
+      "nombre": "Hélio Natsuki",
+      "tipo": "hijo",
+      "avatar": "",
+      "alineacion": "bueno",
+      "edad": "",
+      "tamano": "169cm",
+      "apariencia": {
+        "cabello": "Rubio, como el de su madre, Medium",
+        "ojos": "Iguales a los de su padre",
+        "ropa": "Prendas más simples que recuerdan a las de su tío Flop",
+        "constitucion": "",
+        "marcas": ""
+      },
+      "personalidad": [
+        "Desde niño es alguien en cuyo rostro siempre se puede ver una sonrisa alegre y radiante, difícil de borrar",
+        "Al igual que Medium, Flop y Subaru, heredó los rasgos más alegres de su familia, siendo casi una fuente constante de positividad y diversión",
+        "Siempre intenta ayudar y reconfortar a quienes lo rodean; conoce bien la dificultad del mundo y aun así no deja de esforzarse",
+        "Pese a ser alegre y positivo, no es tonto ni ingenuo; creció en Vollachia rodeado de su familia, que le enseñó sobre la severidad del mundo, pero no se dejó abatir por ello",
+        "Sabe actuar con seriedad cuando es necesario, buscando proteger a todos incluso usando la fuerza; podría ser alguien peligroso si fuera tenido como enemigo por alguien y se concentrara en acabar con esa persona",
+        "Representa la frase 'no juzgues el libro por su portada', pudiendo alternar su personalidad entre polos opuestos según la situación"
+      ],
+      "habilidades": [
+        "Habilidades Físicas — pese a tener un cuerpo delgado, es alguien bastante fuerte para los estándares de Vollachia, especialmente en agilidad y fuerza física, amplificadas por su Protección Divina",
+        "Habilidades Mágicas — no posee afinidad mágica",
+        "Afinidad Espiritual — no posee",
+        "Protección Divina 'Amplificador' — logra amplificar sus habilidades físicas durante un tiempo al activar su Protección Divina, dependiendo de sus energías, que provienen de estar bien alimentado; si está bien alimentado recibe una gran amplificación por un tiempo considerable, y si está mal alimentado, una amplificación menor por menos tiempo; también puede intercambiar tiempo por amplificación, por ejemplo un boost de 10 veces por unos minutos o de 2 veces por una hora, requiriendo control de energía para decidir cómo y cuándo usar cada boost"
+      ],
+      "equipamiento": [
+        "Hoja curva — lleva envainada en su espalda una hoja curva con forma de guadaña, aunque un poco más recta"
+      ],
+      "trivia": [
+        "Puede considerarse el menos desarrollado emocionalmente en comparación con Hippolyta y Ladon, aunque eso no significa que sea inmaduro",
+        "Intenta seguir los sueños de 'venganza' de su madre y su tío contra el mundo, el plan de ser gentil con la gente",
+        "No lucharía contra sus hermanos si se viera obligado, pero sería quien tendría más posibilidades de vencer a Hippolyta y a Ladon"
+      ]
     }
+
   ],
   "relaciones": [
   {"origen":"subaru","destino":"alpha","tipo":"padre"},
@@ -1498,6 +1744,12 @@
   {"origen":"subaru","destino":"pollux","tipo":"padre"},
   {"origen":"subaru","destino":"tonnura","tipo":"padre"},
   {"origen":"subaru","destino":"eris","tipo":"padre"},
+  {"origen":"subaru","destino":"apollo","tipo":"padre"},
+  {"origen":"subaru","destino":"nyx","tipo":"padre"},
+  {"origen":"subaru","destino":"surtr","tipo":"padre"},
+  {"origen":"subaru","destino":"hippolyta","tipo":"padre"},
+  {"origen":"subaru","destino":"ladon","tipo":"padre"},
+  {"origen":"subaru","destino":"helio","tipo":"padre"},
 
   {"origen":"echidna","destino":"alpha","tipo":"madre"},
   {"origen":"echidna","destino":"beta","tipo":"madre"},
@@ -1539,6 +1791,12 @@
   {"origen":"julia","destino":"pollux","tipo":"madre"},
   {"origen":"bruja de la envidia","destino":"tonnura","tipo":"madre"},
   {"origen":"katya","destino":"eris","tipo":"madre"},
+  {"origen":"arakiya","destino":"apollo","tipo":"madre"},
+  {"origen":"sphinx","destino":"nyx","tipo":"madre"},
+  {"origen":"sirius","destino":"surtr","tipo":"madre"},
+  {"origen":"mizelda","destino":"hippolyta","tipo":"madre"},
+  {"origen":"serena","destino":"ladon","tipo":"madre"},
+  {"origen":"medium","destino":"helio","tipo":"madre"},
 
 
   {"origen":"alpha","destino":"beatrice","tipo":"media_hermana"},

@@ -861,24 +861,235 @@
        { "nombre": "Bruja de la envidia", "relacion": "Madre", "id": "bruja de la envidia" }
     ]
   },
-  "taygete": {
- "stats": {
-    "fuerza": 45,
-    "resistencia": {"valor": 85,"rango": "SS+"},
-    "velocidad": 21,
-    "inteligencia": {"valor": 50,"rango": "B"},
-    "habilidades_combate": {"valor": 70,"rango": "SS"},
-    "carisma": {"valor": 50,"rango": "A"},
-    "portal": {"valor": 100,"rango": "SS+"},
-    "afinidad_espiritual": 67,
-    "potencial": {"valor": 80,"rango": "SS"},
-    "suerte": 33
-  },
+    "taygete": {
+      "stats": {
+        "panels": [
+          {
+            "id": "normal",
+            "nombre": "Normal",
+            "stats": {
+              "fuerza": 45,
+              "resistencia": {"valor": 85, "rango": "SS+"},
+              "velocidad": 21,
+              "inteligencia": {"valor": 50, "rango": "B"},
+              "habilidades_combate": {"valor": 70, "rango": "SS"},
+              "carisma": {"valor": 50, "rango": "A"},
+              "portal": {"valor": 100, "rango": "SS+"},
+              "afinidad_espiritual": 67,
+              "potencial": {"valor": 80, "rango": "SS"},
+              "suerte": 33
+            }
+          },
+          {
+            "id": "boost",
+            "nombre": "Boost",
+            "stats": {
+              "fuerza": 45,
+              "resistencia": {"valor": 85, "rango": "SS+"},
+              "velocidad": 21,
+              "inteligencia": {"valor": 50, "rango": "B"},
+              "habilidades_combate": {"valor": 70, "rango": "SS"},
+              "carisma": {"valor": 50, "rango": "A"},
+              "portal": {"valor": 100, "rango": "SS+"},
+              "afinidad_espiritual": 67,
+              "potencial": {"valor": 500, "rango": "EX"},
+              "suerte": 33
+            }
+          }
+        ]
+      },
+      "historias": [],
+      "relaciones": [
+        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+        { "nombre": "Shion", "relacion": "Madre", "id": "shion" }
+      ]
+    },
+  "eris": {
+    "stats": {
+      "panels": [
+        {
+          "id": "normal",
+          "nombre": "Normal",
+          "stats": {
+            "fuerza": {"valor": 10,"rango": "E"},
+            "resistencia": {"valor": 10,"rango": "E"},
+            "velocidad":5,
+            "inteligencia":75,
+            "habilidades_combate": {"valor": 10,"rango": "E"},
+            "carisma": {"valor": 80,"rango": "SS"},
+            "portal": {"valor": 30,"rango": "C"},
+            "afinidad_espiritual": 45,
+            "potencial": {"valor": 30,"rango": "D"},
+            "suerte": {"valor": 50,"rango": "A"}
+          }
+        },
+        {
+          "id": "formaLobo",
+          "nombre": "Hombre Lobo",
+            "stats": {
+            "fuerza": {"valor": 70,"rango": "S"},
+            "resistencia": {"valor": 70,"rango": "S"},
+            "velocidad":65,
+            "inteligencia":75,
+            "habilidades_combate": {"valor": 70,"rango": "S"},
+            "carisma": {"valor": 80,"rango": "SS"},
+            "portal": {"valor": 30,"rango": "C"},
+            "afinidad_espiritual": 45,
+            "potencial": {"valor": 30,"rango": "D"},
+            "suerte": {"valor": 80,"rango": "SS"}
+          }
+        }
+      ]
+    },
     "historias": [],
     "relaciones": [
       { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
-      { "nombre": "Shion", "relacion": "Madre", "id": "shion" }
+      { "nombre": "Katya Aurelie", "relacion": "Madre", "id": "katya" }
     ]
-  }
+  },
+    "apollo": {
+      "stats": {
+        "fuerza": 65,
+        "resistencia": 65,
+        "velocidad": {"valor": 70, "rango": "S"},
+        "inteligencia": 23,
+        "habilidades_combate": 62,
+        "carisma": {"valor": 30, "rango": "C"},
+        "portal": 85,
+        "afinidad_espiritual": {"valor": 80, "rango": "SS"},
+        "potencial": {"valor": 90, "rango": "SS+"},
+        "suerte": {"valor": 10, "rango": "E"}
+        
+      },
+      "historias": [],
+      "relaciones": [
+        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+        { "nombre": "Arakiya", "relacion": "Madre", "id": "arakiya" }
+      ]
+    },
+    "nyx": {
+      "stats": {
+        "fuerza": 25,
+        "resistencia": {"valor": 30, "rango": "C"},
+        "velocidad": {"valor": 20, "rango": "D"},
+        "inteligencia": {"valor": 70, "rango": "S"},
+        "habilidades_combate": {"valor": 60, "rango": "A"},
+        "carisma": {"valor": 30, "rango": "C"},
+        "portal": 75,
+        "afinidad_espiritual": 35,
+        "potencial": {"valor": 80, "rango": "SS"},
+        "suerte": {"valor": 20, "rango": "D"}
+        
+      },
+      "historias": [],
+      "relaciones": [
+        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+        { "nombre": "Sphinx", "relacion": "Madre", "id": "sphinx" }
+      ]
+    },
+    "surtr": {
+      "stats": {
+        "fuerza": {"valor": 60, "rango": "A"},
+        "resistencia": {"valor": 70, "rango": "S"},
+        "velocidad": {"valor": 50, "rango": "B"},
+        "inteligencia": {"valor": 30, "rango": "C"},
+        "habilidades_combate": 35,
+        "carisma": {"valor": 20, "rango": "D"},
+        "portal": {"valor": 60, "rango": "A"},
+        "afinidad_espiritual": {"valor": 30, "rango": "C"},
+        "potencial": {"valor": 70, "rango": "S"},
+        "suerte": {"valor": 10, "rango": "F"}
+        
+      },
+      "historias": [],
+      "relaciones": [
+        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+        { "nombre": "Sirius", "relacion": "Madre", "id": "sirius" }
+      ]
+    },
+    "hippolyta": {
+      "stats": {
+        "fuerza": 55,
+        "resistencia": {"valor": 50, "rango": "A"},
+        "velocidad": 48,
+        "inteligencia": 45,
+        "habilidades_combate": {"valor": 60, "rango": "A"},
+        "carisma": {"valor": 50, "rango": "B"},
+        "portal": {"valor": 10, "rango": "E"},
+        "afinidad_espiritual": {"valor": 40, "rango": "C"},
+        "potencial": {"valor": 60, "rango": "A"},
+        "suerte": 25
+        
+      },
+      "historias": [],
+      "relaciones": [
+        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+        { "nombre": "Mizelda", "relacion": "Madre", "id": "mizelda" }
+      ]
+    },
+    "ladon": {
+      "stats": {
+        "fuerza": {"valor": 30, "rango": "D"},
+        "resistencia": {"valor": 30, "rango": "D"},
+        "velocidad": 15,
+        "inteligencia": {"valor": 60, "rango": "S"},
+        "habilidades_combate": 35,
+        "carisma": {"valor": 60, "rango": "A"},
+        "portal": {"valor": 0, "rango": "F"},
+        "afinidad_espiritual": {"valor": 0, "rango": "F"},
+        "potencial": {"valor": 50, "rango": "B"},
+        "suerte": 35
+        
+      },
+      "historias": [],
+      "relaciones": [
+        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+        { "nombre": "Serena Dracroy", "relacion": "Madre", "id": "serena" }
+      ]
+    },
+    "helio": {
+      "stats": {
+        "panels": [
+          {
+            "id": "normal",
+            "nombre": "Normal",
+            "stats": {
+              "fuerza": {"valor": 40, "rango": "C"},
+              "resistencia": 35,
+              "velocidad": {"valor": 50, "rango": "B"},
+              "inteligencia": {"valor": 40, "rango": "C"},
+              "habilidades_combate": {"valor": 50, "rango": "B"},
+              "carisma": 55,
+              "portal": 5,
+              "afinidad_espiritual": {"valor": 0, "rango": "F"},
+              "potencial": {"valor": 60, "rango": "A"},
+              "suerte": {"valor": 20, "rango": "D"}
+            }
+          },
+          {
+            "id": "boostMaximo",
+            "nombre": "Boost",
+            "stats": {
+              "fuerza": {"valor": 70, "rango": "S"},
+              "resistencia": {"valor": 70, "rango": "S"},
+              "velocidad": {"valor": 70, "rango": "S"},
+              "inteligencia": {"valor": 40, "rango": "C"},
+              "habilidades_combate": {"valor": 70, "rango": "S"},
+              "carisma": 55,
+              "portal": 5,
+              "afinidad_espiritual": {"valor": 0, "rango": "F"},
+              "potencial": {"valor": 80, "rango": "SS"},
+              "suerte": {"valor": 20, "rango": "D"}
+
+            }
+          }
+        ]
+      },
+      "historias": [],
+      "relaciones": [
+        { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
+        { "nombre": "Medium O'Connel", "relacion": "Madre", "id": "medium" }
+      ]
+    }
 
 }
