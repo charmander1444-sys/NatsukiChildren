@@ -8,6 +8,7 @@ import DetailRelaciones from "./DetailRelaciones.astro";
 import DetailGaleria from "./DetailGaleria.astro";
 import statsData from "../../data/stats.json";
 import galleryData from "../../data/gallery.json";
+import characterKids from "../../data/charactersKids.json";
 
 interface Character {
   id: string;
@@ -33,6 +34,21 @@ const { character } = Astro.props;
 
 const statsEntry = (statsData as Record<string, any>)[character.id] ?? {};
 const images = (galleryData as Record<string, { artista: string; imagenes: string[] }[]>)[character.id] ?? [];
+
+// Mapa id -> avatar construido a partir de TODAS las personas (hijos, madres,
+// padre/raíz, etc.), sin el filtro de tipo que usa la página de ranking.
+// Así, aunque "relaciones" en stats.json solo traiga { nombre, relacion, id },
+// podemos completar el avatar buscándolo acá por id.
+const avatarById: Record<string, string> = Object.fromEntries(
+  (characterKids.personas ?? [])
+    .filter((p: any) => p?.id && p?.avatar)
+    .map((p: any) => [p.id, p.avatar])
+);
+
+const relacionesConAvatar = (statsEntry.relaciones ?? []).map((r: any) => ({
+  ...r,
+  avatar: r.avatar ?? (r.id ? avatarById[r.id] : undefined),
+}));
 ---
 <article class="max-w-5xl mx-auto">
   <a
@@ -71,7 +87,7 @@ const images = (galleryData as Record<string, { artista: string; imagenes: strin
     </div>
   </section>
 
-  <DetailRelaciones relaciones={statsEntry.relaciones} />
+  <DetailRelaciones relaciones={relacionesConAvatar} />
 
 <DetailGaleria images={images} nombre={character.nombre} />
 </article>
