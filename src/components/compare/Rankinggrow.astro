@@ -1,46 +1,79 @@
 ---
 // RankingRow.astro
-// Una "tarjeta" de personaje (ya no <tr>, para poder fluir en multi-columna).
-// Guarda el índice numérico de cada stat en data-sort-<key> para que
-// RankingTable pueda ordenar sin re-renderizar.
-// Cada stat vive en su propio <span data-stat="key">, oculto salvo el
-// seleccionado en el <select> de RankingTable.
-// Props: character { id, nombre, avatar, stats }, statKeys (array de strings)
-
 import RankBadge from "./Rankbadge.astro";
-import { rankIndex } from "./lib/statsConfig.js";
+import { STAT_LABELS } from "./lib/statsConfig.js";
 
 const { character, statKeys } = Astro.props;
+const { nombre, avatar, stats, poder } = character;
 
-const sortData = Object.fromEntries(
-  statKeys.map((k) => [`data-sort-${k}`, rankIndex(character.stats?.[k])])
+const sortAttrs = Object.fromEntries(
+  statKeys.map((key) => [`data-sort-${key}`, stats?.[key]?.valor ?? -1])
 );
 ---
 
 <div
+  class="break-inside-avoid mb-3 rounded-xl border border-rz-accent/10 bg-rz-bg/40 p-3 flex flex-col gap-2"
   data-row
-  data-sort-nombre={character.nombre.toLowerCase()}
-  {...sortData}
-  class="break-inside-avoid mb-3 flex items-start sm:items-center justify-between gap-3 rounded-xl border border-rz-accent/10 bg-rz-bg/40 px-4 py-3 hover:bg-rz-accent/5 transition-colors"
+  data-sort-nombre={nombre}
+  data-sort-poder={poder ?? -1}
+  {...sortAttrs}
 >
-  <div class="flex items-start sm:items-center gap-3 min-w-0 flex-1">
-    {character.avatar && (
+  <div class="flex items-center gap-2 min-w-0">
+    {avatar && (
       <img
-        src={character.avatar}
-        alt={character.nombre}
-        class="w-9 h-9 rounded-full object-cover shrink-0"
+        src={avatar}
+        alt={nombre}
+        class="w-8 h-8 rounded-full object-cover shrink-0"
+        loading="lazy"
       />
     )}
-    <span class="text-base sm:text-lg text-white font-body break-words sm:truncate min-w-0">
-      {character.nombre}
+    <span class="min-w-0 break-words font-display text-white text-sm sm:text-base leading-snug">
+      {nombre}
     </span>
   </div>
 
-  <div class="shrink-0">
-    {statKeys.map((key) => (
-      <span data-stat={key} style="display:none">
-        <RankBadge rank={character.stats?.[key]} />
+  <div class="flex flex-col gap-1.5">
+    {statKeys.map((key) => {
+      const entry = stats?.[key];
+      const valor = entry?.valor ?? null;
+      const rango = entry?.rango ?? null;
+      return (
+        <div
+          class="flex items-center justify-between gap-2"
+          data-stat={key}
+          style="display:none"
+        >
+          <span class="text-xs sm:text-sm text-rz-text/60 font-body uppercase tracking-wider truncate">
+            {STAT_LABELS[key] ?? key}
+          </span>
+          <span class="flex items-center gap-2 shrink-0">
+            <span
+              data-points
+              class="text-xs sm:text-sm font-display tabular-nums text-white/70"
+              style="display:none"
+            >
+              {valor ?? "—"}
+            </span>
+            <RankBadge rank={rango} sortKey={key} />
+          </span>
+        </div>
+      );
+    })}
+
+    <div
+      class="items-center justify-between gap-2"
+      data-power-row
+      style="display:none"
+    >
+      <span class="text-xs sm:text-sm text-rz-text/60 font-body uppercase tracking-wider">
+        Poder Total
       </span>
-    ))}
+      <span
+        data-poder
+        class="text-sm sm:text-base font-display font-semibold tabular-nums text-rz-accent"
+      >
+        {poder != null ? poder.toLocaleString("es") : "—"}
+      </span>
+    </div>
   </div>
 </div>

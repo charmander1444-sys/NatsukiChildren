@@ -2,21 +2,35 @@
 // RankBadge.astro
 // Pill de rank reutilizable (mismo estilo visual usado en DetailStats).
 // Props: rank (string opcional, ej. "B", "S", "EX")
+// sortKey (opcional): si se pasa, el badge se vuelve clickeable y dispara
+// el ordenamiento por esa stat (mismo comportamiento que el header).
 
 import { RANK_COLORS } from "./lib/statsConfig.js";
 
-const { rank } = Astro.props;
+const { rank, sortKey } = Astro.props;
 const r = rank ? rank.toUpperCase() : undefined;
 const color = r ? RANK_COLORS[r] ?? "#52525b" : undefined;
+const style = `color:${color}; border:1px solid ${color}55; background:${color}14;`;
 ---
 
 {r ? (
-  <span
-    class="inline-block min-w-[2.75rem] text-center text-sm sm:text-base font-display font-semibold rounded-full px-3 py-1"
-    style={`color:${color}; border:1px solid ${color}55; background:${color}14;`}
-  >
-    {r}
-  </span>
+  sortKey ? (
+    <button
+      type="button"
+      data-rank-sort={sortKey}
+      class="inline-block min-w-[2.75rem] text-center text-sm sm:text-base font-display font-semibold rounded-full px-3 py-1 cursor-pointer hover:brightness-125 transition-[filter]"
+      style={style}
+    >
+      {r}
+    </button>
+  ) : (
+    <span
+      class="inline-block min-w-[2.75rem] text-center text-sm sm:text-base font-display font-semibold rounded-full px-3 py-1"
+      style={style}
+    >
+      {r}
+    </span>
+  )
 ) : (
   <span class="text-rz-text/30 text-sm sm:text-base">—</span>
 )}

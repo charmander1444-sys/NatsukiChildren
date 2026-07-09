@@ -1,11 +1,5 @@
 ---
 // RankingTable.astro
-// Ya no es un <table> (que fuerza una fila = una línea completa).
-// Es un contenedor con CSS multi-columna: en móvil 1 columna, en desktop
-// 2-3, así se aprovecha el ancho disponible.
-// El sort reordena los elementos [data-row] existentes (no re-renderiza).
-// Props: characters (array), statKeys (array de strings)
-
 import RankingRow from "./Rankinggrow.astro";
 import { STAT_LABELS } from "./lib/statsConfig.js";
 
@@ -13,7 +7,7 @@ const { characters, statKeys } = Astro.props;
 ---
 
 <div class="space-y-3" data-ranking-wrapper>
-  <div class="flex items-center justify-center gap-3 flex-wrap">
+  <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
     <label for="ranking-stat-select" class="text-sm sm:text-base text-rz-text/70 font-body">
       Ordenar por:
     </label>
@@ -26,6 +20,24 @@ const { characters, statKeys } = Astro.props;
         <option value={key}>{STAT_LABELS[key] ?? key}</option>
       ))}
     </select>
+
+    <button
+      type="button"
+      data-toggle-points
+      aria-pressed="false"
+      class="text-sm sm:text-base font-body rounded-full px-4 py-1.5 border border-rz-accent/30 text-rz-text/70 hover:text-white hover:border-rz-accent/60 transition-colors cursor-pointer"
+    >
+      Ver puntos
+    </button>
+
+    <button
+      type="button"
+      data-toggle-power
+      aria-pressed="false"
+      class="text-sm sm:text-base font-body rounded-full px-4 py-1.5 border border-rz-accent/30 text-rz-text/70 hover:text-white hover:border-rz-accent/60 transition-colors cursor-pointer"
+    >
+      Poder total
+    </button>
   </div>
 
   <div class="rounded-2xl border border-rz-accent/20 bg-rz-bg-2/40 p-4">
@@ -49,6 +61,16 @@ const { characters, statKeys } = Astro.props;
           {STAT_LABELS[key] ?? key} <span data-sort-arrow></span>
         </span>
       ))}
+
+      <span
+        class="text-sm sm:text-base uppercase tracking-wider text-rz-text/60 font-body font-semibold cursor-pointer select-none hover:text-white transition-colors"
+        data-sort-key="poder"
+        data-sort-type="number"
+        data-power-header
+        style="display:none"
+      >
+        Poder Total <span data-sort-arrow></span>
+      </span>
     </div>
 
     <div class="columns-1 sm:columns-2 lg:columns-3 gap-4" data-ranking-list>
@@ -62,12 +84,17 @@ const { characters, statKeys } = Astro.props;
 <script>
   document.querySelectorAll("[data-ranking-wrapper]").forEach((wrapper) => {
     const select = wrapper.querySelector("[data-stat-select]");
+    const pointsBtn = wrapper.querySelector("[data-toggle-points]");
+    const powerBtn = wrapper.querySelector("[data-toggle-power]");
     const headers = Array.from(wrapper.querySelectorAll("[data-sort-key]"));
     const statHeaders = headers.filter((h) => h.hasAttribute("data-stat-header"));
+    const powerHeader = wrapper.querySelector("[data-power-header]");
     const list = wrapper.querySelector("[data-ranking-list]");
 
     let currentKey = null;
     let currentDir = -1; // default: descendente (el mayor primero)
+    let showPoints = false;
+    let powerMode = false;
 
     function clearArrows() {
       headers.forEach((h) => {
@@ -91,7 +118,7 @@ const { characters, statKeys } = Astro.props;
           const na = Number(rawA);
           const nb = Number(rawB);
           if (na === -1 && nb === -1) return 0;
-          if (na === -1) return 1; // sin stat va al final
+          if (na === -1) return 1;
           if (nb === -1) return -1;
           return (na - nb) * dir;
         }
@@ -115,16 +142,96 @@ const { characters, statKeys } = Astro.props;
       });
     }
 
+    function applyPoints() {
+      list.querySelectorAll("[data-points]").forEach((el) => {
+        el.style.display = showPoints ? "" : "none";
+      });
+      pointsBtn.setAttribute("aria-pressed", String(showPoints));
+      pointsBtn.classList.toggle("bg-rz-accent/20", showPoints);
+      pointsBtn.classList.toggle("text-white", showPoints);
+    }
+
+    // "Poder total": mientras está activo, oculta cualquier stat/rango
+    // (headers y filas) y deshabilita "Ver puntos" por completo. Al salir,
+    // se restaura la vista del stat seleccionado y el estado de puntos
+    // que el usuario tenía antes de entrar.
+    function enterPowerMode() {
+      powerMode = true;
+      powerBtn.setAttribute("aria-pressed", "true");
+      powerBtn.classList.add("bg-rz-accent/20", "text-white");
+
+      // Oculta headers y filas de stats individuales (rango incluido).
+      statHeaders.forEach((h) => (h.style.display = "none"));
+      list.querySelectorAll("[data-stat]").forEach((el) => {
+        el.style.display = "none";
+      });
+
+      // Oculta puntos si estaban visibles y deshabilita el botón de puntos.
+      list.querySelectorAll("[data-points]").forEach((el) => {
+        el.style.display = "none";
+      });
+      pointsBtn.disabled = true;
+      pointsBtn.classList.add("opacity-40", "cursor-not-allowed", "pointer-events-none");
+
+      powerHeader.style.display = "";
+      list.querySelectorAll("[data-power-row]").forEach((el) => {
+        el.style.display = "flex";
+      });
+
+      sortBy("poder", "number", -1); // mayor a menor
+    }
+
+    function exitPowerMode() {
+      powerMode = false;
+      powerBtn.setAttribute("aria-pressed", "false");
+      powerBtn.classList.remove("bg-rz-accent/20", "text-white");
+
+      powerHeader.style.display = "none";
+      list.querySelectorAll("[data-power-row]").forEach((el) => {
+        el.style.display = "none";
+      });
+
+      // Reactiva "Ver puntos".
+      pointsBtn.disabled = false;
+      pointsBtn.classList.remove("opacity-40", "cursor-not-allowed", "pointer-events-none");
+
+      // Restaura la vista del stat seleccionado (headers, filas y, si
+      // showPoints seguía en true, los puntos también vuelven a verse).
+      showOnlyStat(select.value);
+      applyPoints();
+      sortBy(select.value, "number", -1);
+    }
+
     headers.forEach((h) => {
       h.addEventListener("click", () => {
+        if (powerMode && h !== powerHeader) return;
         sortBy(h.dataset.sortKey, h.dataset.sortType);
       });
     });
 
+    list.addEventListener("click", (e) => {
+      const badge = e.target.closest("[data-rank-sort]");
+      if (!badge) return;
+      if (powerMode) return;
+      sortBy(badge.dataset.rankSort, "number");
+    });
+
     select?.addEventListener("change", (e) => {
       const key = e.target.value;
+      if (powerMode) return; // en modo poder, el select no debería tocar nada visible
       showOnlyStat(key);
-      sortBy(key, "number", -1); // vuelve a mayor -> menor al cambiar de stat
+      sortBy(key, "number", -1);
+    });
+
+    pointsBtn?.addEventListener("click", () => {
+      if (powerMode) return; // por las dudas, aunque ya está disabled/pointer-events:none
+      showPoints = !showPoints;
+      applyPoints();
+    });
+
+    powerBtn?.addEventListener("click", () => {
+      if (powerMode) exitPowerMode();
+      else enterPowerMode();
     });
 
     // Estado inicial
