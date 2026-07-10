@@ -1,0 +1,67 @@
+---
+// Gallery.astro
+// Responsabilidad única: cargar gallery.json, transformarlo a una lista
+// plana de imágenes + una lista de sugerencias (personajes + artistas),
+// y componer los 3 componentes hijos. No conoce lógica de búsqueda,
+// filtrado, paginación ni lightbox: eso vive en cada hijo.
+
+import GallerySearch from "./GallerySearch.astro";
+import GalleryGrid from "./GalleryGrid.astro";
+import GalleryPagination from "./GalleryPagination.astro";
+import galleryData from "../../data/gallery.json";
+
+interface ArtistGroup {
+  artista: string;
+  imagenes: string[];
+}
+
+type GalleryJson = Record<string, ArtistGroup[]>;
+
+interface FlatImage {
+  id: string;
+  personaje: string;
+  artista: string;
+  src: string;
+}
+
+interface Suggestion {
+  tipo: "personaje" | "artista";
+  valor: string;
+}
+
+const data = galleryData as GalleryJson;
+
+const flatImages: FlatImage[] = [];
+let counter = 1;
+
+for (const [personajeKey, artistas] of Object.entries(data)) {
+  const personaje = personajeKey.charAt(0).toUpperCase() + personajeKey.slice(1);
+  for (const grupo of artistas ?? []) {
+    for (const src of grupo.imagenes ?? []) {
+      if (!src || src.trim() === "") continue;
+      flatImages.push({
+        id: `img_${String(counter++).padStart(4, "0")}`,
+        personaje,
+        artista: grupo.artista,
+        src,
+      });
+    }
+  }
+}
+
+const personajesUnicos = [...new Set(flatImages.map((i) => i.personaje))];
+const artistasUnicos = [...new Set(flatImages.map((i) => i.artista))];
+
+const suggestions: Suggestion[] = [
+  ...personajesUnicos.map((valor) => ({ tipo: "personaje" as const, valor })),
+  ...artistasUnicos.map((valor) => ({ tipo: "artista" as const, valor })),
+];
+---
+
+<section class="mt-10">
+  <h2 class="font-display text-2xl text-white text-glow mb-4">Galería</h2>
+
+  <GallerySearch suggestions={suggestions} />
+  <GalleryGrid images={flatImages} />
+  <GalleryPagination />
+</section>

@@ -1,0 +1,133 @@
+---
+// GallerySearch.astro
+// Responsabilidad única: capturar la intención de búsqueda del usuario
+// (texto libre + autocompletado) y emitir un evento "gallery:search"
+// con la query. No conoce las imágenes ni la paginación.
+
+interface Suggestion {
+  tipo: "personaje" | "artista";
+  valor: string;
+}
+
+interface Props {
+  suggestions: Suggestion[];
+}
+
+const { suggestions } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-3 items-center mb-6 relative">
+  <div class="relative flex-1 min-w-[220px]">
+    <input
+      id="gallery-search-input"
+      type="text"
+      placeholder="Buscar por personaje o artista..."
+      autocomplete="off"
+      class="w-full bg-rz-bg-2/60 border border-rz-accent/30 rounded-full px-4 py-2 text-sm font-body text-rz-text placeholder-rz-text/40 focus:outline-none focus:border-rz-accent transition-colors duration-200"
+    />
+    <ul
+      id="gallery-search-suggestions"
+      class="hidden absolute z-20 top-full left-0 right-0 mt-2 bg-rz-bg-2/95 border border-rz-accent/30 rounded-xl overflow-hidden shadow-lg backdrop-blur-sm max-h-64 overflow-y-auto"
+    ></ul>
+  </div>
+
+  <button
+    id="gallery-search-clear"
+    type="button"
+    class="px-4 py-2 rounded-full text-sm font-body border border-rz-accent/30 text-rz-text/70 hover:text-white hover:border-rz-accent transition-colors duration-200"
+  >
+    Limpiar
+  </button>
+</div>
+
+<script define:vars={{ suggestions }}>
+  const input = document.getElementById("gallery-search-input");
+  const list = document.getElementById("gallery-search-suggestions");
+  const clearBtn = document.getElementById("gallery-search-clear");
+
+  const MAX_SUGGESTIONS = 8;
+
+  const normalize = (s) =>
+    (s ?? "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+  function emitSearch(query) {
+    document.dispatchEvent(
+      new CustomEvent("gallery:search", { detail: { query } })
+    );
+  }
+
+  function renderSuggestions(query) {
+    const q = normalize(query);
+    if (!q) {
+      list.classList.add("hidden");
+      list.innerHTML = "";
+      return;
+    }
+
+    const matches = suggestions
+      .filter((s) => normalize(s.valor).includes(q))
+      .slice(0, MAX_SUGGESTIONS);
+
+    if (matches.length === 0) {
+      list.classList.add("hidden");
+      list.innerHTML = "";
+      return;
+    }
+
+    list.innerHTML = matches
+      .map(
+        (s) => `
+        <li
+          class="suggestion-item flex items-center justify-between gap-2 px-4 py-2 text-sm font-body text-rz-text hover:bg-rz-accent/20 cursor-pointer transition-colors duration-150"
+          data-valor="${s.valor}"
+        >
+          <span>${s.valor}</span>
+          <span class="text-xs uppercase tracking-wide text-rz-accent-2/70">${s.tipo}</span>
+        </li>`
+      )
+      .join("");
+
+    list.classList.remove("hidden");
+  }
+
+  input?.addEventListener("input", () => {
+    renderSuggestions(input.value);
+    emitSearch(input.value.trim());
+  });
+
+  list?.addEventListener("click", (e) => {
+    const item = e.target.closest(".suggestion-item");
+    if (!item) return;
+    const valor = item.dataset.valor ?? "";
+    input.value = valor;
+    list.classList.add("hidden");
+    emitSearch(valor);
+  });
+
+  clearBtn?.addEventListener("click", () => {
+    input.value = "";
+    list.classList.add("hidden");
+    list.innerHTML = "";
+    emitSearch("");
+    input.focus();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("#gallery-search-input") && !e.target.closest("#gallery-search-suggestions")) {
+      list?.classList.add("hidden");
+    }
+  });
+
+  input?.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      list?.classList.add("hidden");
+    }
+    if (e.key === "Enter") {
+      list?.classList.add("hidden");
+      emitSearch(input.value.trim());
+    }
+  });
+</script>

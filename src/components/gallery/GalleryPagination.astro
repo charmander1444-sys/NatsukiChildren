@@ -1,0 +1,94 @@
+---
+// GalleryPagination.astro
+// Responsabilidad única: dibujar los controles de paginación y emitir
+// "gallery:goto-page" cuando el usuario navega. Se entera de cuántas
+// páginas hay escuchando "gallery:pages-changed" desde GalleryGrid.
+---
+
+<nav
+  id="gallery-pagination"
+  class="hidden mt-6 flex-wrap items-center justify-center gap-2 font-body"
+  aria-label="Paginación de galería"
+>
+  <button
+    type="button"
+    data-nav="prev"
+    class="pagination-btn px-3 py-1.5 rounded-md border border-rz-accent/20 text-rz-accent-2/80 hover:border-rz-accent/50 hover:text-white transition-colors duration-200 disabled:opacity-30 disabled:pointer-events-none"
+    aria-label="Página anterior"
+  >
+    ‹
+  </button>
+  <div id="gallery-pagination-numbers" class="flex flex-wrap items-center gap-2"></div>
+  <button
+    type="button"
+    data-nav="next"
+    class="pagination-btn px-3 py-1.5 rounded-md border border-rz-accent/20 text-rz-accent-2/80 hover:border-rz-accent/50 hover:text-white transition-colors duration-200 disabled:opacity-30 disabled:pointer-events-none"
+    aria-label="Página siguiente"
+  >
+    ›
+  </button>
+</nav>
+
+<script>
+  const paginationNav = document.getElementById("gallery-pagination");
+  const numbersContainer = document.getElementById("gallery-pagination-numbers");
+  const prevBtn = document.querySelector('[data-nav="prev"]');
+  const nextBtn = document.querySelector('[data-nav="next"]');
+
+  let totalPages = 1;
+  let currentPage = 1;
+
+  function goToPage(page) {
+    document.dispatchEvent(
+      new CustomEvent("gallery:goto-page", { detail: { page } })
+    );
+  }
+
+  function render() {
+    if (!paginationNav || !numbersContainer) return;
+
+    if (totalPages <= 1) {
+      paginationNav.classList.add("hidden");
+      paginationNav.classList.remove("flex");
+      return;
+    }
+
+    paginationNav.classList.remove("hidden");
+    paginationNav.classList.add("flex");
+
+    numbersContainer.innerHTML = "";
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = String(i);
+      btn.dataset.page = String(i);
+      const isActive = i === currentPage;
+      btn.className = isActive
+        ? "pagination-btn w-9 h-9 rounded-md border border-rz-accent bg-rz-accent/20 text-white font-semibold transition-colors duration-200"
+        : "pagination-btn w-9 h-9 rounded-md border border-rz-accent/20 text-rz-accent-2/80 hover:border-rz-accent/50 hover:text-white transition-colors duration-200";
+      numbersContainer.appendChild(btn);
+    }
+
+    if (prevBtn) prevBtn.disabled = currentPage === 1;
+    if (nextBtn) nextBtn.disabled = currentPage === totalPages;
+  }
+
+  document.addEventListener("gallery:pages-changed", (e) => {
+    totalPages = e.detail?.totalPages ?? 1;
+    currentPage = e.detail?.currentPage ?? 1;
+    render();
+  });
+
+  numbersContainer?.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-page]");
+    if (!btn) return;
+    goToPage(Number(btn.dataset.page));
+  });
+
+  prevBtn?.addEventListener("click", () => goToPage(currentPage - 1));
+  nextBtn?.addEventListener("click", () => goToPage(currentPage + 1));
+
+  // Al montarse, pide el estado actual por si GalleryGrid ya calculó
+  // las páginas antes de que este listener existiera.
+  document.dispatchEvent(new CustomEvent("gallery:request-state"));
+</script>
