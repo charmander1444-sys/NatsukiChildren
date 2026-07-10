@@ -1025,8 +1025,8 @@
       "relaciones": [
         { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
         { "nombre": "Mizelda", "relacion": "Madre", "id": "mizelda" },
-        { "nombre": "Ladon Natsuki", "relacion": "Media Hermano", "id": "ladon" },
-        { "nombre": "Hélio Natsuki", "relacion": "Media Hermano", "id": "helio" }
+        { "nombre": "Ladon Natsuki", "relacion": "Medio Hermano", "id": "ladon" },
+        { "nombre": "Hélio Natsuki", "relacion": "Medio Hermano", "id": "helio" }
       ]
     },
     "ladon": {
@@ -1048,7 +1048,7 @@
         { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
         { "nombre": "Serena Dracroy", "relacion": "Madre", "id": "serena" },
         { "nombre": "Hippolyta Natsuki", "relacion": "Media Hermana", "id": "hippolyta" },
-        { "nombre": "Hélio Natsuki", "relacion": "Media Hermano", "id": "helio" }
+        { "nombre": "Hélio Natsuki", "relacion": "Medio Hermano", "id": "helio" }
       ]
     },
     "helio": {
@@ -1094,7 +1094,7 @@
         { "nombre": "Subaru Natsuki", "relacion": "Padre", "id": "subaru" },
         { "nombre": "Medium O'Connel", "relacion": "Madre", "id": "medium" },
         { "nombre": "Hippolyta Natsuki", "relacion": "Media Hermana", "id": "hippolyta" },
-        { "nombre": "Ladon Natsuki", "relacion": "Media Hermano", "id": "ladon" }
+        { "nombre": "Ladon Natsuki", "relacion": "Medio Hermano", "id": "ladon" }
       ]
     }
 
