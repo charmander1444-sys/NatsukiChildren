@@ -11,9 +11,20 @@ interface Props {
   alineacion?: string;
   edad?: string;
   tamano?: string | { items: TamanoItem[] };
+  cumpleanos?: string;
+  signoZodiacal?: string;
 }
 
-const { nombre, avatar = "", tipo = "", alineacion = "", edad = "", tamano = "" } = Astro.props;
+const {
+  nombre,
+  avatar = "",
+  tipo = "",
+  alineacion = "",
+  edad = "",
+  tamano = "",
+  cumpleanos = "",
+  signoZodiacal = "",
+} = Astro.props;
 
 const TIPO_LABEL: Record<string, string> = {
   hija: "Hija",
@@ -32,6 +43,34 @@ const TIPO_COLOR: Record<string, string> = {
   raiz: "#b48cff",
   conexion: "#8b8398",
 };
+
+// Íconos (símbolos astrológicos unicode) por signo zodiacal
+const ZODIAC_ICON: Record<string, string> = {
+  aries: "♈",
+  tauro: "♉",
+  geminis: "♊",
+  "géminis": "♊",
+  cancer: "♋",
+  "cáncer": "♋",
+  leo: "♌",
+  virgo: "♍",
+  libra: "♎",
+  escorpio: "♏",
+  sagitario: "♐",
+  capricornio: "♑",
+  acuario: "♒",
+  piscis: "♓",
+};
+
+function normalizeKey(s: string) {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+}
+
+const zodiacIcon = signoZodiacal ? (ZODIAC_ICON[normalizeKey(signoZodiacal)] ?? "✦") : "";
 
 const accent = TIPO_COLOR[tipo] ?? "#b48cff";
 
@@ -78,6 +117,34 @@ const metaItems = [
     <span class="text-sm uppercase tracking-wider font-body" style={`color:${accent}`}>
       {TIPO_LABEL[tipo] ?? tipo}
     </span>
+  )}
+
+  {(cumpleanos || signoZodiacal) && (
+    <div
+      class="flex items-center gap-3 rounded-xl border px-4 py-2"
+      style={`border-color:${accent}44; background:${accent}0d;`}
+    >
+      {signoZodiacal && (
+        <span
+          class="text-3xl leading-none"
+          style={`color:${accent}`}
+          title={signoZodiacal}
+          aria-hidden="true"
+        >
+          {zodiacIcon}
+        </span>
+      )}
+      <div class="text-center sm:text-left">
+        {cumpleanos && (
+          <p class="text-lg text-rz-text/85 font-body leading-tight">{cumpleanos}</p>
+        )}
+        {signoZodiacal && (
+          <p class="text-sm uppercase tracking-wider text-rz-accent-2/80 font-body leading-tight">
+            {signoZodiacal}
+          </p>
+        )}
+      </div>
+    </div>
   )}
 
   {metaItems.length > 0 && (

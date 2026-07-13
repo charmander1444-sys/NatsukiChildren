@@ -18,6 +18,8 @@ interface Character {
   alineacion?: string;
   edad?: string;
   tamano?: string;
+  cumpleanos?: string;
+  signo_zodiacal?: string;
   apariencia?: Record<string, string>;
   personalidad?: string[];
   habilidades?: string[];
@@ -63,14 +65,16 @@ const relacionesConAvatar = (statsEntry.relaciones ?? []).map((r: any) => ({
   </h1>
 
   <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6 mb-10">
-    <DetailHero
-      nombre={character.nombre}
-      avatar={character.avatar}
-      tipo={character.tipo}
-      alineacion={character.alineacion}
-      edad={character.edad}
-      tamano={character.tamano}
-    />
+      <DetailHero
+            nombre={character.nombre}
+            avatar={character.avatar}
+            tipo={character.tipo}
+            alineacion={character.alineacion}
+            edad={character.edad}
+            tamano={character.tamano}
+            cumpleanos={character.cumpleanos}
+            signoZodiacal={character.signo_zodiacal}
+          />
     <DetailStats stats={statsEntry.stats} />
   </div>
 
