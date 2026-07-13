@@ -72,7 +72,9 @@
         "https://cdn.imgchest.com/files/e20248ef65f9.png",
         "https://cdn.imgchest.com/files/60ca6597fda1.png",
         "https://cdn.imgchest.com/files/0891c1c08041.png",
-        "https://cdn.imgchest.com/files/d82b28c0df60.png"
+        "https://cdn.imgchest.com/files/d82b28c0df60.png",
+        "https://cdn.imgchest.com/files/380badfbbc50.png",
+        "https://cdn.imgchest.com/files/45538e3aeb3e.png"
       ]
     },
     {
@@ -109,6 +111,75 @@
       "artista": "EternalWhisper",
       "imagenes": [
         "https://cdn.imgchest.com/files/b09ef62dd72c.png"
+      ]
+    }
+  ],
+  "eris": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/a63a535777f7.png",
+        "https://cdn.imgchest.com/files/ba9a25106c23.png"
+      ]
+    }
+  ],
+    "aconita": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/35a21d4884ff.png",
+        "https://cdn.imgchest.com/files/81290af941c7.png"
+      ]
+    }
+  ],
+    "denebola": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/6b9a58dcfdc9.png",
+        "https://cdn.imgchest.com/files/09f60dcf3565.png",
+        "https://cdn.imgchest.com/files/b45332f35995.png"
+      ]
+    }
+  ],
+    "apollo": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/b3026c7bc35b.png",
+        "https://cdn.imgchest.com/files/fb1e1ef632d6.png"
+      ]
+    }
+  ],
+   "perseus": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/0905bde83d07.png"
+      ]
+    }
+  ],
+  "orion": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/a4ada132a5a3.png"
+      ]
+    }
+  ],
+  "cepheus": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/b4ea098edf5a.png"
+      ]
+    }
+  ],
+  "bellatrix": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/a3c76e59b496.png"
       ]
     }
   ]

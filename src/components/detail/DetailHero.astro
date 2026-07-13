@@ -55,7 +55,18 @@ const metaItems = [
     style={`border-color:${accent}88; box-shadow:0 0 25px 4px ${accent}33;`}
   >
     {avatar ? (
-      <img src={avatar} alt={nombre} class="w-full h-full object-cover" />
+      <button
+        type="button"
+        class="avatar-thumb group relative w-full h-full block cursor-zoom-in"
+        data-src={avatar}
+        aria-label={`Ampliar imagen de ${nombre}`}
+      >
+        <img
+          src={avatar}
+          alt={nombre}
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+      </button>
     ) : (
       <div class="w-full h-full bg-black flex items-center justify-center">
         <span class="text-rz-text/20 text-5xl font-display">?</span>
@@ -95,4 +106,41 @@ const metaItems = [
       </dl>
     </div>
   )}
+
+  {avatar && (
+    <div
+      id="avatar-lightbox"
+      class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-sm items-center justify-center p-6 cursor-zoom-out"
+    >
+      <img id="avatar-lightbox-img" src="" alt="" class="max-w-full max-h-full rounded-lg" />
+    </div>
+  )}
 </div>
+
+<script>
+  const avatarBtn = document.querySelector<HTMLButtonElement>(".avatar-thumb");
+  const lightbox = document.getElementById("avatar-lightbox");
+  const lightboxImg = document.getElementById("avatar-lightbox-img") as HTMLImageElement | null;
+
+  avatarBtn?.addEventListener("click", () => {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = avatarBtn.dataset.src ?? "";
+    lightboxImg.alt = avatarBtn.getAttribute("aria-label") ?? "";
+    lightbox.classList.remove("hidden");
+    lightbox.classList.add("flex");
+  });
+
+  lightbox?.addEventListener("click", () => {
+    lightbox.classList.add("hidden");
+    lightbox.classList.remove("flex");
+    if (lightboxImg) lightboxImg.src = "";
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox && !lightbox.classList.contains("hidden")) {
+      lightbox.classList.add("hidden");
+      lightbox.classList.remove("flex");
+      if (lightboxImg) lightboxImg.src = "";
+    }
+  });
+</script>

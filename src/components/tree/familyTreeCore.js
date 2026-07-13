@@ -5,12 +5,12 @@
 // contexto (ctx) que devuelve createFamilyTreeContext().
 import * as d3 from "d3";
 
-export const COLOR = { raiz: "#b48cff", madre: "#6ee7ff", hija: "#f472b6", hijo: "#60a5fa", sin_genero: "#cbd5e1", conexion: "#8b8398", };
-export const RADIUS = { raiz: 34, madre: 26, hija: 30, hijo: 30, sin_genero: 30, conexion: 20, };
-export const LEVEL = { raiz: 0, madre: 1, hija: 2, hijo: 2, sin_genero: 2, conexion: 3, };
-export const LEVEL_LABEL = { raiz: "Padre", madre: "Madres", hija: "Hijos e Hijas", hijo: "Hijos e Hijas", sin_genero: "Hijos e Hijas", conexion: "Otras conexiones", chicos: "Chicos", chicas: "Chicas", };
+export const COLOR = { raiz: "#b48cff", padre: "#f0a868", madre: "#6ee7ff", hija: "#f472b6", hijo: "#60a5fa", sin_genero: "#cbd5e1", conexion: "#8b8398", };
+export const RADIUS = { raiz: 34, padre: 32, madre: 26, hija: 30, hijo: 30, sin_genero: 30, conexion: 20, };
+export const LEVEL = { raiz: 0, padre: 0, madre: 1, hija: 2, hijo: 2, sin_genero: 2, conexion: 3 };
+export const LEVEL_LABEL = { raiz: "Padre", padre: "Padre", madre: "Madres", hija: "Hijos e Hijas", hijo: "Hijos e Hijas", sin_genero: "Hijos e Hijas", conexion: "Otras conexiones", chicos: "Chicos", chicas: "Chicas", };
 export const LEVEL_COUNT = 4;
-export const MARGIN = { top: 70, bottom: 60, side: 90 };
+export const MARGIN = { top: 190, bottom: 60, side: 90 };
 export const RING_MADRE = 360;
 export const RING_HIJO = 380;
 export const CHILD_ARC_SPAN = 0.92;  // % del sector angular que ocupan los hijos
@@ -36,13 +36,14 @@ export const SIBLING_TIPOS = [
 export const isSiblingLink = (tipo) => SIBLING_TIPOS.includes(tipo) || tipo === "madre_adoptiva";
 
 // Estilos de línea según tipo de relación (compartidos por libre/jerárquico/circular)
+// Estilos de línea según tipo de relación (compartidos por libre/jerárquico/circular)
 const strokeForLink = (d) =>
   isSiblingLink(d.tipo) ? "#8b8398" : d.tipo === "madre" ? COLOR.madre : COLOR.raiz;
 const widthForLink = (d) => (d.tipo === "padre" || d.tipo === "madre" ? 2 : 1.4);
 const dashForLink = (d) =>
-  isSiblingLink(d.tipo) ? "4 4" : d.tipo === "padre_madre_derivado" ? "3 5" : null;
+  isSiblingLink(d.tipo) ? "4 4" : (d.tipo === "padre_madre_derivado" || d.tipo === "raiz_padre_derivado") ? "3 5" : null;
 const markerForLink = (d) => (d.tipo === "padre" || d.tipo === "madre" ? `url(#arrow-${d.tipo})` : null);
-const opacityForLink = (d) => (d.tipo === "padre_madre_derivado" ? 0.4 : 0.6);
+const opacityForLink = (d) => (d.tipo === "padre_madre_derivado" || d.tipo === "raiz_padre_derivado" ? 0.4 : 0.6);
 
 /**
  * Crea todo el setup base (SVG, defs, simulación, nodos, links, panel de detalle)

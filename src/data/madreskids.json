@@ -1,0 +1,49 @@
+{
+  "madres": [
+
+{"id":"subaru","nombre":"Subaru Natsuki","tipo":"raiz"},
+  {"id":"natsumi subaru","nombre":"Natsumi Natsuki","tipo":"raiz"},
+
+  {"id":"otto suwen","nombre":"Otto Suwen","tipo":"padre"},
+
+  {"id":"echidna","nombre":"Echidna","tipo":"madre"},
+  {"id":"emilia","nombre":"Emilia","tipo":"madre"},
+  {"id":"pandora","nombre":"Pandora","tipo":"madre"},
+  {"id":"priscilla","nombre":"Priscilla Barielle","tipo":"madre"},
+  {"id":"anastasia","nombre":"Anastasia Hoshin","tipo":"madre"},
+  {"id":"shaula","nombre":"Shaula","tipo":"madre"},
+  {"id":"miyuse","nombre":"Miyuse","tipo":"madre"},
+  {"id":"shion","nombre":"Shion","tipo":"madre"},
+  {"id":"crusch","nombre":"Crusch Karsten","tipo":"madre"},
+  {"id":"elsa","nombre":"Elsa Granhiert","tipo":"madre"},
+  {"id":"emerada","nombre":"Emerada Lugunica","tipo":"madre"},
+  {"id":"felt","nombre":"Felt","tipo":"madre"},
+  {"id":"lilac","nombre":"Lilac","tipo":"madre"},
+  {"id":"daphne","nombre":"Daphne","tipo":"madre"},
+  {"id":"sekhmet","nombre":"Sekhmet","tipo":"madre"},
+  {"id":"capella","nombre":"Capella Emerada Lugunica","tipo":"madre"},
+  {"id":"liliana","nombre":"Liliana Masquerade","tipo":"madre"},
+  {"id":"ram","nombre":"Ram","tipo":"madre"},
+  {"id":"rem","nombre":"Rem","tipo":"madre"},
+  {"id":"petra","nombre":"Petra Leyte","tipo":"madre"},
+  {"id":"patrasche","nombre":"Patrasche","tipo":"madre"},
+  {"id":"minerva","nombre":"Minerva","tipo":"madre"},
+  {"id":"satella","nombre":"Satella","tipo":"madre"},
+  {"id":"sylphy","nombre":"Sylphy","tipo":"madre"},
+  {"id":"adelheid","nombre":"Adelheid Van Astrea","tipo":"madre"},
+  {"id":"zarestia","nombre":"Zarestia","tipo":"madre"},
+  {"id":"yorna","nombre":"Yorna Mishigure","tipo":"madre"},
+  {"id":"carmilla","nombre":"Carmilla","tipo":"madre"},
+  {"id":"frederica","nombre":"Frederica Baumann","tipo":"madre"},
+  {"id":"julia","nombre":"Julia Mathers","tipo":"madre"},
+  {"id":"bruja de la envidia","nombre":"Bruja de la Envidia","tipo":"madre"},
+  {"id":"katya","nombre":"Katya Aurelie","tipo":"madre"},
+  {"id":"arakiya","nombre":"Arakiya","tipo":"madre"},
+  {"id":"sphinx","nombre":"Sphinx","tipo":"madre"},
+  {"id":"sirius","nombre":"Sirius","tipo":"madre"},
+  {"id":"mizelda","nombre":"Mizelda","tipo":"madre"},
+  {"id":"serena","nombre":"Serena Dracroy","tipo":"madre"},
+  {"id":"medium","nombre":"Medium O'Connel","tipo":"madre"}
+
+]
+}
