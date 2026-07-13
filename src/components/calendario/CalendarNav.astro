@@ -1,0 +1,52 @@
+---
+// src/components/calendario/CalendarNav.astro
+// Barra de navegación: flechas para avanzar/retroceder de mes y título del mes activo.
+// Es puramente presentacional: emite eventos "calendar:prev" / "calendar:next"
+// y escucha "calendar:monthchange" para actualizar su propio título.
+---
+
+<div class="mb-6 flex items-center justify-center gap-6">
+  <button
+    id="calendar-prev"
+    type="button"
+    aria-label="Mes anterior"
+    class="flex h-10 w-10 items-center justify-center rounded-full border border-rz-accent/30 text-lg text-rz-text/70 transition-colors duration-200 hover:border-rz-accent hover:text-white"
+  >
+    ‹
+  </button>
+
+  <h2
+    id="calendar-current-month"
+    class="min-w-[180px] text-center font-display text-2xl font-bold text-white text-glow"
+  >
+    Enero
+  </h2>
+
+  <button
+    id="calendar-next"
+    type="button"
+    aria-label="Mes siguiente"
+    class="flex h-10 w-10 items-center justify-center rounded-full border border-rz-accent/30 text-lg text-rz-text/70 transition-colors duration-200 hover:border-rz-accent hover:text-white"
+  >
+    ›
+  </button>
+</div>
+
+<script>
+  const prevBtn = document.getElementById("calendar-prev");
+  const nextBtn = document.getElementById("calendar-next");
+  const label = document.getElementById("calendar-current-month");
+
+  prevBtn?.addEventListener("click", () => {
+    window.dispatchEvent(new CustomEvent("calendar:prev"));
+  });
+
+  nextBtn?.addEventListener("click", () => {
+    window.dispatchEvent(new CustomEvent("calendar:next"));
+  });
+
+  window.addEventListener("calendar:monthchange", (e) => {
+    const detail = e.detail;
+    if (label && detail?.nombreMes) label.textContent = detail.nombreMes;
+  });
+</script>

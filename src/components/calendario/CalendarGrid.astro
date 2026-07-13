@@ -1,0 +1,151 @@
+---
+// src/components/calendario/CalendarGrid.astro
+// Renderiza los 12 meses (uno visible a la vez) con sus días.
+// Cada día con cumpleaños incluye la data de los personajes en un
+// atributo data-kids para que el modal la use al hacer click.
+// También es dueño del estado "mes activo": escucha calendar:prev,
+// calendar:next y calendar:jump, y emite calendar:monthchange.
+import { MESES, diasDelMes, agruparPorDia } from "./utils.js";
+
+const { kids } = Astro.props;
+const grupos = agruparPorDia(kids);
+---
+
+<div id="calendar-grid-wrapper" class="w-full">
+  {
+    MESES.map((_mesNombre, mesIndex) => (
+      <div
+        class="calendar-month grid grid-cols-4 gap-2 sm:grid-cols-5 md:grid-cols-7 md:gap-3"
+        data-month={mesIndex}
+        style={mesIndex === 0 ? undefined : "display:none"}
+      >
+        {Array.from({ length: diasDelMes(mesIndex) }, (_, i) => i + 1).map((dia) => {
+          const key = `${mesIndex}-${dia}`;
+          const kidsDelDia = grupos[key] ?? [];
+          const tieneKids = kidsDelDia.length > 0;
+
+          return (
+            <button
+              type="button"
+              class:list={[
+                "calendar-day relative flex aspect-square flex-col items-center justify-center gap-1 rounded-xl border p-1 font-body text-sm transition-colors duration-200 md:gap-2 md:p-2",
+                tieneKids
+                  ? "cursor-pointer border-rz-accent/60 bg-rz-accent/10 text-white hover:bg-rz-accent/20"
+                  : "cursor-default border-rz-accent/10 text-rz-text/40",
+              ]}
+              data-day={dia}
+              data-month={mesIndex}
+              data-kids={tieneKids ? JSON.stringify(kidsDelDia) : ""}
+              disabled={!tieneKids}
+            >
+              <span
+                class:list={[
+                  "font-display text-base font-semibold md:text-xl",
+                  tieneKids ? "text-white" : "",
+                ]}
+              >
+                {dia}
+              </span>
+              {tieneKids && (
+                <span class="flex -space-x-2 md:-space-x-3">
+                  {kidsDelDia.slice(0, 3).map((kid) =>
+                    kid.avatar ? (
+                      <img
+                        src={kid.avatar}
+                        alt={kid.nombre}
+                        class="h-6 w-6 rounded-full border border-rz-bg object-cover md:h-9 md:w-9"
+                      />
+                    ) : (
+                      <span class="h-6 w-6 rounded-full border border-rz-bg bg-rz-accent/40 md:h-9 md:w-9" />
+                    ),
+                  )}
+                  {kidsDelDia.length > 3 && (
+                    <span class="flex h-6 w-6 items-center justify-center rounded-full border border-rz-bg bg-rz-bg-2 text-[10px] text-rz-text/70 md:h-9 md:w-9 md:text-xs">
+                      +{kidsDelDia.length - 3}
+                    </span>
+                  )}
+                </span>
+              )}
+            </button>
+          );
+        })}
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .calendar-day--highlight {
+    box-shadow: 0 0 0 2px var(--rz-accent, #d97757);
+  }
+</style>
+
+<script>
+  const MESES = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
+  ];
+
+  let mesActual = 0;
+  const monthSections = document.querySelectorAll(".calendar-month");
+
+  function mostrarMes(index) {
+    mesActual = ((index % 12) + 12) % 12;
+
+    monthSections.forEach((section) => {
+      const m = Number(section.dataset.month);
+      section.style.display = m === mesActual ? "" : "none";
+    });
+
+    window.dispatchEvent(
+      new CustomEvent("calendar:monthchange", {
+        detail: { mesIndex: mesActual, nombreMes: MESES[mesActual] },
+      }),
+    );
+  }
+
+  function resaltarDia(mesIndex, dia) {
+    document
+      .querySelectorAll(".calendar-day--highlight")
+      .forEach((el) => el.classList.remove("calendar-day--highlight"));
+
+    const selector = `.calendar-day[data-month="${mesIndex}"][data-day="${dia}"]`;
+    const dayEl = document.querySelector(selector);
+    if (!dayEl) return null;
+
+    dayEl.classList.add("calendar-day--highlight");
+    dayEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    return dayEl;
+  }
+
+  function abrirModalDelDia(dayEl, mesIndex, dia) {
+    const kidsData = dayEl?.dataset.kids;
+    if (!kidsData) return;
+    const kids = JSON.parse(kidsData);
+    window.openCalendarDayModal?.(dia, MESES[mesIndex], kids);
+  }
+
+  window.addEventListener("calendar:prev", () => mostrarMes(mesActual - 1));
+  window.addEventListener("calendar:next", () => mostrarMes(mesActual + 1));
+
+  window.addEventListener("calendar:jump", (e) => {
+    const detail = e.detail;
+    if (typeof detail?.mesIndex !== "number") return;
+
+    mostrarMes(detail.mesIndex);
+    const dayEl = resaltarDia(detail.mesIndex, detail.dia);
+    if (dayEl) abrirModalDelDia(dayEl, detail.mesIndex, detail.dia);
+  });
+
+  document.querySelectorAll(".calendar-day[data-kids]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const dia = Number(btn.dataset.day);
+      const mes = Number(btn.dataset.month);
+      resaltarDia(mes, dia);
+      abrirModalDelDia(btn, mes, dia);
+    });
+  });
+
+  // Estado inicial: título del mes 0 en el nav.
+  mostrarMes(0);
+</script>

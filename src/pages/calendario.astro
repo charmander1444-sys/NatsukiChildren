@@ -2,6 +2,7 @@
 // src/pages/calendario.astro
 import Layout from "../layouts/layout.astro";
 import Navbar from "../navbar.astro";
+import Calendar from "../components/calendario/Calendar.astro";
 ---
 <Navbar />
 <Layout title="Re:Zero Calendario" description="Calendario de cumpleaños de los personajes.">
@@ -16,7 +17,7 @@ import Navbar from "../navbar.astro";
     </section>
 
     <section class="w-full">
-      <!-- Aquí puedes agregar tu componente de calendario -->
+      <Calendar />
     </section>
   </div>
 </Layout>

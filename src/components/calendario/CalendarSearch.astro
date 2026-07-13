@@ -1,0 +1,105 @@
+---
+// src/components/calendario/CalendarSearch.astro
+// Barra buscadora: busca por nombre (hijo, hija o sin_genero) y salta
+// directamente a la fecha de cumpleaños del personaje encontrado.
+import { listaConFecha } from "./utils.js";
+
+const { kids } = Astro.props;
+const kidsConFecha = listaConFecha(kids).map((kid) => ({
+  id: kid.id,
+  nombre: kid.nombre,
+  tipo: kid.tipo,
+  dia: kid.dia,
+  mesIndex: kid.mesIndex,
+}));
+---
+
+<div class="relative mx-auto mb-8 w-full max-w-md">
+  <input
+    id="calendar-search"
+    type="text"
+    placeholder="Buscar cumpleaños por nombre..."
+    autocomplete="off"
+    class="w-full rounded-full border border-rz-accent/30 bg-rz-bg-2/60 px-4 py-2 text-sm font-body text-rz-text placeholder-rz-text/40 transition-colors duration-200 focus:border-rz-accent focus:outline-none"
+  />
+  <div
+    id="calendar-search-results"
+    class="absolute left-0 right-0 top-full z-10 mt-2 hidden max-h-64 overflow-y-auto rounded-2xl border border-rz-accent/30 bg-rz-bg-2/95 p-2 shadow-xl"
+  >
+  </div>
+</div>
+
+<script define:vars={{ kidsConFecha }}>
+  const MESES = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
+  ];
+
+  const input = document.getElementById("calendar-search");
+  const resultsBox = document.getElementById("calendar-search-results");
+
+  const normalize = (s) =>
+    s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+  function renderResults(query) {
+    if (!resultsBox) return;
+    const q = normalize(query.trim());
+
+    if (!q) {
+      resultsBox.classList.add("hidden");
+      resultsBox.innerHTML = "";
+      return;
+    }
+
+    const matches = kidsConFecha.filter((kid) => normalize(kid.nombre).includes(q));
+
+    if (matches.length === 0) {
+      resultsBox.innerHTML =
+        '<p class="px-3 py-2 text-sm font-body text-rz-text/50">Sin resultados</p>';
+      resultsBox.classList.remove("hidden");
+      return;
+    }
+
+    resultsBox.innerHTML = matches
+      .map(
+        (kid) => `
+          <button
+            type="button"
+            data-mes="${kid.mesIndex}"
+            data-dia="${kid.dia}"
+            data-nombre="${kid.nombre}"
+            class="search-result-item flex w-full items-center justify-between rounded-xl px-3 py-2 text-left font-body text-sm text-rz-text hover:bg-rz-accent/10 hover:text-white transition-colors duration-200"
+          >
+            <span>${kid.nombre}</span>
+            <span class="text-xs text-rz-text/50">${kid.dia} de ${MESES[kid.mesIndex]}</span>
+          </button>
+        `,
+      )
+      .join("");
+
+    resultsBox.classList.remove("hidden");
+
+    resultsBox.querySelectorAll(".search-result-item").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const mesIndex = Number(btn.dataset.mes);
+        const dia = Number(btn.dataset.dia);
+        window.dispatchEvent(
+          new CustomEvent("calendar:jump", { detail: { mesIndex, dia } }),
+        );
+        resultsBox.classList.add("hidden");
+        if (input) input.value = btn.dataset.nombre ?? input.value;
+      });
+    });
+  }
+
+  input?.addEventListener("input", () => renderResults(input.value));
+  input?.addEventListener("focus", () => {
+    if (input.value.trim()) renderResults(input.value);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (resultsBox && !resultsBox.contains(e.target) && e.target !== input) {
+      resultsBox.classList.add("hidden");
+    }
+  });
+</script>

@@ -1,0 +1,26 @@
+---
+// src/components/calendario/Calendar.astro
+// Orquestador: une el buscador, la navegación por meses, el grid de
+// días y el modal de cumpleaños. Cada subcomponente es responsable
+// de su propia UI y se comunican entre sí mediante CustomEvents
+// (calendar:prev, calendar:next, calendar:jump, calendar:monthchange)
+// y la función global window.openCalendarDayModal.
+import charactersData from "../../data/charactersKids.json";
+import CalendarSearch from "./CalendarSearch.astro";
+import CalendarNav from "./CalendarNav.astro";
+import CalendarGrid from "./CalendarGrid.astro";
+import CalendarModal from "./CalendarModal.astro";
+import { obtenerHijosConCumpleanos } from "./utils.js";
+
+// charactersKids.json trae TODOS los personajes (raiz, padre, madre,
+// conexion, hijo/hija/sin_genero). Para el calendario solo nos interesan
+// los hijos que ya tengan cumpleanos cargado.
+const kids = obtenerHijosConCumpleanos(charactersData);
+---
+
+<div class="w-full">
+  <CalendarSearch kids={kids} />
+  <CalendarNav />
+  <CalendarGrid kids={kids} />
+  <CalendarModal />
+</div>

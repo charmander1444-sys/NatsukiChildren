@@ -1,0 +1,90 @@
+---
+// src/components/calendario/CalendarModal.astro
+// Modal que muestra quién(es) cumplen años el día seleccionado.
+// Expone window.openCalendarDayModal(dia, nombreMes, kids) para que
+// CalendarGrid la invoque al hacer click en un día.
+---
+
+<div
+  id="calendar-modal-overlay"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 px-4 backdrop-blur-sm"
+>
+  <div
+    id="calendar-modal"
+    class="relative w-full max-w-md rounded-2xl border border-rz-accent/30 bg-rz-bg-2/95 p-6 shadow-2xl md:max-w-xl md:rounded-3xl md:p-8"
+  >
+    <button
+      id="calendar-modal-close"
+      type="button"
+      aria-label="Cerrar"
+      class="absolute right-4 top-4 text-rz-text/50 transition-colors duration-200 hover:text-white md:right-6 md:top-6 md:text-lg"
+    >
+      ✕
+    </button>
+
+    <h3 id="calendar-modal-title" class="mb-4 font-display text-xl font-bold text-white text-glow md:mb-6 md:text-3xl">
+      Cumpleaños
+    </h3>
+
+    <div id="calendar-modal-list" class="flex max-h-80 flex-col gap-3 overflow-y-auto pr-1 md:max-h-[28rem] md:gap-4">
+    </div>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById("calendar-modal-overlay");
+  const closeBtn = document.getElementById("calendar-modal-close");
+  const titleEl = document.getElementById("calendar-modal-title");
+  const listEl = document.getElementById("calendar-modal-list");
+
+  function closeModal() {
+    overlay?.classList.add("hidden");
+    overlay?.classList.remove("flex");
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str ?? "";
+    return div.innerHTML;
+  }
+
+  function openModal(dia, nombreMes, kids) {
+    if (!titleEl || !listEl || !overlay) return;
+
+    titleEl.textContent = `Cumpleaños del ${dia} de ${nombreMes}`;
+
+    listEl.innerHTML = kids
+      .map((kid) => {
+        const nombre = escapeHtml(kid.nombre);
+        const tipo = escapeHtml(String(kid.tipo).replace("_", " "));
+        const avatarHtml = kid.avatar
+          ? `<img src="${escapeHtml(kid.avatar)}" alt="${nombre}" class="h-12 w-12 rounded-full border border-rz-accent/40 object-cover md:h-16 md:w-16" />`
+          : `<div class="flex h-12 w-12 items-center justify-center rounded-full bg-rz-accent/20 text-xs text-rz-text/60 md:h-16 md:w-16 md:text-sm">?</div>`;
+
+        return `
+          <div class="flex items-center gap-3 rounded-xl border border-rz-accent/20 bg-rz-bg/60 p-3 md:gap-4 md:rounded-2xl md:p-4">
+            ${avatarHtml}
+            <div class="flex flex-col">
+              <span class="font-body text-sm font-semibold text-white md:text-lg">${nombre}</span>
+              <span class="font-body text-xs capitalize text-rz-text/50 md:text-sm">${tipo}</span>
+            </div>
+          </div>
+        `;
+      })
+      .join("");
+
+    overlay.classList.remove("hidden");
+    overlay.classList.add("flex");
+  }
+
+  // Expuesta globalmente para que CalendarGrid la invoque al hacer click en un día.
+  window.openCalendarDayModal = openModal;
+
+  closeBtn?.addEventListener("click", closeModal);
+  overlay?.addEventListener("click", (e) => {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+</script>
