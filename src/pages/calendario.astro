@@ -1,0 +1,22 @@
+---
+// src/pages/calendario.astro
+import Layout from "../layouts/layout.astro";
+import Navbar from "../navbar.astro";
+---
+<Navbar />
+<Layout title="Re:Zero Calendario" description="Calendario de cumpleaños de los personajes.">
+  <div class="mx-auto flex w-full max-w-7xl flex-col gap-8 px-6 py-8">
+    <section class="mx-auto max-w-3xl text-center">
+      <h1 class="font-display text-4xl font-bold text-white text-glow">
+        Calendario de Personajes
+      </h1>
+      <p class="mt-3 text-lg leading-relaxed text-rz-text/70">
+        Próximos cumpleaños y fechas importantes.
+      </p>
+    </section>
+
+    <section class="w-full">
+      <!-- Aquí puedes agregar tu componente de calendario -->
+    </section>
+  </div>
+</Layout>
