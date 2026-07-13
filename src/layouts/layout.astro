@@ -2,6 +2,7 @@
 // Layout.astro
 import "../styles/global.css";
 import Starfield from "../components/Starfield.astro";
+import DarkGalaxy from "../components/DarkGalaxy.astro";
 
 interface Props {
   title?: string;
@@ -31,6 +32,7 @@ const {
   </head>
   <body class="min-h-screen bg-rz-bg text-rz-text font-body">
     <div class="relative min-h-screen flex flex-col overflow-x-hidden bg-[radial-gradient(ellipse_at_top,rgba(75,40,130,0.35),transparent_60%)]">
+
       <Starfield />
 
       <div class="fixed -top-[10%] -left-[10%] -z-10 w-[45vw] h-[45vw] rounded-full blur-[120px] opacity-25 bg-[#8b5cf6] pointer-events-none"></div>

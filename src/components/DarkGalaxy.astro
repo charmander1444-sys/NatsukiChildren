@@ -1,0 +1,243 @@
+---
+// DarkGalaxy.astro — fondo de galaxia oscura: núcleo brillante, brazos
+// espirales de estrellas y nubes de polvo cósmico girando lentamente.
+---
+
+<div
+  class="fixed inset-0 -z-20 overflow-hidden pointer-events-none"
+  style="background: radial-gradient(ellipse at center, #140b28 0%, #0a0616 45%, #030208 80%, #000000 100%);"
+>
+  <svg id="dark-galaxy" class="w-full h-full" preserveAspectRatio="xMidYMid slice"></svg>
+</div>
+
+<script>
+  function initDarkGalaxy() {
+    const svg = document.getElementById("dark-galaxy");
+    if (!svg) return;
+
+    const ns = "http://www.w3.org/2000/svg";
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+
+    const cx = width / 2;
+    const cy = height / 2;
+    const maxRadius = Math.min(width, height) * 0.6;
+    const ARM_COUNT = 3;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    // --- defs: gradientes y filtro de desenfoque para el polvo cósmico ---
+    const defs = document.createElementNS(ns, "defs");
+
+    const coreGradient = document.createElementNS(ns, "radialGradient");
+    coreGradient.setAttribute("id", "galaxy-core");
+    coreGradient.innerHTML = `
+      <stop offset="0%" stop-color="#f2e9ff" stop-opacity="0.95" />
+      <stop offset="25%" stop-color="#b48cff" stop-opacity="0.55" />
+      <stop offset="60%" stop-color="#4a2a80" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#0a0614" stop-opacity="0" />
+    `;
+    defs.appendChild(coreGradient);
+
+    const dustGradient = document.createElementNS(ns, "radialGradient");
+    dustGradient.setAttribute("id", "galaxy-dust");
+    dustGradient.innerHTML = `
+      <stop offset="0%" stop-color="#5d3a94" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#1a1030" stop-opacity="0" />
+    `;
+    defs.appendChild(dustGradient);
+
+    const blurFilter = document.createElementNS(ns, "filter");
+    blurFilter.setAttribute("id", "galaxy-blur");
+    blurFilter.setAttribute("x", "-50%");
+    blurFilter.setAttribute("y", "-50%");
+    blurFilter.setAttribute("width", "200%");
+    blurFilter.setAttribute("height", "200%");
+    const feBlur = document.createElementNS(ns, "feGaussianBlur");
+    feBlur.setAttribute("stdDeviation", "16");
+    blurFilter.appendChild(feBlur);
+    defs.appendChild(blurFilter);
+
+    const shootingGradient = document.createElementNS(ns, "linearGradient");
+    shootingGradient.setAttribute("id", "galaxy-shooting-gradient");
+    shootingGradient.innerHTML = `
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#e8dcff" stop-opacity="1" />
+    `;
+    defs.appendChild(shootingGradient);
+
+    svg.appendChild(defs);
+
+    // --- estrellas ambientales dispersas, dan profundidad detrás de la galaxia ---
+    const ambientGroup = document.createElementNS(ns, "g");
+    const AMBIENT_COUNT = Math.round((width * height) / 15000);
+    for (let i = 0; i < AMBIENT_COUNT; i++) {
+      const circle = document.createElementNS(ns, "circle");
+      circle.setAttribute("cx", String(Math.random() * width));
+      circle.setAttribute("cy", String(Math.random() * height));
+      circle.setAttribute("r", String(Math.random() * 0.9 + 0.3));
+      circle.setAttribute("fill", "#e4defa");
+      circle.style.opacity = "0.45";
+      if (!prefersReducedMotion) {
+        circle.style.animation = `galaxy-twinkle ${5 + Math.random() * 6}s ease-in-out ${
+          Math.random() * 8
+        }s infinite`;
+      }
+      ambientGroup.appendChild(circle);
+    }
+    svg.appendChild(ambientGroup);
+
+    // --- grupo que gira: núcleo, polvo y estrellas de los brazos espirales ---
+    const rotor = document.createElementNS(ns, "g");
+
+    const core = document.createElementNS(ns, "circle");
+    core.setAttribute("cx", String(cx));
+    core.setAttribute("cy", String(cy));
+    core.setAttribute("r", String(maxRadius * 0.22));
+    core.setAttribute("fill", "url(#galaxy-core)");
+    rotor.appendChild(core);
+
+    const dustGroup = document.createElementNS(ns, "g");
+    dustGroup.setAttribute("filter", "url(#galaxy-blur)");
+    const DUST_PER_ARM = 9;
+    for (let arm = 0; arm < ARM_COUNT; arm++) {
+      const armOffset = (arm * (Math.PI * 2)) / ARM_COUNT;
+      for (let i = 0; i < DUST_PER_ARM; i++) {
+        const t = (i + 1) / DUST_PER_ARM;
+        const theta = armOffset + t * Math.PI * 2.4;
+        const radius = t * maxRadius;
+        const perp = theta + Math.PI / 2;
+        const scatter = (Math.random() - 0.5) * radius * 0.3;
+        const x = cx + Math.cos(theta) * radius + Math.cos(perp) * scatter;
+        const y = cy + Math.sin(theta) * radius + Math.sin(perp) * scatter;
+        const size = 26 + Math.random() * 54 * (1 - t * 0.4);
+
+        const blob = document.createElementNS(ns, "ellipse");
+        blob.setAttribute("cx", String(x));
+        blob.setAttribute("cy", String(y));
+        blob.setAttribute("rx", String(size));
+        blob.setAttribute("ry", String(size * (0.45 + Math.random() * 0.4)));
+        blob.setAttribute("fill", "url(#galaxy-dust)");
+        blob.setAttribute(
+          "transform",
+          `rotate(${(theta * 180) / Math.PI} ${x} ${y})`,
+        );
+        dustGroup.appendChild(blob);
+      }
+    }
+    rotor.appendChild(dustGroup);
+
+    const starsGroup = document.createElementNS(ns, "g");
+    const STARS_PER_ARM = Math.round(
+      (width * height) / 6000 / ARM_COUNT,
+    );
+    for (let arm = 0; arm < ARM_COUNT; arm++) {
+      const armOffset = (arm * (Math.PI * 2)) / ARM_COUNT;
+      for (let i = 0; i < STARS_PER_ARM; i++) {
+        const t = Math.random();
+        const theta = armOffset + t * Math.PI * 2.4;
+        const radius = t * maxRadius;
+        const perp = theta + Math.PI / 2;
+        const scatter = (Math.random() - 0.5) * (18 + radius * 0.16);
+        const x = cx + Math.cos(theta) * radius + Math.cos(perp) * scatter;
+        const y = cy + Math.sin(theta) * radius + Math.sin(perp) * scatter;
+
+        const brilloCercaNucleo = 1 - t * 0.6;
+        const r = (Math.random() * 1 + 0.3) * (0.6 + brilloCercaNucleo * 0.6);
+
+        const circle = document.createElementNS(ns, "circle");
+        circle.setAttribute("cx", String(x));
+        circle.setAttribute("cy", String(y));
+        circle.setAttribute("r", String(r));
+        circle.setAttribute("fill", Math.random() < 0.15 ? "#cdb8ff" : "#f4f0fc");
+        circle.style.opacity = String(0.35 + brilloCercaNucleo * 0.4);
+        if (!prefersReducedMotion) {
+          circle.style.animation = `galaxy-twinkle ${4 + Math.random() * 5}s ease-in-out ${
+            Math.random() * 6
+          }s infinite`;
+        }
+        starsGroup.appendChild(circle);
+      }
+    }
+    rotor.appendChild(starsGroup);
+
+    svg.appendChild(rotor);
+
+    // --- rotación lenta del brazo espiral alrededor del núcleo ---
+    if (!prefersReducedMotion) {
+      const DURACION_VUELTA_MS = 260000; // una vuelta completa cada ~4.3 minutos
+      let inicio: number | null = null;
+
+      function girar(timestamp: number) {
+        if (inicio === null) inicio = timestamp;
+        const elapsed = timestamp - inicio;
+        const angulo = (elapsed / DURACION_VUELTA_MS) * 360;
+        rotor.setAttribute("transform", `rotate(${angulo} ${cx} ${cy})`);
+        requestAnimationFrame(girar);
+      }
+      requestAnimationFrame(girar);
+    }
+
+    // --- estrella fugaz ocasional, con tinte violeta acorde a la paleta ---
+    function spawnShootingStar() {
+      const startX = Math.random() * width * 0.6;
+      const startY = Math.random() * height * 0.3;
+      const length = 120 + Math.random() * 80;
+
+      const line = document.createElementNS(ns, "line");
+      line.setAttribute("x1", String(startX));
+      line.setAttribute("y1", String(startY));
+      line.setAttribute("x2", String(startX + length));
+      line.setAttribute("y2", String(startY + length * 0.4));
+      line.setAttribute("stroke", "url(#galaxy-shooting-gradient)");
+      line.setAttribute("stroke-width", "2");
+      line.setAttribute("stroke-linecap", "round");
+      line.style.opacity = "0";
+      line.style.animation = "galaxy-shooting-star 1.4s ease-out forwards";
+      svg.appendChild(line);
+
+      setTimeout(() => line.remove(), 1600);
+    }
+
+    if (!prefersReducedMotion) {
+      function scheduleShootingStar() {
+        const delay = 7000 + Math.random() * 11000;
+        setTimeout(() => {
+          spawnShootingStar();
+          scheduleShootingStar();
+        }, delay);
+      }
+      scheduleShootingStar();
+    }
+  }
+
+  initDarkGalaxy();
+</script>
+
+<style>
+  @keyframes galaxy-twinkle {
+    0%,
+    100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes galaxy-shooting-star {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(60px, 24px);
+    }
+  }
+</style>
