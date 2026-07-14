@@ -6,23 +6,546 @@
 
   {"id":"otto suwen","nombre":"Otto Suwen","tipo":"padre"},
 
-  {"id":"echidna","nombre":"Echidna","tipo":"madre"},
-  {"id":"emilia","nombre":"Emilia","tipo":"madre"},
-  {"id":"pandora","nombre":"Pandora","tipo":"madre"},
-  {"id":"priscilla","nombre":"Priscilla Barielle","tipo":"madre"},
-  {"id":"anastasia","nombre":"Anastasia Hoshin","tipo":"madre"},
-  {"id":"shaula","nombre":"Shaula","tipo":"madre"},
+
+{
+  "id": "echidna",
+  "alineacion": "neutral",
+  "tamano": "164 cm",
+  "apariencia": {
+    "cabello": "Blanco, largo, liso y hasta las caderas",
+    "ojos": "Negros",
+    "ropa": "Vestido negro largo con líneas y detalles blancos; lleva un broche de mariposa en el lado izquierdo del flequillo.",
+    "constitucion": "Alta, delgada y de piel completamente blanca",
+    "marcas": ""
+  },
+  "personalidad": [
+    "Su curiosidad por lo desconocido y su sed de conocimiento definen toda su forma de actuar.",
+    "Es educada, tranquila y de hablar amable a primera vista.",
+    "Puede parecer comprensiva e incluso algo infantil en ocasiones.",
+    "No comprende los sentimientos de los demás y posee una personalidad considerada de 'corazón negro'.",
+    "Está dispuesta a mentir, manipular o engañar si eso le permite obtener más conocimiento.",
+    "Siente una enorme fascinación por el Regreso por la Muerte de Subaru y desea observar todas las posibilidades que genera.",
+    "Es bastante torpe para las tareas cotidianas y puede ser olvidadiza.",
+    "Aunque aparenta ser fría, ocasionalmente deja ver tristeza, culpa y soledad."
+  ],
+  "habilidades": [
+    "Bruja de la Avaricia.",
+    "Dominio de los seis atributos mágicos: Fuego, Agua, Viento, Tierra, Yin y Yang.",
+    "Afinidad con los seis atributos mágicos.",
+    "Autoridad de la Avaricia.",
+    "Puede crear portales hacia el Castillo de los Sueños.",
+    "Manipulación de recuerdos, pudiendo leer y borrar memorias.",
+    "Magia de teletransportación.",
+    "Creó múltiples artes prohibidas y técnicas mágicas, incluyendo Ol Shamak y Al Shario.",
+    "Es una de las magas más poderosas de la historia, capaz de derrotar dragones con facilidad."
+  ],
+  "equipamiento": [
+    "Libro de la Sabiduría (Book of Wisdom)"
+  ],
+  "trivia": [
+    "Es la Bruja de la Avaricia.",
+    "Su cumpleaños es el 24 de enero.",
+    "Tiene más de 400 años; su cuerpo original aparentaba alrededor de 20 años.",
+    "Fue la creadora de Beatrice, Puck, las copias de Ryuzu, Eridna y Sphinx.",
+    "Tras los acontecimientos del Arco 4 renació usando el cuerpo de Ryuzu Shima y adoptó el nombre de Omega.",
+    "Su presencia emite un miasma tan intenso que puede provocar miedo extremo, náuseas e incluso la muerte tras una exposición prolongada.",
+    "Siempre viste ropa negra porque, según el autor, hace mucho tiempo alguien le dijo que ese color le quedaba bien.",
+    "El 'té de la Bruja' que ofrece durante las reuniones del Castillo de los Sueños está hecho a partir de sus propios fluidos corporales."
+  ]
+},
+  {
+    "id": "emilia",
+    "alineacion": "buena",
+    "tamano": "164 cm",
+    "apariencia": {
+      "cabello": "Plateado, largo y liso",
+      "ojos": "Violeta (iris) y azul (pupilas)",
+      "ropa": "Vestido blanco y morado con adornos verdes, capa blanca y una flor blanca en el cabello.",
+      "constitucion": "Esbelta",
+      "marcas": "Orejas largas de semielfa"
+    },
+    "personalidad": [
+      "Amable, bondadosa y muy compasiva.",
+      "Extremadamente altruista y dispuesta a ayudar a cualquiera.",
+      "Algo ingenua debido a su aislamiento durante gran parte de su vida.",
+      "Honesta y sincera.",
+      "Perseverante y valiente frente a las dificultades.",
+      "Se preocupa profundamente por sus seres queridos."
+    ],
+    "habilidades": [
+      "Magia de Fuego (utilizada principalmente como magia de hielo).",
+      "Artes espirituales.",
+      "Gran afinidad con los espíritus.",
+      "Puede crear armas, barreras y enormes estructuras de hielo.",
+      "Gran reserva de maná.",
+      "Combatiente de alto nivel."
+    ],
+    "equipamiento": [
+      "Glintstone.",
+      "Recognition Obstruction Robe.",
+      "Fragmento de la Garra del Dragón Divino."
+    ],
+    "trivia": [
+      "Es una candidata a la Selección Real de Lugunica.",
+      "Es una semielfa de cabello plateado.",
+      "Su cumpleaños es el 23 de septiembre.",
+      "Fue criada por Fortuna y Puck actuó como su figura paterna durante años."
+    ]
+  },
+  {
+    "id": "pandora",
+    "alineacion": "malvada",
+    "tamano": "155 cm",
+    "apariencia": {
+      "cabello": "Platino, largo",
+      "ojos": "Azul oscuro",
+      "ropa": "Solo viste una tela blanca que cubre su cuerpo.",
+      "constitucion": "Pequeña y delgada, con apariencia infantil.",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Calmada y elegante.",
+      "Extremadamente egoísta y manipuladora.",
+      "Sociopática y carente de remordimientos.",
+      "Nunca pierde la compostura.",
+      "Considera a las demás personas simples herramientas."
+    ],
+    "habilidades": [
+      "Bruja de la Vanagloria.",
+      "Autoridad de la Vanagloria.",
+      "Manipulación de fenómenos.",
+      "Puede reescribir acontecimientos y negar su propia muerte.",
+      "Manipulación de los sentidos.",
+      "Manipulación indirecta de bestias bruja.",
+      "Inmortalidad práctica."
+    ],
+    "equipamiento": [],
+    "trivia": [
+      "Es la Bruja de la Vanagloria.",
+      "Tiene más de 400 años.",
+      "Su cumpleaños es el 3 de mayo.",
+      "Fue responsable del incidente del Bosque Elior.",
+      "Es la única persona a quien Regulus Corneas respeta y teme."
+    ]
+  },
+  {
+    "id": "priscilla",
+    "alineacion": "neutral",
+    "tamano": "164 cm",
+    "apariencia": {
+      "cabello": "Naranja",
+      "ojos": "Rojo carmesí con pupilas blancas",
+      "ropa": "Vestidos y kimonos extremadamente lujosos adornados con numerosas joyas.",
+      "constitucion": "Esbelta",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Orgullosa y extremadamente arrogante.",
+      "Está convencida de que el mundo gira a su alrededor.",
+      "Muy inteligente y perceptiva.",
+      "Caprichosa e impredecible.",
+      "Desprecia el aburrimiento.",
+      "Comprende fácilmente la personalidad de quienes la rodean."
+    ],
+    "habilidades": [
+      "Excelente espadachina.",
+      "Magia Yang.",
+      "Gran intuición.",
+      "Extraordinaria suerte.",
+      "Combatiente de primer nivel."
+    ],
+    "equipamiento": [
+      "Yang Sword."
+    ],
+    "trivia": [
+      "Es una candidata a la Selección Real.",
+      "Su cumpleaños es el 7 de julio.",
+      "Es conocida como la 'Princesa del Sol'.",
+      "Su caballero es Aldebaran (Al)."
+    ]
+  },
+  {
+    "id": "anastasia",
+    "alineacion": "buena",
+    "tamano": "155 cm",
+    "apariencia": {
+      "cabello": "Lila",
+      "ojos": "Azules",
+      "ropa": "Vestimenta elegante de comerciante con vestido morado y blanco.",
+      "constitucion": "Pequeña y delgada",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Astuta y calculadora.",
+      "Excelente negociadora.",
+      "Muy inteligente.",
+      "Carismática.",
+      "Pragmática.",
+      "Suele anteponer los negocios y la lógica."
+    ],
+    "habilidades": [
+      "Gran capacidad estratégica.",
+      "Experta comerciante.",
+      "Contrato espiritual con Echidna (espíritu artificial).",
+      "Conocimientos financieros excepcionales."
+    ],
+    "equipamiento": [
+      "Bufanda característica.",
+      "Abacus (herramienta de cálculo)."
+    ],
+    "trivia": [
+      "Es la presidenta de la Compañía Hoshin.",
+      "Es una candidata a la Selección Real.",
+      "Nació en Kararagi.",
+      "Su forma de hablar posee un marcado acento de Kararagi."
+    ]
+  },
+  {
+    "id": "shaula",
+    "alineacion": "neutral",
+    "tamano": "170 cm",
+    "apariencia": {
+      "cabello": "Castaño negruzco, largo, recogido en una cola que ella llama 'cola de escorpión'",
+      "ojos": "Verdes con tres puntos rojos alrededor de cada pupila",
+      "ropa": "Bikini negro, pantalones cortos negros con cinturón naranja, pajarita, collar y una capa negra y naranja desgastada",
+      "constitucion": "Alta, voluptuosa y de gran busto",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Absolutamente leal a Flugel, su maestro.",
+      "Enérgica y despreocupada.",
+      "Impulsiva y poco apta para trabajos que requieren pensar demasiado.",
+      "Tiene dificultades para distinguir a las personas y las identifica principalmente por su olor.",
+      "Demuestra un profundo afecto hacia quien considera su maestro.",
+      "Está dispuesta a sacrificarse si su maestro se lo ordena."
+    ],
+    "habilidades": [
+      "Transformación en el Escorpión Carmesí.",
+      "Fuerza física sobrehumana.",
+      "Hell's Snipe e Infinite Hell's Snipe.",
+      "Gran resistencia y regeneración.",
+      "Puede detectar cuando se rompe una regla de la Atalaya de las Pléyades.",
+      "Manipulación de puertas dimensionales."
+    ],
+    "equipamiento": [],
+    "trivia": [
+      "Fue creada por Daphne con ayuda de Flugel.",
+      "Es la aprendiz de Flugel.",
+      "Ha protegido la Atalaya de las Pléyades durante más de 400 años.",
+      "Su cumpleaños es el 20 de diciembre.",
+      "Tras el Arco 6 quedó convertida en un pequeño escorpión."
+    ]
+  },
+  {
+    "id": "shion",
+    "alineacion": "buena",
+    "tamano": "",
+    "apariencia": {
+      "cabello": "Verde",
+      "ojos": "Naranjas con pupilas azules",
+      "ropa": "",
+      "constitucion": "",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Tranquila.",
+      "Curiosa.",
+      "Empática con los recuerdos de otras personas.",
+      "Reservada."
+    ],
+    "habilidades": [
+      "Dream Arts.",
+      "Memory Scouring (puede explorar recuerdos ajenos).",
+      "Magia."
+    ],
+    "equipamiento": [
+      "Daga"
+    ],
+    "trivia": [
+      "Es un personaje canónico introducido originalmente en Re:Zero Lost in Memories.",
+      "Pertenece al grupo de Omega.",
+      "Comparte cumpleaños con Lilac: 9 de septiembre.",
+      "Lilac es su otra personalidad/alma separada."
+    ]
+  },
+  {
+    "id": "crusch",
+    "alineacion": "buena",
+    "tamano": "168 cm",
+    "apariencia": {
+      "cabello": "Verde claro",
+      "ojos": "Azules",
+      "ropa": "Uniforme militar blanco con detalles verdes y capa",
+      "constitucion": "Atlética",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Honesta y directa.",
+      "Noble y justa.",
+      "Gran sentido del deber.",
+      "Carismática.",
+      "Valiente y decidida.",
+      "Excelente líder."
+    ],
+    "habilidades": [
+      "Esgrima de alto nivel.",
+      "Magia de Viento.",
+      "Divine Protection of Wind Indication.",
+      "Gran capacidad de liderazgo."
+    ],
+    "equipamiento": [
+      "Espada"
+    ],
+    "trivia": [
+      "Es la jefa de la Casa Karsten.",
+      "Es una candidata a la Selección Real.",
+      "Ferris es su caballero.",
+      "Perdió sus recuerdos debido a la Autoridad de la Gula."
+    ]
+  },
+  {
+    "id": "elsa",
+    "alineacion": "malvada",
+    "tamano": "168 cm",
+    "apariencia": {
+      "cabello": "Negro largo",
+      "ojos": "Grises azulados",
+      "ropa": "Vestido negro muy revelador con medias oscuras y tacones",
+      "constitucion": "Alta, esbelta y muy curvilínea",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Sádica.",
+      "Disfruta destripando a sus víctimas.",
+      "Segura de sí misma.",
+      "Fría y calculadora.",
+      "Muy paciente durante los combates.",
+      "Profesional como asesina."
+    ],
+    "habilidades": [
+      "Combate con cuchillos.",
+      "Velocidad y agilidad extraordinarias.",
+      "Regeneración anormal.",
+      "Gran resistencia al daño.",
+      "Experta asesina."
+    ],
+    "equipamiento": [
+      "Kukris.",
+      "Diversos cuchillos ocultos."
+    ],
+    "trivia": [
+      "Es conocida como la 'Cazadora de Intestinos'.",
+      "Trabajó para Roswaal L. Mathers.",
+      "Su obsesión es ver los intestinos de sus víctimas.",
+      "Su cumpleaños es el 2 de febrero."
+    ]
+  },
+  
   {"id":"miyuse","nombre":"Miyuse","tipo":"madre"},
-  {"id":"shion","nombre":"Shion","tipo":"madre"},
-  {"id":"crusch","nombre":"Crusch Karsten","tipo":"madre"},
-  {"id":"elsa","nombre":"Elsa Granhiert","tipo":"madre"},
   {"id":"emerada","nombre":"Emerada Lugunica","tipo":"madre"},
-  {"id":"felt","nombre":"Felt","tipo":"madre"},
-  {"id":"lilac","nombre":"Lilac","tipo":"madre"},
-  {"id":"daphne","nombre":"Daphne","tipo":"madre"},
-  {"id":"sekhmet","nombre":"Sekhmet","tipo":"madre"},
-  {"id":"capella","nombre":"Capella Emerada Lugunica","tipo":"madre"},
-  {"id":"liliana","nombre":"Liliana Masquerade","tipo":"madre"},
+
+  {
+    "id": "felt",
+    "alineacion": "buena",
+    "tamano": "153 cm",
+    "apariencia": {
+      "cabello": "Rubio dorado, corto hasta el cuello",
+      "ojos": "Rojo carmesí",
+      "ropa": "Normalmente viste ropa ligera de ladrona con bufanda roja, chaleco marrón y una daga; como candidata real también usa vestidos elegantes.",
+      "constitucion": "Baja, delgada y de pecho plano",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Rebelde y de mal carácter.",
+      "Muy independiente.",
+      "Valiente y decidida.",
+      "Odia la nobleza y la corrupción del reino.",
+      "Cuidadosa con el dinero debido a su infancia en los barrios bajos.",
+      "Se preocupa profundamente por Rom y Reinhard."
+    ],
+    "habilidades": [
+      "Gran agilidad y velocidad.",
+      "Excelente ladrona.",
+      "Buena combatiente con dagas.",
+      "Protección Divina desconocida."
+    ],
+    "equipamiento": [
+      "Daga."
+    ],
+    "trivia": [
+      "Es una candidata a la Selección Real.",
+      "Fue criada por Rom en los barrios bajos.",
+      "Existe la posibilidad de que tenga sangre de la familia real."
+    ]
+  },
+  {
+    "id": "lilac",
+    "alineacion": "buena",
+    "tamano": "",
+    "apariencia": {
+      "cabello": "Largo y morado con dos flores negras.",
+      "ojos": "Morados y rosados",
+      "ropa": "Vestido negro corto sin mangas, rosa roja en el brazo izquierdo, gargantilla con lazo morado y relicario dorado.",
+      "constitucion": "Delgada",
+      "marcas": "Orejas puntiagudas de elfa."
+    },
+    "personalidad": [
+      "Más agresiva que Shion.",
+      "Terca.",
+      "Muy protectora con Shion.",
+      "Evita involucrar a inocentes cuando puede.",
+      "Busca a la persona cuyos recuerdos cambiaron su vida."
+    ],
+    "habilidades": [
+      "Dream Arts.",
+      "Hipnosis.",
+      "Implantación de pensamientos.",
+      "Memory Scouring.",
+      "Posesión del cuerpo compartido con Shion."
+    ],
+    "equipamiento": [
+      "Daga."
+    ],
+    "trivia": [
+      "Comparte el mismo cuerpo con Shion.",
+      "Es miembro del grupo de Omega.",
+      "Cumpleaños: 9 de septiembre.",
+      "Debutó originalmente en Re:Zero Lost in Memories antes de convertirse en personaje canónico."
+    ]
+  },
+  {
+    "id": "daphne",
+    "alineacion": "neutral",
+    "tamano": "140 cm",
+    "apariencia": {
+      "cabello": "Gris ceniza, hasta los hombros, recogido en dos coletas.",
+      "ojos": "Dorado amarillo (cubiertos por una venda).",
+      "ropa": "Camisa de fuerza negra sobre ropa blanca; permanece encadenada al Ataúd Ciempiés.",
+      "constitucion": "Pequeña, con apariencia de una adolescente.",
+      "marcas": "Colmillos."
+    },
+    "personalidad": [
+      "Obsesionada con el hambre.",
+      "Infantil y alegre al hablar.",
+      "No comprende la moral humana.",
+      "Su único objetivo es eliminar el hambre del mundo.",
+      "Da apodos a las personas."
+    ],
+    "habilidades": [
+      "Bruja de la Gula.",
+      "Autoridad de la Gula.",
+      "Creación de Mabestias.",
+      "Capaz de devorar enormes cantidades de materia.",
+      "Enorme poder mágico."
+    ],
+    "equipamiento": [
+      "Ataúd Ciempiés."
+    ],
+    "trivia": [
+      "Creó la Ballena Blanca, el Gran Conejo y la Serpiente Negra.",
+      "Murió de hambre en un desierto hace más de 400 años.",
+      "También creó a Shaula."
+    ]
+  },
+  {
+    "id": "sekhmet",
+    "alineacion": "neutral",
+    "tamano": "170 cm",
+    "apariencia": {
+      "cabello": "Magenta, extremadamente largo hasta los pies.",
+      "ojos": "Magenta",
+      "ropa": "Vestimenta negra muy reveladora.",
+      "constitucion": "Alta, voluptuosa y de piel muy pálida.",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Extremadamente perezosa.",
+      "Madura y filosófica.",
+      "Generalmente neutral en las discusiones.",
+      "Ayuda a quien considera que tiene razón.",
+      "Odia hacer cualquier esfuerzo innecesario."
+    ],
+    "habilidades": [
+      "Bruja de la Pereza.",
+      "Autoridad de la Pereza.",
+      "Brazos invisibles de enorme poder.",
+      "Poder suficiente para derrotar dragones."
+    ],
+    "equipamiento": [],
+    "trivia": [
+      "Es una gigante.",
+      "Cumpleaños: 13 de agosto.",
+      "Murió tras caer por la Gran Cascada durante una batalla contra Volcanica.",
+      "Fue quien casi llevó a los gigantes a la extinción."
+    ]
+  },
+  {
+    "id": "capella",
+    "alineacion": "malvada",
+    "tamano": "145 cm (variable)",
+    "apariencia": {
+      "cabello": "Rubio (variable)",
+      "ojos": "Rojo carmesí (variable)",
+      "ropa": "Vestimenta extravagante y reveladora.",
+      "constitucion": "Pequeña; puede alterar completamente su cuerpo.",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Sádica.",
+      "Narcisista.",
+      "Manipuladora.",
+      "Cruel.",
+      "Disfruta deformando física y mentalmente a sus víctimas.",
+      "Se considera la personificación de la belleza."
+    ],
+    "habilidades": [
+      "Arzobispo del Pecado de la Lujuria.",
+      "Autoridad de la Lujuria.",
+      "Transformación corporal.",
+      "Regeneración extrema.",
+      "Puede transformar los cuerpos de otras personas."
+    ],
+    "equipamiento": [
+      "Evangelio (Gospel)."
+    ],
+    "trivia": [
+      "También es conocida como 'Mother'.",
+      "Lidera a los Beloved Children.",
+      "Fue quien reunió y controló a Elsa y Meili."
+    ]
+  },
+  {
+    "id": "liliana",
+    "alineacion": "buena",
+    "tamano": "150 cm",
+    "apariencia": {
+      "cabello": "Amarillo, recogido en dos coletas.",
+      "ojos": "Amarillos",
+      "ropa": "Ropa llamativa y reveladora con una capa naranja y numerosos adornos.",
+      "constitucion": "Pequeña",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Muy energética.",
+      "Excéntrica.",
+      "Habla constantemente.",
+      "Le encantan las personas famosas.",
+      "Sigue las nuevas tendencias."
+    ],
+    "habilidades": [
+      "Excelente música y canto.",
+      "Sus canciones pueden influir en las emociones de quienes la escuchan.",
+      "Gran intérprete."
+    ],
+    "equipamiento": [
+      "Lyulyre (instrumento musical)."
+    ],
+    "trivia": [
+      "Es una bardo profesional.",
+      "Está asociada con Kiritaka Muse.",
+      "Tiene un papel importante durante el Arco 5."
+    ]
+  },
   {"id":"ram","nombre":"Ram","tipo":"madre"},
   {"id":"rem","nombre":"Rem","tipo":"madre"},
   {"id":"petra","nombre":"Petra Leyte","tipo":"madre"},
