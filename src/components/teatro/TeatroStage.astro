@@ -1,0 +1,57 @@
+<div class="hidden grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 w-full min-w-0 items-start" data-teatro-stage>
+
+  <!-- Columna A: banner con el nombre + avatar grande -->
+  <div class="flex flex-col items-center gap-3 lg:gap-4 min-w-0" data-teatro-a-hero>
+    <div class="w-full rounded-lg border border-rz-accent/30 bg-rz-bg-2/80 py-3 px-4">
+      <span
+        data-teatro-a-name
+        class="block text-center font-display text-xl sm:text-2xl lg:text-3xl uppercase tracking-wide text-white text-glow break-words"
+      ></span>
+    </div>
+
+    <div class="relative w-full max-w-sm lg:max-w-none aspect-square rounded-xl overflow-hidden border-2 border-rz-accent/40">
+      <img data-teatro-a-avatar alt="" class="w-full h-full object-cover hidden" />
+      <div
+        data-teatro-a-avatar-fallback
+        class="w-full h-full bg-black flex items-center justify-center"
+      >
+        <span class="text-rz-text/20 text-4xl lg:text-6xl font-display">?</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Columna B: label + mini avatar en píldora + descripción/citas -->
+  <div class="flex flex-col gap-4 lg:gap-5 min-w-0">
+    <p class="text-center lg:text-left text-xs lg:text-sm uppercase tracking-widest text-rz-accent/70 font-body">
+      ¿Qué opina de...?
+    </p>
+
+    <div
+      class="flex items-center gap-3 self-center lg:self-start rounded-full border border-rz-accent-2/30 bg-rz-bg-2/60 pl-2 pr-4 py-2"
+      data-teatro-b-hero
+    >
+      <div class="relative w-9 h-9 lg:w-11 lg:h-11 rounded-full overflow-hidden border border-rz-accent-2/40 shrink-0">
+        <img data-teatro-b-avatar alt="" class="w-full h-full object-cover hidden" />
+        <div
+          data-teatro-b-avatar-fallback
+          class="w-full h-full bg-black flex items-center justify-center"
+        >
+          <span class="text-rz-text/30 text-xs font-display">?</span>
+        </div>
+      </div>
+      <span data-teatro-b-name class="font-body text-sm lg:text-base text-rz-text/90"></span>
+    </div>
+
+    <div class="rounded-xl border border-rz-accent/20 bg-rz-bg-2/60 px-5 py-5 lg:px-6 lg:py-6 flex flex-col gap-4">
+      <p
+        data-teatro-text
+        class="text-center lg:text-left text-sm lg:text-base leading-relaxed font-body text-rz-text/85"
+      ></p>
+
+      <ul
+        data-teatro-citas
+        class="hidden flex-col gap-2.5 lg:gap-3 w-full"
+      ></ul>
+    </div>
+  </div>
+</div>

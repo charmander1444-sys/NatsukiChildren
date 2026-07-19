@@ -1,0 +1,41 @@
+---
+import TeatroPicker from "./TeatroPicker.astro";
+import TeatroStage from "./TeatroStage.astro";
+import personasData from "../../data/charactersKids.json";
+import opinionesData from "../../data/reviews.json";
+
+// Mismo criterio de roster que el fight simulator; ajusta si Teatro
+// debe incluir también madres/raíces (no solo hijos peleables).
+const VALID_TIPOS = ["hijo", "hija", "sin_genero"];
+
+const roster = (personasData.personas ?? [])
+  .filter((p: any) => VALID_TIPOS.includes(p.tipo))
+  .map((p: any) => ({
+    id: p.id,
+    nombre: p.nombre,
+    avatar: p.avatar ?? "",
+  }))
+  .sort((a: any, b: any) => a.nombre.localeCompare(b.nombre, "es"));
+---
+
+<section
+  class="flex flex-col gap-6 lg:gap-10 min-w-0"
+  data-teatro-widget
+  data-roster={JSON.stringify(roster)}
+  data-opiniones={JSON.stringify(opinionesData)}
+>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start min-w-0 w-full">
+    <TeatroPicker side="a" label="Personaje" accent="#60a5fa" />
+    <TeatroPicker side="b" label="Sobre quién opina" accent="#f472b6" />
+  </div>
+
+  <TeatroStage />
+</section>
+
+<script>
+  import { initTeatroWidget } from "./lib/teatroEngine.js";
+
+  document.querySelectorAll("[data-teatro-widget]").forEach((el) => {
+    initTeatroWidget(el as HTMLElement);
+  });
+</script>

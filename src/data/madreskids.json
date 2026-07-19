@@ -546,17 +546,357 @@
       "Tiene un papel importante durante el Arco 5."
     ]
   },
-  {"id":"ram","nombre":"Ram","tipo":"madre"},
-  {"id":"rem","nombre":"Rem","tipo":"madre"},
-  {"id":"petra","nombre":"Petra Leyte","tipo":"madre"},
-  {"id":"patrasche","nombre":"Patrasche","tipo":"madre"},
-  {"id":"minerva","nombre":"Minerva","tipo":"madre"},
-  {"id":"satella","nombre":"Satella","tipo":"madre"},
-  {"id":"sylphy","nombre":"Sylphy","tipo":"madre"},
-  {"id":"adelheid","nombre":"Adelheid Van Astrea","tipo":"madre"},
-  {"id":"zarestia","nombre":"Zarestia","tipo":"madre"},
-  {"id":"yorna","nombre":"Yorna Mishigure","tipo":"madre"},
-  {"id":"carmilla","nombre":"Carmilla","tipo":"madre"},
+  {
+    "id": "ram",
+    "alineacion": "buena",
+    "tamano": "154 cm",
+    "apariencia": {
+      "cabello": "Rosa claro, corto, cubriendo el ojo izquierdo",
+      "ojos": "Rojos",
+      "ropa": "Uniforme de sirvienta blanco y negro con diadema y cinta en forma de flor.",
+      "constitucion": "Delgada",
+      "marcas": "Cuerno roto de oni."
+    },
+    "personalidad": [
+      "Sarcástica y de lengua afilada.",
+      "Segura de sí misma.",
+      "Inteligente y perceptiva.",
+      "Profundamente leal a Roswaal.",
+      "Cariñosa con quienes aprecia, aunque rara vez lo demuestra.",
+      "Muy protectora con su hermana Rem."
+    ],
+    "habilidades": [
+      "Magia de Viento.",
+      "Excelente control del maná.",
+      "Combate con varita mágica.",
+      "Gran talento como oni pese a haber perdido su cuerno.",
+      "Amplia experiencia en combate."
+    ],
+    "equipamiento": [
+      "Varita mágica."
+    ],
+    "trivia": [
+      "Su cumpleaños es el 2 de febrero.",
+      "Es la hermana gemela mayor de Rem.",
+      "Fue conocida como la reencarnación del Dios Oni.",
+      "Trabaja como sirvienta en la Mansión Mathers."
+    ]
+  },
+  {
+    "id": "rem",
+    "alineacion": "buena",
+    "tamano": "154 cm",
+    "apariencia": {
+      "cabello": "Azul claro, corto, cubriendo el ojo derecho",
+      "ojos": "Azul claro",
+      "ropa": "Uniforme de sirvienta blanco y negro con diadema y cinta en forma de flor.",
+      "constitucion": "Delgada",
+      "marcas": "Cuerno blanco de oni."
+    },
+    "personalidad": [
+      "Leal y trabajadora.",
+      "Amable y educada.",
+      "Muy dedicada a quienes ama.",
+      "Perfeccionista.",
+      "Valiente incluso frente a enemigos superiores.",
+      "Inicialmente desconfiada de Subaru, pero termina enamorándose de él."
+    ],
+    "habilidades": [
+      "Magia de Agua.",
+      "Transformación Oni.",
+      "Gran fuerza física.",
+      "Combate con Morningstar.",
+      "Excelente resistencia y capacidad de recuperación."
+    ],
+    "equipamiento": [
+      "Morningstar."
+    ],
+    "trivia": [
+      "Su cumpleaños es el 2 de febrero.",
+      "Es la hermana gemela menor de Ram.",
+      "Perdió su nombre y recuerdos debido a la Autoridad de la Gula.",
+      "Trabaja como sirvienta en la Mansión Mathers."
+    ]
+  },
+  {
+    "id": "petra",
+    "alineacion": "buena",
+    "tamano": "135 cm",
+    "apariencia": {
+      "cabello": "Naranja, corto",
+      "ojos": "Verdes",
+      "ropa": "Vestido de sirvienta o ropa sencilla de aldeana.",
+      "constitucion": "Pequeña",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Alegre.",
+      "Trabajadora.",
+      "Muy amable.",
+      "Responsable para su edad.",
+      "Admira profundamente a Subaru.",
+      "Aprende con rapidez."
+    ],
+    "habilidades": [
+      "Entrenamiento como sirvienta.",
+      "Costura.",
+      "Limpieza.",
+      "Conocimientos básicos de magia."
+    ],
+    "equipamiento": [
+      "Pañuelo.",
+      "Utensilios de limpieza."
+    ],
+    "trivia": [
+      "Es una sirvienta aprendiz de la Mansión Mathers.",
+      "Proviene de la Aldea Arlam.",
+      "Tiene sentimientos por Subaru."
+    ]
+  },
+  {
+    "id": "patrasche",
+    "alineacion": "buena",
+    "tamano": "",
+    "apariencia": {
+      "cabello": "",
+      "ojos": "Dorados",
+      "ropa": "",
+      "constitucion": "Dragón terrestre negro de la especie Diana.",
+      "marcas": "Escamas negras."
+    },
+    "personalidad": [
+      "Extremadamente leal a Subaru.",
+      "Valiente.",
+      "Protectora.",
+      "Orgullosa.",
+      "Está dispuesta a sacrificar su vida por sus aliados."
+    ],
+    "habilidades": [
+      "Protección Divina de Evasión del Viento.",
+      "Gran velocidad.",
+      "Enorme resistencia física.",
+      "Excelente montura de combate."
+    ],
+    "equipamiento": [],
+    "trivia": [
+      "Es el dragón terrestre de Subaru.",
+      "Fue entregada por Crusch Karsten tras la derrota de la Ballena Blanca.",
+      "Su cumpleaños es el 15 de abril."
+    ]
+  },
+  {
+    "id": "minerva",
+    "alineacion": "buena",
+    "tamano": "155 cm",
+    "apariencia": {
+      "cabello": "Rubio dorado",
+      "ojos": "Azul cielo",
+      "ropa": "Vestido blanco con detalles negros y rojos.",
+      "constitucion": "Pequeña y delgada",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Muy impulsiva.",
+      "Compasiva.",
+      "Odia la injusticia.",
+      "Siempre intenta salvar a los heridos.",
+      "Se enfurece fácilmente al ver sufrimiento.",
+      "Posee un fuerte sentido de la justicia."
+    ],
+    "habilidades": [
+      "Bruja de la Ira.",
+      "Autoridad de la Ira.",
+      "Puede curar cualquier herida golpeando a la persona.",
+      "Su poder provoca desastres naturales como efecto secundario.",
+      "Gran fuerza física."
+    ],
+    "equipamiento": [],
+    "trivia": [
+      "Es una de las Siete Brujas del Pecado.",
+      "Tiene más de 400 años.",
+      "Su cumpleaños es el 20 de julio.",
+      "Su alma permaneció en el Castillo de los Sueños tras su muerte."
+    ]
+  },
+  {
+    "id": "satella",
+    "alineacion": "neutral",
+    "tamano": "164 cm",
+    "apariencia": {
+      "cabello": "Plateado, largo",
+      "ojos": "Púrpura con pupilas azules",
+      "ropa": "Vestido negro formado por sombras.",
+      "constitucion": "Alta y delgada",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Amable y compasiva con Subaru.",
+      "Profundamente enamorada de Subaru.",
+      "Posee una personalidad separada conocida como la Bruja de la Envidia.",
+      "Se preocupa sinceramente por el bienestar de Subaru.",
+      "Carece de sentido común en muchos aspectos."
+    ],
+    "habilidades": [
+      "Bruja de la Envidia.",
+      "Autoridad de la Envidia.",
+      "Magia Yin.",
+      "Control de sombras.",
+      "Manos invisibles.",
+      "Inmortalidad.",
+      "Poder mágico extraordinario."
+    ],
+    "equipamiento": [],
+    "trivia": [
+      "Tiene más de 400 años.",
+      "Es una semielfa.",
+      "Fue responsable de la Gran Calamidad.",
+      "Está sellada desde hace más de 400 años.",
+      "Comparte exactamente la misma apariencia que Emilia."
+    ]
+  },
+  {
+    "id": "sylphy",
+    "alineacion": "",
+    "tamano": "",
+    "apariencia": {
+      "cabello": "",
+      "ojos": "",
+      "ropa": "",
+      "constitucion": "",
+      "marcas": ""
+    },
+    "personalidad": [],
+    "habilidades": [],
+    "equipamiento": [],
+    "trivia": []
+  },
+  {
+    "id": "adelheid",
+    "alineacion": "buena",
+    "tamano": "167 cm",
+    "apariencia": {
+      "cabello": "Rojo",
+      "ojos": "Azules",
+      "ropa": "Armadura y uniforme de la familia Astrea.",
+      "constitucion": "Atlética",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Noble.",
+      "Seria.",
+      "Responsable.",
+      "Protectora.",
+      "Con un fuerte sentido de la justicia."
+    ],
+    "habilidades": [
+      "Esgrima excepcional.",
+      "Protección Divina del Santo de la Espada.",
+      "Combate cuerpo a cuerpo."
+    ],
+    "equipamiento": [
+      "Espada del Dragón Reid."
+    ],
+    "trivia": [
+      "Es una versión femenina de Reinhard Van Astrea.",
+      "Aparece en IF reverse gender."
+    ]
+  },
+  {
+    "id": "zarestia",
+    "alineacion": "neutral",
+    "tamano": "",
+    "apariencia": {
+      "cabello": "Verde",
+      "ojos": "Verdes",
+      "ropa": "Vestido blanco con adornos verdes.",
+      "constitucion": "Alta y esbelta",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Orgullosa.",
+      "Calmada.",
+      "Protectora con quienes aprecia.",
+      "Muy poderosa y segura de sí misma."
+    ],
+    "habilidades": [
+      "Gran Espíritu del Viento.",
+      "Magia de Viento.",
+      "Vuelo.",
+      "Manipulación de corrientes de aire.",
+      "Enorme cantidad de maná."
+    ],
+    "equipamiento": [],
+    "trivia": [
+      "Es el Gran Espíritu del Viento.",
+      "Aparece principalmente en la historia alternativa Sloth IF."
+    ]
+  },
+  {
+    "id": "yorna",
+    "alineacion": "buena",
+    "tamano": "168 cm",
+    "apariencia": {
+      "cabello": "Negro muy largo",
+      "ojos": "Rojos",
+      "ropa": "Kimono negro y rojo de estilo oriental.",
+      "constitucion": "Voluptuosa",
+      "marcas": "Orejas y cola de zorro."
+    },
+    "personalidad": [
+      "Elegante.",
+      "Cariñosa.",
+      "Protectora con los habitantes de Chaosflame.",
+      "Madura.",
+      "Muy decidida."
+    ],
+    "habilidades": [
+      "Nine Divine Fox.",
+      "Manipulación de llamas.",
+      "Gran dominio del mana.",
+      "Combate cuerpo a cuerpo."
+    ],
+    "equipamiento": [
+      "Abanico."
+    ],
+    "trivia": [
+      "Es una de las Nueve Generales Divinos del Imperio Vollachia.",
+      "Gobernó la ciudad demoníaca Chaosflame.",
+      "Es conocida como la 'Reina Demonio'."
+    ]
+  },
+  {
+    "id": "carmilla",
+    "alineacion": "buena",
+    "tamano": "150 cm",
+    "apariencia": {
+      "cabello": "Negro muy largo",
+      "ojos": "Rojos",
+      "ropa": "Vestido negro sencillo con velo.",
+      "constitucion": "Pequeña y delgada",
+      "marcas": ""
+    },
+    "personalidad": [
+      "Muy tímida.",
+      "Insegura.",
+      "Amable.",
+      "Compasiva.",
+      "Evita causar daño cuando es posible."
+    ],
+    "habilidades": [
+      "Bruja de la Lujuria.",
+      "Autoridad de la Lujuria.",
+      "Faceless Bride.",
+      "Manipulación de emociones.",
+      "Puede adoptar la apariencia de la persona más amada por quien la observa."
+    ],
+    "equipamiento": [],
+    "trivia": [
+      "Es la Bruja de la Lujuria.",
+      "Murió hace más de 400 años.",
+      "Fue una de las Brujas del Pecado.",
+      "Su habilidad puede alterar la percepción de quienes la rodean."
+    ]
+  },
   {"id":"frederica","nombre":"Frederica Baumann","tipo":"madre"},
   {"id":"julia","nombre":"Julia Mathers","tipo":"madre"},
   {"id":"bruja de la envidia","nombre":"Bruja de la Envidia","tipo":"madre"},

@@ -1,0 +1,281 @@
+{
+  "electra": {
+    "alpha": {
+      "descripcion": "Electra siente aprensión hacia Alpha. Cree que sus hermanos y hermanas a veces olvidan lo inestable y monstruosa que puede llegar a ser esa hermana. A menudo permanece atenta cuando están juntas para protegerse tanto a sí misma como a los demás.",
+      "citas": [
+        "Electra: Es inestable, está loca. Además de ser peligrosa. Debo vigilarla para evitar que les ocurra algo a los demás."
+      ]
+    },
+    "chochorina": {
+      "descripcion": "Electra tiene una relación complicada con Chochorina, ya que detesta su nombre, su cabello y la relación que Chochorina tiene con Emilia en su propio mundo. Por ello, siente la necesidad de mantenerse alejada de ella casi siempre que están cerca. Aun así, Electra conserva la cortesía propia de una Caballera hacia Chochorina, ya que sigue siendo una princesa en su mundo y Electra continúa siendo una Caballera al servicio del Reino.",
+      "citas": [
+        "Chochorina: ¡Electra-Nee-San! ¿Puedo dormir contigo? ¡Tengo miedo de que haya un monstruo dentro de mi armario!",
+        "Electra: ¡Tsk——! Chochorina-Sama. Le aseguro que no hay ningún monstruo en su armario. Y sería mejor que Su Alteza se lo pidiera a Taygette-Sama, ya que ambas son majestades élficas.",
+        "Chochorina: ¡No quiero quedarme en la misma habitación que ella! ¡Los pies de Tay-Nee-San huelen horrible!",
+        "Electra: ¡No tienes derecho a juzgar a nadie...! ¡Todavía les tienes miedo a los monstruos del armario aun teniendo más de diez años!"
+      ]
+    },
+    "elpis": {
+      "descripcion": "Electra desea mantenerse lo más lejos posible de Elpis, pues la considera una amenaza gigantesca tanto para ella como para todos los demás. Además, le repugnan las preguntas e insinuaciones que Elpis hace sobre la versión de su padre. También son enemigas debido a que Electra es una Caballera y Elpis una Cultista.",
+      "citas": [
+        "Electra: Debo eliminarla cuando se presente la mejor oportunidad. Pero Alpha también me impide acabar con ella..."
+      ]
+    },
+    "helena": {
+      "descripcion": "Electra la trata con el respeto que una Caballera debe mostrar hacia una Princesa del Reino. Sin embargo, también se siente avergonzada cuando Helena rompe esas formalidades y la trata como si fuera una hermana muy cercana.",
+      "citas": [
+        "Electra: Helena-Sama, por favor. Su Alteza no necesita peinar mi cabello.",
+        "Helena: Es una tontería no cuidar un cabello tan bonito, hermanita tonta~"
+      ]
+    },
+    "leo": {
+      "descripcion": "Electra mantiene una relación educada con Leo, quien sabe comportarse con caballerosidad y respetar las diferencias de estatus cuando es necesario. Ella admira su madurez y su comportamiento ejemplar como príncipe.",
+      "citas": [
+        "Electra: Leo-Sama es un ejemplo de conducta."
+      ]
+    },
+    "lyra": {
+      "descripcion": "Electra tiene una relación y opiniones complicadas respecto a Lyra debido a su costumbre de apostar cosas y a que su comportamiento está muy lejos de lo que espera de un miembro de la realeza. Su opinión empeora aún más porque, cuando juegan y Electra pierde, Lyra la obliga a cumplir retos vergonzosos. En una ocasión, Lyra incluso hizo que Electra se vistiera de conejita frente a todos.",
+      "citas": [
+        "Electra: Lyra-Sama... No le entregaré mi espada.",
+        "Lyra: ¿Ni siquiera si te lo ordeno con mi voz de princesa mandona~?",
+        "Electra: Aun así no lo haré, Lyra-Sama. Así que no me pida apostarla."
+      ]
+    },
+    "mercurius": {
+      "descripcion": "Electra tiene a Mercurius en alta estima, ya que ambos son lo suficientemente maduros como para cuidar de sus complicados hermanos y hermanas. Incluso suelen pasar tiempo juntos para relajarse.",
+      "citas": [
+        "Electra: Mercurius-Sama es bastante perspicaz."
+      ]
+    },
+    "cassiopeia": {
+  "descripcion": "Electra y Cassiopeia normalmente se llevan bien. Incluso entrenan juntas, incluyendo golpear sacos de boxeo. Electra suele fortalecerse entrenando con Cassiopeia, aunque también termina exagerando al dirigirse a ella con demasiada formalidad durante sus interacciones.",
+  "citas": [
+    "Electra: Los golpes de Cassiopeia-Sama son precisos y poderosos. Realmente es una guerrera."
+  ]
+    },
+    "graffias": {
+    "descripcion": "Electra tiene una relación muy cercana con Graffias, ya que esta última suele cruzar las barreras para acercarse más a ella como amiga y hermana. Graffias intenta que Electra se abra más, se divierta y, al mismo tiempo, la ayuda a hacerse más fuerte. Ambas disfrutan de una amistad muy entretenida.",
+    "citas": [
+        "Electra: ¿Por qué sigue llamándome \"Besto Friendo\"?"
+    ]
+    },
+    "taygete": {
+    "descripcion": "Electra siente un gran respeto por Taygete, al igual que por todas las figuras de la realeza. Ambas suelen conversar y divertirse juntas, aunque Electra termina excediéndose al hablar siempre de una manera tan caballeresca.",
+    "citas": [
+        "Electra: Taygete-Sama debería esforzarse más por usar su calzado."
+    ]
+    },
+    "bellatrix": {
+    "descripcion": "Electra no siente simpatía ni respeto por Bellatrix debido a su forma de actuar y de trabajar, especialmente porque arranca los corazones de sus víctimas y los colecciona como una especie de trofeos. Además, existe un rencor personal debido a la rivalidad que Electra tuvo con Elsa en su propio mundo y por tratarse de una asesina que hirió a su padre.",
+    "citas": [
+        "Electra: No se puede confiar en ella."
+    ]
+    },
+    "maia": {
+    "descripcion": "Aunque a Electra le resulte extraño quién es la madre de la adorable niña, la Caballera es bastante amable con su hermana menor.",
+    "citas": [
+        "Electra: Debería entrenar un poco más para no lastimarse si alguna vez necesita defenderse."
+    ]
+    },
+    "aconita": {
+    "descripcion": "Electra no ha interactuado mucho con Aconita debido a que ella suele mantenerse bastante apartada, pero la tiene en buena consideración.",
+    "citas": [
+        "Electra: Es un poco extraña y distante... Pero no parece ser mala en absoluto."
+    ]
+    },
+    "menkar": {
+    "descripcion": "Electra intenta mantenerse cerca de Menkar para vigilarlo e impedir que perjudique a los demás debido a su enorme apetito. Lo trata como si fuera un pequeño animal extraño.",
+    "citas": [
+        "Electra: No estoy segura de que sea seguro dejarlo cerca de cualquier persona."
+    ]
+    },
+    "nunki": {
+    "descripcion": "Electra siente un gran respeto por su hermano, ya que ambos son los más maduros y los que más se preocupan por la seguridad de todos sus hermanos y hermanas, especialmente por la presencia de algunos bastante inestables. Electra puede confiar en Nunki cuando necesita descansar un poco, siendo una de las pocas personas que logra hacerla sentir como una hermana menor cuidada por un hermano mayor.",
+    "citas": [
+        "Electra: Voy a descansar un poco... ¿Puedes encargarte de todo?",
+        "Nunki: ¡Puedes confiar en mí! ¡Descansa todo lo que necesites!"
+    ]
+    },
+    "alcyone": {
+    "descripcion": "Electra siente que Alcyone es una de las pocas personas con las que puede desahogarse y relajarse sin tener que pensar demasiado. Considera que Alcyone es muy perezosa, pero, de una forma extraña, también muy divertida.",
+    "citas": [
+        "Electra: Alcyone es alguien muy perezosa, pero madura."
+    ]
+    },
+    "caph": {
+    "descripcion": "Electra tiene muchos problemas con Caph, sobre todo por su falta de bondad y amabilidad. Además, la considera un ser monstruoso al que desea detener, tal como quiso hacerlo con Capella. En una ocasión, Electra incluso fue derrotada brutalmente por Caph cuando intentó enfrentarse a ella, siendo salvada en el último instante por los demás.",
+    "citas": [
+        "Electra: Aún encontraré una forma de llevarla ante la justicia."
+    ]
+    },
+    "cygnus": {
+    "descripcion": "Electra suele interactuar con su hermano, y prácticamente lo único que ambos tienen en común son sus conversaciones sobre música, aunque a Electra no le guste cantar en público, salvo delante de los miembros de su familia.",
+    "citas": [
+        "Electra: Ojalá dejara de intentar hacerme cantar tanto..."
+    ]
+    },
+    "vega": {
+  "descripcion": "Electra considera a Vega como si fuera una prima y le gusta consentirla de la misma manera que hace con Spica. También se divierten juntas provocando a Rigel siempre que tienen la oportunidad y haciéndolo enfadarse un poco.",
+  "citas": [
+    "Electra: Vega tiene una actitud bastante divertida."
+    ]
+    },
+    "natsumi": {
+    "descripcion": "Electra ve a Natsumi como una civil a la que debe proteger siempre que están juntas.",
+    "citas": [
+        "Electra: Debo mantenerla dentro de mi campo de visión o detrás de mí para asegurarme de que esté protegida."
+    ]
+    },
+    "saiph": {
+    "descripcion": "Saiph es otro de los hermanos a quienes Electra considera completamente confiables para cuidar de los demás. Incluso ha comenzado a aprender cómo comunicarse con él.",
+    "citas": [
+        "Electra: Saiph-Sama es tan confiable como Nunki, aunque físicamente no sea tan fuerte."
+    ]
+    },
+    "sabik": {
+    "descripcion": "Sabik le recuerda tanto a Otto que Electra termina tratándolo casi de la misma manera que trata a Otto.",
+    "citas": [
+        "Electra: Tengo que ser un poco más amable con él... Pero me recuerda tanto a Otto que no puedo evitarlo."
+    ]
+    },
+    "phoebe": {
+    "descripcion": "Electra se sorprendió cuando descubrió quién era la madre de Phoebe, pero le resultó aún más extraño el comportamiento tan entusiasta e ilusionado de Phoebe respecto a ser una guerrera profetizada destinada a luchar contra el mal del mundo. Aun así, Electra confía en Phoebe cuando hay que enfrentarse a un enemigo. De hecho, ambas son compañeras muy cercanas, ya que Phoebe considera a Electra su coprotagonista y cree que deben trabajar juntas para derrotar a los villanos.",
+    "citas": [
+        "Phoebe: ¡Nosotras somos la espada que cortará el mundo del crimen!",
+        "Electra: —— Supongo que tengo que estar de acuerdo con eso."
+    ]
+    },
+    "merope": {
+    "descripcion": "Electra considera a Merope una cabeza dura en quien, aun así, puede confiar cuando necesita ayuda. Incluso ambas son capaces de trabajar juntas.",
+    "citas": [
+        "Electra: Podría gritar menos... Al menos mucho menos."
+    ]
+    },
+    "perseus": {
+    "descripcion": "Electra detesta que Perseus haga experimentos secretos con bebidas usando a ella como sujeto de prueba, por lo que suele corregirlo dándole golpes en la cabeza.",
+    "citas": [
+        "Electra: La última vez hasta se me puso la mano roja después de beber algo que preparó."
+    ]
+    },
+    "adhara": {
+    "descripcion": "Electra no tiene tantos problemas con Adhara por ser hija de Satella, pero sí le incomoda su apariencia debido al rechazo personal que siente hacia cualquier cosa que le recuerde el aspecto de Emilia.",
+    "citas": [
+        "Electra: Adhara es alguien bastante... No tengo tantos problemas con ella como imaginaba que tendría."
+    ]
+    },
+    "denebola": {
+    "descripcion": "Electra mantiene una relación de respeto mutuo con Denebola gracias a la educación de ambas y al respeto que sienten por el estatus de la otra.",
+    "citas": [
+        "Electra: Las habilidades de Denebola como sirvienta son realmente dignas de admiración."
+    ]
+    },
+    "reid": {
+    "descripcion": "Electra no tiene una relación especialmente profunda con Reid, pero a veces ambos disfrutan entrenando juntos con espadas. Electra jamás ha tenido una oportunidad de vencer a ese hermano en un combate.",
+    "citas": [
+        "Electra: Sus habilidades realmente hacen honor al linaje del Santo de la Espada."
+    ]
+    },
+    "cepheus": {
+    "descripcion": "Electra y Cepheus no interactúan demasiado ni sienten mucho interés en conversar. Solo intercambian algunas palabras de vez en cuando o permanecen cómodamente en un silencio compartido.",
+    "citas": [
+        "Electra: No lo veo como alguien sociable. Creo que será mejor mantenerlo vigilado."
+    ]
+    },
+    "luna": {
+    "descripcion": "Electra tiene que contener el impulso de acariciar la cabeza de Luna debido a lo adorable que parece su pelaje. Le tiene mucho cariño a su hermana menor por lo tierna que es.",
+    "citas": [
+        "Electra: ¿Cómo se sentirá esa cola...? ¡No!, concéntrate."
+    ]
+    },
+    "nova": {
+  "descripcion": "Si llegara a encontrarse cara a cara con Nova, Electra sentiría un profundo miedo e intentaría escapar.",
+  "citas": [
+    "Electra: ——"
+    ]
+    },
+    "orion": {
+    "descripcion": "Electra lo trataría con cariño, del mismo modo que trata a sus hermanas menores, especialmente por lo físicamente débil que es en comparación con los demás.",
+    "citas": [
+        "Electra: No parece ser un mal chico."
+    ]
+    },
+    "morgana": {
+    "descripcion": "Electra no considera que Morgana sea una mala persona. Sin embargo, cree que suele sobrepasar ciertos límites de una forma bastante irritante. Además, Electra siente que también tiene la responsabilidad de cuidar de ella.",
+    "citas": [
+        "Electra: Somos de las mayores, ¿por qué no actúa como debería?"
+    ]
+    },
+    "viviane": {
+    "descripcion": "Electra termina llevándose un poco mejor con Viviane que con Morgana, aunque sigue intentando detenerla, al igual que hace con Morgana, para evitar que hagan algo indebido.",
+    "citas": []
+    },
+    "arthur": {
+    "descripcion": "Electra se lleva mucho mejor con Arthur que con Morgana y Viviane. Incluso entrenan juntos con sus demás hermanos y también entre ellos. Electra intenta ayudar a Arthur a convertirse en alguien más maduro y con mayor experiencia para el combate. Sin embargo, a veces termina herida porque las habilidades de Arthur son lo bastante poderosas como para lastimarla cuando él pierde un poco el control.",
+    "citas": [
+        "Electra: Tus habilidades han mejorado muchísimo.",
+        "Arthur: Gracias, Electra-Nee-Sama."
+    ]
+    },
+    "castor_pollux": {
+    "descripcion": "Electra mantiene una relación bastante buena con ambos gemelos. Se lleva un poco mejor con Pollux que con Castor, pero procura tratar a los dos con el respeto que merece su nobleza. Lo único que le resulta un poco frustrante es cuando ambos empiezan a hablar al mismo tiempo o se alternan constantemente mientras conversan con ella.",
+    "citas": [
+        "Electra: A veces me provocan unos tremendos dolores de cabeza..."
+    ]
+    },
+    "tonnura": {
+    "descripcion": "Electra no siente un aprecio completo por Tonnura, aunque lo respeta y comprende la dura vida que tuvo. En realidad, Electra ve muchas similitudes entre él y ella misma.",
+    "citas": [
+        "Electra: Lo que ocurrió en tu mundo no fue culpa de Papá...",
+        "Tonnura: Igual que Emilia tampoco tiene toda la culpa en el tuyo...",
+        "Electra: Pero nuestras situaciones son diferentes.",
+        "Tonnura: Cuando en realidad son bastante parecidas."
+    ]
+    },
+    "apollo": {
+    "descripcion": "Electra suele entrar en conflicto con Apollo porque este intenta cuidar y consentir demasiado a Chochorina. Del mismo modo, Apollo también discute con Electra debido a la forma en que ella trata a Chochorina, a quien él desea proteger.",
+    "citas": [
+        "Electra: ¿No crees que ya le has dado demasiado pastel de chocolate...?",
+        "Apollo: No veo ningún problema en consentir un poco más a Chochorina-Sama.",
+        "Electra: Deberías... cuando termine con problemas en los dientes o con unos kilos de más..."
+    ]
+    },
+    "nyx": {
+  "descripcion": "Electra no siente simpatía por Nyx ni por sus objetivos, y mucho menos desea acercarse a ella.",
+  "citas": [
+    "Electra: Otra gran amenaza para la gente."
+    ]
+    },
+    "surtr": {
+    "descripcion": "Electra considera que Surtr es una niña problemática y triste. Siente lástima de que nunca haya podido ser una niña buena e inocente debido al tipo de vida que lleva, creyendo incluso que esa vida es algo normal. Por lo general, ambas no entran en conflicto, aunque Electra cree que podría sobrevivir si llegaran a enfrentarse.",
+    "citas": [
+        "Electra: Necesito volverme cada vez más fuerte para hacer lo que es necesario."
+    ]
+    },
+    "hippolyta": {
+    "descripcion": "Electra ve a Hippolyta como una buena rival de entrenamiento cuando necesita motivarse. Lo mismo ocurre con otras hermanas por las que siente admiración y respeto.",
+    "citas": [
+        "Electra: Creo que podría aprender más sobre tiro con arco con ella."
+    ]
+    },
+    "ladon": {
+    "descripcion": "Electra conversa de vez en cuando con Ladon sobre dragones, especialmente acerca del cuidado de Patrasche y de los demás Dragones Terrestres de su tierra natal.",
+    "citas": [
+        "Electra: Las enseñanzas sobre el cuidado de los Dragones Terrestres son una disciplina realmente excelente..."
+    ]
+    },
+    "helio": {
+    "descripcion": "Electra considera que Hélio es un poco distraído y despistado, pero no lo cree un idiota, como algunos podrían pensar. Se esfuerza por superar las barreras que crea la sordera de Hélio para poder comunicarse con él. Lo trata con amabilidad y, de vez en cuando, ambos comen dulces juntos mientras descansan, igual que hacen con sus otros hermanos y hermanas.",
+    "citas": [
+        "Electra: Podría contar con su apoyo si alguna vez lo necesitara."
+    ]
+    },
+    "eris": {
+    "descripcion": "Electra siente cierto miedo por la manera en que Eris la observa y la trata de forma amistosa, aunque ella procura responder con la cortesía propia de una Caballera hacia una princesa a la que respeta. Incluso siente auténtico pavor al notar que Eris la está observando. Ese miedo sería aún mayor si conociera la verdadera naturaleza de Eris, pero todavía no lo sabe, ya que Eris sigue ocultando esa faceta.",
+    "citas": [
+        "Eris: Hermana Electra... Creo que debo decir que eres magnífica, y espero contemplar una magnificencia aún mayor en tu futuro.",
+        "Electra: Gracias por sus palabras... Eris-Sama. —— ¿Y por qué me siento más incómoda cuando ella me elogia que si no lo hiciera...?"
+    ]
+    }
+  }
+}

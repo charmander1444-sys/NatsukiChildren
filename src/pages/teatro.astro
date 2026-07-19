@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/layout.astro";
+import Navbar from "../navbar.astro";
+import Teatro from "../components/teatro/Teatro.astro";
+---
+<Navbar />
+<Layout title="Re:Zero Comparacion">
+    <h2 class="font-display text-4xl text-white text-glow text-center">
+    INTERACCIONES ENTRE PERSONAJES
+  </h2>
+  <section class="mx-auto flex min-h-[70vh] max-w-full lg:max-w-7xl flex-col items-stretch sm:items-center justify-center px-4 py-16 text-center sm:px-6 lg:px-8" style="min-width:0;">
+    <Teatro />
+  </section>
+</Layout>
