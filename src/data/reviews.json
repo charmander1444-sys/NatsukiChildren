@@ -217,7 +217,13 @@
         "Arthur: Gracias, Electra-Nee-Sama."
     ]
     },
-    "castor_pollux": {
+    "castor": {
+    "descripcion": "Electra mantiene una relación bastante buena con ambos gemelos. Se lleva un poco mejor con Pollux que con Castor, pero procura tratar a los dos con el respeto que merece su nobleza. Lo único que le resulta un poco frustrante es cuando ambos empiezan a hablar al mismo tiempo o se alternan constantemente mientras conversan con ella.",
+    "citas": [
+        "Electra: A veces me provocan unos tremendos dolores de cabeza..."
+    ]
+    },
+    "pollux": {
     "descripcion": "Electra mantiene una relación bastante buena con ambos gemelos. Se lleva un poco mejor con Pollux que con Castor, pero procura tratar a los dos con el respeto que merece su nobleza. Lo único que le resulta un poco frustrante es cuando ambos empiezan a hablar al mismo tiempo o se alternan constantemente mientras conversan con ella.",
     "citas": [
         "Electra: A veces me provocan unos tremendos dolores de cabeza..."
@@ -494,7 +500,13 @@
         "Alpha: De verdad es como Arthur de Fire Force."
     ]
     },
-    "castor_pollux": {
+    "castor": {
+    "descripcion": "Alpha tiene problemas con la persona que es su madre, no con ellos. En realidad, no tiene ningún problema con los gemelos.",
+    "citas": [
+        "Alpha: ¿Por qué, entre tantas opciones... tenía que ser ella?"
+    ]
+    },
+    "pollux": {
     "descripcion": "Alpha tiene problemas con la persona que es su madre, no con ellos. En realidad, no tiene ningún problema con los gemelos.",
     "citas": [
         "Alpha: ¿Por qué, entre tantas opciones... tenía que ser ella?"
