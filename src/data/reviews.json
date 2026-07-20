@@ -277,5 +277,276 @@
         "Electra: Gracias por sus palabras... Eris-Sama. —— ¿Y por qué me siento más incómoda cuando ella me elogia que si no lo hiciera...?"
     ]
     }
+  },
+  "alpha":{
+    "electra": {
+  "descripcion": "Alpha siente un gran respeto por Electra, más que por la mayoría de sus otros hermanos y hermanas. Esto se debe principalmente a la mala suerte y al pasado de Electra. Hasta el punto de que Electra puede ser una de las pocas medio hermanas a las que Alpha ama y respeta lo suficiente como para escuchar gran parte de su opinión cuando expresa lo que piensa.",
+  "citas": [
+    "Alpha: ¿Cómo es posible que tengamos una suerte casi idéntica, querida hermana?",
+    "Electra: No me gusta mucho lo parecidas que somos en ese sentido... ni en general."
+  ]
+    },
+    "chochorina": {
+    "descripcion": "Alpha tiene una opinión algo diferente sobre Chochorina. No le desagrada ni le agrada la chica de cabello plateado. Simplemente le molesta que Chochorina haya tenido una vida tan fácil y sencilla que nunca le permitió alcanzar su máximo potencial. También le disgusta lo mucho que se parece a Emilia en personalidad.",
+    "citas": [
+        "Alpha: Tanto potencial... Tanto... Pero no eres capaz de usar tu inteligencia al máximo, ¿verdad? Pequeña tonta estúpida."
+    ]
+    },
+    "elpis": {
+    "descripcion": "Alpha siente un enorme asco al ver las imágenes mentales y los pensamientos de Elpis, ya que el tipo de cosas que pasan por su mente le resultan extremadamente repugnantes. Llega a disgustarle tanto que desearía no tener que entrar constantemente en su mente para impedir que actúe de forma agresiva contra los demás.",
+    "citas": [
+        "Alpha: ¡¿Durante cinco minutos... podrías dejar de pensar en las peores obscenidades con papá... SOLO DURANTE CINCO MINUTOS?!"
+    ]
+    },
+    "helena": {
+    "descripcion": "Alpha considera a Helena una persona muy interesante y divertida debido a su comportamiento tan extravagante y arrogante, además de que Helena fue una de las primeras hijas en existir.",
+    "citas": [
+        "Alpha: ¿Sabías que una de las primeras Artes de las hijas originales de papá nació gracias a ti?",
+        "Helena: ¿De qué estás hablando?"
+    ]
+    },
+    "leo": {
+    "descripcion": "Alpha disfruta provocando el comportamiento tan correcto y ordenado de Leo, aunque también lo respeta de una manera contenida, algo que no hace con algunos de sus otros hermanos.",
+    "citas": [
+        "Alpha: ¿Sabías que tendría sentido que te gustaran los chicos? No sé por qué algunos no exploran esa idea en otras historias.",
+        "Leo: Pero... ¿qué?"
+    ]
+    },
+    "lyra": {
+    "descripcion": "Alpha y Lyra son hermanas que se llevan muy bien por ser dos gremlins superdestructivos que provocan el caos la mayor parte del tiempo y terminan irritando a los demás. Además, les encanta apostar entre ellas, ya que ambas están dispuestas a cumplir cualquier desafío que la otra proponga.",
+    "citas": [
+        "Alpha: ¿Cuánto caos podríamos causar en un casino? ¿Sabes qué? ¿Por qué no averiguarlo?",
+        "Lyra: ¿Dónde has estado toda mi vida?"
+    ]
+    },
+    "mercurius": {
+    "descripcion": "Alpha disfruta mucho molestando a Mercurius y, de vez en cuando, incluso lo ayuda a provocar a Lyra cuando le apetece hacerlo.",
+    "citas": [
+        "Alpha: Oh, mi querido hermano necesita salirse un poco de los límites, igual que nuestra hermana."
+    ]
+    },
+    "cassiopeia": {
+  "descripcion": "Alpha disfruta molestando a Cassiopeia de vez en cuando por ser una de las hermanas más altas. Además, siempre hace referencia a lo fuerte que es Cassiopeia, considerando que es hija de una de las Candidatas más \"débiles\" en comparación con las demás.",
+  "citas": [
+    "Alpha: Ni siquiera quiero recordar lo enorme que eras cuando naciste... Sentí un poco de pena por Felt por eso."
+    ]
+    },
+    "graffias": {
+    "descripcion": "Alpha aprecia mucho a Graffias porque la ayuda a librarse de gran parte de los dolores de cabeza diarios en el Teatro y porque también es una persona muy libre.",
+    "citas": [
+        "Alpha: ¿Por qué puedo imaginarla tan fácilmente disfrazada de Indiana Jones?"
+    ]
+    },
+    "taygete": {
+    "descripcion": "Alpha y Taygete no tienen una relación especialmente cercana. Aun así, Alpha elogia el enorme potencial que Taygete posee con sus habilidades y su magia.",
+    "citas": [
+        "Alpha: Sus poderes tienen muchísimo potencial... Como los de Atom Eve."
+    ]
+    },
+    "bellatrix": {
+    "descripcion": "Alpha siente un aprecio particular por Bellatrix, ya que puede contratarla para realizar trabajos cuando ella no puede ir personalmente a algún lugar. Además, le paga constantemente para ayudar con distintas tareas relacionadas con sus hermanos y hermanas en el Teatro.",
+    "citas": [
+        "Alpha: Su trabajo es de calidad y vale cada pago."
+    ]
+    },
+    "maia": {
+    "descripcion": "Alpha y Maia no interactúan demasiado, pero a Alpha le gustan las ilustraciones de Maia y siempre procura animarla.",
+    "citas": [
+        "Alpha: Me gustaría tener ese talento para dibujar... ¿Por qué no pude ser bendecida con esas habilidades?"
+    ]
+    },
+    "aconita": {
+    "descripcion": "Alpha siente un gran respeto por Aconita, aunque no logren llevarse perfectamente bien. Ve el enorme potencial de Aconita y admira el poder de su magia.",
+    "citas": [
+        "Alpha: ¿Entre ella y Taygete? ¿Quién ganaría? Sería interesante."
+    ]
+    },
+    "menkar": {
+    "descripcion": "Alpha no tiene problemas con Menkar, aunque tampoco se llevan especialmente bien. Le gusta bromear con que ambos forman parte del grupo de hermanos e hijas de las Brujas.",
+    "citas": [
+        "Alpha: Ojalá dejara de masticar tanto mis sillas. Al menos no se orina para marcar territorio. Y, por lo menos, se come la comida quemada de Chochorina en vez de desperdiciarla."
+    ]
+    },
+    "nunki": {
+    "descripcion": "Alpha aprecia mucho a Nunki porque ambos son bastante amistosos entre sí. Además, le gusta recurrir a él para que cuide de los demás y evitar que provoquen demasiados desastres.",
+    "citas": [
+        "Alpha: ¡Nunki~~~! ¡Elpis está causando problemas otra vez~!",
+        "Nunki: ¡Déjamelo a mí!"
+    ]
+    },
+    "alcyone": {
+    "descripcion": "La relación entre Alpha y Alcyone podría describirse como \"caminar sobre hielo fino\", ya que Alpha sabe perfectamente que Alcyone no confía en ella en absoluto. Sin embargo, eso solo hace que Alpha la respete aún más por su sinceridad.",
+    "citas": [
+        "Alpha: No puedo llegar a desagradarme de ella. Simplemente no puedo."
+    ]
+    },
+    "caph": {
+    "descripcion": "Alpha siente un poco de repulsión hacia Caph únicamente por el tipo de cosas que podría hacerle a la versión de Subaru de su mundo. Fuera de eso, no tiene grandes problemas con ella.",
+    "citas": [
+        "Alpha: ¿Por qué tendrías que ser el típico personaje de NTR, eh?"
+    ]
+    },
+    "cygnus": {
+    "descripcion": "Alpha aprecia a Cygnus porque siempre puede crear la banda sonora perfecta para cualquier momento que ella desee. Ambos se llevan muy bien porque Cygnus sabe exactamente cómo preparar las listas de reproducción ideales para Alpha.",
+    "citas": [
+        "Alpha: Cygnus... ¡Música para un atraco!"
+    ]
+    },
+    "vega": {
+    "descripcion": "Alpha no mantiene una relación especialmente cercana con Vega, aparte de molestarla de vez en cuando.",
+    "citas": [
+        "Alpha: La Ram original vomitaría si supiera que tuvo una hija con papá."
+    ]
+    },
+    "natsumi": {
+    "descripcion": "Alpha respeta el estilo de vida friki/otaku que lleva Natsumi en su mundo. Además, ese mundo es su favorito porque allí su padre nunca tuvo que morir y pudo seguir viviendo tranquilamente.",
+    "citas": [
+        "Alpha: ¿Sabías que aquí puedes ser todo lo perezosa que quieras?"
+    ]
+    },
+    "saiph": {
+    "descripcion": "Aunque pueda parecer extraño, Alpha mantiene una relación bastante afectuosa con Saiph, llegando incluso a ofrecerse para ayudarlo a comunicarse dentro del Teatro.",
+    "citas": [
+        "Alpha: Me cae bien... Creo que tendría una buena voz si pudiera hablar."
+    ]
+    },
+    "sabik": {
+    "descripcion": "Alpha siente cierta extrañeza porque Sabik sea hijo de Otto... solo por eso, ya que realmente no tiene ningún problema con él.",
+    "citas": [
+        "Alpha: ¿Otto? ¿De entre todos?"
+    ]
+    },
+    "phoebe": {
+    "descripcion": "Alpha disfruta alimentando de vez en cuando las ilusiones de Phoebe solo para ver cómo actúa en esas situaciones y luego burlarse un poco de ella.",
+    "citas": [
+        "Alpha: Al menos no es una emo gótica oscura..."
+    ]
+    },
+    "merope": {
+    "descripcion": "Alpha tiene una relación bastante divertida con Merope porque siente que es como una versión de Chochorina mucho más dispuesta a darle un puñetazo.",
+    "citas": [
+        "Alpha: ¿Por qué no puede ser una tonta amable?"
+    ]
+    },
+    "perseus": {
+    "descripcion": "Alpha disfruta observando los experimentos de Perseus cuando este hace que sus hermanos y hermanas prueben sus extrañas bebidas.",
+    "citas": [
+        "Alpha: ¿Puedes crear una poción que deje calvos a los demás? Sería muy divertido, ¿no crees?"
+    ]
+    },
+    "adhara": {
+    "descripcion": "Alpha no tiene problemas con Adhara, y el sentimiento es mutuo. Ambas interactúan como lo harían dos hermanas la mayor parte del tiempo, aunque Alpha siga sin soportar a Satella.",
+    "citas": [
+        "Alpha: Mejor Satella que otra Emilia más..."
+    ]
+    },
+    "denebola": {
+    "descripcion": "Alpha aprecia a Denebola, aunque el sentimiento no sea recíproco.",
+    "citas": [
+        "Alpha: No es una hermana tan mala. Me gusta que limpie mi habitación... Aunque puedo hacerlo yo sola, y más rápido."
+    ]
+    },
+    "reid": {
+    "descripcion": "Alpha aprecia a Reid porque no resulta molesto y simplemente es alguien que suele quedarse dormido en distintos rincones de su Teatro.",
+    "citas": [
+        "Alpha: Al menos hay un hermano perezoso que no viene a fastidiarme tanto."
+    ]
+    },
+    "cepheus": {
+    "descripcion": "Alpha y Cepheus no son especialmente cercanos. De vez en cuando, Alpha se divierte acelerando el paso del tiempo para ver si él se da cuenta, aunque Cepheus nunca parece notarlo.",
+    "citas": [
+        "Alpha: ¿Cuánto tiempo hice pasar esta vez? Creo que pasé un milenio entero en su habitación..."
+    ]
+    },
+    "luna": {
+    "descripcion": "A Alpha le gusta usar a Luna para molestar de vez en cuando a Helena por la relación familiar que comparten, ya que, técnicamente, Luna también sería la \"tía\" de Helena.",
+    "citas": [
+        "Alpha: Eras muy adorable cuando naciste. Aunque eras muy pequeñita."
+    ]
+    },
+    "nova": {
+    "descripcion": "Alpha odia profundamente a Nova, hasta el punto de que no existe la más mínima posibilidad de que ambas lleguen a ser amistosas entre sí.",
+    "citas": [
+        "Alpha: ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE! ¡MUERE!"
+    ]
+    },
+    "orion": {
+    "descripcion": "Alpha no tiene una relación muy profunda con Orion, pero cuida de él debido a que es físicamente muy débil.",
+    "citas": [
+        "Alpha: Si no fuera por su labia, no tendría ninguna cualidad."
+    ]
+    },
+    "morgana": {
+    "descripcion": "Alpha no mantiene una relación especialmente cercana con Morgana, más allá de satisfacer algunos de sus caprichos relacionados con su habitación privada.",
+    "citas": [
+        "Alpha: ¿Se cree que está en un hotel y que yo soy una empleada? Aunque, pensándolo bien... al menos espero una valoración de cinco estrellas."
+    ]
+    },
+    "viviane": {
+    "descripcion": "Alpha disfruta alentando algunos de los líos que Viviane provoca de vez en cuando, siempre que no sea ella quien tenga que sufrir las consecuencias.",
+    "citas": [
+        "Alpha: Una de las pequeñas agentes del caos de la familia..."
+    ]
+    },
+    "arthur": {
+    "descripcion": "Alpha aprecia a Arthur porque lo considera adorable y también suele utilizarlo como uno de los guardias del Teatro junto con los demás niños.",
+    "citas": [
+        "Alpha: De verdad es como Arthur de Fire Force."
+    ]
+    },
+    "castor_pollux": {
+    "descripcion": "Alpha tiene problemas con la persona que es su madre, no con ellos. En realidad, no tiene ningún problema con los gemelos.",
+    "citas": [
+        "Alpha: ¿Por qué, entre tantas opciones... tenía que ser ella?"
+    ]
+    },
+    "tonnura": {
+    "descripcion": "Alpha no tiene una relación muy profunda con Tonnura, aunque comprende parte de los problemas que él enfrentó en su mundo. Aun así, no le agrada demasiado que Tonnura no quiera tanto a su padre.",
+    "citas": [
+        "Alpha: Si intentas sellar a alguna versión de papá aquí, tendrás que enfrentarte a mucho más que solo a mí."
+    ]
+    },
+    "apollo": {
+    "descripcion": "Alpha no tiene problemas con Apollo, pero tampoco le agrada demasiado, principalmente por el tipo de persona a la que ha decidido servir.",
+    "citas": [
+        "Alpha: Podrías tener un mejor gusto por las mujeres, ¿no crees?"
+    ]
+    },
+    "nyx": {
+  "descripcion": "Alpha no tiene problemas directamente con Nyx. Lo que no le gusta es que su existencia le recuerde los errores de su madre al crear a Sphinx y el hecho de que Sphinx utilizara a un Subaru no muerto para crear a Nyx.",
+  "citas": [
+    "Alpha: Una auténtica máquina de matar."
+    ]
+    },
+    "surtr": {
+    "descripcion": "Alpha es una de las pocas personas que se llevan bien con Surtr, ya que ambas comparten cierto entendimiento debido a que sus inestabilidades mentales son bastante parecidas.",
+    "citas": [
+        "Alpha: Es como hablar con Dos Caras... o casi."
+    ]
+    },
+    "hippolyta": {
+    "descripcion": "Alpha disfruta molestando a Hippolyta diciendo que sería una excelente Xena.",
+    "citas": [
+        "Alpha: La serie era buena... aunque era aún más divertido verla junto con la serie de Hércules."
+    ]
+    },
+    "ladon": {
+    "descripcion": "Alpha suele confiarle a Ladon el cuidado de los Dragones Terrestres cuando ella no dispone de mucho tiempo para hacerlo.",
+    "citas": [
+        "Alpha: Es un buen cuidador y me ahorra mucho tiempo."
+    ]
+    },
+    "helio": {
+    "descripcion": "Alpha disfruta reuniendo a Hélio, Saiph y Arthur solo para bromear un poco, ya que aprecia mucho a los tres hermanos.",
+    "citas": [
+        "Alpha: Un sordo, un mudo y un ciego entraron en un bar..."
+    ]
+    },
+    "eris": {
+    "descripcion": "Alpha siente cierto aprecio por Eris, aunque la considera bastante intensa para su edad. Se divierte provocándola con sus ideas y comentarios.",
+    "citas": [
+        "Alpha: ¿Un Tanya IF es una posibilidad, o con Eris ya es suficiente?"
+    ]
+    }
   }
 }
