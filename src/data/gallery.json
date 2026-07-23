@@ -16,7 +16,8 @@
         "https://cdn.imgchest.com/files/6979e5582c0c.png",
         "https://cdn.imgchest.com/files/0204056bf2c7.png",
         "https://cdn.imgchest.com/files/84cd447ac000.png",
-        "https://cdn.imgchest.com/files/68883fa3094f.png"
+        "https://cdn.imgchest.com/files/68883fa3094f.png",
+        "https://cdn.imgchest.com/files/47e3b15622cd.png"
       ]
     },
     {
@@ -50,7 +51,10 @@
         "https://cdn.imgchest.com/files/6a4ebeddac6c.png",
         "https://cdn.imgchest.com/files/aaa463cd411d.png",
         "https://cdn.imgchest.com/files/f8a6c91aaf35.png",
-        "https://cdn.imgchest.com/files/373ef929ac47.png"
+        "https://cdn.imgchest.com/files/373ef929ac47.png",
+        "https://cdn.imgchest.com/files/6734c69f72cc.png",
+        "https://cdn.imgchest.com/files/1cf1e009156d.png",
+        "https://cdn.imgchest.com/files/a8b57e5ca85e.png"
       ]
     },
     {
@@ -119,7 +123,8 @@
       "artista": "EternalWhisper",
       "imagenes": [
         "https://cdn.imgchest.com/files/a63a535777f7.png",
-        "https://cdn.imgchest.com/files/ba9a25106c23.png"
+        "https://cdn.imgchest.com/files/ba9a25106c23.png",
+        "https://cdn.imgchest.com/files/4251b86fb1c1.png"
       ]
     }
   ],
@@ -171,7 +176,10 @@
     {
       "artista": "EternalWhisper",
       "imagenes": [
-        "https://cdn.imgchest.com/files/b4ea098edf5a.png"
+        "https://cdn.imgchest.com/files/b4ea098edf5a.png",
+        "https://cdn.imgchest.com/files/64e563df5a05.png",
+        "https://cdn.imgchest.com/files/14943f7b9eda.png",
+        "https://cdn.imgchest.com/files/d91d35846026.png"
       ]
     }
   ],
@@ -180,6 +188,70 @@
       "artista": "EternalWhisper",
       "imagenes": [
         "https://cdn.imgchest.com/files/a3c76e59b496.png"
+      ]
+    }
+  ],
+  "vega": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/6d7a26459ec2.png"
+      ]
+    }
+  ],
+  "merope": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/71234e1e6943.png"
+      ]
+    }
+  ],
+  "taygete": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/c44cf46a54b9.png"
+      ]
+    }
+  ],
+  "lyra": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/59330a68e97d.png"
+      ]
+    }
+  ],
+  "menkar": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/3849c373b094.png"
+      ]
+    }
+  ],
+  "graffias": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/6eeca1ff9768.png"
+      ]
+    }
+  ],
+  "alcyone": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/95daabb4121e.png"
+      ]
+    }
+  ],
+  "nunki": [
+    {
+      "artista": "EternalWhisper",
+      "imagenes": [
+        "https://cdn.imgchest.com/files/decd0dba4e56.png"
       ]
     }
   ]
